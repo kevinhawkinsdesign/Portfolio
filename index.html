@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kevin Hawkins — VP of Product Design & Research</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #f8f5f0;
+      --bg-dark: #f2ede5;
+      --ink: #181512;
+      --ink-2: #4a453e;
+      --ink-3: #9a9188;
+      --border: #e0d9cf;
+      --red: #c13b0f;
+      --red-pale: #fdf1ec;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─────────────────────────────────────── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      display: flex; justify-content: space-between; align-items: center;
+      padding: 1.5rem 3rem;
+      mix-blend-mode: multiply;
+    }
+    .nav-logo {
+      font-family: 'DM Mono', monospace;
+      font-size: .72rem; font-weight: 400;
+      letter-spacing: .18em; text-transform: uppercase;
+      color: var(--ink); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+    .nav-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: .65rem; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--ink-2); text-decoration: none;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+
+    /* ─── HERO ────────────────────────────────────── */
+    #hero {
+      position: relative;
+      height: 100vh; min-height: 680px;
+      overflow: hidden;
+    }
+    .hero-photo {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+      display: block;
+    }
+    /* subtle warm gradient overlay so text is readable */
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(248,245,240,.08) 0%,
+        rgba(248,245,240,.12) 40%,
+        rgba(248,245,240,.72) 72%,
+        rgba(248,245,240,1) 100%
+      );
+    }
+    .hero-content {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 0 3rem 4rem;
+    }
+    .hero-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: .65rem; letter-spacing: .2em; text-transform: uppercase;
+      color: var(--red); margin-bottom: 1.25rem;
+      opacity: 0; animation: riseUp .8s .2s cubic-bezier(.16,1,.3,1) forwards;
+    }
+    .hero-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.5rem, 7vw, 8rem);
+      font-weight: 300; line-height: 1;
+      letter-spacing: -.02em; color: var(--ink);
+      max-width: 14ch;
+      opacity: 0; animation: riseUp .8s .4s cubic-bezier(.16,1,.3,1) forwards;
+    }
+    .hero-headline em {
+      font-style: italic; font-weight: 300;
+    }
+    .hero-sub-row {
+      display: flex; justify-content: space-between; align-items: flex-end;
+      margin-top: 2.5rem;
+      opacity: 0; animation: riseUp .8s .6s cubic-bezier(.16,1,.3,1) forwards;
+    }
+    .hero-descriptor {
+      font-size: 1.05rem; line-height: 1.7;
+      color: var(--ink-2); max-width: 44ch; font-weight: 300;
+    }
+    .hero-descriptor strong { color: var(--ink); font-weight: 500; }
+    .hero-cta-group { display: flex; gap: 1rem; flex-shrink: 0; }
+    .hero-cta {
+      font-family: 'DM Mono', monospace;
+      font-size: .65rem; letter-spacing: .12em; text-transform: uppercase;
+      padding: .85rem 1.6rem; text-decoration: none; transition: all .2s;
+    }
+    .hero-cta.primary { background: var(--ink); color: var(--bg); }
+    .hero-cta.primary:hover { background: var(--red); }
+    .hero-cta.ghost { border: 1px solid var(--border); color: var(--ink-2); }
+    .hero-cta.ghost:hover { border-color: var(--ink); color: var(--ink); }
+
+    @keyframes riseUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: none; }
+    }
+
+    /* ─── LOGO BAR ────────────────────────────────── */
+    .logo-bar {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 3rem;
+      background: var(--bg-dark);
+      display: flex; flex-direction: column;
+      align-items: center; gap: .9rem;
+    }
+    .logo-bar-label {
+      font-family: 'DM Mono', monospace;
+      font-size: .58rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--ink-3);
+    }
+    .logo-bar img {
+      width: 100%; max-width: 1080px;
+      display: block; opacity: .38; filter: brightness(0);
+    }
+
+    /* ─── SHARED ──────────────────────────────────── */
+    .reveal {
+      opacity: 0; transform: translateY(32px);
+      transition: opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1);
+    }
+    .reveal.on { opacity: 1; transform: none; }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: .6rem; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--red);
+      margin-bottom: 1rem;
+    }
+    .section-heading {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 5vw, 5.5rem);
+      font-weight: 300; line-height: 1.02;
+      letter-spacing: -.015em; color: var(--ink);
+    }
+    .section-heading em { font-style: italic; }
+
+    /* ─── INTRO (ABOUT) ───────────────────────────── */
+    #intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 90vh;
+      border-bottom: 1px solid var(--border);
+    }
+    .intro-photo-col {
+      position: relative; overflow: hidden;
+      border-right: 1px solid var(--border);
+    }
+    .intro-photo {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+      display: block;
+      transition: transform .8s cubic-bezier(.16,1,.3,1);
+    }
+    .intro-photo-col:hover .intro-photo { transform: scale(1.03); }
+    .intro-photo-tag {
+      position: absolute; bottom: 2rem; left: 2rem;
+      font-family: 'DM Mono', monospace;
+      font-size: .58rem; letter-spacing: .12em; text-transform: uppercase;
+      color: rgba(255,255,255,.75);
+      background: rgba(24,21,18,.55);
+      backdrop-filter: blur(6px);
+      padding: .5rem .9rem;
+    }
+    .intro-text-col {
+      display: flex; flex-direction: column;
+      justify-content: center;
+      padding: 7rem 4rem 7rem 5rem;
+    }
+    .intro-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 2.8vw, 2.6rem);
+      font-weight: 300; font-style: italic;
+      line-height: 1.38; color: var(--ink);
+      margin-bottom: 2.5rem;
+    }
+    .intro-body {
+      font-size: 1rem; line-height: 1.85;
+      color: var(--ink-2); font-weight: 300;
+      margin-bottom: 1.2rem; max-width: 50ch;
+    }
+    .intro-body strong { color: var(--ink); font-weight: 500; }
+    .intro-stats {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 2rem; margin-top: 3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .stat-n {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem; font-weight: 400;
+      color: var(--red); line-height: 1;
+    }
+    .stat-l {
+      font-family: 'DM Mono', monospace;
+      font-size: .55rem; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--ink-3);
+      margin-top: .3rem; line-height: 1.55;
+    }
+
+    /* ─── EXPERTISE CARDS ─────────────────────────── */
+    #expertise {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--border);
+    }
+    .exp-card {
+      padding: 3.5rem 2.5rem;
+      border-right: 1px solid var(--border);
+      transition: background .3s;
+    }
+    .exp-card:last-child { border-right: none; }
+    .exp-card:hover { background: var(--bg-dark); }
+    .exp-num {
+      font-family: 'DM Mono', monospace;
+      font-size: .58rem; letter-spacing: .16em;
+      color: var(--red); margin-bottom: 1.5rem;
+    }
+    .exp-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem; font-weight: 400;
+      color: var(--ink); line-height: 1.25;
+      margin-bottom: .9rem;
+    }
+    .exp-body {
+      font-size: .83rem; line-height: 1.75;
+      color: var(--ink-3); font-weight: 300;
+    }
+
+    /* ─── EXPERIENCE ──────────────────────────────── */
+    #experience {
+      background: var(--ink); color: var(--bg);
+      padding: 8rem 3rem;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+    }
+    #experience .section-label { color: #c9a84c; }
+    #experience .section-heading { color: var(--bg); margin-bottom: 5rem; }
+    .xp-row {
+      display: grid;
+      grid-template-columns: 220px 1fr auto;
+      gap: 3rem; align-items: start;
+      padding: 2.5rem 0;
+      border-top: 1px solid rgba(255,255,255,.08);
+    }
+    .xp-row:last-child { border-bottom: 1px solid rgba(255,255,255,.08); }
+    .xp-co {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; font-weight: 400;
+      color: var(--bg); line-height: 1.1;
+    }
+    .xp-date {
+      font-family: 'DM Mono', monospace;
+      font-size: .58rem; letter-spacing: .1em;
+      text-transform: uppercase; color: #c9a84c;
+      margin-top: .4rem;
+    }
+    .xp-loc {
+      font-family: 'DM Mono', monospace;
+      font-size: .54rem; letter-spacing: .06em;
+      color: rgba(255,255,255,.25); margin-top: .25rem;
+    }
+    .xp-detail {}
+    .xp-role {
+      font-size: 1rem; font-weight: 500;
+      color: var(--bg); margin-bottom: .9rem; line-height: 1.4;
+    }
+    .xp-points { list-style: none; display: flex; flex-direction: column; gap: .4rem; }
+    .xp-points li {
+      font-size: .87rem; line-height: 1.75;
+      color: rgba(248,245,240,.55);
+      padding-left: 1.1rem; position: relative;
+      font-weight: 300;
+    }
+    .xp-points li::before { content: '→'; position: absolute; left: 0; color: #c9a84c; }
+    .xp-points li strong { color: var(--bg); font-weight: 500; }
+    .xp-tags { display: flex; flex-direction: column; gap: .4rem; align-items: flex-end; flex-shrink: 0; }
+    .xp-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: .52rem; letter-spacing: .08em;
+      text-transform: uppercase; padding: .3rem .65rem;
+      border: 1px solid rgba(255,255,255,.1);
+      color: rgba(255,255,255,.35); white-space: nowrap;
+    }
+
+    /* ─── PHOTO STRIP ─────────────────────────────── */
+    .photo-strip {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      height: 420px;
+    }
+    .strip-cell { position: relative; overflow: hidden; }
+    .strip-cell img {
+      width: 100%; height: 100%;
+      object-fit: cover; display: block;
+      transition: transform .7s cubic-bezier(.16,1,.3,1);
+    }
+    .strip-cell:hover img { transform: scale(1.05); }
+    .strip-cell-caption {
+      position: absolute; bottom: 1.5rem; left: 1.5rem;
+      font-family: 'DM Mono', monospace;
+      font-size: .56rem; letter-spacing: .1em;
+      text-transform: uppercase; color: rgba(255,255,255,.6);
+    }
+
+    /* ─── SPEAKING ────────────────────────────────── */
+    #speaking {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--border);
+    }
+    .speaking-photo-col {
+      position: relative; overflow: hidden;
+      border-right: 1px solid var(--border);
+      min-height: 680px;
+    }
+    .speaking-photo {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center top;
+      display: block;
+      transition: transform .7s cubic-bezier(.16,1,.3,1);
+    }
+    .speaking-photo-col:hover .speaking-photo { transform: scale(1.03); }
+    .speaking-tag {
+      position: absolute; top: 2rem; left: 2rem;
+      background: var(--red); color: white;
+      font-family: 'DM Mono', monospace;
+      font-size: .58rem; letter-spacing: .1em;
+      text-transform: uppercase; padding: .45rem .9rem;
+    }
+    .speaking-text-col { padding: 7rem 4rem 7rem 5rem; }
+    .playlist-row {
+      display: flex; gap: .75rem; margin: 2.5rem 0 3rem;
+    }
+    .playlist-btn {
+      display: inline-flex; align-items: center; gap: .7rem;
+      font-family: 'DM Mono', monospace;
+      font-size: .62rem; letter-spacing: .1em; text-transform: uppercase;
+      padding: .85rem 1.4rem; text-decoration: none;
+      border: 1px solid var(--border); color: var(--ink-2);
+      background: var(--bg-dark);
+      transition: all .2s;
+    }
+    .playlist-btn:hover { border-color: var(--ink); color: var(--ink); }
+    .playlist-btn.green:hover { border-color: #1db954; color: #1db954; }
+    .talks-list { display: flex; flex-direction: column; }
+    .talk-row {
+      display: grid; grid-template-columns: 2rem 1fr auto;
+      gap: 1.25rem; align-items: start;
+      padding: 1.5rem 0;
+      border-top: 1px solid var(--border);
+      text-decoration: none; color: inherit;
+    }
+    .talk-row:last-child { border-bottom: 1px solid var(--border); }
+    .talk-num {
+      font-family: 'DM Mono', monospace;
+      font-size: .56rem; color: var(--ink-3); padding-top: .2rem;
+    }
+    .talk-venue {
+      font-family: 'DM Mono', monospace;
+      font-size: .56rem; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--red); margin-bottom: .3rem;
+    }
+    .talk-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; font-weight: 400;
+      color: var(--ink); line-height: 1.3;
+      margin-bottom: .3rem;
+      transition: color .2s;
+    }
+    .talk-row:hover .talk-title { color: var(--red); }
+    .talk-desc { font-size: .8rem; color: var(--ink-3); line-height: 1.6; font-weight: 300; }
+    .talk-arrow { color: var(--ink-3); font-size: 1rem; padding-top: .2rem; transition: color .2s; }
+    .talk-row:hover .talk-arrow { color: var(--red); }
+
+    /* ─── TESTIMONIALS ────────────────────────────── */
+    #testimonials {
+      padding: 8rem 3rem;
+      background: var(--bg-dark);
+      border-bottom: 1px solid var(--border);
+    }
+    .testimonials-intro {
+      display: grid; grid-template-columns: 1fr 2fr;
+      gap: 6rem; margin-bottom: 5rem; align-items: end;
+    }
+    .testimonials-subhead {
+      font-size: 1rem; line-height: 1.75;
+      color: var(--ink-2); font-weight: 300; max-width: 46ch;
+    }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1px; background: var(--border);
+    }
+    .testi-card {
+      background: var(--bg-dark);
+      padding: 2.5rem;
+      transition: background .25s;
+    }
+    .testi-card:hover { background: var(--bg); }
+    .testi-card.wide { grid-column: span 2; }
+    .testi-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic; font-size: 1.1rem;
+      line-height: 1.72; color: var(--ink-2);
+      margin-bottom: 1.75rem; font-weight: 300;
+    }
+    .testi-quote::before {
+      content: '\201C'; color: var(--red);
+      font-size: 2rem; line-height: 0;
+      vertical-align: -.4em; margin-right: .1em;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    .testi-name { font-weight: 500; font-size: .9rem; color: var(--ink); }
+    .testi-role {
+      font-family: 'DM Mono', monospace;
+      font-size: .56rem; letter-spacing: .06em;
+      color: var(--ink-3); margin-top: .2rem;
+    }
+    .testi-card.dark {
+      background: var(--ink); grid-column: span 1;
+    }
+    .testi-card.dark:hover { background: #2a2520; }
+    .testi-card.dark .testi-quote { color: rgba(248,245,240,.68); }
+    .testi-card.dark .testi-quote::before { color: #c9a84c; }
+    .testi-card.dark .testi-name { color: var(--bg); }
+    .testi-card.dark .testi-role { color: #c9a84c; }
+
+    /* ─── CONTACT ─────────────────────────────────── */
+    #contact {
+      display: grid; grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--border);
+      min-height: 60vh;
+    }
+    .contact-left {
+      padding: 8rem 5rem 8rem 3rem;
+      border-right: 1px solid var(--border);
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .contact-big {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3rem, 5.5vw, 6.5rem);
+      font-weight: 300; line-height: 1;
+      letter-spacing: -.02em; color: var(--ink);
+      margin-top: 1.5rem;
+    }
+    .contact-big em { font-style: italic; }
+    .contact-right {
+      padding: 8rem 3rem 8rem 5rem;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .contact-sub {
+      font-size: 1rem; line-height: 1.8;
+      color: var(--ink-2); font-weight: 300;
+      max-width: 42ch; margin-bottom: 3rem;
+    }
+    .contact-email {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.3rem, 2.5vw, 2rem);
+      font-style: italic; font-weight: 300;
+      color: var(--red); text-decoration: none;
+      margin-bottom: 3rem;
+      transition: opacity .2s;
+    }
+    .contact-email:hover { opacity: .65; }
+    .social-row { display: flex; flex-wrap: wrap; gap: .65rem; }
+    .social-link {
+      font-family: 'DM Mono', monospace;
+      font-size: .6rem; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--ink-3);
+      text-decoration: none; padding: .55rem 1rem;
+      border: 1px solid var(--border);
+      transition: border-color .2s, color .2s;
+    }
+    .social-link:hover { border-color: var(--ink); color: var(--ink); }
+
+    /* ─── FOOTER ──────────────────────────────────── */
+    footer {
+      padding: 1.5rem 3rem;
+      display: flex; justify-content: space-between; align-items: center;
+      background: var(--bg-dark);
+    }
+    .footer-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem; font-weight: 400;
+      color: var(--ink); text-decoration: none;
+    }
+    .footer-copy {
+      font-family: 'DM Mono', monospace;
+      font-size: .55rem; letter-spacing: .1em;
+      color: var(--ink-3);
+    }
+
+    /* ─── RESPONSIVE ──────────────────────────────── */
+    @media (max-width: 960px) {
+      nav { padding: 1.25rem 1.5rem; }
+      .hero-content { padding: 0 1.5rem 3rem; }
+      .hero-sub-row { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+      .logo-bar { padding: 1.5rem; }
+      #intro { grid-template-columns: 1fr; }
+      .intro-photo-col { height: 60vw; border-right: none; border-bottom: 1px solid var(--border); }
+      .intro-text-col { padding: 4rem 1.5rem; }
+      .intro-stats { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+      #expertise { grid-template-columns: 1fr 1fr; }
+      .exp-card { border-bottom: 1px solid var(--border); }
+      #experience { padding: 5rem 1.5rem; }
+      .xp-row { grid-template-columns: 1fr; gap: .75rem; }
+      .xp-tags { flex-direction: row; align-items: flex-start; }
+      .photo-strip { grid-template-columns: 1fr; height: auto; }
+      .strip-cell { height: 280px; }
+      #speaking { grid-template-columns: 1fr; }
+      .speaking-photo-col { min-height: 60vw; border-right: none; border-bottom: 1px solid var(--border); }
+      .speaking-text-col { padding: 4rem 1.5rem; }
+      .playlist-row { flex-direction: column; }
+      #testimonials { padding: 5rem 1.5rem; }
+      .testimonials-intro { grid-template-columns: 1fr; gap: 1.5rem; }
+      .testi-grid { grid-template-columns: 1fr; }
+      .testi-card.wide, .testi-card.dark { grid-column: span 1; }
+      #contact { grid-template-columns: 1fr; }
+      .contact-left { padding: 5rem 1.5rem 3rem; border-right: none; border-bottom: 1px solid var(--border); }
+      .contact-right { padding: 3rem 1.5rem 5rem; }
+      footer { flex-direction: column; gap: .75rem; padding: 1.5rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Kevin Hawkins</a>
+  <ul class="nav-links">
+    <li><a href="#intro">About</a></li>
+    <li><a href="#experience">Work</a></li>
+    <li><a href="#speaking">Talks</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO — full bleed photo, single human sentence -->
+<section id="hero">
+  <img src="photo-hero.jpeg" alt="Kevin Hawkins" class="hero-photo" />
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">VP Product Design & Research · Barcelona</p>
+    <h1 class="hero-headline">I build teams that build <em>products people love.</em></h1>
+    <div class="hero-sub-row">
+      <p class="hero-descriptor">
+        18 years leading design at <strong>global scale</strong> — from a 100-person org at Glovo to establishing UX from zero at Monta. <strong>AI-native.</strong> Player-coach. Multihyphenate creative.
+      </p>
+      <div class="hero-cta-group">
+        <a href="#experience" class="hero-cta primary">View Work →</a>
+        <a href="https://kevinhawkinsdesign.com/resume.pdf" target="_blank" class="hero-cta ghost">Resume ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO BAR -->
+<div class="logo-bar">
+  <p class="logo-bar-label">Previously worked with</p>
+  <img src="logos.png" alt="Glovo, Booking.com, Hilton, PwC, EY, Uber, Capital One, Gates Foundation, Federal Reserve, Georgetown, Brookings, GWU" />
+</div>
+
+<!-- INTRO / ABOUT -->
+<section id="intro">
+  <div class="intro-photo-col">
+    <img src="photo-street.jpeg" alt="Kevin Hawkins, New York City" class="intro-photo" />
+    <div class="intro-photo-tag">New York City</div>
+  </div>
+  <div class="intro-text-col">
+    <p class="section-label reveal">About</p>
+    <p class="intro-quote reveal">
+      "The best design leaders don't just direct — they make."
+    </p>
+    <p class="intro-body reveal">
+      I'm Kevin — a <strong>gay, Liberian-American</strong> design leader based in Barcelona. I've spent 18 years building products and the teams behind them, working across Europe, the US, and Asia. Currently VP of Product Experience at <strong>Monta</strong>, where I was their first-ever UX hire.
+    </p>
+    <p class="intro-body reveal">
+      I operate at every altitude: shaping strategy in the boardroom, running workshops with engineers, shipping UI, and building the research practices that make it all smarter. <strong>AI-native</strong> isn't a buzzword for me — I build with it daily and design products powered by it.
+    </p>
+    <p class="intro-body reveal">
+      Outside of work I'm the founder of <strong>The Common Thread Club</strong> (a foodie community of 1,000+ in Barcelona), UXDX Barcelona Ambassador, and a board member at We Create Space. I've visited 52 countries and counting.
+    </p>
+    <div class="intro-stats reveal">
+      <div><div class="stat-n">18+</div><div class="stat-l">Years of<br>practice</div></div>
+      <div><div class="stat-n">105</div><div class="stat-l">Largest<br>team led</div></div>
+      <div><div class="stat-n">52</div><div class="stat-l">Public<br>talks given</div></div>
+      <div><div class="stat-n">20M</div><div class="stat-l">Monthly<br>transactions</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERTISE CARDS -->
+<section id="expertise">
+  <div class="exp-card reveal">
+    <div class="exp-num">01</div>
+    <div class="exp-title">Product Design<br>& Research</div>
+    <div class="exp-body">End-to-end product design and mixed-methods research. Hands-on from pixels to product strategy.</div>
+  </div>
+  <div class="exp-card reveal">
+    <div class="exp-num">02</div>
+    <div class="exp-title">Content &<br>Localization</div>
+    <div class="exp-body">In-house localization in 19+ languages with 24-hour turnaround. Language as a first-class design material.</div>
+  </div>
+  <div class="exp-card reveal">
+    <div class="exp-num">03</div>
+    <div class="exp-title">AI-Native<br>Practice</div>
+    <div class="exp-body">LLMs and generative tools integrated into research, design, and product workflows from day one.</div>
+  </div>
+  <div class="exp-card reveal">
+    <div class="exp-num">04</div>
+    <div class="exp-title">Teaching &<br>Speaking</div>
+    <div class="exp-body">52 public talks. 5,000+ students. Georgetown, GrowthTribe, General Assembly. UXDX Barcelona Ambassador.</div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <p class="section-label reveal">Experience</p>
+  <h2 class="section-heading reveal">Where I've<br><em>done the work.</em></h2>
+
+  <div class="xp-row reveal">
+    <div>
+      <div class="xp-co">Monta</div>
+      <div class="xp-date">Dec 2024 – Present</div>
+      <div class="xp-loc">Barcelona, Spain</div>
+    </div>
+    <div class="xp-detail">
+      <div class="xp-role">VP, Product Experience — Design, Research & Content</div>
+      <ul class="xp-points">
+        <li>Built UX from zero — Monta's first UX leader. Established vision, team of <strong>20+</strong>, and org-wide playbook.</li>
+        <li>Led <strong>Monta AI</strong>, Customer Council, NOC agent, and Mobile 2.0 as strategic bets.</li>
+        <li>Grew MoM MAU by <strong>20%</strong> through experimentation — PostHog, A/B tests, and PLG comms.</li>
+      </ul>
+    </div>
+    <div class="xp-tags">
+      <span class="xp-tag">eMobility</span>
+      <span class="xp-tag">0→1</span>
+      <span class="xp-tag">AI Products</span>
+    </div>
+  </div>
+
+  <div class="xp-row reveal">
+    <div>
+      <div class="xp-co">Amenitiz</div>
+      <div class="xp-date">Sep 2023 – Nov 2024</div>
+      <div class="xp-loc">Barcelona, Spain</div>
+    </div>
+    <div class="xp-detail">
+      <div class="xp-role">Director, Head of Design & Research</div>
+      <ul class="xp-points">
+        <li>Hired <strong>6 designers in 45 days</strong>. Rebuilt the design org from the ground up.</li>
+        <li>Increased LTV and retention <strong>+20%</strong> with no drop in NPS. Scaled to <strong>60+ countries</strong>.</li>
+        <li>Launched Brazil with new language, personalized product, and full PLG motion.</li>
+      </ul>
+    </div>
+    <div class="xp-tags">
+      <span class="xp-tag">Hospitality</span>
+      <span class="xp-tag">Localization</span>
+      <span class="xp-tag">PLG</span>
+    </div>
+  </div>
+
+  <div class="xp-row reveal">
+    <div>
+      <div class="xp-co">Glovo</div>
+      <div class="xp-date">Feb 2022 – Sep 2023</div>
+      <div class="xp-loc">Remote / Hybrid</div>
+    </div>
+    <div class="xp-detail">
+      <div class="xp-role">Global UX Director — Design, Research, Content & Localization</div>
+      <ul class="xp-points">
+        <li>Led a <strong>100+ person</strong> UX org spanning designers, researchers, motion, writers, and localization.</li>
+        <li>Acquisition <strong>+15%</strong>, retention <strong>+20%</strong>. Saved <strong>€500k+</strong> in tools and licensing.</li>
+        <li>Built a 19-language in-house localization agency with <strong>24-hour turnaround</strong>.</li>
+      </ul>
+    </div>
+    <div class="xp-tags">
+      <span class="xp-tag">100+ Org</span>
+      <span class="xp-tag">€500k Saved</span>
+      <span class="xp-tag">B2C + B2B</span>
+    </div>
+  </div>
+
+  <div class="xp-row reveal">
+    <div>
+      <div class="xp-co">Booking.com</div>
+      <div class="xp-date">Jul 2019 – Feb 2021</div>
+      <div class="xp-loc">Amsterdam</div>
+    </div>
+    <div class="xp-detail">
+      <div class="xp-role">UX Team Lead — Connected Stay & Cross-Brand</div>
+      <ul class="xp-points">
+        <li>Led Connected Stay across Kayak, Priceline, and Agoda. <strong>Won two internal Hackathons</strong> — shipped both into product.</li>
+      </ul>
+    </div>
+    <div class="xp-tags">
+      <span class="xp-tag">Travel Tech</span>
+      <span class="xp-tag">Hackathon ×2</span>
+    </div>
+  </div>
+
+  <div class="xp-row reveal">
+    <div>
+      <div class="xp-co">PwC / EY</div>
+      <div class="xp-date">2018 – 2019</div>
+      <div class="xp-loc">Washington D.C.</div>
+    </div>
+    <div class="xp-detail">
+      <div class="xp-role">Lead Product Design Consultant</div>
+      <ul class="xp-points">
+        <li>Clients: <strong>JPMorgan Chase, Uber, Yahoo, Vogue, GW University,</strong> and Urban Institute.</li>
+      </ul>
+    </div>
+    <div class="xp-tags">
+      <span class="xp-tag">Consulting</span>
+      <span class="xp-tag">Enterprise</span>
+    </div>
+  </div>
+
+  <div class="xp-row reveal">
+    <div>
+      <div class="xp-co">KHD Studio</div>
+      <div class="xp-date">2008 – 2018</div>
+      <div class="xp-loc">Global</div>
+    </div>
+    <div class="xp-detail">
+      <div class="xp-role">UX / UI Design & Digital Strategy — Kevin Hawkins Design</div>
+      <ul class="xp-points">
+        <li>10 years of independent consulting. Built products and brands across 3 continents. <strong>52 countries visited.</strong></li>
+      </ul>
+    </div>
+    <div class="xp-tags">
+      <span class="xp-tag">Independent</span>
+      <span class="xp-tag">52 Countries</span>
+    </div>
+  </div>
+</section>
+
+<!-- PHOTO STRIP -->
+<div class="photo-strip">
+  <div class="strip-cell">
+    <img src="photo-stage.jpeg" alt="Kevin on stage at UXDX" />
+    <div class="strip-cell-caption">UXDX Conference</div>
+  </div>
+  <div class="strip-cell">
+    <img src="photo-team.jpeg" alt="Kevin with the Glovo team" />
+    <div class="strip-cell-caption">Glovo UX Team · Spain</div>
+  </div>
+  <div class="strip-cell">
+    <img src="photo-venice.jpeg" alt="Kevin in Venice" />
+    <div class="strip-cell-caption">Venice · 52 Countries</div>
+  </div>
+</div>
+
+<!-- SPEAKING -->
+<section id="speaking">
+  <div class="speaking-photo-col">
+    <img src="photo-speaking.jpeg" alt="Kevin Hawkins speaking" class="speaking-photo" />
+    <div class="speaking-tag">52 Talks Given</div>
+  </div>
+  <div class="speaking-text-col">
+    <p class="section-label reveal">Watch & Listen</p>
+    <h2 class="section-heading reveal">On stage.<br><em>In podcasts.</em><br>In classrooms.</h2>
+    <div class="playlist-row reveal">
+      <a href="https://www.youtube.com/playlist?list=PL6qjgSwuMGbgPp9fkZFgFkM99clQXBpXT" target="_blank" rel="noopener" class="playlist-btn">
+        ▶&nbsp; YouTube — Full Playlist
+      </a>
+      <a href="https://open.spotify.com/playlist/1odZ1OutWIVnoy7HAcJHBw" target="_blank" rel="noopener" class="playlist-btn green">
+        ♫&nbsp; Spotify — Podcasts
+      </a>
+    </div>
+    <div class="talks-list reveal">
+      <a href="https://uxdx.com/session/how-to-build-a-product-for-everyone/" target="_blank" rel="noopener" class="talk-row">
+        <div class="talk-num">01</div>
+        <div><div class="talk-venue">UXDX EMEA 2022</div><div class="talk-title">How to Build a Product for Everyone</div><div class="talk-desc">Culture, usability labs, and loyalty at scale during a major merger.</div></div>
+        <div class="talk-arrow">↗</div>
+      </a>
+      <a href="https://uxdx.com/profile/kevin-hawkins/" target="_blank" rel="noopener" class="talk-row">
+        <div class="talk-num">02</div>
+        <div><div class="talk-venue">UXDX — Research at Scale</div><div class="talk-title">Doing More with Less After Downsizing</div><div class="talk-desc">9-person team, 20M monthly transactions, 30+ countries.</div></div>
+        <div class="talk-arrow">↗</div>
+      </a>
+      <a href="https://2025.uxlondon.com/speakers/kevin-hawkins/" target="_blank" rel="noopener" class="talk-row">
+        <div class="talk-num">03</div>
+        <div><div class="talk-venue">UX London 2025</div><div class="talk-title">Convincing Stakeholders to Ship Great UX</div><div class="talk-desc">Connecting design heuristics to conversion and business outcomes.</div></div>
+        <div class="talk-arrow">↗</div>
+      </a>
+      <a href="https://smashingconf.com/meets-product-design/speakers/kevin-hawkins" target="_blank" rel="noopener" class="talk-row">
+        <div class="talk-num">04</div>
+        <div><div class="talk-venue">Smashing Conference 2024</div><div class="talk-title">Democratizing UX Research & AI</div><div class="talk-desc">Building research panels at global scale — where AI helps and where it doesn't.</div></div>
+        <div class="talk-arrow">↗</div>
+      </a>
+      <a href="https://revisionpath.com/kevin-hawkins/" target="_blank" rel="noopener" class="talk-row">
+        <div class="talk-num">05</div>
+        <div><div class="talk-venue">Revision Path Podcast</div><div class="talk-title">Design at a Global Scale — A Career Story</div><div class="talk-desc">From D.C. to San Francisco, Amsterdam, and Barcelona.</div></div>
+        <div class="talk-arrow">↗</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="testimonials-intro">
+    <div>
+      <p class="section-label reveal">What people say</p>
+      <h2 class="section-heading reveal">In their<br><em>own words.</em></h2>
+    </div>
+    <p class="testimonials-subhead reveal">
+      I've been fortunate to build careers alongside brilliant people at every level. Here's how some of them have described working with me.
+    </p>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card wide reveal">
+      <p class="testi-quote">Kevin is an inspiring UX leader with an exceptional ability to craft and execute impactful visions. His leadership style not only drives innovation but also creates a supportive and caring environment for his team. As one of his direct reports, I deeply appreciated his mentorship, encouragement, and genuine investment in my growth.</p>
+      <div class="testi-name">Direct Report, Amenitiz & Glovo</div>
+      <div class="testi-role">UX Designer — worked with Kevin across two companies</div>
+    </div>
+    <div class="testi-card dark reveal">
+      <p class="testi-quote">We need to make "to Emily" a verb. How can we clone her?</p>
+      <div class="testi-name">Chris McCarthy</div>
+      <div class="testi-role">COO · Degreed</div>
+    </div>
+    <div class="testi-card reveal">
+      <p class="testi-quote">Something that sets you apart from most leaders is your ability to not only create a vision grounded in insights, but to communicate a plan to operationalize it through the empowerment of others.</p>
+      <div class="testi-name">Chris Avore</div>
+      <div class="testi-role">Principal, Design Transformation · InVision</div>
+    </div>
+    <div class="testi-card reveal">
+      <p class="testi-quote">Kevin gave me the agency and trust to do my best work. He went out of his way to teach the team how to incorporate AI into design and research, and helped us be more assertive across everything we shipped.</p>
+      <div class="testi-name">Karan Shastri</div>
+      <div class="testi-role">Staff UX Researcher · Vendr</div>
+    </div>
+    <div class="testi-card reveal">
+      <p class="testi-quote">Kevin continues to surprise me with his myriad of talents in technology and design. A wonderful resource and an even better friend — he seems to know everyone.</p>
+      <div class="testi-name">Colleague since 2015</div>
+      <div class="testi-role">WeWork · Washington D.C.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-left">
+    <p class="section-label reveal">Let's connect</p>
+    <h2 class="contact-big reveal">
+      Let's build<br>something<br><em>great.</em>
+    </h2>
+  </div>
+  <div class="contact-right">
+    <p class="contact-sub reveal">
+      Open to VP and C-suite design leadership, advisory roles, speaking engagements, and creative collaborations. Based in Barcelona — open to relocate.
+    </p>
+    <a href="/cdn-cgi/l/email-protection#86eee3eaeae9c6ede3f0efe8eee7f1edefe8f5e2e3f5efe1e8a8e5e9eb" class="contact-email reveal">
+      <span class="__cf_email__" data-cfemail="9cf4f9f0f0f3dcf7f9eaf5f2f4fdebf7f5f2eff8f9eff5fbf2b2fff3f1">[email&#160;protected]</span>
+    </a>
+    <div class="social-row reveal">
+      <a href="https://www.linkedin.com/in/kevinhawkinsdesign" target="_blank" class="social-link">LinkedIn</a>
+      <a href="https://dribbble.com/KevinHawkins" target="_blank" class="social-link">Dribbble</a>
+      <a href="https://www.instagram.com/kevinhawkinsdesign/" target="_blank" class="social-link">Instagram</a>
+      <a href="https://adplist.org/mentors/kevin-hawkins" target="_blank" class="social-link">ADPList</a>
+      <a href="https://www.youtube.com/playlist?list=PL6qjgSwuMGbgPp9fkZFgFkM99clQXBpXT" target="_blank" class="social-link">YouTube</a>
+      <a href="https://open.spotify.com/playlist/1odZ1OutWIVnoy7HAcJHBw" target="_blank" class="social-link">Spotify</a>
+      <a href="https://kevinhawkinsdesign.com/resume.pdf" target="_blank" class="social-link">Resume ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-name">Kevin Hawkins Design</a>
+  <p class="footer-copy">© 2026 · Barcelona, Spain</p>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        e

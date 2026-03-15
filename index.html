@@ -1,477 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kevin Hawkins — VP of Product Design & Research</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg:     #111110;
-      --bg2:    #1a1917;
-      --bg3:    #222120;
-      --ink:    #f0ede8;
-      --ink2:   #b8b4ac;
-      --ink3:   #6b6860;
-      --rule:   #2a2825;
-      --accent: #00e5a0;
-      --accent2:#00b87d;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { background: var(--bg); color: var(--ink); font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
-    ::selection { background: var(--accent); color: var(--bg); }
-
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 1.4rem 3rem; border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 100; background: rgba(17,17,16,.93); backdrop-filter: blur(12px); }
-    .nav-logo { font-size: .82rem; font-weight: 600; color: var(--ink); text-decoration: none; letter-spacing: .02em; }
-    .nav-logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 2rem; list-style: none; }
-    .nav-links a { font-size: .82rem; color: var(--ink3); text-decoration: none; transition: color .15s; }
-    .nav-links a:hover { color: var(--ink); }
-
-    .wrap { max-width: 1160px; margin: 0 auto; padding: 0 3rem; }
-
-    /* HERO */
-    .hero { padding: 6rem 0 5rem; border-bottom: 1px solid var(--rule); }
-    .hero-top { display: grid; grid-template-columns: 1fr 340px; gap: 6rem; align-items: center; margin-bottom: 5rem; }
-    .hero-eyebrow { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 1.5rem; }
-    .hero-statement { font-family: 'Lora', serif; font-size: clamp(2.2rem, 4vw, 3.6rem); font-weight: 400; line-height: 1.18; letter-spacing: -.015em; color: var(--ink); }
-    .hero-statement em { font-style: italic; color: var(--accent); }
-    .hero-sub { font-size: 1rem; line-height: 1.78; color: var(--ink2); font-weight: 300; margin-top: 1.5rem; max-width: 46ch; }
-    .hero-cta { display: inline-flex; align-items: center; gap: .5rem; margin-top: 2.2rem; font-size: .82rem; font-weight: 600; letter-spacing: .04em; color: var(--bg); background: var(--accent); padding: .72rem 1.5rem; text-decoration: none; transition: background .2s, transform .15s; }
-    .hero-cta:hover { background: var(--accent2); transform: translateY(-1px); }
-    .hero-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: center 20%; display: block; filter: grayscale(12%) contrast(1.04); }
-
-    /* ROLE CARDS */
-    .roles { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; padding-top: 4rem; border-top: 1px solid var(--rule); }
-    .role-card { padding: 2rem 2rem 2rem 0; border-right: 1px solid var(--rule); }
-    .role-card:last-child { border-right: none; padding-right: 0; }
-    .role-card:not(:first-child) { padding-left: 2rem; }
-    .role-num { font-family: 'Lora', serif; font-style: italic; font-size: .78rem; color: var(--accent); display: block; margin-bottom: .7rem; }
-    .role-label { font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink); margin-bottom: .55rem; }
-    .role-body { font-size: .85rem; line-height: 1.75; color: var(--ink3); font-weight: 300; }
-    .role-body strong { color: var(--ink2); font-weight: 500; }
-
-    /* LOGO BAR */
-    .logo-bar { padding: 2rem 0; border-bottom: 1px solid var(--rule); display: flex; align-items: center; gap: 2rem; flex-wrap: wrap; }
-    .logo-label { font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--ink3); flex-shrink: 0; }
-    .logo-bar img { height: 20px; display: block; opacity: .2; filter: brightness(10); }
-
-    /* SHARED */
-    .section { padding: 5.5rem 0; border-bottom: 1px solid var(--rule); }
-    .stag { font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 2.5rem; }
-    .shead { font-family: 'Lora', serif; font-size: clamp(1.8rem, 3vw, 2.6rem); font-weight: 400; line-height: 1.18; color: var(--ink); }
-    .shead em { font-style: italic; color: var(--ink2); }
-    .btext { font-size: .97rem; line-height: 1.88; color: var(--ink2); font-weight: 300; margin-bottom: 1.1rem; }
-    .btext strong { color: var(--ink); font-weight: 500; }
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.on { opacity: 1; transform: none; }
-
-    /* ABOUT */
-    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
-    .about-photo { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 15%; display: block; filter: grayscale(10%); }
-    .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; padding-top: 3rem; border-top: 1px solid var(--rule); }
-    .stat-n { font-family: 'Lora', serif; font-size: 2rem; font-weight: 400; color: var(--accent); line-height: 1; }
-    .stat-l { font-size: .72rem; color: var(--ink3); margin-top: .25rem; line-height: 1.5; }
-
-    /* WORK INDEX */
-    .work-header { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: end; margin-bottom: 4rem; }
-    .work-index { display: flex; flex-direction: column; }
-    .wi-item { display: grid; grid-template-columns: 3rem 1fr 110px; gap: 2rem; align-items: start; padding: 2.2rem 0; border-top: 1px solid var(--rule); text-decoration: none; color: inherit; }
-    .wi-item:last-child { border-bottom: 1px solid var(--rule); }
-    .wi-item:hover .wi-title { color: var(--accent); }
-    .wi-num { font-family: 'Lora', serif; font-size: .95rem; font-style: italic; color: var(--ink3); padding-top: .1rem; }
-    .wi-cat { font-size: .66rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--ink3); margin-bottom: .3rem; }
-    .wi-title { font-family: 'Lora', serif; font-size: 1.2rem; font-weight: 400; color: var(--ink); line-height: 1.3; margin-bottom: .3rem; transition: color .2s; }
-    .wi-desc { font-size: .85rem; line-height: 1.7; color: var(--ink3); font-weight: 300; max-width: 54ch; }
-    .wi-meta { font-size: .76rem; color: var(--ink3); text-align: right; padding-top: .1rem; line-height: 1.6; }
-    .wi-arrow { color: var(--accent); }
-
-    /* FEATURED CARDS */
-    .feat-cards { display: flex; flex-direction: column; margin-top: 5rem; }
-    .feat-card { display: grid; gap: 4rem; padding: 4rem 0; border-top: 1px solid var(--rule); text-decoration: none; color: inherit; }
-    .feat-card:last-child { border-bottom: 1px solid var(--rule); }
-    .feat-card.lft { grid-template-columns: 1fr 1.2fr; align-items: center; }
-    .feat-card.rgt { grid-template-columns: 1.2fr 1fr; align-items: center; }
-    .feat-card.rgt .ftxt { order: 2; }
-    .feat-card.rgt .fmedia { order: 1; }
-    .feat-card:hover .fmedia img { transform: scale(1.025); }
-    .ftag { font-size: .66rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: .6rem; }
-    .ftitle { font-family: 'Lora', serif; font-size: clamp(1.3rem, 2.2vw, 1.9rem); font-weight: 400; line-height: 1.22; color: var(--ink); margin-bottom: .9rem; }
-    .fdesc { font-size: .92rem; line-height: 1.82; color: var(--ink2); font-weight: 300; margin-bottom: 1.5rem; max-width: 50ch; }
-    .flink { font-size: .85rem; font-weight: 600; color: var(--accent); text-decoration: none; }
-    .flink:hover { color: var(--accent2); }
-    .flink::after { content: ' →'; }
-    .fmedia { overflow: hidden; background: var(--bg3); }
-    .fmedia img { width: 100%; display: block; aspect-ratio: 16/10; object-fit: cover; transition: transform .6s ease; filter: grayscale(8%); }
-
-    /* CV */
-    .cv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 4rem; }
-    .cv-col-head { font-size: .68rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); display: block; padding-bottom: 1.1rem; border-bottom: 1px solid var(--rule); }
-    .cv-row { display: grid; grid-template-columns: 1fr auto; gap: 1rem; align-items: baseline; padding: 1.2rem 0; border-bottom: 1px solid var(--rule); }
-    .cv-co { font-family: 'Lora', serif; font-size: 1rem; font-weight: 400; color: var(--ink); }
-    .cv-role { font-size: .82rem; font-weight: 300; color: var(--ink3); margin-top: .15rem; }
-    .cv-year { font-size: .76rem; color: var(--ink3); white-space: nowrap; }
-    .cv-note { font-size: .78rem; font-weight: 300; color: var(--ink3); font-style: italic; padding: 1.5rem 0 .5rem; line-height: 1.7; }
-
-    /* LEADERSHIP */
-    .lead-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; margin-top: 3rem; background: var(--rule); }
-    .lead-card { padding: 2.5rem; background: var(--bg); transition: background .2s; }
-    .lead-card:hover { background: var(--bg2); }
-    .lead-num { font-family: 'Lora', serif; font-style: italic; font-size: .82rem; color: var(--accent); display: block; margin-bottom: .8rem; }
-    .lead-title { font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 400; color: var(--ink); margin-bottom: .6rem; }
-    .lead-body { font-size: .85rem; line-height: 1.8; color: var(--ink3); font-weight: 300; }
-
-    /* SPEAKING */
-    .speak-top { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: end; margin-bottom: 3.5rem; }
-    .speak-photo { width: 100%; aspect-ratio: 3/2; object-fit: cover; object-position: center top; display: block; filter: grayscale(12%); }
-    .speak-desc { font-size: .97rem; line-height: 1.82; color: var(--ink2); font-weight: 300; margin-bottom: 1.5rem; }
-    .plist { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-    .plink { font-size: .85rem; font-weight: 600; color: var(--accent); text-decoration: none; }
-    .plink:hover { color: var(--accent2); }
-    .plink::after { content: ' →'; }
-    .talks-list { display: flex; flex-direction: column; }
-    .talk-row { display: grid; grid-template-columns: 3rem 1fr 80px; gap: 2rem; align-items: baseline; padding: 1.4rem 0; border-top: 1px solid var(--rule); text-decoration: none; color: inherit; transition: opacity .2s; }
-    .talk-row:last-child { border-bottom: 1px solid var(--rule); }
-    .talk-row:hover { opacity: .6; }
-    .talk-n { font-family: 'Lora', serif; font-style: italic; font-size: .88rem; color: var(--accent); }
-    .talk-venue { font-size: .66rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; color: var(--ink3); margin-bottom: .2rem; }
-    .talk-title { font-family: 'Lora', serif; font-size: 1.05rem; font-weight: 400; color: var(--ink); line-height: 1.3; }
-    .talk-yr { font-size: .78rem; color: var(--ink3); text-align: right; }
-
-    /* TESTIMONIALS */
-    .testi-header { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-bottom: 4rem; align-items: end; }
-    .testi-subtext { font-size: .95rem; line-height: 1.82; color: var(--ink2); font-weight: 300; }
-    .testi-list { display: flex; flex-direction: column; }
-    .testi-item { display: grid; grid-template-columns: 1fr 220px; gap: 4rem; align-items: start; padding: 3rem 0; border-top: 1px solid var(--rule); }
-    .testi-item:last-child { border-bottom: 1px solid var(--rule); }
-    .testi-quote { font-family: 'Lora', serif; font-size: clamp(.95rem, 1.5vw, 1.12rem); font-weight: 400; font-style: italic; line-height: 1.72; color: var(--ink2); }
-    .testi-name { font-size: .85rem; font-weight: 600; color: var(--ink); margin-bottom: .2rem; }
-    .testi-role { font-size: .78rem; font-weight: 300; color: var(--ink3); line-height: 1.45; }
-
-    /* CONTACT */
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: start; }
-    .contact-email { display: block; font-family: 'Lora', serif; font-size: clamp(1.1rem, 1.8vw, 1.6rem); font-style: italic; color: var(--accent); text-decoration: none; margin-bottom: 2.5rem; transition: color .2s; }
-    .contact-email:hover { color: var(--accent2); }
-    .socials { display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; }
-    .soc { font-size: .85rem; color: var(--ink3); text-decoration: none; transition: color .15s; }
-    .soc:hover { color: var(--ink); }
-    .contact-photo { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 15%; display: block; filter: grayscale(12%); }
-
-    footer { padding: 2rem 3rem; display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--rule); }
-    .footer-logo { font-size: .82rem; font-weight: 500; color: var(--ink); text-decoration: none; }
-    .footer-copy { font-size: .75rem; color: var(--ink3); }
-
-    @media (max-width: 860px) {
-      nav, footer { padding: 1.2rem 1.5rem; }
-      .wrap { padding: 0 1.5rem; }
-      .hero-top { grid-template-columns: 1fr; gap: 2.5rem; }
-      .hero-photo { max-width: 300px; }
-      .roles { grid-template-columns: 1fr 1fr; }
-      .role-card { border-right: none; border-bottom: 1px solid var(--rule); padding: 1.5rem 0; }
-      .role-card:not(:first-child) { padding-left: 0; }
-      .about-grid, .work-header, .speak-top, .testi-header, .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .stats-row { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
-      .wi-item { grid-template-columns: 2.5rem 1fr; }
-      .wi-meta { display: none; }
-      .feat-card.lft, .feat-card.rgt { grid-template-columns: 1fr; gap: 2rem; }
-      .feat-card.rgt .ftxt, .feat-card.rgt .fmedia { order: unset; }
-      .cv-grid { grid-template-columns: 1fr; }
-      .lead-grid { grid-template-columns: 1fr; }
-      .testi-item { grid-template-columns: 1fr; gap: 1.5rem; }
-      footer { flex-direction: column; gap: .5rem; text-align: center; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kevin Hawkins — VP Product Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">Kevin Hawkins<span>.</span></a>
+  <a href="#" class="nav-logo">Kevin Hawkins</a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
     <li><a href="#work">Work</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+    
+    <li><a href="#teaching">Teaching</a></li>
     <li><a href="#speaking">Speaking</a></li>
-    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
-<div class="wrap">
-
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-top">
-      <div>
-        <span class="hero-eyebrow">VP of Product Design & Research · Barcelona</span>
-        <h1 class="hero-statement">Building <em>empowered teams</em> and products people love.</h1>
-        <p class="hero-sub">18 years. 5 continents. Delivery, travel, fintech, hospitality, eMobility. I've led teams of 100+, shipped products used by millions, and built design practices from scratch at every stage of company growth.</p>
-        <a href="#work" class="hero-cta">View my work</a>
-      </div>
-      <img src="photo-street.jpeg" alt="Kevin Hawkins" class="hero-photo" />
-    </div>
-    <div class="roles reveal">
-      <div class="role-card">
-        <span class="role-num">01</span>
-        <div class="role-label">VP of UX</div>
-        <p class="role-body"><strong>I lead with empathy and ambition.</strong> Design, research, content, localization, product ops — I connect every discipline directly to business value.</p>
-      </div>
-      <div class="role-card">
-        <span class="role-num">02</span>
-        <div class="role-label">Player-Coach</div>
-        <p class="role-body"><strong>Strategy and craft are not separate.</strong> I set direction in the boardroom and still ship UI. You can't lead what you don't understand.</p>
-      </div>
-      <div class="role-card">
-        <span class="role-num">03</span>
-        <div class="role-label">AI-Native</div>
-        <p class="role-body"><strong>AI is a design material, not a feature.</strong> I build with it, research with it, and design products powered by it — from day one, not as an afterthought.</p>
-      </div>
-      <div class="role-card">
-        <span class="role-num">04</span>
-        <div class="role-label">Human-First</div>
-        <p class="role-body"><strong>I don't design for users — I design for humans.</strong> Emotional, irrational, wonderful humans. Empathy is the most important design skill, full stop.</p>
-      </div>
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-label">VP Product Experience · Barcelona</div>
+    <h1 class="hero-title">Design that <em>moves</em><br>the business.</h1>
+    <p class="hero-summary">Kevin Hawkins leads product experience at the intersection of behavioral science, data, and design. For 20+ years, he and his teams have built products that drive measurable growth — from Glovo's social commerce to Monta's AI-powered EV infrastructure.</p>
+    <div class="hero-ctas">
+      <a href="#work" class="btn-primary">View Case Studies</a>
+      <a href="#speaking" class="btn-outline">Speaking &amp; Teaching</a>
     </div>
   </div>
-
-  <!-- LOGO BAR -->
-  <div class="logo-bar">
-    <span class="logo-label">Previously with</span>
-    <img src="logos.png" alt="Glovo, Booking.com, Hilton, PwC, EY, Uber, Capital One, Gates Foundation, Federal Reserve, Georgetown, Brookings, GWU" />
+  <div class="hero-right">
+    <div class="hero-photo-frame">
+      <img src="assets/img/img_01.jpg" alt="Kevin Hawkins">
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-number">105</div><div class="stat-label">Largest team led</div></div>
+      <div class="stat"><div class="stat-number">20+</div><div class="stat-label">Years experience</div></div>
+      <div class="stat"><div class="stat-number">70+</div><div class="stat-label">Countries traveled</div></div>
+      <div class="stat"><div class="stat-number">19</div><div class="stat-label">Languages localized</div></div>
+    </div>
   </div>
+</section>
 
-  <!-- ABOUT -->
-  <section class="section" id="about">
-    <span class="stag">About</span>
-    <div class="about-grid">
-      <div>
-        <p class="btext reveal">I'm Kevin — a <strong>gay, Liberian-American</strong> product design executive based in Barcelona. 18 years building products and the teams behind them across the USA, Europe, and Asia. Currently VP of Product Experience at <strong>Monta</strong>, where I joined as their first-ever UX hire and built the practice from scratch.</p>
-        <p class="btext reveal">Before Monta: Global UX Director at <strong>Glovo</strong> (100+ person org, 25+ countries), Director of Design at <strong>Amenitiz</strong>, UX Team Lead at <strong>Booking.com</strong>, and founding designer at <strong>BookClub</strong>. Earlier I led UX for <strong>Gap Inc.</strong> across all five sub-brands and customer loyalty, was the founding designer at <strong>Hello Alice</strong> (first virtual accelerator for women entrepreneurs, 13,000+ founders), and consulted for Capital One, PwC New Ventures, EY, Chase, and 50+ others through my own studio, KHD.</p>
-        <p class="btext reveal">I'm also a <strong>curriculum lead and instructor</strong> who taught 5,000+ students at GrowthTribe and a guest lecturer at Georgetown University. I've given <strong>52 public talks</strong> at conferences worldwide. I founded <strong>The Common Thread Club</strong>, a foodie community of 1,000+ in Barcelona. I sit on the board of We Create Space, serve as UXDX Barcelona Ambassador, and co-organize Hatch Conference Leadership Ateliers. I've visited 52 countries.</p>
-        <div class="stats-row reveal">
-          <div><div class="stat-n">18+</div><div class="stat-l">Years of practice</div></div>
-          <div><div class="stat-n">105</div><div class="stat-l">Largest team led</div></div>
-          <div><div class="stat-n">52</div><div class="stat-l">Public talks given</div></div>
-          <div><div class="stat-n">20M</div><div class="stat-l">Monthly transactions</div></div>
-        </div>
-      </div>
-      <img src="photo-speaking.jpeg" alt="Kevin Hawkins on stage" class="about-photo reveal" />
+<div class="philosophy">
+  <div class="philosophy-inner">
+    <p class="philosophy-quote">"Great product experience isn't decoration — it's a growth lever. Every design decision our teams make connects directly to acquisition, retention, and lifetime value. We measure it, we own it."</p>
+    <div class="philosophy-attr">Kevin Hawkins — VP Product Experience</div>
+    <div class="pillars">
+      <div class="pillar"><div class="pillar-num">01</div><div class="pillar-title">Data Before Opinion</div><p class="pillar-desc">We anchor every design decision in behavioral data, A/B testing, and qualitative insight. PostHog, Mixpanel, and our own experimentation frameworks give us the signal to move with conviction.</p></div>
+      <div class="pillar"><div class="pillar-num">02</div><div class="pillar-title">Empower, Don't Micromanage</div><p class="pillar-desc">The best work comes from teams with ownership and clarity. We set the vision, define the framework, and get out of the way — trusting talented designers and researchers to lead by example themselves.</p></div>
+      <div class="pillar"><div class="pillar-num">03</div><div class="pillar-title">Experience Is Revenue</div><p class="pillar-desc">UX strategy maps directly to business outcomes. From loyalty program redesigns that lift MAU 20% to onboarding flows that reduce churn — our team speaks fluently in both design and P&amp;L.</p></div>
     </div>
-  </section>
-
-  <!-- WORK -->
-  <section class="section" id="work">
-    <span class="stag">Work</span>
-    <div class="work-header">
-      <h2 class="shead reveal">Selected work<br><em>&amp; highlights.</em></h2>
-      <p class="btext reveal">eMobility, delivery, travel, hospitality, fintech, media, and retail. Most work is under NDA. Here's what I can share.</p>
-    </div>
-    <div class="work-index reveal">
-      <a href="case-monta.html" class="wi-item">
-        <div class="wi-num">01</div>
-        <div>
-          <div class="wi-cat">VP of UX · 0→1 · eMobility · AI</div>
-          <div class="wi-title">Monta — Building UX from zero</div>
-          <div class="wi-desc">First UX hire. 20+ person team. Monta Hub, Mobile 2.0, Monta AI, NOC agent, Customer Council, PLG onboarding. +20% MoM MAU.</div>
-        </div>
-        <div class="wi-meta">2024–Present<br><span class="wi-arrow">↗</span></div>
-      </a>
-      <a href="case-glovo.html" class="wi-item">
-        <div class="wi-num">02</div>
-        <div>
-          <div class="wi-cat">Global UX Director · 100+ Org · Delivery</div>
-          <div class="wi-title">Glovo — QXScore 12 → 81.5</div>
-          <div class="wi-desc">Homepage redesign, GlovoPrime loyalty, brand ad product, research centralization. 5× ad ROAS. 18% fewer support contacts. €500k saved.</div>
-        </div>
-        <div class="wi-meta">2022–2023<br><span class="wi-arrow">↗</span></div>
-      </a>
-      <a href="case-amenitiz.html" class="wi-item">
-        <div class="wi-num">03</div>
-        <div>
-          <div class="wi-cat">Director of Design · Hospitality SaaS · Spain</div>
-          <div class="wi-title">Amenitiz — Hospitality management, simplified</div>
-          <div class="wi-desc">Homepage redesign, reservations calendar (+30% sat., 50% faster), PriceAdvisor AI (4hrs/wk saved). 60+ countries, 15k properties.</div>
-        </div>
-        <div class="wi-meta">2023–2024<br><span class="wi-arrow">↗</span></div>
-      </a>
-      <a href="case-booking.html" class="wi-item">
-        <div class="wi-num">04</div>
-        <div>
-          <div class="wi-cat">Sr Design Manager · Travel · Cross-brand</div>
-          <div class="wi-title">Booking.com — Connected Stay &amp; local discovery</div>
-          <div class="wi-desc">AI trip planner spanning Booking, Kayak, Priceline &amp; Agoda. Group travel, local events. 2 Hackathon wins shipped to production.</div>
-        </div>
-        <div class="wi-meta">2019–2021<br><span class="wi-arrow">↗</span></div>
-      </a>
-      <a href="case-capital-one.html" class="wi-item">
-        <div class="wi-num">05</div>
-        <div>
-          <div class="wi-cat">Design Strategist · Fintech · USA</div>
-          <div class="wi-title">Capital One — Project Elements &amp; SMB banking</div>
-          <div class="wi-desc">20+ empathy interviews. Ecosystem concept model. Project Elements credit card — physical SF installation. Café digital touchpoints.</div>
-        </div>
-        <div class="wi-meta">2016–2018<br><span class="wi-arrow">↗</span></div>
-      </a>
-    </div>
-    <div class="feat-cards">
-      <a href="case-glovo.html" class="feat-card lft reveal">
-        <div class="ftxt">
-          <div class="ftag">Featured · Glovo · 2022–2023 · 100-person org</div>
-          <h3 class="ftitle">From QXScore 12 to 81.5 — redesigning Glovo's consumer experience at scale</h3>
-          <p class="fdesc">As Global UX Director I led the complete redesign of Glovo's consumer app, the GlovoPrime loyalty program, and the brand advertising product — managing 100+ people across 25 countries. QXScore jumped from 12 to 81.5. 5× return on ad spend. 18% fewer delivery contacts.</p>
-          <span class="flink">Read the case study</span>
-        </div>
-        <div class="fmedia">
-          <img src="photo-team.jpeg" alt="Kevin Hawkins with the Glovo UX team" />
-        </div>
-      </a>
-      <a href="case-amenitiz.html" class="feat-card rgt reveal">
-        <div class="fmedia">
-          <img src="photo-stage.jpeg" alt="Kevin Hawkins presenting" />
-        </div>
-        <div class="ftxt">
-          <div class="ftag">Featured · Amenitiz · 2023–2024 · Hospitality SaaS</div>
-          <h3 class="ftitle">Redesigning hospitality management for 15,000 properties across 60+ countries</h3>
-          <p class="fdesc">Rebuilt the UX practice from scratch. Shipped a redesigned homepage (20% first-click improvement), new reservations calendar (30% satisfaction, 50% faster), and PriceAdvisor AI that saved hotel managers 4 hours per week.</p>
-          <span class="flink">Read the case study</span>
-        </div>
-      </a>
-    </div>
-  </section>
-
-  <!-- CV — lean, last 10 years only -->
-  <section class="section" id="experience">
-    <span class="stag">Experience</span>
-    <h2 class="shead reveal" style="margin-bottom:3rem;">Career <em>timeline.</em></h2>
-    <div class="cv-grid reveal">
-      <div>
-        <span class="cv-col-head">Last 5 years</span>
-        <div class="cv-row"><div><div class="cv-co">Monta</div><div class="cv-role">VP, Product Experience</div></div><div class="cv-year">Dec 2024–Now</div></div>
-        <div class="cv-row"><div><div class="cv-co">Amenitiz</div><div class="cv-role">Director, Head of Design &amp; Research</div></div><div class="cv-year">2023–2024</div></div>
-        <div class="cv-row"><div><div class="cv-co">Glovo</div><div class="cv-role">Global UX Director</div></div><div class="cv-year">2022–2023</div></div>
-        <div class="cv-row"><div><div class="cv-co">BookClub</div><div class="cv-role">Director of Product Design</div></div><div class="cv-year">2020–2022</div></div>
-        <div class="cv-row"><div><div class="cv-co">Growth Tribe</div><div class="cv-role">Instructor &amp; UX Curriculum Lead</div></div><div class="cv-year">2020–2022</div></div>
-        <p class="cv-note">Winner, Uber Celebrating Cities Hackathon · Honorable Mention, Grindr #Hack4Equality</p>
-      </div>
-      <div>
-        <span class="cv-col-head">2015–2021</span>
-        <div class="cv-row"><div><div class="cv-co">Booking.com</div><div class="cv-role">UX Team Lead</div></div><div class="cv-year">2019–2021</div></div>
-        <div class="cv-row"><div><div class="cv-co">EY / PwC New Ventures</div><div class="cv-role">Lead UX Consultant</div></div><div class="cv-year">2018–2019</div></div>
-        <div class="cv-row"><div><div class="cv-co">Gap Inc.</div><div class="cv-role">Sr UX Consultant, Customer Loyalty Lead</div></div><div class="cv-year">2017–2018</div></div>
-        <div class="cv-row"><div><div class="cv-co">Hello Alice</div><div class="cv-role">Founding Design Leader</div></div><div class="cv-year">2017</div></div>
-        <div class="cv-row"><div><div class="cv-co">Capital One</div><div class="cv-role">Product Design Consultant</div></div><div class="cv-year">2016–2018</div></div>
-        <p class="cv-note">Earlier: KHD Studio (2008–2018) · Clients include EY, Hilton, BET, Vogue, JPMorgan, Uber, Brookings, Federal Reserve, Georgetown University, and more.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- LEADERSHIP -->
-  <section class="section" id="leadership">
-    <span class="stag">Leadership &amp; Management</span>
-    <h2 class="shead reveal">How I lead<br><em>teams and practice.</em></h2>
-    <div class="lead-grid reveal">
-      <div class="lead-card">
-        <span class="lead-num">01 — Vision</span>
-        <div class="lead-title">I build practices, not just teams</div>
-        <p class="lead-body">At Monta (0→1), Amenitiz (rebuild), and Glovo (scale to 100+) I've established the vision, playbook, rituals, and culture that make design a strategic function. I formalize UX maturity from day one and integrate design insights into quarterly business reviews.</p>
-      </div>
-      <div class="lead-card">
-        <span class="lead-num">02 — People</span>
-        <div class="lead-title">I grow designers into leaders</div>
-        <p class="lead-body">Career frameworks, bi-weekly 1:1s, guest AMAs for professional development, first-hand user exposure, and cross-department collaboration. I distribute responsibility according to strengths and celebrate small wins — togetherness is the method, not just the outcome.</p>
-      </div>
-      <div class="lead-card">
-        <span class="lead-num">03 — Research</span>
-        <div class="lead-title">I chair executive research councils</div>
-        <p class="lead-body">At Glovo I rebuilt the research org post-layoffs with 9 senior researchers, implemented RallyUXR &amp; Qualtrics for ReOps, and established UXR labs across EMEA. I recreated the prioritization process directly with COO, CPO, and Product Directors. At Amenitiz I led 3 strategic research trips with key accounts.</p>
-      </div>
-      <div class="lead-card">
-        <span class="lead-num">04 — Operations</span>
-        <div class="lead-title">I run design as a business</div>
-        <p class="lead-body">OKRs, budget, tooling, headcount modeling — design operations as craft. At Glovo I saved €500k in licensing while improving velocity. At Monta I own PostHog implementation and PLG comms. At Gap Inc. I grew BRIGHT Rewards from 0 to 2M members across five sub-brands.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SPEAKING -->
-  <section class="section" id="speaking">
-    <span class="stag">Speaking</span>
-    <div class="speak-top">
-      <div>
-        <h2 class="shead reveal">On stage &amp; in podcasts.</h2>
-        <p class="speak-desc reveal">52 talks at conferences, universities, and podcasts worldwide — on product design, AI in UX, research at scale, and design leadership. Also a curriculum lead who taught 5,000+ students at GrowthTribe and a guest lecturer at Georgetown University's McCourt School of Public Policy.</p>
-        <div class="plist reveal">
-          <a href="https://www.youtube.com/playlist?list=PL6qjgSwuMGbgPp9fkZFgFkM99clQXBpXT" target="_blank" class="plink">Watch on YouTube</a>
-          <a href="https://open.spotify.com/playlist/1odZ1OutWIVnoy7HAcJHBw" target="_blank" class="plink">Listen on Spotify</a>
-        </div>
-      </div>
-      <img src="photo-stage.jpeg" alt="Kevin speaking on stage" class="speak-photo reveal" />
-    </div>
-    <div class="talks-list reveal">
-      <a href="https://uxdx.com/session/how-to-build-a-product-for-everyone/" target="_blank" rel="noopener" class="talk-row"><div class="talk-n">01</div><div><div class="talk-venue">UXDX EMEA 2022</div><div class="talk-title">How to Build a Product for Everyone</div></div><div class="talk-yr">2022</div></a>
-      <a href="https://uxdx.com/profile/kevin-hawkins/" target="_blank" rel="noopener" class="talk-row"><div class="talk-n">02</div><div><div class="talk-venue">UXDX — Research at Scale</div><div class="talk-title">Doing More with Less: Post-Downsizing UX Research</div></div><div class="talk-yr">2023</div></a>
-      <a href="https://2025.uxlondon.com/speakers/kevin-hawkins/" target="_blank" rel="noopener" class="talk-row"><div class="talk-n">03</div><div><div class="talk-venue">UX London 2025</div><div class="talk-title">Convincing Stakeholders to Ship Great UX</div></div><div class="talk-yr">2025</div></a>
-      <a href="https://smashingconf.com/meets-product-design/speakers/kevin-hawkins" target="_blank" rel="noopener" class="talk-row"><div class="talk-n">04</div><div><div class="talk-venue">Smashing Conference 2024</div><div class="talk-title">Democratizing User Research &amp; AI in UX</div></div><div class="talk-yr">2024</div></a>
-      <a href="https://revisionpath.com/kevin-hawkins/" target="_blank" rel="noopener" class="talk-row"><div class="talk-n">05</div><div><div class="talk-venue">Revision Path Podcast</div><div class="talk-title">Design at a Global Scale — A Career Story</div></div><div class="talk-yr">2023</div></a>
-      <a href="https://site.pheedloop.com/event/dtvan24/home" target="_blank" rel="noopener" class="talk-row"><div class="talk-n">06</div><div><div class="talk-venue">Design Thinkers Vancouver 2024</div><div class="talk-title">RGD — Association of Registered Graphic Designers</div></div><div class="talk-yr">2024</div></a>
-      <a href="https://www.youtube.com/playlist?list=PL6qjgSwuMGbgPp9fkZFgFkM99clQXBpXT" target="_blank" rel="noopener" class="talk-row"><div class="talk-n">↗</div><div><div class="talk-venue">Full Playlist</div><div class="talk-title">View all 52 talks on YouTube</div></div><div class="talk-yr"></div></a>
-    </div>
-  </section>
-
-  <!-- TESTIMONIALS -->
-  <section class="section" id="testimonials">
-    <div class="testi-header">
-      <div><span class="stag">What people say</span><h2 class="shead reveal">In the words<br><em>of others.</em></h2></div>
-      <p class="testi-subtext reveal">I've been fortunate to build careers alongside brilliant people at every level. Here's how some of them have described working with me.</p>
-    </div>
-    <div class="testi-list">
-      <div class="testi-item reveal"><p class="testi-quote">"Kevin is an inspiring UX leader with an exceptional ability to craft and execute impactful visions. His leadership style not only drives innovation but also creates a supportive and caring environment for his team. As one of his direct reports, I deeply appreciated his mentorship, encouragement, and genuine investment in my growth."</p><div><div class="testi-name">Direct Report</div><div class="testi-role">UX Designer, Amenitiz &amp; Glovo</div></div></div>
-      <div class="testi-item reveal"><p class="testi-quote">"Something that sets you apart from most leaders is your ability to not only create and articulate a vision for the future, grounded in insights, but to communicate a plan to operationalize your vision through the empowerment of others."</p><div><div class="testi-name">Chris Avore</div><div class="testi-role">Principal, Design Transformation · InVision</div></div></div>
-      <div class="testi-item reveal"><p class="testi-quote">"Kevin gave me the agency and trust to do my best work. He went out of his way to teach the team how to think about incorporating AI technologies into design and research work, and helped us be more assertive across all our work."</p><div><div class="testi-name">Karan Shastri</div><div class="testi-role">Staff UX Researcher · Vendr</div></div></div>
-      <div class="testi-item reveal"><p class="testi-quote">"Kevin is resilient, adaptive, and supportive. His leadership style was so important for maintaining alignment in our fast-paced startup environment, and it will do the same for any future team lucky enough to have his leadership."</p><div><div class="testi-name">Duncan Malashok</div><div class="testi-role">Engineering Manager · Vendr</div></div></div>
-      <div class="testi-item reveal"><p class="testi-quote">"Kevin continues to surprise me with his myriad of talents in technology and design. He seems to know everyone, and above all he's a person you can trust to give honest, thoughtful feedback on your work and goals."</p><div><div class="testi-name">Colleague since 2015</div><div class="testi-role">WeWork · Washington D.C.</div></div></div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section class="section" id="contact">
-    <span class="stag">Contact</span>
-    <div class="contact-grid">
-      <div>
-        <h2 class="shead reveal">Let's build<br><em>something great.</em></h2>
-        <p class="btext reveal" style="margin-top:1.25rem;">Open to VP and C-suite design leadership opportunities, advisory roles, speaking engagements, and creative collaborations. Based in Barcelona — open to relocate.</p>
-        <a href="mailto:hello@kevinhawkinsdesign.com" class="contact-email reveal">hello@kevinhawkinsdesign.com</a>
-        <div class="socials reveal">
-          <a href="https://www.linkedin.com/in/kevinhawkinsdesign" target="_blank" class="soc">LinkedIn</a>
-          <a href="https://dribbble.com/KevinHawkins" target="_blank" class="soc">Dribbble</a>
-          <a href="https://www.instagram.com/kevinhawkinsdesign/" target="_blank" class="soc">Instagram</a>
-          <a href="https://adplist.org/mentors/kevin-hawkins" target="_blank" class="soc">ADPList</a>
-          <a href="https://www.youtube.com/playlist?list=PL6qjgSwuMGbgPp9fkZFgFkM99clQXBpXT" target="_blank" class="soc">YouTube</a>
-          <a href="https://kevinhawkinsdesign.com/resume.pdf" target="_blank" class="soc">Resume PDF</a>
-        </div>
-      </div>
-      <img src="photo-hero.jpeg" alt="Kevin Hawkins" class="contact-photo reveal" />
-    </div>
-  </section>
-
+  </div>
 </div>
 
+<section class="case-studies" id="work">
+  <div class="section-label">Selected Work</div>
+  <h2 class="section-title">Case <em>Studies</em></h2>
+  <div class="case-intro">
+    <p>Each engagement below reflects the work of skilled, cross-functional teams. My role is to set strategic direction, clear the path, and elevate performance — with a consistent eye on what the numbers tell us.</p>
+  </div>
+
+  <!-- MONTA -->
+  <div class="case-card fade-in">
+    <div class="case-card-inner">
+      <div class="case-visual">
+        <div class="case-badge">Current Role · 2024–Present</div>
+        <div class="case-visual-gallery three">
+          <img class="img-main" src="assets/img/img_02.jpg" alt="UX Metrics Dashboard" style="grid-column:1/-1;height:240px;object-fit:cover;">
+          <div style="position:relative;overflow:hidden;">
+            <img src="assets/img/img_03.jpg" alt="Monta EV Charging" style="height:240px;width:100%;object-fit:cover;">
+            <div class="img-caption">Monta Platform Work</div>
+          </div>
+          <div style="position:relative;overflow:hidden;">
+            <img src="assets/img/img_04.jpg" alt="Product Design" style="height:240px;width:100%;object-fit:cover;">
+          </div>
+        </div>
+      </div>
+      <div class="case-content">
+        <div class="case-company">Monta · 2024–Present</div>
+        <h3 class="case-title">Building the <em>intelligence layer</em> for EV charging infrastructure</h3>
+        <div class="case-role">VP, Product Experience · Design, Research &amp; Content · 20+ Person Team</div>
+        <p class="case-body">As Monta's first dedicated UX leader, we came in to do more than ship features — we formalized a design culture from the ground up. The team established vision, playbook, and measurable UX maturity across Monta's flagship products: the Monta Charge driver app, the operator Hub, and Monta's emerging AI capabilities.<br><br>
+        We drove 20% month-over-month MAU growth through structured experimentation — owning PostHog implementation, A/B test pipelines, and PLG communication strategies for accounts without dedicated CSMs. On the AI front, the team shaped UX for the NOC Agent: Monta's first AI-powered diagnostic tool that cross-references 10+ data sources to resolve charging failures in seconds rather than hours. One US operator improved their DC charger success rate from 31.2% to 98.3% in just 25 seconds of analysis.</p>
+        <div class="metrics-grid">
+          <div class="metric-box"><div class="metric-value">+20%</div><div class="metric-label">MoM MAU Growth via Experimentation</div></div>
+          <div class="metric-box"><div class="metric-value">75%</div><div class="metric-label">Support Tickets Resolved by AI Before Human</div></div>
+          <div class="metric-box"><div class="metric-value">25s</div><div class="metric-label">NOC Agent Fault Diagnosis vs. Hours Prior</div></div>
+          <div class="metric-box"><div class="metric-value">220k+</div><div class="metric-label">Connected Charge Points on Platform</div></div>
+        </div>
+        <a href="https://changelog.monta.com" class="case-link" target="_blank">View Monta Changelog <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLOVO -->
+  <div class="case-card fade-in">
+    <div class="case-card-inner reverse">
+      <div class="case-visual">
+        <div class="case-badge">TechCrunch Coverage · 2022–2023</div>
+        <div class="case-visual-gallery" style="display:grid;grid-template-rows:auto auto;min-height:480px;">
+          <div style="position:relative;overflow:hidden;height:300px;">
+            <img src="assets/img/img_05.jpg" alt="Glovo Social Commerce UI — Your Picks, Friends Top Choice" style="width:100%;height:100%;object-fit:cover;">
+            <div class="img-caption">Social Commerce UI — Your Picks &amp; Friends' Top Choice</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;height:185px;">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/img/img_06.jpg" alt="Glovo Satisfaction Metrics: +21% Catalogue, +16% Overall" style="width:100%;height:100%;object-fit:cover;">
+              <div class="img-caption">B2B Partner Satisfaction Lift</div>
+            </div>
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/img/img_07.jpg" alt="Glovo Font Rebrand — 19 Languages" style="width:100%;height:100%;object-fit:cover;">
+              <div class="img-caption">19-Language Font Rebranding</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="case-content">
+        <div class="case-company">Glovo · 2022–2023</div>
+        <h3 class="case-title">Scaling a <em>100-person</em> design org to fuel European market dominance</h3>
+        <div class="case-role">Global UX Director · Design, Research, Motion, Content &amp; Localization</div>
+        <p class="case-body">At Glovo, we inherited a fast-scaling organization and raised its bar. Leading 100+ designers, researchers, motion designers, UX writers, and localization specialists across 23 countries, we connected design output directly to GMV growth — achieving +44% from FY2022 to FY2024.<br><br>
+        We co-led two company-wide hackathons with the CPO and CEO to rapidly prototype social commerce features, shared payment, and loyalty iterations. The social stickiness features — friend-based restaurant discovery, "Picks" lists, and a TikTok-style food video feed — were covered by TechCrunch at Glovo's first annual product event. We also delivered a full font rebranding across 19 languages, saving €500k+ in annual licensing costs while managing a 24-hour in-house localization operation at scale.</p>
+        <div class="metrics-grid">
+          <div class="metric-box"><div class="metric-value">+44%</div><div class="metric-label">GMV Growth FY2022–FY2024</div></div>
+          <div class="metric-box"><div class="metric-value">+20%</div><div class="metric-label">Retention via CRM Personalization</div></div>
+          <div class="metric-box"><div class="metric-value">+15%</div><div class="metric-label">New Customer Acquisition Boost</div></div>
+          <div class="metric-box"><div class="metric-value">€500k+</div><div class="metric-label">Annual Font &amp; Tooling Savings</div></div>
+        </div>
+        <a href="https://techcrunch.com/2024/10/16/glovo-adds-a-side-of-social-stickiness-to-its-food-delivery-app/" class="case-link" target="_blank">Read TechCrunch Coverage <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- GLOVO EXTRA VISUALS STRIP -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-bottom:4px;">
+    <div style="position:relative;overflow:hidden;height:200px;">
+      <img src="assets/img/img_08.jpg" alt="Glovo Design Team — 100+ people" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+      <div class="img-caption" style="position:absolute;">100+ Person Design Team</div>
+    </div>
+    <div style="position:relative;overflow:hidden;height:200px;">
+      <img src="assets/img/img_09.jpg" alt="Kevin presenting Glovo global expansion at conference" style="width:100%;height:100%;object-fit:cover;">
+      <div class="img-caption" style="position:absolute;">Presenting Glovo Global Expansion Strategy</div>
+    </div>
+    <div style="position:relative;overflow:hidden;height:200px;">
+      <img src="assets/img/img_10.jpg" alt="Glovo x Disney Pixar brand integration — Inside Out" style="width:100%;height:100%;object-fit:cover;">
+      <div class="img-caption" style="position:absolute;">Glovo × Disney·Pixar Brand Integration</div>
+    </div>
+    <div style="position:relative;overflow:hidden;height:200px;">
+      <img src="assets/img/img_11.jpg" alt="Glovo B2B Promotions Tool" style="width:100%;height:100%;object-fit:cover;">
+      <div class="img-caption" style="position:absolute;">B2B Restaurant Promotions Platform</div>
+    </div>
+  </div>
+
+  <!-- AMENITIZ -->
+  <div class="case-card fade-in">
+    <div class="case-card-inner">
+      <div class="case-visual">
+        <div class="case-badge">Hospitality SaaS · 2023–2024</div>
+        <div style="display:grid;grid-template-rows:1fr 1fr;min-height:480px;">
+          <div style="position:relative;overflow:hidden;">
+            <img src="assets/img/img_12.jpg" alt="Amenitiz product work" style="width:100%;height:100%;object-fit:cover;">
+            <div class="img-caption">Property Management Redesign</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/img/img_13.jpg" alt="Amenitiz calendar UI" style="width:100%;height:100%;object-fit:cover;">
+            </div>
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/img/img_14.jpg" alt="Amenitiz onboarding" style="width:100%;height:100%;object-fit:cover;">
+              <div class="img-caption">Self-Service Onboarding</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="case-content">
+        <div class="case-company">Amenitiz · 2023–2024</div>
+        <h3 class="case-title">From 0 to team in 45 days — and a <em>20% LTV lift</em> in under a year</h3>
+        <div class="case-role">Director, Head of Design &amp; Research · 6-Person Team · 60+ Countries</div>
+        <p class="case-body">Coming in as Amenitiz's first design leader, we moved fast without sacrificing quality. Within 45 days we recruited a full team of 6 designers and ran a cross-functional innovation workshop with Product and Engineering to reset working norms and design ambitions across the org.<br><br>
+        We led a full redesign of core hospitality management UIs — the calendar, self-service onboarding, and inventory management — scaling the product across 60 countries and 15,000+ properties while increasing LTV and retention by 20% without degrading NPS. We launched the Brazilian market with full localization, a personalized product experience, and a streamlined PLG self-service signup tailored to lower-LTV market dynamics. Three strategic research trips with key accounts informed every decision.</p>
+        <div class="metrics-grid">
+          <div class="metric-box"><div class="metric-value">+20%</div><div class="metric-label">LTV &amp; Retention Increase</div></div>
+          <div class="metric-box"><div class="metric-value">45 days</div><div class="metric-label">Full Team Recruited &amp; Operational</div></div>
+          <div class="metric-box"><div class="metric-value">60+</div><div class="metric-label">Countries Product Scaled To</div></div>
+          <div class="metric-box"><div class="metric-value">15k+</div><div class="metric-label">Properties Using Redesigned UI</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOKING.COM -->
+  <div class="case-card fade-in">
+    <div class="case-card-inner reverse">
+      <div class="case-visual">
+        <div class="case-badge">Cross-Brand Innovation · 2019–2021</div>
+        <div style="display:grid;grid-template-rows:1fr 1fr;min-height:480px;">
+          <div style="position:relative;overflow:hidden;height:240px;">
+            <img src="assets/img/img_15.jpg" alt="Booking.com Group Trip Planner — hackathon feature shipped" style="width:100%;height:100%;object-fit:cover;">
+            <div class="img-caption">Group Trip Planner — Hackathon Feature Shipped to Production</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;height:240px;">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/img/img_16.jpg" alt="Booking.com local events hotel search" style="width:100%;height:100%;object-fit:cover;">
+              <div class="img-caption">Local Events Hotel Search</div>
+            </div>
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/img/img_17.jpg" alt="Booking.com Connected Stay" style="width:100%;height:100%;object-fit:cover;">
+              <div class="img-caption">Connected Stay — Amsterdam &amp; Events</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="case-content">
+        <div class="case-company">Booking.com · 2019–2021</div>
+        <h3 class="case-title">Cross-brand innovation across Booking, Kayak, Priceline &amp; <em>Agoda</em></h3>
+        <div class="case-role">UX Team Lead · Connected Stay &amp; Cross-Brand Initiatives · Amsterdam</div>
+        <p class="case-body">At Booking Holdings, we had the unique mandate of designing across ecosystems. Leading teams in the Accommodations business unit, we explored Connected Stay and built cross-brand product experiences that bridged Booking.com with sister companies Kayak, Priceline, and Agoda — unifying disparate surfaces into coherent traveller journeys.<br><br>
+        Our team won two internal hackathons and successfully converted ideas into shipped product features: a group travel planner enabling collaborative trip-building, and a local events–based hotel search that surfaced contextually relevant accommodation around concerts, sports events, and cultural moments. Both features demonstrated that when designers are given autonomy and cross-functional buy-in, they deliver outcomes that move the needle.</p>
+        <div class="metrics-grid">
+          <div class="metric-box"><div class="metric-value">2×</div><div class="metric-label">Internal Hackathon Wins</div></div>
+          <div class="metric-box"><div class="metric-value">4</div><div class="metric-label">Brands: Booking, Kayak, Priceline, Agoda</div></div>
+          <div class="metric-box"><div class="metric-value">2</div><div class="metric-label">Hackathon Concepts Shipped to Production</div></div>
+          <div class="metric-box"><div class="metric-value">~1bn</div><div class="metric-label">Annual Bookers on Platform</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOKCLUB -->
+  <div class="case-card fade-in">
+    <div class="case-card-inner">
+      <div class="case-visual">
+        <div class="case-badge">Founding Designer · 2020–2022</div>
+        <div style="display:grid;grid-template-rows:1fr 1fr;min-height:480px;">
+          <div style="position:relative;overflow:hidden;height:240px;">
+            <img src="assets/img/img_18.jpg" alt="BookClub team with Hasan Minhaj on set" style="width:100%;height:100%;object-fit:cover;object-position:top;">
+            <div class="img-caption">BookClub Production — Team with Authors &amp; Celebrity Hosts</div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;height:240px;">
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/img/img_19.jpg" alt="BookClub — Gary Vaynerchuk" style="width:100%;height:100%;object-fit:cover;">
+              <div class="img-caption">Gary Vaynerchuk — Twelve and a Half</div>
+            </div>
+            <div style="position:relative;overflow:hidden;">
+              <img src="assets/img/img_20.jpg" alt="BookClub product UI" style="width:100%;height:100%;object-fit:cover;">
+              <div class="img-caption">BookClub Product — Inspired by Books</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="case-content">
+        <div class="case-company">BookClub · 2020–2022</div>
+        <h3 class="case-title">Founding designer for a <em>platform</em> connecting authors directly with readers</h3>
+        <div class="case-role">Director of Product Design · Founding Designer · Remote</div>
+        <p class="case-body">BookClub brings authors and readers together through online book clubs — led by authors themselves, alongside celebrity hosts. Coming in as the founding designer, I built the entire product design and user research function from zero: establishing design principles, the visual system, research cadence, and the cross-functional rituals that kept a small team shipping with quality.<br><br>
+        The platform's experience needed to feel intimate yet scalable — capable of hosting Gary Vaynerchuk or Hasan Minhaj while still feeling personal to the reader at home. We designed for discovery, community, and conversation: a streaming-meets-reading-club product that required deep thinking about information architecture, video UX, and social dynamics. The work touched everything from mobile app flows to the web experience and author-facing tools.</p>
+        <div class="metrics-grid">
+          <div class="metric-box"><div class="metric-value">0→1</div><div class="metric-label">Full Design Function Built from Scratch</div></div>
+          <div class="metric-box"><div class="metric-value">Celebrity</div><div class="metric-label">Hosts Including GaryVee &amp; Hasan Minhaj</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- LEADERSHIP & OPS -->
+<section class="leadership" id="leadership">
+  <div class="section-label">Leadership Philosophy</div>
+  <h2 class="section-title">Building teams that <em>own</em> the outcome</h2>
+  <div class="leadership-grid">
+    <div class="leadership-text">
+      <p>Leadership means setting a high bar and trusting the team to clear it — often exceeding it. The best design decisions don't come from the top of an org chart; they come from researchers, designers, and writers who are close to the user and empowered to act.</p>
+      <p>We build that environment through clear career frameworks, structured feedback culture, and shared ownership of metrics. When every team member understands how their work connects to retention, MAU, or revenue, the quality of decisions across the entire organization improves.</p>
+      <p>I lead by example: getting into the work when it matters, facilitating workshops with senior leaders, and modeling the craft standards we expect. But the goal is always to develop the next generation of design leaders — not to be the indispensable one in the room.</p>
+      <div class="leadership-numbers">
+        <div class="l-num"><div class="big">105</div><div class="label">Peak Team Size Led</div></div>
+        <div class="l-num"><div class="big">5k+</div><div class="label">Students Taught &amp; Mentored</div></div>
+        <div class="l-num"><div class="big">3</div><div class="label">UX Teams Built from Scratch</div></div>
+        <div class="l-num"><div class="big">120</div><div class="label">UX Leaders via Hatch Yearly</div></div>
+      </div>
+    </div>
+    <div class="ops-list">
+      <div class="ops-title">Operational Infrastructure We Build</div>
+      <div class="ops-item">
+        <div class="ops-icon">CF</div>
+        <div class="ops-item-content"><h4>Career Frameworks &amp; Level Definitions</h4><p>Transparent progression paths for designers, researchers, and content strategists — from IC to senior leadership, with clear behavioral anchors at every level.</p></div>
+      </div>
+      <div class="ops-item">
+        <div class="ops-icon">WW</div>
+        <div class="ops-item-content"><h4>Ways of Working &amp; Design Rituals</h4><p>Critique culture, design reviews, research repositories, and cross-functional collaboration norms that scale without creating bottlenecks.</p></div>
+      </div>
+      <div class="ops-item">
+        <div class="ops-icon">EX</div>
+        <div class="ops-item-content"><h4>Experimentation &amp; Data Infrastructure</h4><p>Owning A/B testing pipelines, PostHog instrumentation, and embedding UX metrics directly into quarterly business reviews.</p></div>
+      </div>
+      <div class="ops-item">
+        <div class="ops-icon">L&amp;D</div>
+        <div class="ops-item-content"><h4>Learning Programs &amp; Engagement Initiatives</h4><p>Internal academies, mentorship programs, and skill-gap curricula that retain and grow exceptional talent — because great people leave when they stop growing.</p></div>
+      </div>
+      <div class="ops-item">
+        <div class="ops-icon">TL</div>
+        <div class="ops-item-content"><h4>Tooling &amp; Design Systems</h4><p>Rationalizing the design toolchain, establishing design systems, and — at Glovo — orchestrating €500k+ in annual tooling and font cost reduction.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leadership photo strip -->
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:48px;">
+    <div style="overflow:hidden;height:240px;"><img src="assets/img/img_21.jpg" alt="Kevin leading Hatch Leadership Atelier workshop" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"></div>
+    <div style="overflow:hidden;height:240px;"><img src="assets/img/img_22.jpg" alt="Hatch workshop session" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"></div>
+    <div style="overflow:hidden;height:240px;"><img src="assets/img/img_23.jpg" alt="Hatch atelier" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"></div>
+    <div style="overflow:hidden;height:240px;"><img src="assets/img/img_24.jpg" alt="Leadership workshop" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'"></div>
+  </div>
+</section>
+
+
+
+<!-- TEACHING -->
+<section class="teaching" id="teaching">
+  <div class="section-label">Education &amp; Mentorship</div>
+  <h2 class="section-title">Teaching the next <em>generation</em></h2>
+  <p style="font-size:18px;font-weight:300;color:var(--sand);max-width:640px;line-height:1.75;margin-top:16px;">Rooted in behavioral psychology and over two decades of design practice, the curriculum we've built spans university lecture halls, global online platforms, and intimate leadership workshops.</p>
+  <div class="teaching-grid">
+    <div class="teach-card"><div class="teach-card-icon">🎓</div><h3>Growth Tribe</h3><p>Created and taught three full courses — Product Design, Design Thinking, and Innovation + PLG. 250+ live students and 5,000+ on-demand learners reached across two years of weekly instruction.</p></div>
+    <div class="teach-card"><div class="teach-card-icon">🏛️</div><h3>Georgetown University</h3><p>Guest lecturer at McCourt School of Public Policy covering Data Visualization, Data Science, and UX for the Master of Public Policy program — bridging design thinking and public sector decision-making.</p></div>
+    <div class="teach-card"><div class="teach-card-icon">🎤</div><h3>Hatch Conference</h3><p>Co-organizer of Leadership Ateliers — an annual series of curated education events for 120 UX and Product leaders. Consulting top European design teams on skills gaps and org maturity models.</p></div>
+    <div class="teach-card"><div class="teach-card-icon">🧠</div><h3>Coaching &amp; Mentorship</h3><p>Actively coaching and mentoring designers, researchers, and aspiring design leaders — from career transitions to executive presence, salary negotiation, and navigating complex organizational dynamics.</p></div>
+    <div class="teach-card"><div class="teach-card-icon">🔬</div><h3>Behavioral Psychology Foundation</h3><p>A background in behavioral psychology informs both curriculum and practice — from cognitive load frameworks in design critique to nudge theory in onboarding strategy and retention design.</p></div>
+    <div class="teach-card"><div class="teach-card-icon">📊</div><h3>UX Metrics in Practice</h3><p>Teaching practitioners how to connect UX metrics — CSAT, Task Completion Rate, NPS, Time-to-Resolution, and funnel cohort analysis — to business KPIs in a way that earns executive credibility.</p></div>
+  </div>
+
+  <!-- Metrics slide -->
+  <div style="margin-top:48px;border:1px solid rgba(200,184,154,.15);overflow:hidden;">
+    <img src="assets/img/img_02.jpg" alt="7 UX Metrics Kevin Actually Uses" style="width:100%;max-height:400px;object-fit:cover;object-position:top;display:block;">
+    <div style="padding:20px 28px;background:rgba(255,255,255,.04);border-top:1px solid rgba(200,184,154,.15);">
+      <p style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);">Framework · UX Metrics We Actually Use</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKING -->
+<section class="speaking" id="speaking">
+  <div class="section-label">Public Speaking</div>
+  <h2 class="section-title">On stage, <em>across continents</em></h2>
+  <p style="font-size:18px;font-weight:300;color:rgba(245,240,232,.6);max-width:600px;line-height:1.75;margin-top:16px;">From product conferences in Copenhagen and Dublin to university halls in Barcelona and Valencia — sharing what we've learned about design leadership, UX strategy, and building teams that deliver.</p>
+  <div class="speaking-grid">
+    <div class="speaking-events">
+      <div class="speaking-event"><div class="speaking-event-year">2025</div><div class="speaking-event-details"><h4>Universitat de Barcelona — UniTalk</h4><p>Valencia · Product design careers, strategic UX &amp; behavioral design</p></div></div>
+      <div class="speaking-event"><div class="speaking-event-year">2023</div><div class="speaking-event-details"><h4>UXDX Conference</h4><p>Dublin · Design leadership and organizational UX maturity</p></div></div>
+      <div class="speaking-event"><div class="speaking-event-year">2023</div><div class="speaking-event-details"><h4>Hatch Conference</h4><p>Leadership Ateliers for senior UX &amp; Product leaders</p></div></div>
+      <div class="speaking-event"><div class="speaking-event-year">2022</div><div class="speaking-event-details"><h4>CPH:UX — Copenhagen UX</h4><p>Scaling design orgs in hypergrowth environments</p></div></div>
+      <div class="speaking-event"><div class="speaking-event-year">2022</div><div class="speaking-event-details"><h4>Hatch Conference</h4><p>Design leadership frameworks and team empowerment</p></div></div>
+      <div class="speaking-event"><div class="speaking-event-year">2015</div><div class="speaking-event-details"><h4>Georgetown University</h4><p>Data Visualization &amp; UX for Public Policy — McCourt School</p></div></div>
+    </div>
+    <div class="speaking-photo-mosaic">
+      <img class="span2" src="assets/img/img_25.jpg" alt="Kevin on stage — FOCUS" style="width:100%;height:260px;object-fit:cover;display:block;">
+      <img class="square" src="assets/img/img_26.jpg" alt="Kevin at UXDX Conference 2023" style="width:100%;height:180px;object-fit:cover;display:block;">
+      <img class="square" src="assets/img/img_27.jpg" alt="Kevin at Hatch Conference 2023" style="width:100%;height:180px;object-fit:cover;display:block;">
+      <img class="square" src="assets/img/img_28.jpg" alt="Kevin at CPH:UX Copenhagen" style="width:100%;height:180px;object-fit:cover;display:block;">
+      <img class="square" src="assets/img/img_29.jpg" alt="Kevin speaking" style="width:100%;height:180px;object-fit:cover;display:block;">
+    </div>
+  </div>
+
+  <!-- Extra speaking strip -->
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;margin-top:48px;">
+    <div style="overflow:hidden;height:220px;position:relative;">
+      <img src="assets/img/img_30.jpg" alt="Kevin at conference event" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      <div class="img-caption" style="position:absolute;">Conference &amp; Event Speaker</div>
+    </div>
+    <div style="overflow:hidden;height:220px;position:relative;">
+      <img src="assets/img/img_31.jpg" alt="Kevin speaking on stage" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+    </div>
+    <div style="overflow:hidden;height:220px;position:relative;">
+      <img src="assets/img/img_32.jpg" alt="Kevin at event" style="width:100%;height:100%;object-fit:cover;transition:transform .4s;object-position:top;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+    </div>
+  </div>
+</section>
+
 <footer>
-  <a href="#" class="footer-logo">Kevin Hawkins Design</a>
-  <p class="footer-copy">© 2026 · Barcelona, Spain</p>
+  <div>
+    <div class="footer-name">Kevin Hawkins</div>
+    <div class="footer-title">VP Product Experience · Barcelona, Spain</div>
+    <div class="footer-contact">
+      <a href="/cdn-cgi/l/email-protection#9af2fff6f6f5daf1ffecf3f4f2fbedf1f3f4e9feffe9f3fdf4b4f9f5f7"><span class="__cf_email__" data-cfemail="0f676a6363604f646a796661676e786466617c6b6a7c666861216c6062">[email&#160;protected]</span></a>
+      <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank">LinkedIn</a>
+      <a href="tel:+34625735141">+34 625 735 141</a>
+    </div>
+  </div>
+  <div class="footer-right">
+    <div class="footer-countries">70+</div>
+    <div class="footer-countries-label">Countries Explored · Cultures Understood</div>
+  </div>
 </footer>
 
-<script>
-  const io = new IntersectionObserver(entries => {
-    entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        e.target.style.transitionDelay = (i % 3 * 0.09) + 's';
-        e.target.classList.add('on');
-        io.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
-</body>
-</html>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('

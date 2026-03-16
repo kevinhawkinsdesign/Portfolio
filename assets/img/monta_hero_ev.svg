@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" width="1400" height="700">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#050810"/>
+      <stop offset="100%" stop-color="#0a1520"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="30%" cy="70%" r="35%">
+      <stop offset="0%" stop-color="#00c896" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="65%" cy="70%" r="30%">
+      <stop offset="0%" stop-color="#00a3e0" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="80%" cy="65%" r="25%">
+      <stop offset="0%" stop-color="#00c896" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+  <!-- Sky -->
+  <rect width="1400" height="700" fill="url(#sky)"/>
+  <!-- Glows -->
+  <rect width="1400" height="700" fill="url(#glow1)"/>
+  <rect width="1400" height="700" fill="url(#glow2)"/>
+  <rect width="1400" height="700" fill="url(#glow3)"/>
+  <!-- Ground -->
+  <rect y="480" width="1400" height="220" fill="#060c14" opacity="0.9"/>
+  <!-- Ground line -->
+  <rect y="478" width="1400" height="2" fill="#00c896" opacity="0.3"/>
+  <!-- Car 1 (left) — sedan silhouette -->
+  <g transform="translate(80, 340)">
+    <rect x="20" y="80" width="300" height="90" rx="8" fill="#0d1a26"/>
+    <rect x="60" y="30" width="180" height="65" rx="12" fill="#0d1a26"/>
+    <ellipse cx="70" cy="175" rx="38" ry="38" fill="#111" stroke="#1a2a3a" stroke-width="3"/>
+    <ellipse cx="70" cy="175" rx="22" ry="22" fill="#0d1a26"/>
+    <ellipse cx="270" cy="175" rx="38" ry="38" fill="#111" stroke="#1a2a3a" stroke-width="3"/>
+    <ellipse cx="270" cy="175" rx="22" ry="22" fill="#0d1a26"/>
+    <rect x="140" y="38" width="80" height="45" rx="6" fill="#0a2030" opacity="0.8"/>
+    <!-- Headlights -->
+    <rect x="22" y="95" width="24" height="12" rx="3" fill="#fff" opacity="0.9"/>
+    <rect x="296" y="95" width="24" height="12" rx="3" fill="#f00" opacity="0.6"/>
+    <!-- Charging cable glow -->
+    <line x1="320" y1="110" x2="400" y2="110" stroke="#00c896" stroke-width="3" stroke-dasharray="6,4" opacity="0.8"/>
+    <circle cx="400" cy="110" r="6" fill="#00c896" opacity="0.9"/>
+  </g>
+  <!-- Charger 1 -->
+  <g transform="translate(430, 280)">
+    <rect width="60" height="200" rx="8" fill="#0d2030"/>
+    <rect x="8" y="20" width="44" height="28" rx="4" fill="#00c896" opacity="0.15"/>
+    <rect x="14" y="26" width="32" height="16" rx="2" fill="#00c896" opacity="0.6"/>
+    <circle cx="30" cy="130" r="14" fill="#0a1a2a" stroke="#00c896" stroke-width="2" opacity="0.8"/>
+    <text x="30" y="135" text-anchor="middle" fill="#00c896" font-size="11" font-family="monospace" opacity="0.9">⚡</text>
+    <!-- Status LED -->
+    <circle cx="30" cy="70" r="6" fill="#00c896"/>
+    <circle cx="30" cy="70" r="10" fill="#00c896" opacity="0.2"/>
+    <!-- Monta logo area -->
+    <rect x="10" y="160" width="40" height="16" rx="3" fill="#00c896" opacity="0.12"/>
+    <rect x="14" y="164" width="32" height="8" rx="1" fill="#00c896" opacity="0.4"/>
+  </g>
+  <!-- Car 2 (center) — SUV silhouette -->
+  <g transform="translate(530, 320)">
+    <rect x="10" y="60" width="340" height="110" rx="10" fill="#0e1e2e"/>
+    <rect x="50" y="15" width="230" height="60" rx="14" fill="#0e1e2e"/>
+    <ellipse cx="75" cy="178" rx="42" ry="42" fill="#111" stroke="#1a2a3a" stroke-width="3"/>
+    <ellipse cx="75" cy="178" rx="25" ry="25" fill="#0d1a26"/>
+    <ellipse cx="290" cy="178" rx="42" ry="42" fill="#111" stroke="#1a2a3a" stroke-width="3"/>
+    <ellipse cx="290" cy="178" rx="25" ry="25" fill="#0d1a26"/>
+    <rect x="155" y="22" width="85" height="46" rx="5" fill="#0a2535" opacity="0.8"/>
+    <rect x="12" y="75" width="26" height="14" rx="3" fill="#fff" opacity="0.85"/>
+    <rect x="322" y="75" width="26" height="14" rx="3" fill="#f00" opacity="0.55"/>
+    <line x1="350" y1="115" x2="430" y2="115" stroke="#00a3e0" stroke-width="3" stroke-dasharray="6,4" opacity="0.8"/>
+    <circle cx="430" cy="115" r="6" fill="#00a3e0" opacity="0.9"/>
+  </g>
+  <!-- Charger 2 (center-right) -->
+  <g transform="translate(900, 260)">
+    <rect width="65" height="220" rx="8" fill="#0d2030"/>
+    <rect x="8" y="20" width="49" height="32" rx="4" fill="#00a3e0" opacity="0.12"/>
+    <rect x="13" y="26" width="38" height="18" rx="2" fill="#00a3e0" opacity="0.55"/>
+    <circle cx="32" cy="140" r="14" fill="#0a1a2a" stroke="#00a3e0" stroke-width="2" opacity="0.8"/>
+    <text x="32" y="145" text-anchor="middle" fill="#00a3e0" font-size="11" font-family="monospace">⚡</text>
+    <circle cx="32" cy="75" r="6" fill="#00a3e0"/>
+    <circle cx="32" cy="75" r="10" fill="#00a3e0" opacity="0.2"/>
+    <rect x="10" y="178" width="45" height="18" rx="3" fill="#00a3e0" opacity="0.1"/>
+    <rect x="14" y="182" width="37" height="10" rx="1" fill="#00a3e0" opacity="0.35"/>
+  </g>
+  <!-- Car 3 (right) -->
+  <g transform="translate(980, 350)">
+    <rect x="15" y="70" width="280" height="95" rx="8" fill="#0d1a26"/>
+    <rect x="55" y="25" width="165" height="55" rx="12" fill="#0d1a26"/>
+    <ellipse cx="65" cy="170" rx="38" ry="38" fill="#111" stroke="#1a2a3a" stroke-width="3"/>
+    <ellipse cx="65" cy="170" rx="22" ry="22" fill="#0d1a26"/>
+    <ellipse cx="250" cy="170" rx="38" ry="38" fill="#111" stroke="#1a2a3a" stroke-width="3"/>
+    <ellipse cx="250" cy="170" rx="22" ry="22" fill="#0d1a26"/>
+    <rect x="17" y="82" width="22" height="12" rx="3" fill="#fff" opacity="0.8"/>
+    <rect x="271" y="82" width="22" height="12" rx="3" fill="#f00" opacity="0.5"/>
+  </g>
+  <!-- Ground reflections -->
+  <rect x="400" y="480" width="3" height="120" fill="#00c896" opacity="0.12"/>
+  <rect x="900" y="480" width="3" height="100" fill="#00a3e0" opacity="0.10"/>
+  <!-- Stars -->
+  <circle cx="200" cy="60" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="450" cy="30" r="1" fill="white" opacity="0.5"/>
+  <circle cx="700" cy="80" r="1.5" fill="white" opacity="0.5"/>
+  <circle cx="950" cy="45" r="1" fill="white" opacity="0.6"/>
+  <circle cx="1150" cy="70" r="1.5" fill="white" opacity="0.4"/>
+  <circle cx="1300" cy="35" r="1" fill="white" opacity="0.5"/>
+  <!-- Monta branding hint -->
+  <text x="700" y="440" text-anchor="middle" fill="#00c896" font-size="13" font-family="sans-serif" opacity="0.5" letter-spacing="4">MONTA EV CHARGING INFRASTRUCTURE</text>
+</svg>

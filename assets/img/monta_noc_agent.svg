@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700">
+  <defs>
+    <linearGradient id="bg3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#080c16"/>
+      <stop offset="100%" stop-color="#050810"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00c896" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="700" fill="url(#bg3)"/>
+  <rect width="1200" height="700" fill="url(#glow)"/>
+  <!-- Header bar -->
+  <rect width="1200" height="60" fill="#0d1520" opacity="0.9"/>
+  <rect x="20" y="16" width="32" height="32" rx="8" fill="#00c896" opacity="0.9"/>
+  <rect x="62" y="22" width="100" height="12" rx="3" fill="#ffffff" opacity="0.8"/>
+  <rect x="62" y="38" width="60" height="8" rx="2" fill="#00c896" opacity="0.5"/>
+  <!-- Tabs -->
+  <rect x="250" y="14" width="120" height="34" rx="6" fill="#00c896" opacity="0.15"/>
+  <rect x="262" y="25" width="96" height="12" rx="2" fill="#00c896" opacity="0.8"/>
+  <rect x="384" y="14" width="100" height="34" rx="6" fill="none"/>
+  <rect x="396" y="25" width="76" height="12" rx="2" fill="#ffffff" opacity="0.35"/>
+  <!-- NOC AI panel -->
+  <rect x="20" y="80" width="560" height="600" rx="12" fill="#0d1a26"/>
+  <!-- AI header -->
+  <rect x="36" y="98" width="160" height="14" rx="3" fill="#ffffff" opacity="0.7"/>
+  <rect x="36" y="118" width="220" height="8" rx="2" fill="#ffffff" opacity="0.25"/>
+  <!-- Fault indicator -->
+  <rect x="36" y="146" width="528" height="70" rx="8" fill="#1a0808" opacity="0.9"/>
+  <rect x="36" y="146" width="4" height="70" rx="2" fill="#f07845"/>
+  <rect x="52" y="160" width="180" height="12" rx="3" fill="#f07845" opacity="0.8"/>
+  <rect x="52" y="178" width="280" height="8" rx="2" fill="#ffffff" opacity="0.4"/>
+  <rect x="52" y="192" width="220" height="8" rx="2" fill="#ffffff" opacity="0.25"/>
+  <!-- Diagnosis in progress -->
+  <rect x="36" y="234" width="528" height="50" rx="8" fill="#0a1a10" opacity="0.9"/>
+  <rect x="36" y="234" width="4" height="50" rx="2" fill="#00c896"/>
+  <rect x="52" y="246" width="140" height="10" rx="2" fill="#00c896" opacity="0.8"/>
+  <rect x="52" y="262" width="260" height="8" rx="2" fill="#ffffff" opacity="0.4"/>
+  <!-- Data sources being checked -->
+  <rect x="36" y="304" width="528" height="200" rx="8" fill="#0a1520"/>
+  <rect x="52" y="318" width="160" height="10" rx="2" fill="#ffffff" opacity="0.5"/>
+  <rect x="52" y="340" width="510" height="1" fill="#ffffff" opacity="0.05"/>
+  <!-- Source rows -->
+  <circle cx="68" cy="360" r="6" fill="#00c896"/>
+  <rect x="84" y="354" width="140" height="8" rx="2" fill="#ffffff" opacity="0.5"/>
+  <rect x="460" y="354" width="80" height="8" rx="2" fill="#00c896" opacity="0.6"/>
+  <circle cx="68" cy="386" r="6" fill="#00c896"/>
+  <rect x="84" y="380" width="160" height="8" rx="2" fill="#ffffff" opacity="0.5"/>
+  <rect x="460" y="380" width="60" height="8" rx="2" fill="#00c896" opacity="0.6"/>
+  <circle cx="68" cy="412" r="6" fill="#00c896"/>
+  <rect x="84" y="406" width="120" height="8" rx="2" fill="#ffffff" opacity="0.5"/>
+  <rect x="460" y="406" width="70" height="8" rx="2" fill="#00c896" opacity="0.6"/>
+  <circle cx="68" cy="438" r="6" fill="#7aabdc"/>
+  <rect x="84" y="432" width="150" height="8" rx="2" fill="#ffffff" opacity="0.5"/>
+  <rect x="460" y="432" width="80" height="8" rx="2" fill="#7aabdc" opacity="0.6"/>
+  <circle cx="68" cy="464" r="6" fill="#7aabdc"/>
+  <rect x="84" y="458" width="130" height="8" rx="2" fill="#ffffff" opacity="0.5"/>
+  <rect x="460" y="458" width="65" height="8" rx="2" fill="#7aabdc" opacity="0.6"/>
+  <!-- Result box -->
+  <rect x="36" y="524" width="528" height="120" rx="8" fill="#0a1a10"/>
+  <rect x="36" y="524" width="528" height="4" rx="2" fill="#00c896"/>
+  <rect x="52" y="538" width="200" height="14" rx="3" fill="#00c896" opacity="0.9"/>
+  <rect x="52" y="560" width="480" height="8" rx="2" fill="#ffffff" opacity="0.45"/>
+  <rect x="52" y="574" width="420" height="8" rx="2" fill="#ffffff" opacity="0.35"/>
+  <rect x="52" y="588" width="360" height="8" rx="2" fill="#ffffff" opacity="0.25"/>
+  <text x="488" y="628" fill="#00c896" font-size="28" font-family="monospace" font-weight="bold" opacity="0.95">25s</text>
+  <!-- Right panel - charge point detail -->
+  <rect x="600" y="80" width="580" height="290" rx="12" fill="#0d1a26"/>
+  <rect x="618" y="98" width="160" height="12" rx="3" fill="#ffffff" opacity="0.6"/>
+  <!-- Charge point visual -->
+  <rect x="618" y="126" width="260" height="150" rx="8" fill="#0a1520"/>
+  <rect x="630" y="138" width="80" height="10" rx="2" fill="#ffffff" opacity="0.4"/>
+  <rect x="630" y="156" width="220" height="1" fill="#ffffff" opacity="0.05"/>
+  <rect x="630" y="168" width="120" height="20" rx="3" fill="#f07845" opacity="0.15"/>
+  <rect x="636" y="173" width="108" height="10" rx="2" fill="#f07845" opacity="0.6"/>
+  <rect x="630" y="198" width="140" height="20" rx="3" fill="#00c896" opacity="0.15"/>
+  <rect x="636" y="203" width="128" height="10" rx="2" fill="#00c896" opacity="0.6"/>
+  <rect x="630" y="228" width="100" height="20" rx="3" fill="#7aabdc" opacity="0.15"/>
+  <rect x="636" y="233" width="88" height="10" rx="2" fill="#7aabdc" opacity="0.6"/>
+  <!-- Stats -->
+  <rect x="896" y="126" width="266" height="150" rx="8" fill="#0a1520"/>
+  <rect x="912" y="140" width="100" height="10" rx="2" fill="#ffffff" opacity="0.4"/>
+  <rect x="912" y="162" width="234" height="1" fill="#ffffff" opacity="0.05"/>
+  <text x="916" y="200" fill="#f07845" font-size="32" font-family="monospace" font-weight="bold">31%</text>
+  <rect x="916" y="210" width="100" height="8" rx="2" fill="#f07845" opacity="0.5"/>
+  <text x="1020" y="200" fill="#ffffff" font-size="20" font-family="monospace" opacity="0.3">→</text>
+  <text x="1050" y="200" fill="#00c896" font-size="32" font-family="monospace" font-weight="bold">98%</text>
+  <rect x="1050" y="210" width="100" height="8" rx="2" fill="#00c896" opacity="0.5"/>
+  <!-- Bottom right panels -->
+  <rect x="600" y="390" width="280" height="180" rx="12" fill="#0d1a26"/>
+  <rect x="618" y="408" width="120" height="12" rx="3" fill="#ffffff" opacity="0.6"/>
+  <!-- Mini chart -->
+  <polyline points="620,550 650,530 680,510 710,490 740,470 770,445 800,430 830,440 860,420" fill="none" stroke="#00c896" stroke-width="2.5" opacity="0.9"/>
+  <polyline points="620,550 650,530 680,510 710,490 740,470 770,445 800,430 830,440 860,420 860,570 620,570" fill="#00c896" fill-opacity="0.07"/>
+  <rect x="900" y="390" width="280" height="180" rx="12" fill="#0d1a26"/>
+  <rect x="918" y="408" width="120" height="12" rx="3" fill="#ffffff" opacity="0.6"/>
+  <rect x="918" y="432" width="244" height="40" rx="6" fill="#0a1520"/>
+  <rect x="928" y="442" width="80" height="8" rx="2" fill="#ffffff" opacity="0.4"/>
+  <rect x="928" y="454" width="140" height="6" rx="2" fill="#7aabdc" opacity="0.5"/>
+  <rect x="918" y="480" width="244" height="40" rx="6" fill="#0a1520"/>
+  <rect x="928" y="490" width="90" height="8" rx="2" fill="#ffffff" opacity="0.4"/>
+  <rect x="928" y="502" width="120" height="6" rx="2" fill="#00c896" opacity="0.5"/>
+  <rect x="918" y="528" width="244" height="24" rx="6" fill="#0a1520"/>
+  <rect x="928" y="534" width="110" height="8" rx="2" fill="#ffffff" opacity="0.4"/>
+</svg>

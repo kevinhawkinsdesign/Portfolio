@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" fill="none">
+  <!-- B. logomark -->
+  <rect x="0" y="3" width="34" height="34" rx="6" fill="#003580"/>
+  <text x="5" y="27" 
+    font-family="'Georgia','Times New Roman',serif" 
+    font-size="22" font-weight="700" fill="white">B.</text>
+  <!-- Wordmark -->
+  <text x="42" y="27" 
+    font-family="'Inter','Helvetica Neue',Arial,sans-serif" 
+    font-size="18" font-weight="700" letter-spacing="-0.2"
+    fill="currentColor">Booking</text>
+  <text x="130" y="27" 
+    font-family="'Inter','Helvetica Neue',Arial,sans-serif" 
+    font-size="18" font-weight="700" letter-spacing="-0.2"
+    fill="#0057A8">.com</text>
+</svg>

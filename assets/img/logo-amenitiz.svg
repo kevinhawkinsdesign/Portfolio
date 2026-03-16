@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40" fill="none">
+  <!-- Rounded square mark -->
+  <rect x="0" y="4" width="32" height="32" rx="8" fill="#FF6B35"/>
+  <!-- stylized "a" -->
+  <path d="M20 13h-8a2 2 0 00-2 2v10h3v-4h7v4h3V15a2 2 0 00-3-2zm0 5h-7v-3h7v3z" fill="white"/>
+  <!-- Wordmark -->
+  <text x="40" y="28" 
+    font-family="'Inter','Helvetica Neue',Arial,sans-serif" 
+    font-size="20" font-weight="600" letter-spacing="-0.3"
+    fill="currentColor">amenitiz</text>
+</svg>

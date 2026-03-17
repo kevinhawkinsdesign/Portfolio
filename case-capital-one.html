@@ -1,91 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Capital One — Kevin Hawkins</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="case.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/gradient-system.css">
 </head>
 <body>
-<nav>
-  <a href="index.html" class="nav-logo">Kevin Hawkins<span>.</span></a>
-  <a href="index.html#work" class="nav-back">← All work</a>
+
+<nav id="main-nav">
+  <a class="nav-logo" href="index.html">Kevin Hawkins</a>
+  <ul class="nav-links">
+    <li><a href="about.html">About</a></li>
+    <li class="has-dropdown">
+      <a href="index.html#work">Work</a>
+      <ul class="dropdown">
+        <li><a href="case-monta.html">⚡ Monta</a></li>
+        <li><a href="case-glovo.html">🛵 Glovo</a></li>
+        <li><a href="case-amenitiz.html">🏨 Amenitiz</a></li>
+        <li><a href="case-booking.html">✈️ Booking.com</a></li>
+        <li><a href="case-bookclub.html">📚 BookClub</a></li>
+        <li><a href="case-capital-one.html" class="active">🏦 Capital One</a></li>
+      </ul>
+    </li>
+    <li><a href="index.html#leadership">Leadership</a></li>
+    <li><a href="index.html#speaking">Speaking</a></li>
+    <li><a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank">LinkedIn</a></li>
+  </ul>
+  <a href="mailto:hello@kevinhawkinsdesign.com" class="btn-primary">Get in touch</a>
 </nav>
 
-<div class="wrap">
-  <div class="case-hero">
-    <span class="case-tag">05 · Design Strategist · Fintech · USA · 2016–2018</span>
-    <h1 class="case-title">Capital One — Revamping<br><em>America's #8 bank.</em></h1>
-    <p class="case-desc">As Design Strategist Consultant, I led research-driven design strategy across Capital One's SMB banking, mobile T&E, virtual card, and Capital One Café digital touchpoint — and contributed to Project Elements, a radical reimagining of the credit card that launched as a physical installation in San Francisco.</p>
-    <div class="case-meta">
-      <div><div class="meta-label">Role</div><div class="meta-val">Design Strategist Consultant</div></div>
-      <div><div class="meta-label">Scope</div><div class="meta-val">SMB banking, mobile T&E, Project Elements, Café</div></div>
-      <div><div class="meta-label">Research</div><div class="meta-val">20+ empathy interviews, 6 webcam sessions</div></div>
-      <div><div class="meta-label">Output</div><div class="meta-val">Physical product launch, SF installation</div></div>
+<article class="case-study">
+  <header class="case-hero">
+    <div class="case-company">
+      <img src="assets/img/logos/capital-one.png" alt="Capital One">
+      <span>Capital One · Design Strategist Consultant · 2016–2018</span>
     </div>
-  </div>
-</div>
-
-<img src="photo-street.jpeg" alt="Kevin Hawkins" class="case-cover" />
-
-<div class="wrap-narrow">
-
-  <div class="case-section reveal">
-    <span class="section-label">The challenge</span>
-    <h2 class="section-head">Making a legacy bank feel<br><em>as modern as its ambition.</em></h2>
-    <p class="body-text">Capital One had the infrastructure of America's #8 bank and the ambition of a tech company. My work spanned several initiatives — all connected by a research-first approach and a belief that banking UX could be radically more human.</p>
-    <p class="body-text">The core tension was consistent across every project: Capital One needed to serve diverse user needs (from millennials building credit to SMB owners managing complex finances) while modernizing systems that had grown organically over decades.</p>
-  </div>
-
-  <div class="case-section reveal">
-    <span class="section-label">SMB banking research</span>
-    <h2 class="section-head">20+ empathy interviews.<br><em>One ecosystem concept model.</em></h2>
-    <p class="body-text">For the ICCE (Integrated Commercial Card Experience) initiative, I led an extensive research program: over 20 in-person empathy interviews with small business owners, phone interviews with existing customers for the Virtual Card program, and 6 taped webcam sessions for remote validation.</p>
-    <p class="body-text">From this research I built a comprehensive <strong>Ecosystem Concept Model</strong> — mapping all the tasks a small business owner performs at every cadence (daily, weekly, monthly, quarterly, yearly) against their internal attitudes and external relationships. This radial model became the foundation for SMB product strategy and was used by multiple product teams to align on what to build first.</p>
-    <p class="body-text">Key insights from the research surfaced three user archetypes — ICCE Mobile (T&E), ICCE Web Virtual Card Users, and Decision Makers — each with distinct needs around visibility, control, and workflow automation. I translated these into distilled themes, driving principles, and a sample features roadmap that moved insights directly into product planning.</p>
-  </div>
-
-  <div class="case-section reveal">
-    <span class="section-label">Mobile banking</span>
-    <h2 class="section-head">Designing for the future<br><em>of personal finance.</em></h2>
-    <p class="body-text">The Capital One mobile app work was grounded in a clear set of user goals and business goals that I helped define and align across teams. On the user side: save money for the future, manage travel costs and standard expenses, learn more about wealth management, trim spending without having a "dull life." On the business side: become the cardholder's preferred primary bank, expand personal finance management capabilities, increase brand awareness among millennials.</p>
-    <p class="body-text">I contributed to information architecture concepts, wireframes, and IA stress tests across multiple rounds — working through flows for account management, virtual card controls, the Eno AI assistant, and the ICCE SMB dashboard.</p>
-  </div>
-
-  <div class="case-section reveal">
-    <span class="section-label">Project Elements</span>
-    <h2 class="section-head">The credit card,<br><em>radically redesigned.</em></h2>
-    <p class="body-text">Project Elements by Capital One Labs was the most ambitious design project I contributed to during my time at Capital One. The premise: the credit card is a physical object you carry every day — it should feel like it belongs to you, not your bank.</p>
-    <div class="highlight">
-      <p>"It's your card, not ours. And it should look that way." — Project Elements, Capital One Labs</p>
+    <h1>Revamping <em>America's #8 bank.</em></h1>
+    <p class="case-summary">Led research-driven design strategy across Capital One's SMB banking, mobile T&amp;E, virtual card, and Capital One Café — and contributed to Project Elements, a radical reimagining of the credit card that launched as a physical installation in San Francisco.</p>
+    <div class="case-meta-row">
+      <div class="case-meta-item"><dt>Role</dt><dd>Design Strategist Consultant</dd></div>
+      <div class="case-meta-item"><dt>Scope</dt><dd>SMB banking · Mobile T&amp;E · Project Elements · Café</dd></div>
+      <div class="case-meta-item"><dt>Research</dt><dd>20+ empathy interviews · 6 webcam sessions</dd></div>
+      <div class="case-meta-item"><dt>Output</dt><dd>Physical product launch · SF installation</dd></div>
     </div>
-    <p class="body-text">The project reimagined every aspect of the card — its shape (soft rounded rectangle instead of hard corners), its material (bamboo, leather, textured metal, custom colors), and its visual identity (personalized with your signature, your chosen aesthetic). Cards had names: Bamboo. Coral. Lemon. Each told a story about the person who carried it.</p>
-    <p class="body-text">The project launched as a physical installation in San Francisco — a gallery-style experience where people could interact with card prototypes, explore different materials and finishes, and envision a version of financial product design that treated the cardholder as a creative collaborator rather than a number.</p>
-  </div>
+  </header>
 
-  <div class="case-section reveal">
-    <span class="section-label">Capital One Café</span>
-    <h2 class="section-head">Banking meets<br><em>hospitality design.</em></h2>
-    <p class="body-text">I also contributed UX strategy to the Capital One Café initiative — the bank's flagship physical-meets-digital experience designed to make financial services approachable, human, and community-oriented. The Café was open to anyone, not just Capital One customers. The digital touchpoints I helped design included a welcoming kiosk experience and ambient digital displays — reinforcing the "everyone's welcome" positioning in every interaction.</p>
-  </div>
+  <section class="case-section">
+    <h2>The challenge</h2>
+    <p>Capital One had the infrastructure of America's #8 bank and the ambition of a tech company. My work spanned several initiatives — all connected by a research-first approach and a belief that banking UX could be radically more human.</p>
+    <p>The core tension was consistent across every project: Capital One needed to serve diverse user needs — from millennials building credit to SMB owners managing complex finances — while modernizing systems that had grown organically over decades.</p>
+  </section>
 
-  <div class="case-nav">
-    <a href="case-booking.html">← Booking.com</a>
-    <a href="case-monta.html">Next: Monta →</a>
-  </div>
+  <section class="case-section">
+    <h2>SMB banking research</h2>
+    <p>For the ICCE (Integrated Commercial Card Experience) initiative, I led an extensive research program: over 20 in-person empathy interviews with small business owners, phone interviews with existing customers for the Virtual Card program, and 6 taped webcam sessions for remote validation.</p>
+    <p>From this research I built a comprehensive <strong>Ecosystem Concept Model</strong> — mapping all the tasks a small business owner performs at every cadence (daily, weekly, monthly, quarterly, yearly) against their internal attitudes and external relationships. This radial model became the foundation for SMB product strategy and was used by multiple product teams to align on what to build first.</p>
+    <p>Key insights surfaced three user archetypes — ICCE Mobile (T&amp;E), ICCE Web Virtual Card Users, and Decision Makers — each with distinct needs around visibility, control, and workflow automation. I translated these into distilled themes, driving principles, and a sample features roadmap that moved insights directly into product planning.</p>
+  </section>
 
-</div>
+  <section class="case-section">
+    <h2>Mobile banking</h2>
+    <p>The Capital One mobile app work was grounded in a clear set of user goals and business goals that I helped define and align across teams. On the user side: save money for the future, manage travel costs and standard expenses, learn more about wealth management, and trim spending without having a "dull life." On the business side: become the cardholder's preferred primary bank, expand personal finance management capabilities, and increase brand awareness among millennials.</p>
+    <p>I contributed to information architecture concepts, wireframes, and IA stress tests across multiple rounds — working through flows for account management, virtual card controls, the Eno AI assistant, and the ICCE SMB dashboard.</p>
+  </section>
+
+  <section class="case-section">
+    <h2>Project Elements</h2>
+    <p>Project Elements by Capital One Labs was the most ambitious design project I contributed to during this engagement. The premise: the credit card is a physical object you carry every day — it should feel like it belongs to you, not your bank.</p>
+    <p>The project reimagined every aspect of the card — its shape (soft rounded rectangle instead of hard corners), its material (bamboo, leather, textured metal, custom colors), and its visual identity (personalized with your signature, your chosen aesthetic). Cards had names: <strong>Bamboo. Coral. Lemon.</strong> Each told a story about the person who carried it.</p>
+    <p>The project launched as a physical installation in San Francisco — a gallery-style experience where people could interact with card prototypes, explore different materials and finishes, and envision a version of financial product design that treated the cardholder as a creative collaborator rather than a number.</p>
+  </section>
+
+  <section class="case-section">
+    <h2>Capital One Café</h2>
+    <p>I also contributed UX strategy to the Capital One Café initiative — the bank's flagship physical-meets-digital experience designed to make financial services approachable, human, and community-oriented. The Café was open to anyone, not just Capital One customers.</p>
+    <p>The digital touchpoints I helped design included a welcoming kiosk experience and ambient digital displays — reinforcing the "everyone's welcome" positioning in every interaction.</p>
+  </section>
+
+  <section class="case-outcomes">
+    <h2>Outcomes</h2>
+    <div class="outcomes-grid">
+      <div class="outcome-card">
+        <span class="outcome-number">20+</span>
+        <span class="outcome-label">in-person empathy interviews with small business owners</span>
+      </div>
+      <div class="outcome-card">
+        <span class="outcome-number">1</span>
+        <span class="outcome-label">Ecosystem Concept Model adopted across multiple product teams</span>
+      </div>
+      <div class="outcome-card">
+        <span class="outcome-number">3</span>
+        <span class="outcome-label">user archetypes defined — ICCE Mobile, Virtual Card, Decision Makers</span>
+      </div>
+      <div class="outcome-card">
+        <span class="outcome-number">SF</span>
+        <span class="outcome-label">Project Elements launched as a physical gallery installation in San Francisco</span>
+      </div>
+    </div>
+  </section>
+
+  <aside class="case-sidebar-meta">
+    <div class="sidebar-block">
+      <p class="sidebar-label">Company</p>
+      <p>Capital One — one of America's largest banks, with ambitions to operate like a tech company. Engaged as a Design Strategist Consultant via KHD Studio.</p>
+    </div>
+    <div class="sidebar-block">
+      <p class="sidebar-label">My responsibilities</p>
+      <ul>
+        <li>SMB research program (20+ interviews)</li>
+        <li>Ecosystem Concept Model</li>
+        <li>User archetypes &amp; driving principles</li>
+        <li>Mobile IA &amp; wireframes</li>
+        <li>Project Elements contribution</li>
+        <li>Capital One Café UX strategy</li>
+      </ul>
+    </div>
+    <div class="sidebar-block">
+      <p class="sidebar-label">Tools &amp; methods</p>
+      <div class="tag-list">
+        <span class="tag">Empathy interviews</span>
+        <span class="tag">Ecosystem mapping</span>
+        <span class="tag">User archetypes</span>
+        <span class="tag">IA design</span>
+        <span class="tag">Wireframing</span>
+        <span class="tag">Physical UX</span>
+        <span class="tag">Service design</span>
+      </div>
+    </div>
+  </aside>
+
+  <nav class="case-nav">
+    <a href="case-booking.html" class="case-nav-prev">← ✈️ Booking.com — UX Team Lead</a>
+    <a href="case-monta.html" class="case-nav-next">⚡ Monta — VP Product Experience →</a>
+  </nav>
+</article>
 
 <footer>
-  <a href="index.html" class="footer-logo">Kevin Hawkins Design</a>
-  <p class="footer-copy">© 2026 · Barcelona, Spain</p>
+  <p>© 2025 Kevin Hawkins</p>
+  <div class="footer-links">
+    <a href="mailto:hello@kevinhawkinsdesign.com">hello@kevinhawkinsdesign.com</a>
+    <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank">LinkedIn</a>
+  </div>
 </footer>
-<script>
-  const io = new IntersectionObserver(entries => { entries.forEach((e,i) => { if (e.isIntersecting) { e.target.style.transitionDelay=(i%3*0.09)+'s'; e.target.classList.add('on'); io.unobserve(e.target); } }); }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
+
+<script src="assets/js/animations.js"></script>
 </body>
 </html>

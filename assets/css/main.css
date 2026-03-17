@@ -434,27 +434,40 @@ footer::before {
 }
 
 /* ── LOGO FILTERS FOR DARK MODE ── */
-/* Logos that are dark/black on transparent — invert to white */
-.logo-invert {
-  filter: invert(1) brightness(1.2);
-}
-/* Logos that are white on black bg — just strip the black bg using mix-blend-mode */
-.logo-white-on-dark {
+
+/* All logos: white-on-black PNGs — use screen blend to strip black bg */
+.company-logo,
+.case-company img {
   mix-blend-mode: screen;
-  filter: brightness(1.1);
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
 }
-/* Amenitiz blue logo — desaturate + invert to fit dark palette */
-.logo-amenitiz {
+.company-logo:hover,
+.case-company img:hover {
+  opacity: 1;
+}
+
+/* Amenitiz only: blue logo on white bg — invert to white */
+.company-logo[src*="amenitiz"],
+.case-company img[src*="amenitiz"] {
+  mix-blend-mode: normal;
   filter: brightness(0) invert(1) opacity(0.85);
 }
-/* General company logo sizing in case headers */
-.case-company img {
-  filter: brightness(0) invert(1) opacity(0.8);
+
+/* Marquee strip logos */
+.logo-track img,
+.logo-track object {
+  mix-blend-mode: screen;
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+  filter: none;
 }
-/* Work card logos */
-.company-logo {
-  filter: brightness(0) invert(1) opacity(0.7);
+.logo-track img:hover { opacity: 0.9; }
+
+/* Amenitiz in marquee */
+.logo-track img[src*="amenitiz"] {
   mix-blend-mode: normal;
+  filter: brightness(0) invert(1) opacity(0.45);
 }
 
 /* ── CLIENT LOGO MARQUEE ── */
@@ -490,7 +503,7 @@ footer::before {
   to   { transform: translateX(-50%); }
 }
 .logo-track img, .logo-track svg {
-  height: 28px; width: auto;
+  height: 44px; width: auto;
   filter: brightness(0) invert(1) opacity(0.45);
   transition: opacity 0.2s ease, filter 0.2s ease;
   flex-shrink: 0;
@@ -498,3 +511,107 @@ footer::before {
 .logo-track img:hover, .logo-track svg:hover {
   filter: brightness(0) invert(1) opacity(0.9);
 }
+/* Logo strip anchor links */
+.logo-track a {
+  display: flex; align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.logo-track a:hover { transform: scale(1.08); }
+.logo-track a img,
+.logo-track a svg {
+  pointer-events: none;
+}
+
+/* ── SPEAKING & MEDIA SECTION ── */
+.speaking-header {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; flex-wrap: wrap;
+  gap: 1.25rem; margin-bottom: 2rem;
+}
+.speaking-ctas { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; margin-top: 0.5rem; }
+
+.media-platform-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.5rem 1rem; border-radius: 100px;
+  font-size: 0.8rem; font-weight: 600;
+  text-decoration: none; border: 1px solid var(--border);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.media-btn-yt {
+  color: #ff4444; border-color: rgba(255,68,68,0.25);
+  background: rgba(255,68,68,0.07);
+}
+.media-btn-yt:hover {
+  border-color: rgba(255,68,68,0.5);
+  box-shadow: 0 4px 16px rgba(255,68,68,0.15);
+  transform: translateY(-1px);
+}
+.media-btn-sp {
+  color: #1db954; border-color: rgba(29,185,84,0.25);
+  background: rgba(29,185,84,0.07);
+}
+.media-btn-sp:hover {
+  border-color: rgba(29,185,84,0.5);
+  box-shadow: 0 4px 16px rgba(29,185,84,0.15);
+  transform: translateY(-1px);
+}
+
+/* Tabs */
+.speaking-tabs {
+  display: flex; gap: 0.5rem; margin-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0;
+}
+.speaking-tab {
+  background: none; border: none; cursor: pointer;
+  font-family: var(--font-sans); font-size: 0.875rem; font-weight: 500;
+  color: var(--text-tertiary); padding: 0.6rem 1rem;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.speaking-tab:hover { color: var(--text-secondary); }
+.speaking-tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.speaking-tab-content.hidden { display: none; }
+
+/* Media cards */
+.speaking-card-media {
+  text-decoration: none; display: flex; flex-direction: column; gap: 0.5rem;
+}
+.speaking-card-media:hover { border-color: rgba(167,139,250,0.35) !important; }
+.speaking-card-top {
+  display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.25rem;
+}
+.speaking-tag {
+  font-size: 0.68rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--accent); background: rgba(167,139,250,0.1);
+  padding: 0.15rem 0.5rem; border-radius: 4px;
+}
+.speaking-source {
+  font-size: 0.75rem; color: var(--text-tertiary);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.speaking-meta {
+  font-size: 0.75rem; color: var(--text-tertiary);
+  margin-top: auto; padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+/* "Watch all" card */
+.speaking-card-more {
+  align-items: center; justify-content: center;
+  background: rgba(255,68,68,0.04) !important;
+  border-color: rgba(255,68,68,0.15) !important;
+  text-align: center;
+}
+.speaking-card-more:hover { border-color: rgba(255,68,68,0.4) !important; }
+.speaking-card-more-inner {
+  display: flex; flex-direction: column;
+  align-items: center; gap: 0.75rem;
+}
+.speaking-card-more h4 { font-size: 1rem; }

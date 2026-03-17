@@ -95,3 +95,15 @@
     });
   }
 })();
+
+  /* ── SPEAKING TABS ── */
+  document.querySelectorAll('.speaking-tab').forEach(function(tab) {
+    tab.addEventListener('click', function() {
+      var target = tab.getAttribute('data-tab');
+      document.querySelectorAll('.speaking-tab').forEach(function(t) { t.classList.remove('active'); });
+      document.querySelectorAll('.speaking-tab-content').forEach(function(c) { c.classList.add('hidden'); });
+      tab.classList.add('active');
+      var el = document.getElementById('tab-' + target);
+      if (el) el.classList.remove('hidden');
+    });
+  });

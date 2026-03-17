@@ -1,5 +1,5 @@
 /* =============================================
-   KEVIN HAWKINS PORTFOLIO — MAIN STYLESHEET
+   KEVIN HAWKINS PORTFOLIO — DARK MODE
    ============================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap');
@@ -10,14 +10,18 @@
 :root {
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans: 'DM Sans', system-ui, sans-serif;
-  --color-bg: #faf9f7;
-  --color-surface: #ffffff;
-  --color-text: #1a1a18;
-  --color-text-muted: #5a5a55;
-  --color-text-faint: #9a9a94;
-  --color-border: #e4e2dc;
-  --color-border-strong: #c8c5bc;
-  --color-accent: #1a1a18;
+
+  /* Dark palette */
+  --color-bg:           #0e0e0c;
+  --color-surface:      #151513;
+  --color-surface-2:    #1c1c19;
+  --color-text:         #f0ede6;
+  --color-text-muted:   #8a887f;
+  --color-text-faint:   #565650;
+  --color-border:       #262620;
+  --color-border-strong:#3a3a32;
+  --color-accent:       #f0ede6;
+
   --max-w: 1100px;
   --max-w-narrow: 720px;
   --nav-h: 64px;
@@ -64,7 +68,7 @@ a { color: inherit; }
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 249, 247, 0.92);
+  background: rgba(14, 14, 12, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
@@ -134,9 +138,9 @@ a { color: inherit; }
   top: calc(100% + 4px);
   left: 0;
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border-strong);
   border-radius: var(--radius);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
   list-style: none;
   min-width: 220px;
   padding: 6px 0;
@@ -155,7 +159,7 @@ a { color: inherit; }
   transition: background 0.1s, color 0.1s;
 }
 
-.dropdown li a:hover { background: var(--color-bg); color: var(--color-text); }
+.dropdown li a:hover { background: var(--color-surface-2); color: var(--color-text); }
 .dropdown li a.active { color: var(--color-text); font-weight: 500; }
 
 /* Nav CTA */
@@ -253,10 +257,10 @@ a { color: inherit; }
   bottom: 1.5rem;
   left: -1.5rem;
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--color-border-strong);
   border-radius: var(--radius-lg);
   padding: 12px 16px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
 
 .hero-badge .num {
@@ -404,6 +408,7 @@ a { color: inherit; }
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   min-height: 200px;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -721,7 +726,7 @@ a { color: inherit; }
 }
 
 .metric-card {
-  background: var(--color-bg);
+  background: var(--color-surface);
   padding: 1.5rem 1.75rem;
   display: flex;
   flex-direction: column;
@@ -758,6 +763,16 @@ a { color: inherit; }
 }
 .sidebar-next:hover { opacity: 0.6; }
 
+/* Case figure captions */
+figure { margin: 0; }
+figcaption {
+  font-size: 12px;
+  color: var(--color-text-faint);
+  margin-top: 0.75rem;
+  font-style: italic;
+  line-height: 1.5;
+}
+
 /* ── FOOTER ── */
 .footer {
   border-top: 1px solid var(--color-border);
@@ -786,8 +801,6 @@ a { color: inherit; }
   .stats-bar { grid-template-columns: 1fr 1fr; }
   .stat-cell:nth-child(2) { border-right: none; }
   .principles-grid { grid-template-columns: 1fr 1fr; }
-  .principle:nth-child(2n) { margin-right: 0; }
-  .principle:nth-child(3n) { margin-right: 2.5rem; }
   .speaking-section { grid-template-columns: 1fr; }
   .about-layout { grid-template-columns: 1fr; }
   .about-sidebar { position: static; border-top: 1px solid var(--color-border); padding-top: 2rem; }
@@ -806,6 +819,9 @@ a { color: inherit; }
   .principle { margin-right: 0; }
   .nav-links { display: none; }
   .case-meta { min-width: 100%; border-right: none; border-bottom: 1px solid var(--color-border); }
+  .case-photo-pair { grid-template-columns: 1fr; }
+  .about-photos { grid-template-columns: 1fr; }
+  .about-photos img:last-child { margin-top: 0; }
 }
 
 /* ── PAGE LOAD ANIMATION ── */
@@ -824,7 +840,6 @@ a { color: inherit; }
 
 /* ── PHOTO STYLES ── */
 
-/* Hero photo on index */
 .hero-photo img {
   width: 100%;
   aspect-ratio: 3/4;
@@ -834,7 +849,6 @@ a { color: inherit; }
   display: block;
 }
 
-/* About page — two-photo layout */
 .about-photos {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -861,7 +875,6 @@ a { color: inherit; }
   margin-top: 2.5rem;
 }
 
-/* Case study hero image */
 .case-hero-img {
   width: 100%;
   max-height: 480px;
@@ -877,7 +890,6 @@ a { color: inherit; }
   max-height: 480px;
 }
 
-/* Case study inline photos */
 .case-photo {
   width: 100%;
   border-radius: var(--radius);
@@ -895,7 +907,6 @@ a { color: inherit; }
   font-style: italic;
 }
 
-/* Two-up photo grid within case studies */
 .case-photo-pair {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -909,10 +920,4 @@ a { color: inherit; }
   object-fit: cover;
   border-radius: var(--radius);
   display: block;
-}
-
-@media (max-width: 640px) {
-  .about-photos { grid-template-columns: 1fr; }
-  .about-photos img:last-child { margin-top: 0; }
-  .case-photo-pair { grid-template-columns: 1fr; }
 }

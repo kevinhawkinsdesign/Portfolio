@@ -1,165 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Monta — Kevin Hawkins Case Study</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/case-study.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monta — Kevin Hawkins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="case.css" />
 </head>
-<body style="background:var(--bg);">
+<body>
 
-<nav>
-  <a href="index.html" class="nav-logo">Kevin Hawkins</a>
-  <ul class="nav-links">
-    <li class="nav-item">
-      <a href="about.html">About</a>
-    </li>
-    <li class="nav-item">
-      <a href="index.html#work">Work
-        <svg class="nav-chevron" viewBox="0 0 10 6" fill="none">
-          <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </a>
-      <div class="nav-dropdown">
-        <a href="case-monta.html">
-          <span class="dd-icon">⚡</span>
-          <span class="dd-label">Monta<span>VP Product Experience · 2024–Present</span></span>
-        </a>
-        <a href="case-glovo.html">
-          <span class="dd-icon">🛵</span>
-          <span class="dd-label">Glovo<span>Global UX Director · 2022–2023</span></span>
-        </a>
-        <a href="case-amenitiz.html">
-          <span class="dd-icon">🏨</span>
-          <span class="dd-label">Amenitiz<span>Head of Design &amp; Research · 2023–2024</span></span>
-        </a>
-        <div class="nav-dropdown-divider"></div>
-        <a href="case-booking.html">
-          <span class="dd-icon">✈️</span>
-          <span class="dd-label">Booking.com<span>UX Team Lead · 2019–2021</span></span>
-        </a>
-        <a href="case-bookclub.html">
-          <span class="dd-icon">📚</span>
-          <span class="dd-label">BookClub<span>Director of Product Design · 2020–2022</span></span>
-        </a>
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Kevin Hawkins</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <a href="index.html#work" class="active">Work</a>
+          <ul class="dropdown">
+            <li><a href="case-monta.html" class="active">⚡ Monta</a></li>
+            <li><a href="case-glovo.html">🛵 Glovo</a></li>
+            <li><a href="case-amenitiz.html">🏨 Amenitiz</a></li>
+            <li><a href="case-booking.html">✈️ Booking.com</a></li>
+            <li><a href="case-bookclub.html">📚 BookClub</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#leadership">Leadership</a></li>
+        <li><a href="index.html#speaking">Speaking</a></li>
+        <li><a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+      <a href="mailto:hello@kevinhawkinsdesign.com" class="nav-cta">Get in touch</a>
+    </div>
+  </nav>
+
+  <!-- ── CASE STUDY ── -->
+  <main class="case-wrap">
+
+    <header class="case-header">
+      <div class="container">
+        <p class="case-eyebrow">⚡ Monta · VP Product Experience · Dec 2024–Present</p>
+        <h1 class="case-title">Formalizing UX at Europe's leading EV infrastructure platform</h1>
+        <div class="case-meta-row">
+          <div class="case-meta"><span class="meta-label">Role</span><span class="meta-value">VP Product Experience</span></div>
+          <div class="case-meta"><span class="meta-label">Team</span><span class="meta-value">20+ designers, researchers &amp; content</span></div>
+          <div class="case-meta"><span class="meta-label">Location</span><span class="meta-value">Barcelona</span></div>
+          <div class="case-meta"><span class="meta-label">Focus</span><span class="meta-value">0→1 UX function, PLG, AI product</span></div>
+        </div>
       </div>
-    </li>
-    <li class="nav-item"><a href="index.html#leadership">Leadership</a></li>
-    <li class="nav-item"><a href="index.html#speaking">Speaking</a></li>
-    <li>
-      <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" class="nav-linkedin">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </li>
-  </ul>
-  <a href="mailto:hello@kevinhawkinsdesign.com" class="nav-cta">Get in touch</a>
-</nav>
-<div class="cs-hero" style="background:linear-gradient(135deg,rgba(0,40,24,0.95),var(--bg-deep));">
-  <div class="cs-hero-bg"><img src="assets/img/monta_hero_ev.svg" alt="Monta EV charging platform"></div>
-  <div class="cs-hero-content">
-    <a href="index.html#work" class="cs-back">← Back to Work</a>
-    <div class="cs-hero-label">Case Study · 2024–Present</div>
-    <div class="cs-logo"><img src="https://img.logo.dev/monta.com?token=pk_R1FMCqPiR7Wl9KUAP0-7qw&size=120&format=png" alt="Monta logo" referrerpolicy="no-referrer" style="height:36px;width:auto;max-width:180px;"></div>
-  <h1 class="cs-hero-title">Monta<em>:</em><br>Building the intelligence<br>layer for EV charging</h1>
-    <div class="cs-hero-meta">
-      <span>VP, Product Experience</span>
-      <span>Barcelona, Spain</span>
-      <span>Team of 20+</span>
+    </header>
+
+    <div class="container case-body">
+      <div class="case-content">
+
+        <section class="case-section">
+          <h2>The situation</h2>
+          <p>
+            Monta had grown rapidly — and successfully — without a dedicated UX function. By the
+            time I joined, the product had real traction across EV charging networks, charge point
+            operators, and end consumers. But there was no UX vision, no design career framework,
+            and no experimentation infrastructure tied to business outcomes.
+          </p>
+          <p>
+            I was hired as the company's first UX leader. That meant building everything from
+            scratch: vision, process, team structure, shared design language, and the organizational
+            muscle to make design a strategic input rather than a production service.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>What I did</h2>
+          <p>
+            I started by establishing what UX would stand for at Monta — not aesthetics, but
+            outcomes. I connected the design function directly to quarterly business reviews,
+            making research insights a standing agenda item rather than a deck that got shared
+            after decisions were already made.
+          </p>
+          <p>
+            I led a team of 20+ across design, research, and content, delegating ownership
+            broadly while staying close enough to the hardest problems to lead by example.
+            I personally owned the <strong>PostHog implementation</strong> — architecting the event taxonomy
+            and A/B testing framework that the team now runs experiments against. That
+            infrastructure became the foundation for a 20% month-over-month lift in monthly
+            active users, driven by systematic experimentation and a comprehensive PLG
+            onboarding redesign.
+          </p>
+          <p>
+            On the product side, I led UX for Monta's most strategic initiatives:
+            <strong>Monta AI</strong> (AI-assisted charge point management), the <strong>Customer Council</strong>
+            program, the <strong>NOC operations agent</strong> for network operators, and the
+            <strong>Mobile 2.0</strong> consumer app redesign.
+          </p>
+          <p>
+            On the team side, I implemented a career framework and structured learning programs
+            that hadn't existed before — giving designers a clear growth path and the organization
+            a shared language for performance and development.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>What I learned</h2>
+          <p>
+            Coming in as the first UX leader at a fast-growing company requires a different
+            approach than inheriting an established function. The first job isn't to redesign
+            things — it's to earn trust, understand what's already working, and make the case
+            for design maturity in the language of business outcomes. At Monta, that meant
+            owning the PostHog implementation myself before delegating it, so I understood
+            exactly what we were measuring and why.
+          </p>
+        </section>
+
+        <section class="case-metrics">
+          <h2>Outcomes</h2>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-num">+20%</span>
+              <span class="metric-label">MoM MAU growth via A/B experimentation</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">20+</span>
+              <span class="metric-label">designers, researchers &amp; content specialists led</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">4</span>
+              <span class="metric-label">strategic product initiatives: AI, NOC, Mobile 2.0, Customer Council</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">1st</span>
+              <span class="metric-label">UX career framework established at Monta</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="case-sidebar">
+        <div class="sidebar-block">
+          <p class="sidebar-label">Company</p>
+          <p class="sidebar-value">Monta — Europe's leading EV charging infrastructure platform, supporting charge point operators, businesses, and consumers.</p>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">My responsibilities</p>
+          <p class="sidebar-value">
+            UX vision &amp; strategy<br>
+            PostHog implementation<br>
+            A/B experimentation framework<br>
+            PLG onboarding redesign<br>
+            Career framework<br>
+            QBR design integration<br>
+            Team of 20+ across 3 disciplines
+          </p>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">Tools &amp; methods</p>
+          <div class="tag-row">
+            <span class="tag">PostHog</span>
+            <span class="tag">A/B testing</span>
+            <span class="tag">PLG</span>
+            <span class="tag">Figma</span>
+            <span class="tag">UX research</span>
+            <span class="tag">Design systems</span>
+          </div>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">Next case study</p>
+          <a href="case-glovo.html" class="sidebar-next">🛵 Glovo — Global UX Director →</a>
+        </div>
+      </aside>
     </div>
-  </div>
-</div>
 
-<div class="cs-body">
-  <div class="cs-overview">
-    <div class="cs-overview-stats">
-      <div class="cs-stat"><div class="cs-stat-val">+20%</div><div class="cs-stat-lbl">MoM MAU Growth</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">75%</div><div class="cs-stat-lbl">AI Ticket Resolution</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">25s</div><div class="cs-stat-lbl">NOC Fault Diagnosis</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">220k+</div><div class="cs-stat-lbl">Connected Chargers</div></div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2025 Kevin Hawkins</span>
+      <div class="footer-links">
+        <a href="mailto:hello@kevinhawkinsdesign.com">hello@kevinhawkinsdesign.com</a>
+        <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
-  </div>
+  </footer>
 
-  <div class="cs-section">
-    <div class="cs-section-label">Context</div>
-  <div class="company-logo" style="margin-bottom:16px;"><img src="https://img.logo.dev/monta.com?token=pk_R1FMCqPiR7Wl9KUAP0-7qw&size=80&format=png" alt="Monta logo" referrerpolicy="no-referrer" style="height:22px;width:auto;max-width:140px;opacity:0.85;"></div>
-    <h2 class="cs-section-title">The opportunity</h2>
-    <p>Monta came to us without a single dedicated UX leader. The platform — connecting over 220,000 charge points across operators, drivers, and installers — had the product depth of a category leader but lacked the design infrastructure to match. We came in as Monta's first VP of Product Experience with a mandate to formalize UX as a discipline, build the team, and prove that great experience directly drives growth.</p>
-    <p>The challenge was threefold: build a design culture from scratch, drive measurable MAU growth through experimentation, and contribute meaningfully to Monta's most ambitious AI bets — all while managing a team of 20+ across design, research, and content.</p>
-  </div>
-
-  <div class="cs-image-full"><img src="assets/img/monta_hub_ai.png" alt="Monta Hub with Monta AI panel — charge point management"><div class="cs-img-cap">Monta Hub — Operator Portal & Charge Point Management System</div></div>
-
-  <div class="cs-section">
-    <div class="cs-section-label">Approach</div>
-    <h2 class="cs-section-title">Formalizing UX from the ground up</h2>
-    <p>The first 90 days were about establishing foundations: a shared design vision, a ways-of-working playbook, career frameworks for every level from IC designer to senior principal, and research operations that could scale. We embedded UX insights into Monta's quarterly business reviews — making the connection between design decisions and retention metrics visible to leadership for the first time.</p>
-    <p>We simultaneously stood up an experimentation engine. Owning PostHog implementation end-to-end, we built A/B testing pipelines and PLG communication strategies targeting the large base of accounts without dedicated CSMs. This drove 20% month-over-month MAU growth — moving the metric that matters most to Monta's growth story.</p>
-  </div>
-
-  <div class="cs-image-grid">
-    <div class="cs-img-wrap"><img src="assets/img/monta_noc_agent.png" alt="NOC Agent — AI-powered diagnostic tool for EV charge operators"><div class="cs-img-cap">Monta Hub — Real-Time Charge Point Monitoring & Analytics</div></div>
-  </div>
-
-  <div class="cs-section">
-    <div class="cs-section-label">Key Initiative</div>
-    <h2 class="cs-section-title">Monta AI &amp; the NOC Agent</h2>
-    <p>Monta's most strategically significant initiative was the launch of Monta AI — and at its core, the NOC Agent: the platform's first AI-powered diagnostic tool. Traditionally, diagnosing a failed EV charging session required operators to manually cross-reference OCPP logs, firmware histories, payment records, and hardware specs. This process took hours and required deep technical expertise.</p>
-    <p>Our team owned the UX of the NOC Agent from concept to launch — designing the interaction model, the plain-English explanation layer, and the operator-facing interface that sits inside Monta Control 2.0. The NOC Agent cross-references 10+ data sources and delivers a diagnosis in seconds. In one documented case, a US operator improved their DC charger success rate from 31.2% to 98.3% in just 25 seconds of analysis. Monta's AI now resolves 75% of customer support tickets before they reach a human agent.</p>
-  </div>
-
-  <div class="cs-image-full"><img src="assets/img/monta_hub_stats.png" alt="Monta Hub — CP HQ1 statistics: 279 charge sessions, 98% success rate, 99% uptime"><div class="cs-img-cap">Monta Hub — Charge Point Statistics Dashboard: 98% Success Rate, 99% Uptime</div></div>
-
-  <div class="cs-section">
-    <div class="cs-section-label">Key Initiative</div>
-    <h2 class="cs-section-title">Monta Charge Mobile 2.0</h2>
-    <p>In parallel with the AI work, we led a comprehensive UX overhaul of the Monta Charge mobile app — the driver-facing product used by EV drivers to find, start, and pay for charging sessions. Mobile 2.0 focused on simplifying the core charging journey, improving session status feedback, and introducing contextual guidance that reduced support contacts and increased driver confidence.</p>
-    <p>We ran structured research sprints with drivers across multiple markets, feeding behavioral data and usability findings directly into the design iterations. The result was a product that felt significantly more intuitive without sacrificing the power-user capabilities that operators depend on.</p>
-  </div>
-
-  <div class="cs-image-grid two">
-    <div class="cs-img-wrap"><img src="assets/img/monta_charge_app.png" alt="Monta Charge app — team wallet, active charging session, charging summary"><div class="cs-img-cap">Monta Charge — Team Wallet, Live Session &amp; Charging Summary Flow</div></div>
-    <div class="cs-img-wrap"><img src="assets/img/monta_hub_pricing.png" alt="Monta Hub — price groups management interface"><div class="cs-img-cap">Monta Hub — Price Groups &amp; Revenue Management for Charge Point Operators</div></div>
-  </div>
-
-  <div class="cs-section">
-    <div class="cs-section-label">Outcomes</div>
-    <h2 class="cs-section-title">Results that move the business</h2>
-    <p>The combination of experimentation infrastructure, AI product design, and Mobile 2.0 delivered measurable outcomes across the three metrics Monta cares about most: MAU growth, support efficiency, and operator reliability. We also established Monta's Customer Council — a structured program for continuous feedback from key accounts — and integrated UX maturity scoring into the company's quarterly planning process.</p>
-  </div>
-
-  <div class="cs-results-grid">
-    <div class="cs-result"><div class="cs-result-val">+20%</div><div class="cs-result-lbl">Month-over-month MAU growth via owned experimentation pipeline</div></div>
-    <div class="cs-result"><div class="cs-result-val">75%</div><div class="cs-result-lbl">Customer support tickets resolved by AI before reaching a human</div></div>
-    <div class="cs-result"><div class="cs-result-val">25s</div><div class="cs-result-lbl">Time for NOC Agent to diagnose a charging fault vs. hours manually</div></div>
-    <div class="cs-result"><div class="cs-result-val">31% → 98%</div><div class="cs-result-lbl">DC charger success rate improvement in one documented case</div></div>
-  </div>
-
-  <div class="cs-next">
-    <a href="case-glovo.html" class="cs-next-link">Next Case Study: Glovo →</a>
-    <a href="index.html#work" class="cs-back-link">← All Work</a>
-  </div>
-</div>
-
-<footer>
-  <div>
-    <div class="footer-name">Kevin Hawkins</div>
-    <div class="footer-title">VP Product Experience · Barcelona, Spain</div>
-    <div class="footer-contact">
-      <a href="mailto:hello@kevinhawkinsdesign.com">hello@kevinhawkinsdesign.com</a>
-      <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" style="display:inline-flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
-      <a href="https://instagram.com/kevinhawkinsdesign" target="_blank" style="display:inline-flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>Instagram</a>
-      <a href="tel:+34625735141">+34 625 735 141</a>
-    </div>
-  </div>
-  <div class="footer-right">
-    <div class="footer-countries">70+</div>
-    <div class="footer-countries-label">Countries Explored · Cultures Understood</div>
-  </div>
-</footer>
-<script src="assets/js/main.js"></script>
-</body></html>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

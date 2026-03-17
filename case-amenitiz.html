@@ -1,139 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Amenitiz — Kevin Hawkins Case Study</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/main.css"><link rel="stylesheet" href="assets/css/case-study.css">
-</head><body style="background:var(--bg);">
-<nav>
-  <a href="index.html" class="nav-logo">Kevin Hawkins</a>
-  <ul class="nav-links">
-    <li class="nav-item">
-      <a href="about.html">About</a>
-    </li>
-    <li class="nav-item">
-      <a href="index.html#work">Work
-        <svg class="nav-chevron" viewBox="0 0 10 6" fill="none">
-          <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </a>
-      <div class="nav-dropdown">
-        <a href="case-monta.html">
-          <span class="dd-icon">⚡</span>
-          <span class="dd-label">Monta<span>VP Product Experience · 2024–Present</span></span>
-        </a>
-        <a href="case-glovo.html">
-          <span class="dd-icon">🛵</span>
-          <span class="dd-label">Glovo<span>Global UX Director · 2022–2023</span></span>
-        </a>
-        <a href="case-amenitiz.html">
-          <span class="dd-icon">🏨</span>
-          <span class="dd-label">Amenitiz<span>Head of Design &amp; Research · 2023–2024</span></span>
-        </a>
-        <div class="nav-dropdown-divider"></div>
-        <a href="case-booking.html">
-          <span class="dd-icon">✈️</span>
-          <span class="dd-label">Booking.com<span>UX Team Lead · 2019–2021</span></span>
-        </a>
-        <a href="case-bookclub.html">
-          <span class="dd-icon">📚</span>
-          <span class="dd-label">BookClub<span>Director of Product Design · 2020–2022</span></span>
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amenitiz — Kevin Hawkins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="case.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Kevin Hawkins</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <a href="index.html#work" class="active">Work</a>
+          <ul class="dropdown">
+            <li><a href="case-monta.html">⚡ Monta</a></li>
+            <li><a href="case-glovo.html">🛵 Glovo</a></li>
+            <li><a href="case-amenitiz.html" class="active">🏨 Amenitiz</a></li>
+            <li><a href="case-booking.html">✈️ Booking.com</a></li>
+            <li><a href="case-bookclub.html">📚 BookClub</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#leadership">Leadership</a></li>
+        <li><a href="index.html#speaking">Speaking</a></li>
+        <li><a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+      <a href="mailto:hello@kevinhawkinsdesign.com" class="nav-cta">Get in touch</a>
+    </div>
+  </nav>
+
+  <!-- ── CASE STUDY ── -->
+  <main class="case-wrap">
+
+    <header class="case-header">
+      <div class="container">
+        <p class="case-eyebrow">🏨 Amenitiz · Head of Design &amp; Research · Sep 2023–Nov 2024</p>
+        <h1 class="case-title">Expanding a hospitality SaaS platform to 60+ countries</h1>
+        <div class="case-meta-row">
+          <div class="case-meta"><span class="meta-label">Role</span><span class="meta-value">Head of Design &amp; Research</span></div>
+          <div class="case-meta"><span class="meta-label">Team</span><span class="meta-value">6 designers hired in 45 days</span></div>
+          <div class="case-meta"><span class="meta-label">Scale</span><span class="meta-value">60+ countries · 15k+ properties</span></div>
+          <div class="case-meta"><span class="meta-label">Focus</span><span class="meta-value">International expansion, PLG, LTV</span></div>
+        </div>
       </div>
-    </li>
-    <li class="nav-item"><a href="index.html#leadership">Leadership</a></li>
-    <li class="nav-item"><a href="index.html#speaking">Speaking</a></li>
-    <li>
-      <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" class="nav-linkedin">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </li>
-  </ul>
-  <a href="mailto:hello@kevinhawkinsdesign.com" class="nav-cta">Get in touch</a>
-</nav>
-<div class="cs-hero" style="background:linear-gradient(135deg,rgba(40,28,6,0.95),var(--bg-deep));">
-  <div class="cs-hero-bg"><img src="assets/img/amenitiz_calendar.jpeg" alt=""></div>
-  <div class="cs-hero-content">
-    <a href="index.html#work" class="cs-back">← Back to Work</a>
-    <div class="cs-hero-label">Case Study · 2023–2024</div>
-    <div class="cs-logo"><img src="https://img.logo.dev/amenitiz.com?token=pk_R1FMCqPiR7Wl9KUAP0-7qw&size=120&format=png" alt="Amenitiz logo" referrerpolicy="no-referrer" style="height:36px;width:auto;max-width:180px;"></div>
-  <h1 class="cs-hero-title">Amenitiz<em>:</em><br>0 to team in 45 days,<br>+20% LTV in under a year</h1>
-    <div class="cs-hero-meta"><span>Director, Head of Design &amp; Research</span><span>Barcelona</span><span>6-Person Team · 60+ Countries</span></div>
-  </div>
-</div>
-<div class="cs-body">
-  <div class="cs-overview">
-    <div class="cs-overview-stats">
-      <div class="cs-stat"><div class="cs-stat-val">45 days</div><div class="cs-stat-lbl">Full Team Recruited</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">+20%</div><div class="cs-stat-lbl">LTV &amp; Retention</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">60+</div><div class="cs-stat-lbl">Countries Scaled To</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">15k+</div><div class="cs-stat-lbl">Properties on Platform</div></div>
+    </header>
+
+    <div class="container case-body">
+      <div class="case-content">
+
+        <section class="case-section">
+          <h2>The situation</h2>
+          <p>
+            Amenitiz had strong product-market fit in its core European markets but needed to
+            scale internationally — across 60+ countries and 15,000+ properties — without
+            degrading the experience that made it successful in the first place.
+          </p>
+          <p>
+            There was no research practice, no localization framework, and no dedicated design
+            leadership. I was brought in to build those foundations and lead the product
+            transformation required to support international scale.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>What I did</h2>
+          <p>
+            I recruited a full team of six designers in my first 45 days — which required
+            running a hiring process, defining roles and standards, and onboarding people into
+            an environment without established design systems or documentation. Rather than
+            waiting until the team was settled, I put everyone to work immediately on an
+            <strong>innovation workshop</strong> with Product and Engineering to align on priorities and
+            build shared context fast.
+          </p>
+          <p>
+            Before touching the product, I led <strong>three strategic research trips</strong> to key
+            accounts — visiting properties directly to understand how hospitality operators
+            actually worked across different markets. That research informed everything that
+            followed and gave the team a shared grounding in user reality that you can't get
+            from internal data alone.
+          </p>
+          <p>
+            I then led the redesign of Amenitiz's core UIs: <strong>calendar</strong>, <strong>self-service
+            onboarding</strong>, and <strong>inventory management</strong> — the three surfaces that determined
+            whether a new property could get up and running independently. The redesigns were
+            built to scale across languages, property types, and operational contexts.
+          </p>
+          <p>
+            I personally led the <strong>Brazilian market launch</strong>: new language, personalized product
+            experience, and a streamlined self-service signup flow designed for a lower-LTV
+            prospect profile and a full PLG motion. No sales-assisted onboarding — the
+            product had to do the work on its own.
+          </p>
+          <p>
+            I also established the company's first user research and localization best
+            practices — repeatable frameworks that gave the team a foundation to work from
+            after I left.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>What I learned</h2>
+          <p>
+            Moving fast in a new role doesn't mean skipping the research. The three
+            field trips to customer accounts were the single best investment I made in those
+            early months. They surfaced problems that no analytics dashboard would have
+            shown, and they built instant credibility with the product and engineering teams
+            who saw that design was willing to get its hands dirty.
+          </p>
+          <p>
+            The Brazilian launch was also a useful forcing function: designing a PLG motion
+            for a new market — with no sales support and a different economic profile — requires
+            making every friction point in onboarding visible and eliminating it. That
+            discipline made the core product better for everyone.
+          </p>
+        </section>
+
+        <section class="case-metrics">
+          <h2>Outcomes</h2>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-num">+20%</span>
+              <span class="metric-label">LTV &amp; retention — NPS held flat through the transition</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">6</span>
+              <span class="metric-label">designers hired and onboarded in first 45 days</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">60+</span>
+              <span class="metric-label">countries supported via redesigned core UIs</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">1</span>
+              <span class="metric-label">new market launched (Brazil) with full PLG motion</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="case-sidebar">
+        <div class="sidebar-block">
+          <p class="sidebar-label">Company</p>
+          <p class="sidebar-value">Amenitiz — all-in-one hospitality management software for independent hotels and vacation rentals, operating across 60+ countries.</p>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">My responsibilities</p>
+          <p class="sidebar-value">
+            Team hiring (0→6 in 45 days)<br>
+            3 field research trips<br>
+            Calendar, onboarding &amp; inventory redesign<br>
+            Brazil market launch<br>
+            PLG self-service onboarding<br>
+            Research &amp; localization frameworks<br>
+            Cross-functional innovation workshop
+          </p>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">Tools &amp; methods</p>
+          <div class="tag-row">
+            <span class="tag">Field research</span>
+            <span class="tag">PLG design</span>
+            <span class="tag">Localization</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Usability testing</span>
+            <span class="tag">Jobs-to-be-done</span>
+          </div>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">Next case study</p>
+          <a href="case-booking.html" class="sidebar-next">✈️ Booking.com — UX Team Lead →</a>
+        </div>
+      </aside>
     </div>
-  </div>
 
-  <div class="cs-section">
-    <div class="cs-section-label">Context</div>
-  <div class="company-logo" style="margin-bottom:16px;"><img src="https://img.logo.dev/amenitiz.com?token=pk_R1FMCqPiR7Wl9KUAP0-7qw&size=80&format=png" alt="Amenitiz logo" referrerpolicy="no-referrer" style="height:22px;width:auto;max-width:140px;opacity:0.85;"></div>
-    <h2 class="cs-section-title">Building fast without sacrificing quality</h2>
-    <p>Amenitiz is an all-in-one hospitality management platform serving independent hotels and properties across 60+ countries. When we joined, the company had strong product-market fit and an ambitious growth trajectory — but no dedicated design leadership. The brief was clear: come in, build a team, and immediately begin improving the product experiences that drive acquisition, onboarding, and retention.</p>
-    <p>Within 45 days we had recruited a full team of 6 designers and facilitated a cross-functional innovation workshop with Product and Engineering leadership — resetting the team's working norms, aligning on a shared design vision, and identifying the highest-impact areas to tackle first.</p>
-  </div>
+  </main>
 
-  <div class="cs-image-full"><img src="assets/img/amenitiz_calendar.jpeg" alt="Amenitiz product design work"><div class="cs-img-cap">Amenitiz PMS — Property Calendar with Availability, Pricing &amp; Rate Recommendations</div></div>
-
-  <div class="cs-section">
-    <div class="cs-section-label">Core Work</div>
-    <h2 class="cs-section-title">Redesigning the heart of the product</h2>
-    <p>The platform's core UI — the property calendar, self-service onboarding flow, and inventory management — was functional but not optimized for scale or ease of use across diverse property types and markets. We ran a systematic redesign across all three areas, anchored in research findings from three strategic on-site visits with key accounts in different regions.</p>
-    <p>The calendar redesign alone improved time-on-task for property managers by reducing the number of steps required for common actions. The self-service onboarding overhaul was particularly impactful — enabling the team to scale to new markets without proportionally scaling the customer success team, a critical lever for unit economics at Amenitiz's stage.</p>
-  </div>
-
-  <div class="cs-image-grid two">
-    <div class="cs-img-wrap"><img src="assets/img/amenitiz_booking.jpeg" alt="Calendar UI redesign"><div class="cs-img-cap">Amenitiz Booking Engine — Accommodation Selection &amp; Reservation Flow</div></div>
-    <div class="cs-img-wrap"><img src="assets/img/amenitiz_calendar.jpeg" alt="Self-service onboarding"><div class="cs-img-cap">Amenitiz PMS — Multi-Property Calendar &amp; Pricing Management</div></div>
-  </div>
-
-  <div class="cs-section">
-    <div class="cs-section-label">Market Expansion</div>
-    <h2 class="cs-section-title">Launching Brazil — a full PLG motion</h2>
-    <p>One of our most strategically complex deliverables was the Brazil market launch. Brazil represented a meaningful expansion opportunity but with different LTV characteristics than Amenitiz's core European markets — meaning the product and acquisition motion needed to be calibrated accordingly.</p>
-    <p>We designed and delivered a full PLG self-service signup experience specifically for the Brazilian market: localized in Portuguese, personalized to local property management workflows, and streamlined to reduce the onboarding drop-off that was more pronounced in lower-LTV market segments. This was a complete product and go-to-market exercise — touching copy, UX, information architecture, and the signup funnel end to end.</p>
-  </div>
-
-  <div class="cs-image-grid">
-    <div class="cs-img-wrap"><img src="assets/img/img_48.jpg" alt="Research and strategy"><div class="cs-img-cap">Strategic Research Trips with Key Accounts</div></div>
-  </div>
-
-  <div class="cs-results-grid">
-    <div class="cs-result"><div class="cs-result-val">45 days</div><div class="cs-result-lbl">Full 6-person design team recruited and operational</div></div>
-    <div class="cs-result"><div class="cs-result-val">+20%</div><div class="cs-result-lbl">LTV and retention increase without NPS degradation</div></div>
-    <div class="cs-result"><div class="cs-result-val">60+</div><div class="cs-result-lbl">Countries product successfully scaled to</div></div>
-    <div class="cs-result"><div class="cs-result-val">15k+</div><div class="cs-result-lbl">Properties using the redesigned property management UI</div></div>
-  </div>
-
-  <div class="cs-next">
-    <a href="case-booking.html" class="cs-next-link">Next Case Study: Booking.com →</a>
-    <a href="index.html#work" class="cs-back-link">← All Work</a>
-  </div>
-</div>
-
-<footer>
-  <div>
-    <div class="footer-name">Kevin Hawkins</div>
-    <div class="footer-title">VP Product Experience · Barcelona, Spain</div>
-    <div class="footer-contact">
-      <a href="mailto:hello@kevinhawkinsdesign.com">hello@kevinhawkinsdesign.com</a>
-      <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" style="display:inline-flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
-      <a href="https://instagram.com/kevinhawkinsdesign" target="_blank" style="display:inline-flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>Instagram</a>
-      <a href="tel:+34625735141">+34 625 735 141</a>
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2025 Kevin Hawkins</span>
+      <div class="footer-links">
+        <a href="mailto:hello@kevinhawkinsdesign.com">hello@kevinhawkinsdesign.com</a>
+        <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
-  </div>
-  <div class="footer-right">
-    <div class="footer-countries">70+</div>
-    <div class="footer-countries-label">Countries Explored · Cultures Understood</div>
-  </div>
-</footer>
-<script src="assets/js/main.js"></script>
-</body></html>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

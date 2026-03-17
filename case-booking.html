@@ -1,146 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Booking.com — Kevin Hawkins Case Study</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/main.css"><link rel="stylesheet" href="assets/css/case-study.css">
-</head><body style="background:var(--bg);">
-<nav>
-  <a href="index.html" class="nav-logo">Kevin Hawkins</a>
-  <ul class="nav-links">
-    <li class="nav-item">
-      <a href="about.html">About</a>
-    </li>
-    <li class="nav-item">
-      <a href="index.html#work">Work
-        <svg class="nav-chevron" viewBox="0 0 10 6" fill="none">
-          <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </a>
-      <div class="nav-dropdown">
-        <a href="case-monta.html">
-          <span class="dd-icon">⚡</span>
-          <span class="dd-label">Monta<span>VP Product Experience · 2024–Present</span></span>
-        </a>
-        <a href="case-glovo.html">
-          <span class="dd-icon">🛵</span>
-          <span class="dd-label">Glovo<span>Global UX Director · 2022–2023</span></span>
-        </a>
-        <a href="case-amenitiz.html">
-          <span class="dd-icon">🏨</span>
-          <span class="dd-label">Amenitiz<span>Head of Design &amp; Research · 2023–2024</span></span>
-        </a>
-        <div class="nav-dropdown-divider"></div>
-        <a href="case-booking.html">
-          <span class="dd-icon">✈️</span>
-          <span class="dd-label">Booking.com<span>UX Team Lead · 2019–2021</span></span>
-        </a>
-        <a href="case-bookclub.html">
-          <span class="dd-icon">📚</span>
-          <span class="dd-label">BookClub<span>Director of Product Design · 2020–2022</span></span>
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking.com — Kevin Hawkins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="case.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Kevin Hawkins</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <a href="index.html#work" class="active">Work</a>
+          <ul class="dropdown">
+            <li><a href="case-monta.html">⚡ Monta</a></li>
+            <li><a href="case-glovo.html">🛵 Glovo</a></li>
+            <li><a href="case-amenitiz.html">🏨 Amenitiz</a></li>
+            <li><a href="case-booking.html" class="active">✈️ Booking.com</a></li>
+            <li><a href="case-bookclub.html">📚 BookClub</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#leadership">Leadership</a></li>
+        <li><a href="index.html#speaking">Speaking</a></li>
+        <li><a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+      <a href="mailto:hello@kevinhawkinsdesign.com" class="nav-cta">Get in touch</a>
+    </div>
+  </nav>
+
+  <!-- ── CASE STUDY ── -->
+  <main class="case-wrap">
+
+    <header class="case-header">
+      <div class="container">
+        <p class="case-eyebrow">✈️ Booking.com · UX Team Lead · Jul 2019–Feb 2021</p>
+        <h1 class="case-title">Cross-brand product innovation at one of the world's largest travel platforms</h1>
+        <div class="case-meta-row">
+          <div class="case-meta"><span class="meta-label">Role</span><span class="meta-value">UX Team Lead</span></div>
+          <div class="case-meta"><span class="meta-label">Business units</span><span class="meta-value">Connected Stay, Cross-brand</span></div>
+          <div class="case-meta"><span class="meta-label">Brands</span><span class="meta-value">Booking.com · Kayak · Priceline · Agoda</span></div>
+          <div class="case-meta"><span class="meta-label">Location</span><span class="meta-value">Amsterdam</span></div>
+        </div>
       </div>
-    </li>
-    <li class="nav-item"><a href="index.html#leadership">Leadership</a></li>
-    <li class="nav-item"><a href="index.html#speaking">Speaking</a></li>
-    <li>
-      <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" class="nav-linkedin">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </li>
-  </ul>
-  <a href="mailto:hello@kevinhawkinsdesign.com" class="nav-cta">Get in touch</a>
-</nav>
-<div class="cs-hero" style="background:linear-gradient(135deg,rgba(0,20,50,0.95),var(--bg-deep));">
-  <div class="cs-hero-bg"><img src="assets/img/img_49.jpg" alt=""></div>
-  <div class="cs-hero-content">
-    <a href="index.html#work" class="cs-back">← Back to Work</a>
-    <div class="cs-hero-label">Case Study · 2019–2021</div>
-    <div class="cs-logo"><img src="https://img.logo.dev/booking.com?token=pk_R1FMCqPiR7Wl9KUAP0-7qw&size=120&format=png" alt="Booking.com logo" referrerpolicy="no-referrer" style="height:36px;width:auto;max-width:180px;"></div>
-  <h1 class="cs-hero-title">Booking.com<em>:</em><br>Cross-brand innovation<br>across 4 platforms</h1>
-    <div class="cs-hero-meta"><span>UX Team Lead</span><span>Amsterdam</span><span>Booking · Kayak · Priceline · Agoda</span></div>
-  </div>
-</div>
-<div class="cs-body">
-  <div class="cs-overview">
-    <div class="cs-overview-stats">
-      <div class="cs-stat"><div class="cs-stat-val">2×</div><div class="cs-stat-lbl">Hackathon Wins</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">4</div><div class="cs-stat-lbl">Brands Unified</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">2</div><div class="cs-stat-lbl">Concepts Shipped</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">~1bn</div><div class="cs-stat-lbl">Platform Bookers</div></div>
+    </header>
+
+    <div class="container case-body">
+      <div class="case-content">
+
+        <section class="case-section">
+          <h2>The situation</h2>
+          <p>
+            Booking Holdings owns some of the world's most-used travel platforms —
+            Booking.com, Kayak, Priceline, Agoda, and others. I led two product teams focused
+            on <strong>Connected Stay</strong> (a cross-product initiative to create a seamless
+            experience across the trip lifecycle) and <strong>cross-brand initiatives</strong> that
+            required coordination between separate engineering and product organizations across
+            sister companies.
+          </p>
+          <p>
+            The challenge of cross-brand work at that scale is mostly organizational: getting
+            multiple teams with different priorities, tech stacks, and timelines to converge on
+            something shippable. Design is often the connective tissue that makes that possible.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>What I did</h2>
+          <p>
+            I led my teams through two <strong>internal hackathons</strong>, turning raw product ideas
+            into shippable concepts with clear business cases. The winning concepts — a
+            <strong>group travel planner</strong> and <strong>local events hotel search</strong> — both went into
+            production track, demonstrating how design-led experimentation could compress the
+            time from insight to decision at a company that size.
+          </p>
+          <p>
+            For the cross-brand work, I built the relationships across Kayak, Priceline, and
+            Agoda that made collaboration realistic rather than theoretical — establishing
+            shared design principles and communication channels that let multiple teams move
+            toward the same goal without constant alignment overhead.
+          </p>
+          <p>
+            I also used this period to sharpen my approach to measuring design impact in a
+            large, highly data-driven organization. At Booking.com, every design decision
+            was expected to have a testable hypothesis and measurable outcome. That rigor
+            shaped how I've approached experimentation ever since.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>What I learned</h2>
+          <p>
+            At a company with Booking.com's data culture, design credibility comes from
+            speaking the language of statistical significance and conversion rates — not
+            just user empathy. The best designers I worked with there were fluent in both.
+            That was the bar I held my team to, and it's shaped how I hire and develop
+            designers ever since.
+          </p>
+        </section>
+
+        <section class="case-metrics">
+          <h2>Outcomes</h2>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-num">2×</span>
+              <span class="metric-label">hackathon wins — both concepts went to production track</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">4</span>
+              <span class="metric-label">brands aligned on cross-platform design principles</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">2</span>
+              <span class="metric-label">new consumer features shipped: group planner + local events search</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="case-sidebar">
+        <div class="sidebar-block">
+          <p class="sidebar-label">Company</p>
+          <p class="sidebar-value">Booking.com — world's largest online travel platform, part of Booking Holdings alongside Kayak, Priceline, Agoda, and OpenTable.</p>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">My responsibilities</p>
+          <p class="sidebar-value">
+            2 product team leads<br>
+            Connected Stay UX<br>
+            Cross-brand design alignment<br>
+            2 internal hackathons<br>
+            Experimental product concepts<br>
+            Kayak · Priceline · Agoda coordination
+          </p>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">Tools &amp; methods</p>
+          <div class="tag-row">
+            <span class="tag">A/B testing</span>
+            <span class="tag">Rapid prototyping</span>
+            <span class="tag">Figma</span>
+            <span class="tag">Quantitative UX</span>
+            <span class="tag">Cross-brand systems</span>
+          </div>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">Next case study</p>
+          <a href="case-bookclub.html" class="sidebar-next">📚 BookClub — Director of Design →</a>
+        </div>
+      </aside>
     </div>
-  </div>
 
-  <div class="cs-section">
-    <div class="cs-section-label">Context</div>
-  <div class="company-logo" style="margin-bottom:16px;"><img src="https://img.logo.dev/booking.com?token=pk_R1FMCqPiR7Wl9KUAP0-7qw&size=80&format=png" alt="Booking.com logo" referrerpolicy="no-referrer" style="height:22px;width:auto;max-width:140px;opacity:0.85;"></div>
-    <h2 class="cs-section-title">Designing across a travel empire</h2>
-    <p>Booking Holdings is one of the world's largest travel companies — operating Booking.com, Kayak, Priceline, Agoda, OpenTable, and Rentalcars.com as distinct but strategically connected platforms. Our role at Booking.com was to lead design for Connected Stay and cross-brand initiatives: product experiences that bridged multiple platforms into a coherent, intelligent traveller journey.</p>
-    <p>This was a uniquely complex design challenge. Each platform had its own design system, user base, and product culture — yet the opportunity to create genuine value for travellers who were already using multiple Booking Holdings products was enormous. Our team operated at the intersection of product vision, technical constraint, and cross-brand politics.</p>
-  </div>
+  </main>
 
-  <div class="cs-image-full"><img src="assets/img/img_50.jpg" alt="Booking.com"><div class="cs-img-cap">Booking.com — Designing for the World's Leading Accommodation Platform</div></div>
-
-  <div class="cs-section">
-    <div class="cs-section-label">Key Feature · Shipped</div>
-    <h2 class="cs-section-title">Group Trip Planner — from hackathon to production</h2>
-    <p>One of the clearest demonstrations of what happens when designers are given autonomy, speed, and cross-functional buy-in was the Group Trip Planner. We conceived, prototyped, and validated this feature during an internal hackathon — designing a collaborative trip-planning experience that allowed groups to plan, vote on options, and book together within a single Booking.com flow.</p>
-    <p>The feature addressed a genuine pain point: group travel coordination typically required multiple tools, endless message threads, and someone volunteering to be the "planner." Our solution surfaced personalised recommendations, let each traveller indicate preferences, and unified the booking decision into a single streamlined experience. The hackathon prototype was polished and shipped to production — one of the more satisfying full-cycle moments in the engagement.</p>
-  </div>
-
-  <div class="cs-image-full"><img src="assets/img/img_49.jpg" alt="Group Trip Planner UI — full flow"><div class="cs-img-cap">Group Trip Planner — Collaborative Travel Planning Shipped to Booking.com Production</div></div>
-
-  <div class="cs-section">
-    <div class="cs-section-label">Key Feature · Shipped</div>
-    <h2 class="cs-section-title">Local Events Hotel Search — context-first discovery</h2>
-    <p>The second hackathon win was Local Events Hotel Search: a feature that reframed the accommodation search paradigm around events rather than dates. Instead of "I need a hotel in Amsterdam, Feb 24–26," the experience became "Beyoncé is performing at Johan Cruyff Arena on Feb 24 — here are the best places to stay nearby, with contextual neighbourhood information, canal tours, and local attractions."</p>
-    <p>This was a bet on context-first discovery — surfacing accommodation at moments of high intent rather than waiting for users to initiate a search. The feature drew on Booking.com's rich data infrastructure to surface personalized, location-aware recommendations tied to concerts, sports events, festivals, and cultural moments in key cities.</p>
-  </div>
-
-  <div class="cs-image-grid two">
-    <div class="cs-img-wrap"><img src="assets/img/img_51.jpg" alt="Local events hotel search — Berlin and Amsterdam"><div class="cs-img-cap">Local Events Hotel Search — Berlin &amp; Amsterdam Context-First Discovery</div></div>
-    <div class="cs-img-wrap"><img src="assets/img/img_52.jpg" alt="Connected Stay — Amsterdam canals and Beyoncé"><div class="cs-img-cap">Connected Stay — Amsterdam Canals + Beyoncé Concert Hotel Pairing</div></div>
-  </div>
-
-  <div class="cs-section">
-    <div class="cs-section-label">Key Feature</div>
-    <h2 class="cs-section-title">Connected Stay — bridging the Booking Holdings ecosystem</h2>
-    <p>The broader Connected Stay initiative was about creating intelligent continuity across a traveller's entire journey — not just the accommodation booking, but the discovery, planning, and on-trip experience. We worked across the sister brands (Kayak for flight search, OpenTable for dining, Rentalcars for ground transport) to design shared data models, surface relevant cross-platform recommendations, and reduce the fragmentation that forced travellers to context-switch between apps.</p>
-    <p>This work required as much organisational design as product design — navigating platform autonomy, competing roadmaps, and the natural tension between local optimization and cross-brand coherence. We learned as much about leading across organisational lines as we did about designing multi-platform experiences.</p>
-  </div>
-
-  <div class="cs-image-full"><img src="assets/img/img_53.jpg" alt="Connected Stay product"><div class="cs-img-cap">Connected Stay — Intelligent Continuity Across Booking Holdings Platforms</div></div>
-
-  <div class="cs-results-grid">
-    <div class="cs-result"><div class="cs-result-val">2×</div><div class="cs-result-lbl">Internal hackathon wins — both converted to shipped product features</div></div>
-    <div class="cs-result"><div class="cs-result-val">4 brands</div><div class="cs-result-lbl">Unified design thinking across Booking.com, Kayak, Priceline, and Agoda</div></div>
-    <div class="cs-result"><div class="cs-result-val">Group Travel</div><div class="cs-result-lbl">Planner feature shipped: collaborative trip planning for groups of any size</div></div>
-    <div class="cs-result"><div class="cs-result-val">Events Search</div><div class="cs-result-lbl">Local events hotel discovery launched: context-first accommodation UX</div></div>
-  </div>
-
-  <div class="cs-next">
-    <a href="case-bookclub.html" class="cs-next-link">Next Case Study: BookClub →</a>
-    <a href="index.html#work" class="cs-back-link">← All Work</a>
-  </div>
-</div>
-
-<footer>
-  <div>
-    <div class="footer-name">Kevin Hawkins</div>
-    <div class="footer-title">VP Product Experience · Barcelona, Spain</div>
-    <div class="footer-contact">
-      <a href="mailto:hello@kevinhawkinsdesign.com">hello@kevinhawkinsdesign.com</a>
-      <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" style="display:inline-flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
-      <a href="https://instagram.com/kevinhawkinsdesign" target="_blank" style="display:inline-flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>Instagram</a>
-      <a href="tel:+34625735141">+34 625 735 141</a>
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2025 Kevin Hawkins</span>
+      <div class="footer-links">
+        <a href="mailto:hello@kevinhawkinsdesign.com">hello@kevinhawkinsdesign.com</a>
+        <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
-  </div>
-  <div class="footer-right">
-    <div class="footer-countries">70+</div>
-    <div class="footer-countries-label">Countries Explored · Cultures Understood</div>
-  </div>
-</footer>
-<script src="assets/js/main.js"></script>
-</body></html>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

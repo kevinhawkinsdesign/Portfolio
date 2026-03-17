@@ -1,174 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Glovo — Kevin Hawkins Case Study</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/main.css">
-<link rel="stylesheet" href="assets/css/case-study.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glovo — Kevin Hawkins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="case.css" />
 </head>
-<body style="background:var(--bg);">
+<body>
 
-<nav>
-  <a href="index.html" class="nav-logo">Kevin Hawkins</a>
-  <ul class="nav-links">
-    <li class="nav-item">
-      <a href="about.html">About</a>
-    </li>
-    <li class="nav-item">
-      <a href="index.html#work">Work
-        <svg class="nav-chevron" viewBox="0 0 10 6" fill="none">
-          <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </a>
-      <div class="nav-dropdown">
-        <a href="case-monta.html">
-          <span class="dd-icon">⚡</span>
-          <span class="dd-label">Monta<span>VP Product Experience · 2024–Present</span></span>
-        </a>
-        <a href="case-glovo.html">
-          <span class="dd-icon">🛵</span>
-          <span class="dd-label">Glovo<span>Global UX Director · 2022–2023</span></span>
-        </a>
-        <a href="case-amenitiz.html">
-          <span class="dd-icon">🏨</span>
-          <span class="dd-label">Amenitiz<span>Head of Design &amp; Research · 2023–2024</span></span>
-        </a>
-        <div class="nav-dropdown-divider"></div>
-        <a href="case-booking.html">
-          <span class="dd-icon">✈️</span>
-          <span class="dd-label">Booking.com<span>UX Team Lead · 2019–2021</span></span>
-        </a>
-        <a href="case-bookclub.html">
-          <span class="dd-icon">📚</span>
-          <span class="dd-label">BookClub<span>Director of Product Design · 2020–2022</span></span>
-        </a>
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Kevin Hawkins</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <a href="index.html#work" class="active">Work</a>
+          <ul class="dropdown">
+            <li><a href="case-monta.html">⚡ Monta</a></li>
+            <li><a href="case-glovo.html" class="active">🛵 Glovo</a></li>
+            <li><a href="case-amenitiz.html">🏨 Amenitiz</a></li>
+            <li><a href="case-booking.html">✈️ Booking.com</a></li>
+            <li><a href="case-bookclub.html">📚 BookClub</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#leadership">Leadership</a></li>
+        <li><a href="index.html#speaking">Speaking</a></li>
+        <li><a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+      <a href="mailto:hello@kevinhawkinsdesign.com" class="nav-cta">Get in touch</a>
+    </div>
+  </nav>
+
+  <!-- ── CASE STUDY ── -->
+  <main class="case-wrap">
+
+    <header class="case-header">
+      <div class="container">
+        <p class="case-eyebrow">🛵 Glovo · Global UX Director · Feb 2022–Sep 2023</p>
+        <h1 class="case-title">Scaling a 100-person design org across 25 markets post-acquisition</h1>
+        <div class="case-meta-row">
+          <div class="case-meta"><span class="meta-label">Role</span><span class="meta-value">Global UX Director</span></div>
+          <div class="case-meta"><span class="meta-label">Team</span><span class="meta-value">100+ across 5 disciplines</span></div>
+          <div class="case-meta"><span class="meta-label">Scope</span><span class="meta-value">25 markets · 19 languages</span></div>
+          <div class="case-meta"><span class="meta-label">Focus</span><span class="meta-value">Acquisition, retention, MAU, cost efficiency</span></div>
+        </div>
       </div>
-    </li>
-    <li class="nav-item"><a href="index.html#leadership">Leadership</a></li>
-    <li class="nav-item"><a href="index.html#speaking">Speaking</a></li>
-    <li>
-      <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" class="nav-linkedin">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </li>
-  </ul>
-  <a href="mailto:hello@kevinhawkinsdesign.com" class="nav-cta">Get in touch</a>
-</nav>
-<div class="cs-hero" style="background:linear-gradient(135deg,rgba(40,28,0,0.95),var(--bg-deep));">
-  <div class="cs-hero-bg"><img src="assets/img/img_39.jpg" alt=""></div>
-  <div class="cs-hero-content">
-    <a href="index.html#work" class="cs-back">← Back to Work</a>
-    <div class="cs-hero-label">Case Study · 2022–2023</div>
-    <div class="cs-logo"><img src="https://img.logo.dev/glovoapp.com?token=pk_R1FMCqPiR7Wl9KUAP0-7qw&size=120&format=png" alt="Glovo logo" referrerpolicy="no-referrer" style="height:36px;width:auto;max-width:180px;"></div>
-  <h1 class="cs-hero-title">Glovo<em>:</em><br>Scaling a 100-person<br>design org for growth</h1>
-    <div class="cs-hero-meta">
-      <span>Global UX Director</span>
-      <span>Remote / Hybrid</span>
-      <span>100+ Person Team · 23 Countries</span>
+    </header>
+
+    <div class="container case-body">
+      <div class="case-content">
+
+        <section class="case-section">
+          <h2>The situation</h2>
+          <p>
+            After Glovo's acquisition by Delivery Hero, the product design organization needed
+            to operate at a significantly higher level of strategic coherence. The org was 100+
+            people — UX designers, researchers, motion designers, UX writers, and localization
+            specialists — spread across 25 markets, working against fragmented priorities and
+            without a unified research practice.
+          </p>
+          <p>
+            I was brought in to lead the transformation: align design accountability with revenue
+            outcomes, build the research infrastructure that had been missing, and position UX as
+            a driver of Glovo's post-acquisition growth story.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>What I did</h2>
+          <p>
+            I restructured the org to pair design ownership directly with Glovo's key revenue
+            areas — acquisition, retention, and marketplace growth. Rather than a centralized
+            service model, I built a federated structure where designers were embedded in
+            product squads and accountable for business metrics, not just delivery.
+          </p>
+          <p>
+            I built the company's first global UX research practice from the ground up —
+            introducing dogfooding rituals in key markets to identify competitive gaps firsthand,
+            and establishing quarterly research cycles that fed directly into roadmap decisions.
+            I also led two <strong>company-wide hackathons</strong> with the CPO and CEO, rapidly prototyping
+            new consumer experiences: homepage redesign, social shopping, shared payment flows,
+            loyalty program redesign, and product catalogue discovery.
+          </p>
+          <p>
+            I drove <strong>CRM and promotions personalization</strong> across the consumer app — a
+            multi-month initiative that required coordination across product, engineering, and
+            data science, and delivered a 15% lift in new customer acquisition and 20% improvement
+            in retention without degrading LTV.
+          </p>
+          <p>
+            I also led a company-wide <strong>font replacement and localization overhaul</strong> — replacing
+            licensed fonts with an open alternative across all 19 languages and 25 markets,
+            with a 24-hour turnaround SLA. That single initiative saved €500k annually in
+            licensing costs and materially improved brand consistency across markets. I
+            simultaneously renegotiated the design tooling stack and cut a further €500k in
+            software spend.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>What I learned</h2>
+          <p>
+            Leading a 100-person org through a post-acquisition period means managing two
+            things simultaneously: the external work of shipping product that moves the
+            business, and the internal work of rebuilding team cohesion and shared purpose
+            after ownership changes. The two are inseparable. Teams that don't trust the
+            direction ship slowly, and teams that don't ship lose trust.
+          </p>
+          <p>
+            The hackathons were one of the best tools I've used for that: they forced
+            cross-functional collaboration, surfaced the team's best ideas quickly, and gave
+            people a reason to be proud of what they were building — all in two days.
+          </p>
+        </section>
+
+        <section class="case-metrics">
+          <h2>Outcomes</h2>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-num">+15%</span>
+              <span class="metric-label">new customer acquisition via CRM &amp; promotions personalization</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">+20%</span>
+              <span class="metric-label">retention improvement — no loss in LTV</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">€500k</span>
+              <span class="metric-label">annual savings via font replacement &amp; licensing renegotiation</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">19</span>
+              <span class="metric-label">languages localized with 24-hour turnaround SLA</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="case-sidebar">
+        <div class="sidebar-block">
+          <p class="sidebar-label">Company</p>
+          <p class="sidebar-value">Glovo — multi-category delivery platform operating across Europe, Africa, and Central Asia. Acquired by Delivery Hero in 2022.</p>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">My responsibilities</p>
+          <p class="sidebar-value">
+            100+ person org leadership<br>
+            Global UXR practice (0→1)<br>
+            CRM &amp; promotions personalization<br>
+            Font replacement &amp; localization<br>
+            Tool stack consolidation<br>
+            2× CEO/CPO hackathons<br>
+            Post-acquisition org restructure
+          </p>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">Disciplines led</p>
+          <div class="tag-row">
+            <span class="tag">Product design</span>
+            <span class="tag">UX research</span>
+            <span class="tag">Motion design</span>
+            <span class="tag">UX writing</span>
+            <span class="tag">Localization</span>
+          </div>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">Next case study</p>
+          <a href="case-amenitiz.html" class="sidebar-next">🏨 Amenitiz — Head of Design →</a>
+        </div>
+      </aside>
     </div>
-  </div>
-</div>
 
-<div class="cs-body">
-  <div class="cs-overview">
-    <div class="cs-overview-stats">
-      <div class="cs-stat"><div class="cs-stat-val">+44%</div><div class="cs-stat-lbl">GMV Growth FY22–24</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">+20%</div><div class="cs-stat-lbl">Retention Lift</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">+15%</div><div class="cs-stat-lbl">New Customer Acquisition</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">€500k+</div><div class="cs-stat-lbl">Annual Cost Savings</div></div>
+  </main>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2025 Kevin Hawkins</span>
+      <div class="footer-links">
+        <a href="mailto:hello@kevinhawkinsdesign.com">hello@kevinhawkinsdesign.com</a>
+        <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
-  </div>
+  </footer>
 
-  <div class="cs-section">
-    <div class="cs-section-label">Context</div>
-  <div class="company-logo" style="margin-bottom:16px;"><img src="https://img.logo.dev/glovoapp.com?token=pk_R1FMCqPiR7Wl9KUAP0-7qw&size=80&format=png" alt="Glovo logo" referrerpolicy="no-referrer" style="height:22px;width:auto;max-width:140px;opacity:0.85;"></div>
-    <h2 class="cs-section-title">A category leader at an inflection point</h2>
-    <p>When we joined Glovo, the company had just been acquired by Delivery Hero — one of the world's largest food delivery groups — and was navigating the complexity of scaling across 23 countries while maintaining the product velocity that had made it Europe's leading quick-commerce platform. The design organization was 100+ people strong, spanning UX designers, researchers, motion designers, UX writers, and a localization team managing 19 languages.</p>
-    <p>The opportunity was clear: connect design output directly to business metrics, elevate research maturity across markets, and use design as a competitive weapon to steal back market share from well-funded local competitors.</p>
-  </div>
-
-  <div class="cs-image-full"><img src="assets/img/img_40.jpg" alt="Glovo design team — 100+ people" style="object-position:top;"><div class="cs-img-cap">The Glovo Design &amp; Research Team · 100+ People Across 23 Countries</div></div>
-
-  <div class="cs-section">
-    <div class="cs-section-label">Work · Social Commerce</div>
-    <h2 class="cs-section-title">Social stickiness: features that make ordering a social act</h2>
-    <p>One of our highest-visibility initiatives was the design of Glovo's social commerce layer — a set of features that transformed the app from a transactional ordering tool into a socially engaging discovery platform. We co-led two company-wide hackathons with the CPO and CEO to rapidly prototype and validate concepts across: social shopping, friend-based restaurant discovery, shared payment flows, "Picks" lists, and a TikTok-style vertical food video feed.</p>
-    <p>The social features — including the ability to see where friends have ordered and create shareable restaurant lists — were covered by TechCrunch as part of Glovo Next, the company's first annual product showcase event. We hypothesized that social signals would reduce decision fatigue and increase order frequency, and the early data supported the thesis.</p>
-  </div>
-
-  <div class="cs-image-full"><img src="assets/img/img_39.jpg" alt="Glovo social commerce UI — Your Picks, Friends Top Choice"><div class="cs-img-cap">Social Commerce UI — "Your Picks" Lists &amp; "Your Friends' Top Choice" Discovery</div></div>
-
-  <div class="cs-image-grid three">
-    <div class="cs-img-wrap"><img src="assets/img/img_41.jpg" alt="B2B Promotions Platform"><div class="cs-img-cap">B2B Restaurant Promotions Dashboard</div></div>
-    <div class="cs-img-wrap"><img src="assets/img/img_42.jpg" alt="Glovo x Disney Pixar"><div class="cs-img-cap">Glovo × Disney·Pixar — Inside Out Brand Integration</div></div>
-    <div class="cs-img-wrap"><img src="assets/img/img_43.jpg" alt="Satisfaction metrics"><div class="cs-img-cap">B2B Partner Satisfaction — +21% Catalogue Mgmt, +16% Overall</div></div>
-  </div>
-
-  <div class="cs-section">
-    <div class="cs-section-label">Work · Research</div>
-    <h2 class="cs-section-title">Kickstarting global UXR to steal back market share</h2>
-    <p>We established dogfooding and user research practices in key markets — running structured competitive research across Glovo's top rivals including Talabat, Foodpanda, and PedidosYa. Our team mapped homepage differences, tested onboarding flows, and identified high-demand features that competitors had but Glovo hadn't yet built. This research directly informed the product roadmap and helped us prioritize the features most likely to close the gap.</p>
-    <p>The UXR function also introduced localization research — validating product experiences in specific markets before full rollout, reducing costly late-stage rework and building organizational confidence in research as a business tool rather than a nice-to-have.</p>
-  </div>
-
-  <div class="cs-image-grid two">
-    <div class="cs-img-wrap"><img src="assets/img/img_44.jpg" alt="Competitive UX research across Talabat, Foodpanda, PedidosYa"><div class="cs-img-cap">Competitive UX Research — Talabat, Foodpanda &amp; PedidosYa Homepage Analysis</div></div>
-    <div class="cs-img-wrap"><img src="assets/img/img_45.jpg" alt="Kevin presenting Glovo global strategy at conference"><div class="cs-img-cap">Presenting Glovo's Global Expansion Strategy &amp; Delivery Hero Acquisition Context</div></div>
-  </div>
-
-  <div class="cs-section">
-    <div class="cs-section-label">Work · Brand &amp; Localization</div>
-    <h2 class="cs-section-title">A €500k font rebranding across 19 languages</h2>
-    <p>One of the highest-ROI initiatives we delivered was deceptively mundane on the surface: replacing Glovo's proprietary licensed font with a custom typeface across 19 languages — including Latin, Cyrillic, Georgian, Armenian, and Arabic scripts. The project required designing a typeface that felt cohesive with Glovo's circular brand shapes while functioning correctly across right-to-left writing systems and complex scripts.</p>
-    <p>The result was €500k+ in annual licensing savings and a stronger typographic system that worked better in markets where the original font had coverage gaps. We ran the entire project as an in-house operation, with our localization team turning around 24-hour translation cycles across all active markets.</p>
-  </div>
-
-  <div class="cs-image-full"><img src="assets/img/img_46.jpg" alt="Glovo font rebranding — 19 languages, Cyrillic, Georgian, Arabic"><div class="cs-img-cap">Universal Font Rebranding — Custom Typeface Across 19 Languages Including RTL Scripts</div></div>
-
-  <div class="cs-image-grid two">
-    <div class="cs-img-wrap"><img src="assets/img/img_47.jpg" alt="Glovo brand — delivery bags and scooters"><div class="cs-img-cap">Glovo Brand Identity — Quick Commerce at Scale</div></div>
-    <div class="cs-img-wrap"><img src="assets/img/img_43.jpg" alt="Satisfaction data"><div class="cs-img-cap">Partner Satisfaction Metrics Post-Redesign</div></div>
-  </div>
-
-  <div class="cs-results-grid">
-    <div class="cs-result"><div class="cs-result-val">+44%</div><div class="cs-result-lbl">GMV growth FY2022 vs FY2024 — the metric that tells the Glovo story</div></div>
-    <div class="cs-result"><div class="cs-result-val">+20%</div><div class="cs-result-lbl">Retention improvement via CRM personalization and loyalty program redesign</div></div>
-    <div class="cs-result"><div class="cs-result-val">+15%</div><div class="cs-result-lbl">New customer acquisition boost from personalized promotions</div></div>
-    <div class="cs-result"><div class="cs-result-val">€500k+</div><div class="cs-result-lbl">Annual savings from font rebranding and design tooling optimization</div></div>
-  </div>
-
-  <div class="cs-press">
-    <div class="cs-press-label">Press Coverage</div>
-    <p>The social commerce features were covered by TechCrunch at Glovo Next, Glovo's first annual product event in Barcelona.</p>
-    <a href="https://techcrunch.com/2024/10/16/glovo-adds-a-side-of-social-stickiness-to-its-food-delivery-app/" target="_blank" class="cs-press-link">Read the TechCrunch article →</a>
-  </div>
-
-  <div class="cs-next">
-    <a href="case-amenitiz.html" class="cs-next-link">Next Case Study: Amenitiz →</a>
-    <a href="index.html#work" class="cs-back-link">← All Work</a>
-  </div>
-</div>
-
-<footer>
-  <div>
-    <div class="footer-name">Kevin Hawkins</div>
-    <div class="footer-title">VP Product Experience · Barcelona, Spain</div>
-    <div class="footer-contact">
-      <a href="mailto:hello@kevinhawkinsdesign.com">hello@kevinhawkinsdesign.com</a>
-      <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" style="display:inline-flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
-      <a href="https://instagram.com/kevinhawkinsdesign" target="_blank" style="display:inline-flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>Instagram</a>
-      <a href="tel:+34625735141">+34 625 735 141</a>
-    </div>
-  </div>
-  <div class="footer-right">
-    <div class="footer-countries">70+</div>
-    <div class="footer-countries-label">Countries Explored · Cultures Understood</div>
-  </div>
-</footer>
-<script src="assets/js/main.js"></script>
-</body></html>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,145 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>BookClub — Kevin Hawkins Case Study</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/main.css"><link rel="stylesheet" href="assets/css/case-study.css">
-</head><body style="background:var(--bg);">
-<nav>
-  <a href="index.html" class="nav-logo">Kevin Hawkins</a>
-  <ul class="nav-links">
-    <li class="nav-item">
-      <a href="about.html">About</a>
-    </li>
-    <li class="nav-item">
-      <a href="index.html#work">Work
-        <svg class="nav-chevron" viewBox="0 0 10 6" fill="none">
-          <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </a>
-      <div class="nav-dropdown">
-        <a href="case-monta.html">
-          <span class="dd-icon">⚡</span>
-          <span class="dd-label">Monta<span>VP Product Experience · 2024–Present</span></span>
-        </a>
-        <a href="case-glovo.html">
-          <span class="dd-icon">🛵</span>
-          <span class="dd-label">Glovo<span>Global UX Director · 2022–2023</span></span>
-        </a>
-        <a href="case-amenitiz.html">
-          <span class="dd-icon">🏨</span>
-          <span class="dd-label">Amenitiz<span>Head of Design &amp; Research · 2023–2024</span></span>
-        </a>
-        <div class="nav-dropdown-divider"></div>
-        <a href="case-booking.html">
-          <span class="dd-icon">✈️</span>
-          <span class="dd-label">Booking.com<span>UX Team Lead · 2019–2021</span></span>
-        </a>
-        <a href="case-bookclub.html">
-          <span class="dd-icon">📚</span>
-          <span class="dd-label">BookClub<span>Director of Product Design · 2020–2022</span></span>
-        </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BookClub — Kevin Hawkins</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="case.css" />
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Kevin Hawkins</a>
+      <ul class="nav-links">
+        <li><a href="about.html">About</a></li>
+        <li class="has-dropdown">
+          <a href="index.html#work" class="active">Work</a>
+          <ul class="dropdown">
+            <li><a href="case-monta.html">⚡ Monta</a></li>
+            <li><a href="case-glovo.html">🛵 Glovo</a></li>
+            <li><a href="case-amenitiz.html">🏨 Amenitiz</a></li>
+            <li><a href="case-booking.html">✈️ Booking.com</a></li>
+            <li><a href="case-bookclub.html" class="active">📚 BookClub</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#leadership">Leadership</a></li>
+        <li><a href="index.html#speaking">Speaking</a></li>
+        <li><a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+      <a href="mailto:hello@kevinhawkinsdesign.com" class="nav-cta">Get in touch</a>
+    </div>
+  </nav>
+
+  <!-- ── CASE STUDY ── -->
+  <main class="case-wrap">
+
+    <header class="case-header">
+      <div class="container">
+        <p class="case-eyebrow">📚 BookClub · Director of Product Design · Oct 2020–Feb 2022</p>
+        <h1 class="case-title">Building a social reading platform from the ground up</h1>
+        <div class="case-meta-row">
+          <div class="case-meta"><span class="meta-label">Role</span><span class="meta-value">Director of Product Design</span></div>
+          <div class="case-meta"><span class="meta-label">Stage</span><span class="meta-value">Founding designer → Director</span></div>
+          <div class="case-meta"><span class="meta-label">Model</span><span class="meta-value">Two-sided: authors + readers</span></div>
+          <div class="case-meta"><span class="meta-label">Focus</span><span class="meta-value">0→1, community, engagement</span></div>
+        </div>
       </div>
-    </li>
-    <li class="nav-item"><a href="index.html#leadership">Leadership</a></li>
-    <li class="nav-item"><a href="index.html#speaking">Speaking</a></li>
-    <li>
-      <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" class="nav-linkedin">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </li>
-  </ul>
-  <a href="mailto:hello@kevinhawkinsdesign.com" class="nav-cta">Get in touch</a>
-</nav>
-<div class="cs-hero" style="background:linear-gradient(135deg,rgba(10,10,30,0.95),var(--bg-deep));">
-  <div class="cs-hero-bg"><img src="assets/img/img_54.jpg" alt=""></div>
-  <div class="cs-hero-content">
-    <a href="index.html#work" class="cs-back">← Back to Work</a>
-    <div class="cs-hero-label">Case Study · 2020–2022</div>
-    <div class="cs-logo"><img src="https://img.logo.dev/bookclubs.com?token=pk_R1FMCqPiR7Wl9KUAP0-7qw&size=120&format=png" alt="BookClub logo" referrerpolicy="no-referrer" style="height:36px;width:auto;max-width:180px;"></div>
-  <h1 class="cs-hero-title">BookClub<em>:</em><br>Founding designer for<br>an author-reader platform</h1>
-    <div class="cs-hero-meta"><span>Director of Product Design</span><span>Remote · Global</span><span>Founding Designer</span></div>
-  </div>
-</div>
-<div class="cs-body">
-  <div class="cs-overview">
-    <div class="cs-overview-stats">
-      <div class="cs-stat"><div class="cs-stat-val">0 → 1</div><div class="cs-stat-lbl">Full Design Built from Scratch</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">Celebrity</div><div class="cs-stat-lbl">Authors &amp; Hosts</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">Video+</div><div class="cs-stat-lbl">Community UX</div></div>
-      <div class="cs-stat"><div class="cs-stat-val">Multi-platform</div><div class="cs-stat-lbl">Mobile + Web</div></div>
+    </header>
+
+    <div class="container case-body">
+      <div class="case-content">
+
+        <section class="case-section">
+          <h2>The situation</h2>
+          <p>
+            BookClub had a genuinely novel idea: author-led online book clubs where readers
+            could join live discussions, Q&amp;A sessions, and video series directly with the
+            authors themselves — and celebrity hosts. The model created a two-sided product:
+            you needed to design for readers who came for the books, and for authors who
+            needed tools to host and engage their communities.
+          </p>
+          <p>
+            I joined as the founding designer, which meant I was responsible for translating
+            the product vision into actual experience — without an existing design system,
+            research practice, or design team.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>What I did</h2>
+          <p>
+            I built the product design and research function from zero. That meant establishing
+            design principles, creating a component library, defining the research cadence, and
+            doing a significant amount of the initial design work myself before growing the team.
+          </p>
+          <p>
+            The core design challenge was emotional engagement. Readers weren't coming to
+            BookClub to complete a task — they were coming for connection: with authors, with
+            the ideas in a book, and with other readers. That required a fundamentally different
+            design approach than the growth-oriented, conversion-focused products I'd worked
+            on before. Less funnel thinking, more community thinking.
+          </p>
+          <p>
+            I worked closely with founders and engineers in a fast-moving environment where
+            design decisions had immediate product consequences. I also made the early case
+            for user research as a product investment — not a luxury — and established the
+            research practice before the team expected it to exist.
+          </p>
+          <p>
+            As the platform grew, I transitioned from individual contributor to Director —
+            hiring and developing the design team, setting standards, and shifting my focus
+            toward product strategy and team health while maintaining quality across the
+            whole experience.
+          </p>
+        </section>
+
+        <section class="case-section">
+          <h2>What I learned</h2>
+          <p>
+            Designing for emotional engagement and community is a different discipline than
+            designing for conversion. The metrics that matter — return visits, session depth,
+            community participation — require patience and qualitative understanding that
+            pure A/B testing doesn't give you. This role deepened my appreciation for
+            mixed-method research and for designing with retention in mind from day one.
+          </p>
+          <p>
+            Being a founding designer also taught me something about the value of speed over
+            perfection in early-stage products: the best version of a feature you shipped
+            last week is almost always better than the perfect version you're still designing.
+          </p>
+        </section>
+
+        <section class="case-metrics">
+          <h2>Outcomes</h2>
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <span class="metric-num">0→1</span>
+              <span class="metric-label">product design &amp; research function built from scratch</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">2</span>
+              <span class="metric-label">sides of a marketplace designed: authors and readers</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-num">IC→Dir</span>
+              <span class="metric-label">progressed from founding designer to Director of Product Design</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <aside class="case-sidebar">
+        <div class="sidebar-block">
+          <p class="sidebar-label">Company</p>
+          <p class="sidebar-value">BookClub — platform connecting readers with authors through live book clubs, video series, and Q&amp;A. Authors and celebrity hosts guide readers through their books.</p>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">My responsibilities</p>
+          <p class="sidebar-value">
+            Founding product designer<br>
+            Component library (0→1)<br>
+            User research practice setup<br>
+            Author-side tools design<br>
+            Reader-side experience design<br>
+            Design team hiring &amp; management<br>
+            Product strategy
+          </p>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">Tools &amp; methods</p>
+          <div class="tag-row">
+            <span class="tag">Figma</span>
+            <span class="tag">Usability testing</span>
+            <span class="tag">Community design</span>
+            <span class="tag">Mixed-method research</span>
+            <span class="tag">Design systems</span>
+          </div>
+        </div>
+        <div class="sidebar-block">
+          <p class="sidebar-label">Back to</p>
+          <a href="index.html#work" class="sidebar-next">← All case studies</a>
+        </div>
+      </aside>
     </div>
-  </div>
 
-  <div class="cs-section">
-    <div class="cs-section-label">Context</div>
-  <div class="company-logo" style="margin-bottom:16px;"><img src="https://img.logo.dev/bookclubs.com?token=pk_R1FMCqPiR7Wl9KUAP0-7qw&size=80&format=png" alt="BookClub logo" referrerpolicy="no-referrer" style="height:22px;width:auto;max-width:140px;opacity:0.85;"></div>
-    <h2 class="cs-section-title">What BookClub is — and what it required</h2>
-    <p>BookClub is a platform that brings authors and readers together through intimate, author-led online book clubs. Authors guide readers through their own books via video series, live Q&amp;As, public book discussions, and the opportunity to join or host small reading groups. Celebrity hosts — including Gary Vaynerchuk, Hasan Minhaj, Barbara Corcoran, and Charlamagne tha God — led some of the most popular clubs.</p>
-    <p>Coming in as the founding designer, we had the rare opportunity — and the significant challenge — of designing the product from the ground up. There was no existing design system, no research repository, no established design culture. Everything had to be built: the visual language, the information architecture, the interaction model, the research practice, and the cross-functional rituals that kept the team aligned.</p>
-  </div>
+  </main>
 
-  <div class="cs-image-full"><img src="assets/img/img_54.jpg" alt="BookClub product — Inspired by books, made for people who love them"><div class="cs-img-cap">BookClub — "Inspired by Books. Made for the People Who Love Them."</div></div>
-
-  <div class="cs-section">
-    <div class="cs-section-label">Design Challenge</div>
-    <h2 class="cs-section-title">Intimate yet scalable — the core design tension</h2>
-    <p>The central design tension was intimacy at scale. BookClub needed to feel personal — like a small, curated gathering with your favourite author — while simultaneously supporting thousands of concurrent readers, multi-format media (video, text, audio), and a community layer with comments, reactions, and discussion threads.</p>
-    <p>We resolved this through careful information architecture that separated discovery (finding clubs and books that match your taste), participation (watching, reading, and discussing within a club), and community (connecting with other readers who share your interests). The navigation model had to serve both the casual browser and the deeply engaged member without overwhelming either.</p>
-  </div>
-
-  <div class="cs-image-grid two">
-    <div class="cs-img-wrap"><img src="assets/img/img_55.jpg" alt="BookClub Watch &amp; Discuss feature"><div class="cs-img-cap">Watch &amp; Discuss — Author Q&amp;A with Community Discussion</div></div>
-    <div class="cs-img-wrap"><img src="assets/img/img_56.jpg" alt="BookClub club communities"><div class="cs-img-cap">Vibrant Club Communities — Author &amp; Influencer-Led Groups</div></div>
-  </div>
-
-  <div class="cs-section">
-    <div class="cs-section-label">Production &amp; High-Profile Content</div>
-    <h2 class="cs-section-title">Designing for A-list authors and celebrity hosts</h2>
-    <p>One of the most distinctive aspects of the BookClub product was the caliber of its content partners. The platform hosted video productions featuring bestselling authors and high-profile personalities — each with their own production style, audience expectations, and brand considerations. The design needed to give each club a distinct feeling of identity without creating a fragmented product experience.</p>
-    <p>We designed flexible content templates that could be branded per author or series while maintaining a consistent underlying structure. The production work — including on-set photography and video direction — fed directly into the design system, ensuring the UI frames and the content within it felt cohesive.</p>
-  </div>
-
-  <div class="cs-image-grid three">
-    <div class="cs-img-wrap"><img src="assets/img/img_57.jpg" alt="BookClub video production — on set shoot"><div class="cs-img-cap">BookClub Video Production — On-Set Author Shoots</div></div>
-    <div class="cs-img-wrap"><img src="assets/img/img_58.jpg" alt="Gary Vaynerchuk shoot"><div class="cs-img-cap">Gary Vaynerchuk — Twelve and a Half Recording</div></div>
-    <div class="cs-img-wrap"><img src="assets/img/img_59.jpg" alt="Gary Vaynerchuk BookClub"><div class="cs-img-cap">GaryVee on BookClub Platform</div></div>
-  </div>
-
-  <div class="cs-image-grid two">
-    <div class="cs-img-wrap"><img src="assets/img/img_60.jpg" alt="BookClub team with Hasan Minhaj"><div class="cs-img-cap">BookClub Team On Set — with Hasan Minhaj</div></div>
-    <div class="cs-img-wrap"><img src="assets/img/img_61.jpg" alt="BookClub logo"><div class="cs-img-cap">BookClub — Director of Design</div></div>
-  </div>
-
-  <div class="cs-results-grid">
-    <div class="cs-result"><div class="cs-result-val">0 → 1</div><div class="cs-result-lbl">Full design function built from scratch: system, research ops, culture, rituals</div></div>
-    <div class="cs-result"><div class="cs-result-val">Multi-format</div><div class="cs-result-lbl">Video, audio, text, and community UX unified into a single coherent product</div></div>
-    <div class="cs-result"><div class="cs-result-val">Celebrity hosts</div><div class="cs-result-lbl">Design system flexible enough to brand per author while maintaining product coherence</div></div>
-    <div class="cs-result"><div class="cs-result-val">Mobile + Web</div><div class="cs-result-lbl">Full cross-platform design: iOS, Android, and responsive web</div></div>
-  </div>
-
-  <div class="cs-next">
-    <a href="index.html#work" class="cs-back-link">← Back to All Work</a>
-  </div>
-</div>
-
-<footer>
-  <div>
-    <div class="footer-name">Kevin Hawkins</div>
-    <div class="footer-title">VP Product Experience · Barcelona, Spain</div>
-    <div class="footer-contact">
-      <a href="mailto:hello@kevinhawkinsdesign.com">hello@kevinhawkinsdesign.com</a>
-      <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" style="display:inline-flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>LinkedIn</a>
-      <a href="https://instagram.com/kevinhawkinsdesign" target="_blank" style="display:inline-flex;align-items:center;gap:5px;"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>Instagram</a>
-      <a href="tel:+34625735141">+34 625 735 141</a>
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2025 Kevin Hawkins</span>
+      <div class="footer-links">
+        <a href="mailto:hello@kevinhawkinsdesign.com">hello@kevinhawkinsdesign.com</a>
+        <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
-  </div>
-  <div class="footer-right">
-    <div class="footer-countries">70+</div>
-    <div class="footer-countries-label">Countries Explored · Cultures Understood</div>
-  </div>
-</footer>
-<script src="assets/js/main.js"></script>
-</body></html>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

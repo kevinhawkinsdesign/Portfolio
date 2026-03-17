@@ -821,3 +821,98 @@ a { color: inherit; }
 .hero-content > *:nth-child(2) { animation-delay: 0.12s; }
 .hero-content > *:nth-child(3) { animation-delay: 0.2s; }
 .hero-content > *:nth-child(4) { animation-delay: 0.28s; }
+
+/* ── PHOTO STYLES ── */
+
+/* Hero photo on index */
+.hero-photo img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 4px 100px 4px 4px;
+  display: block;
+}
+
+/* About page — two-photo layout */
+.about-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  margin-top: 0.5rem;
+}
+
+.about-photos img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.about-photos img:first-child {
+  aspect-ratio: 4/5;
+  border-radius: 4px 80px 4px 4px;
+}
+
+.about-photos img:last-child {
+  aspect-ratio: 4/5;
+  border-radius: 4px 4px 80px 4px;
+  margin-top: 2.5rem;
+}
+
+/* Case study hero image */
+.case-hero-img {
+  width: 100%;
+  max-height: 480px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 0;
+}
+
+.case-hero-img-wrap {
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-border);
+  max-height: 480px;
+}
+
+/* Case study inline photos */
+.case-photo {
+  width: 100%;
+  border-radius: var(--radius);
+  display: block;
+  margin: 1.75rem 0;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.case-photo-caption {
+  font-size: 12px;
+  color: var(--color-text-faint);
+  margin-top: -1rem;
+  margin-bottom: 1.75rem;
+  font-style: italic;
+}
+
+/* Two-up photo grid within case studies */
+.case-photo-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 1.75rem 0;
+}
+
+.case-photo-pair img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .about-photos { grid-template-columns: 1fr; }
+  .about-photos img:last-child { margin-top: 0; }
+  .case-photo-pair { grid-template-columns: 1fr; }
+}

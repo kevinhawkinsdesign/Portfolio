@@ -8,101 +8,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <style>
-    /* ── Page-specific overrides ── */
-    .about-layout {
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 4rem;
-      align-items: start;
-      padding-top: 3rem;
-    }
-    .about-main h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(32px, 5vw, 48px);
-      font-weight: 400;
-      line-height: 1.15;
-      margin-bottom: 1.75rem;
-    }
-    .about-main h1 em { font-style: italic; font-weight: 400; }
-    .about-main .lead {
-      font-size: 18px;
-      font-weight: 300;
-      line-height: 1.8;
-      color: var(--color-text);
-      margin-bottom: 2rem;
-    }
-    .about-main h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      font-weight: 400;
-      margin: 2.5rem 0 1rem;
-    }
-    .about-main p {
-      font-size: 15px;
-      font-weight: 300;
-      line-height: 1.85;
-      color: var(--color-text-muted);
-      margin-bottom: 1.25rem;
-    }
-    .about-main p strong {
-      font-weight: 500;
-      color: var(--color-text);
-    }
-    .about-cta {
-      display: inline-block;
-      margin-top: 1.5rem;
-      padding: 12px 24px;
-      background: var(--color-text);
-      color: var(--color-bg);
-      border-radius: 40px;
-      font-size: 14px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: opacity 0.2s;
-    }
-    .about-cta:hover { opacity: 0.75; }
-
-    /* Sidebar */
-    .about-sidebar { padding-top: 0.25rem; }
-    .sidebar-block {
-      padding: 1.25rem 0;
-      border-top: 1px solid var(--color-border);
-    }
-    .sidebar-block:last-child { border-bottom: 1px solid var(--color-border); }
-    .sidebar-label {
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--color-text-muted);
-      margin-bottom: 10px;
-    }
-    .sidebar-value {
-      font-size: 14px;
-      font-weight: 300;
-      line-height: 1.9;
-      color: var(--color-text);
-    }
-    .sidebar-value strong { font-weight: 500; }
-    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
-    .tag {
-      font-size: 11px;
-      padding: 4px 10px;
-      border-radius: 40px;
-      border: 1px solid var(--color-border);
-      color: var(--color-text-muted);
-    }
-
-    @media (max-width: 720px) {
-      .about-layout { grid-template-columns: 1fr; gap: 2.5rem; }
-      .about-sidebar { border-top: 1px solid var(--color-border); padding-top: 2rem; }
-    }
-  </style>
 </head>
 <body>
 
-  <!-- ── NAV ── -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Kevin Hawkins</a>
@@ -126,13 +34,17 @@
     </div>
   </nav>
 
-  <!-- ── ABOUT ── -->
   <main class="container">
     <div class="about-layout">
 
       <div class="about-main">
-        <p class="eyebrow">VP Product Experience · Barcelona</p>
+        <span class="eyebrow">VP Product Experience · Barcelona</span>
         <h1>I build design organizations<br>that <em>earn</em> their seat<br>at the table.</h1>
+
+        <div class="about-photos">
+          <img src="photo-speaking.jpeg" alt="Kevin Hawkins speaking at UXDX conference" />
+          <img src="photo-stage.jpeg" alt="Kevin Hawkins on stage at a design conference" />
+        </div>
 
         <p class="lead">
           I'm Kevin Hawkins — a VP of Product Experience based in Barcelona, with 20+ years
@@ -160,21 +72,21 @@
         </p>
 
         <p>
-          At <strong>Glovo</strong>, I inherited a fragmented 100-person org across 25 markets and rebuilt
-          it into a cohesive function with shared standards, unified tooling, and a research
-          practice that fed directly into quarterly business reviews. At <strong>Amenitiz</strong>, I
+          At <strong>Glovo</strong>, I joined a Barcelona-based team of 65 and grew it to 105
+          across five disciplines, building the research practice and org structure from scratch
+          while shipping product used across 25 countries. At <strong>Amenitiz</strong>, I
           recruited a full team of six designers in my first 45 days and immediately put them
           to work on a product redesign that increased LTV and retention by 20%. At
-          <strong>Monta</strong>, I joined as the company's first UX leader and formalized the entire
-          function from scratch — vision, playbook, career framework, and all.
+          <strong>Monta</strong>, I joined as the company's first UX leader and formalized the
+          entire function from scratch — vision, playbook, career framework, and all.
         </p>
 
         <p>
           I'm data-oriented in a specific way: I care about the metrics that actually predict
           business outcomes — MAU growth, funnel conversion, LTV, retention cohorts — and I
-          build the experimentation infrastructure to track them. At Monta, I owned the
-          PostHog implementation personally and drove a 20% month-over-month lift in monthly
-          active users through systematic A/B testing and PLG-focused onboarding redesign.
+          build the experimentation infrastructure to track them. At Monta, I owned the PostHog
+          implementation personally and drove a 20% month-over-month lift in monthly active
+          users through systematic A/B testing and PLG-focused onboarding redesign.
         </p>
 
         <h2>On building diverse teams</h2>
@@ -187,21 +99,23 @@
           make is shaped by this.
         </p>
 
+        <img src="photo-workshop.jpeg" alt="Kevin in conversation with peers at a design leadership workshop" class="case-photo" style="aspect-ratio:16/9;" />
+
         <h2>Beyond the work</h2>
 
         <p>
           I teach. I've built and delivered UX curriculum at GrowthTribe reaching 5,000+
           students, guest-lectured at Georgetown's McCourt School of Public Policy, and
           co-organize the Hatch Conference Leadership Ateliers — an annual series for 120
-          UX and product leaders across Europe. Design leadership is a fundamentally
-          different job, and most people have to figure it out alone. I try to change that.
+          UX and product leaders across Europe. Design leadership is a fundamentally different
+          job, and most people have to figure it out alone. I try to change that.
         </p>
 
         <p>
-          Outside work, I founded The Common Thread Club — a 1,000+ member foodie
-          community in Barcelona built around one-night-only dinners, intimate group trips,
-          and conversations with interesting people. It started as a side project and became
-          one of the things I'm most proud of building.
+          Outside work, I founded The Common Thread Club — a 1,000+ member foodie community
+          in Barcelona built around one-night-only dinners, intimate group trips, and
+          conversations with interesting people. It started as a side project and became one
+          of the things I'm most proud of building.
         </p>
 
         <a href="mailto:hello@kevinhawkinsdesign.com" class="about-cta">Get in touch</a>
@@ -248,7 +162,7 @@
         </div>
         <div class="sidebar-block">
           <p class="sidebar-label">Based in</p>
-          <p class="sidebar-value">Barcelona<br><span style="color:var(--color-text-muted);font-size:13px">Previously Amsterdam · Washington DC</span></p>
+          <p class="sidebar-value">Barcelona<br><span style="color:var(--color-text-faint);font-size:13px">Previously Amsterdam · Washington DC</span></p>
         </div>
         <div class="sidebar-block">
           <p class="sidebar-label">Languages</p>
@@ -259,7 +173,6 @@
     </div>
   </main>
 
-  <!-- ── FOOTER ── -->
   <footer class="footer">
     <div class="container footer-inner">
       <span>© 2025 Kevin Hawkins</span>

@@ -11,15 +11,12 @@
   <link rel="stylesheet" href="case.css" />
 </head>
 <body>
-
-  <!-- ── NAV ── -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Kevin Hawkins</a>
       <ul class="nav-links">
         <li><a href="about.html">About</a></li>
-        <li class="has-dropdown">
-          <a href="index.html#work" class="active">Work</a>
+        <li class="has-dropdown"><a href="index.html#work" class="active">Work</a>
           <ul class="dropdown">
             <li><a href="case-monta.html">⚡ Monta</a></li>
             <li><a href="case-glovo.html">🛵 Glovo</a></li>
@@ -36,91 +33,87 @@
     </div>
   </nav>
 
-  <!-- ── CASE STUDY ── -->
   <main class="case-wrap">
 
-    <header class="case-header">
+    <!-- Branded header: Booking.com dark navy blue -->
+    <div style="background:#00112a;padding:clamp(3rem,7vw,5.5rem) 0 clamp(2.5rem,5vw,4rem);border-bottom:3px solid #003580;">
       <div class="container">
-        <p class="case-eyebrow">✈️ Booking.com · UX Team Lead · Jul 2019–Feb 2021</p>
-        <h1 class="case-title">Cross-brand product innovation at one of the world's largest travel platforms</h1>
-        <div class="case-meta-row">
-          <div class="case-meta"><span class="meta-label">Role</span><span class="meta-value">UX Team Lead</span></div>
-          <div class="case-meta"><span class="meta-label">Business units</span><span class="meta-value">Connected Stay, Cross-brand</span></div>
-          <div class="case-meta"><span class="meta-label">Brands</span><span class="meta-value">Booking.com · Kayak · Priceline · Agoda</span></div>
-          <div class="case-meta"><span class="meta-label">Location</span><span class="meta-value">Amsterdam</span></div>
+        <div style="display:flex;align-items:flex-start;gap:1.75rem;margin-bottom:2.5rem;">
+          <img src="https://img.logo.dev/booking.com?token=pk_VAooMHFDRsK3MWbgOF0t_Q&size=80&format=png"
+               alt="Booking.com" width="64" height="64"
+               style="border-radius:14px;background:#fff;padding:8px;flex-shrink:0;box-shadow:0 0 0 1px rgba(255,255,255,.08);"
+               onerror="this.outerHTML='<div style=\'width:64px;height:64px;border-radius:14px;background:#003580;display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;\'>✈️</div>'" />
+          <div>
+            <p style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#4da6ff;margin:0 0 .6rem;">Booking.com &nbsp;·&nbsp; UX Team Lead &nbsp;·&nbsp; 2019–2021</p>
+            <h1 style="font-family:'Playfair Display',serif;font-size:clamp(24px,3.8vw,42px);font-weight:400;color:#ffffff;line-height:1.18;margin:0 0 1rem;">Cross-brand product innovation<br>at scale — Amsterdam</h1>
+            <p style="font-size:15px;color:#8ab4d4;max-width:560px;line-height:1.65;margin:0;">Led two product teams at Booking.com from internal hackathons through to production — aligning across Kayak, Priceline, and Agoda to ship features used by millions of travelers globally.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:1px;background:#003580;border-radius:8px;overflow:hidden;max-width:680px;">
+          <div style="padding:14px 22px;background:#001a3d;flex:1;min-width:130px;">
+            <p style="font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#2a5a8a;margin:0 0 5px;">Role</p>
+            <p style="font-size:13px;color:#c0d8f0;margin:0;">UX Team Lead</p>
+          </div>
+          <div style="padding:14px 22px;background:#001a3d;flex:1;min-width:130px;">
+            <p style="font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#2a5a8a;margin:0 0 5px;">Location</p>
+            <p style="font-size:13px;color:#c0d8f0;margin:0;">Amsterdam</p>
+          </div>
+          <div style="padding:14px 22px;background:#001a3d;flex:1;min-width:130px;">
+            <p style="font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#2a5a8a;margin:0 0 5px;">Scope</p>
+            <p style="font-size:13px;color:#c0d8f0;margin:0;">Cross-brand alignment</p>
+          </div>
+          <div style="padding:14px 22px;background:#001a3d;flex:1;min-width:130px;">
+            <p style="font-size:10px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:#2a5a8a;margin:0 0 5px;">Notable</p>
+            <p style="font-size:13px;color:#c0d8f0;margin:0;">2 hackathon wins → production</p>
+          </div>
         </div>
       </div>
-    </header>
+    </div>
 
     <div class="container case-body">
       <div class="case-content">
 
         <section class="case-section">
           <h2>The situation</h2>
-          <p>
-            Booking Holdings owns some of the world's most-used travel platforms —
-            Booking.com, Kayak, Priceline, Agoda, and others. I led two product teams focused
-            on <strong>Connected Stay</strong> (a cross-product initiative to create a seamless
-            experience across the trip lifecycle) and <strong>cross-brand initiatives</strong> that
-            required coordination between separate engineering and product organizations across
-            sister companies.
-          </p>
-          <p>
-            The challenge of cross-brand work at that scale is mostly organizational: getting
-            multiple teams with different priorities, tech stacks, and timelines to converge on
-            something shippable. Design is often the connective tissue that makes that possible.
-          </p>
+          <p>Booking.com operates within the Booking Holdings portfolio — a network that includes Kayak, Priceline, Agoda, and Rentalcars. In practice, that means product decisions don't end at Booking.com's borders. Features that touch the core travel experience require alignment across brands, platforms, and engineering teams with very different timelines and priorities.</p>
+          <p>As UX Team Lead, I led two product teams working at that intersection — responsible not just for the design quality within Booking.com, but for getting cross-brand concepts from idea through alignment to production.</p>
         </section>
 
         <section class="case-section">
-          <h2>What I did</h2>
-          <p>
-            I led my teams through two <strong>internal hackathons</strong>, turning raw product ideas
-            into shippable concepts with clear business cases. The winning concepts — a
-            <strong>group travel planner</strong> and <strong>local events hotel search</strong> — both went into
-            production track, demonstrating how design-led experimentation could compress the
-            time from insight to decision at a company that size.
-          </p>
-          <p>
-            For the cross-brand work, I built the relationships across Kayak, Priceline, and
-            Agoda that made collaboration realistic rather than theoretical — establishing
-            shared design principles and communication channels that let multiple teams move
-            toward the same goal without constant alignment overhead.
-          </p>
-          <p>
-            I also used this period to sharpen my approach to measuring design impact in a
-            large, highly data-driven organization. At Booking.com, every design decision
-            was expected to have a testable hypothesis and measurable outcome. That rigor
-            shaped how I've approached experimentation ever since.
-          </p>
+          <h2>What we built</h2>
+          <p>I led two internal hackathon projects that went all the way through to live production — a rare outcome in an organization of Booking.com's scale. The first was a <strong>group travel planning feature</strong>, allowing multiple travelers to coordinate itineraries and book collaboratively. The second was a <strong>local events and activities integration</strong>, surfacing curated experiences directly within the accommodation booking flow.</p>
+          <p>Both features required not just strong design execution, but the organizational work of getting engineering, product, and legal teams across Booking Holdings brands aligned around a shared roadmap. I owned the cross-functional facilitation directly.</p>
+          <p>On the operations side, I led the development of the <strong>Connected Stay roadmap</strong> — a multi-quarter planning artifact that mapped the complete guest experience from booking through check-out, coordinating contributions from product, tech, and commercial teams across the business.</p>
         </section>
+
+        <!-- Real Booking.com work artifact -->
+        <figure style="margin:2rem 0;">
+          <img src="photo-booking-roadmap.png"
+               alt="Booking.com Connected Stay check-in roadmap — a real internal product planning document showing milestones from Q3 2020 through H1 2021"
+               style="width:100%;border-radius:var(--radius);border:1px solid var(--color-border);display:block;" />
+          <figcaption style="font-size:12px;color:var(--color-text-faint);margin-top:.75rem;font-style:italic;">The Connected Stay check-in roadmap — a real internal planning artifact from the team, mapping milestones across Customer Experience and Integrations tracks through H1 2021.</figcaption>
+        </figure>
+
+        <!-- Hackathon team photo -->
+        <figure style="margin:2rem 0;">
+          <img src="photo-booking-hackathon.jpg"
+               alt="Booking.com hackathon team wearing Celebrating Cities t-shirts"
+               style="width:100%;border-radius:var(--radius);display:block;max-height:420px;object-fit:cover;object-position:center;" />
+          <figcaption style="font-size:12px;color:var(--color-text-faint);margin-top:.75rem;font-style:italic;">The hackathon team behind the "Celebrating Cities" project — one of two hackathon wins that went through to production during this period.</figcaption>
+        </figure>
 
         <section class="case-section">
           <h2>What I learned</h2>
-          <p>
-            At a company with Booking.com's data culture, design credibility comes from
-            speaking the language of statistical significance and conversion rates — not
-            just user empathy. The best designers I worked with there were fluent in both.
-            That was the bar I held my team to, and it's shaped how I hire and develop
-            designers ever since.
-          </p>
+          <p>Getting a prototype to production inside a large tech company is almost entirely an organizational problem — not a design one. The design work is the easy part. The hard part is building enough trust across enough stakeholders that they're willing to reorganize engineering resources, align on scope, and accept the risk of something new. I learned to treat that stakeholder work as design work — to prototype it, test it, and iterate on it the same way I would a user flow.</p>
         </section>
 
         <section class="case-metrics">
           <h2>Outcomes</h2>
           <div class="metrics-grid">
-            <div class="metric-card">
-              <span class="metric-num">2×</span>
-              <span class="metric-label">hackathon wins — both concepts went to production track</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-num">4</span>
-              <span class="metric-label">brands aligned on cross-platform design principles</span>
-            </div>
-            <div class="metric-card">
-              <span class="metric-num">2</span>
-              <span class="metric-label">new consumer features shipped: group planner + local events search</span>
-            </div>
+            <div class="metric-card"><span class="metric-num">2</span><span class="metric-label">hackathon projects shipped to production</span></div>
+            <div class="metric-card"><span class="metric-num">3</span><span class="metric-label">Booking Holdings brands aligned (Kayak, Priceline, Agoda)</span></div>
+            <div class="metric-card"><span class="metric-num">1</span><span class="metric-label">Connected Stay roadmap spanning 3 quarters</span></div>
+            <div class="metric-card"><span class="metric-num">∞</span><span class="metric-label">travelers impacted at Booking.com's global scale</span></div>
           </div>
         </section>
 
@@ -129,39 +122,27 @@
       <aside class="case-sidebar">
         <div class="sidebar-block">
           <p class="sidebar-label">Company</p>
-          <p class="sidebar-value">Booking.com — world's largest online travel platform, part of Booking Holdings alongside Kayak, Priceline, Agoda, and OpenTable.</p>
+          <p class="sidebar-value">Booking.com — the world's leading travel platform, part of Booking Holdings alongside Kayak, Priceline, Agoda, and Rentalcars.</p>
         </div>
         <div class="sidebar-block">
           <p class="sidebar-label">My responsibilities</p>
-          <p class="sidebar-value">
-            2 product team leads<br>
-            Connected Stay UX<br>
-            Cross-brand design alignment<br>
-            2 internal hackathons<br>
-            Experimental product concepts<br>
-            Kayak · Priceline · Agoda coordination
-          </p>
+          <p class="sidebar-value">2 hackathon projects → production<br>Cross-brand alignment<br>Group travel planning feature<br>Local events integration<br>Connected Stay roadmap<br>Cross-functional facilitation</p>
         </div>
         <div class="sidebar-block">
           <p class="sidebar-label">Tools &amp; methods</p>
           <div class="tag-row">
-            <span class="tag">A/B testing</span>
-            <span class="tag">Rapid prototyping</span>
-            <span class="tag">Figma</span>
-            <span class="tag">Quantitative UX</span>
-            <span class="tag">Cross-brand systems</span>
+            <span class="tag">Rapid prototyping</span><span class="tag">Cross-functional facilitation</span><span class="tag">Roadmapping</span><span class="tag">Figma</span>
           </div>
         </div>
         <div class="sidebar-block">
           <p class="sidebar-label">Next case study</p>
-          <a href="case-bookclub.html" class="sidebar-next">📚 BookClub — Director of Design →</a>
+          <a href="case-bookclub.html" class="sidebar-next">📚 BookClub — Director of Product Design →</a>
         </div>
       </aside>
     </div>
 
   </main>
 
-  <!-- ── FOOTER ── -->
   <footer class="footer">
     <div class="container footer-inner">
       <span>© 2025 Kevin Hawkins</span>
@@ -171,7 +152,6 @@
       </div>
     </div>
   </footer>
-
   <script src="assets/js/main.js"></script>
 </body>
 </html>

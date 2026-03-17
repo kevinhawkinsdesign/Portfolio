@@ -1,44 +1,77 @@
-# Kevin Hawkins — Portfolio Website
+# Kevin Hawkins Portfolio — GitHub Pages
 
-VP Product Experience | Barcelona, Spain  
-20+ years in product design, research, and UX leadership.
+## Files in this zip
 
-## Setup
+```
+index.html
+about.html
+case-monta.html
+case-glovo.html
+case-amenitiz.html
+case-booking.html
+case-bookclub.html
+assets/
+  css/
+    main.css            ← Base portfolio styles
+    gradient-system.css ← Gradient & animation enhancement layer
+  js/
+    animations.js       ← Micro-animation engine (scroll reveal, counters, cursor glow, etc.)
+  img/                  ← Your existing images (not included — already in your repo)
+```
 
-This is a static website. To run locally:
+## How to deploy
+
+1. **Unzip** this archive
+2. **Copy all files** into your GitHub repo root (alongside your existing `assets/img/` folder)
+3. **Commit and push** — GitHub Pages rebuilds in ~60 seconds
 
 ```bash
-# Option 1: Python simple server
-python3 -m http.server 8000
-# Then open http://localhost:8000
-
-# Option 2: Node live-server
-npx live-server
+git add .
+git commit -m "Add gradient system and micro-animations"
+git push
 ```
 
-## Deploy to GitHub Pages
+## What the gradient system adds
 
-1. Push this repository to GitHub
-2. Go to Settings → Pages
-3. Set source to `main` branch, root folder `/`
-4. Your site will be live at `https://yourusername.github.io/repository-name`
+Every page automatically gets:
+- Floating ambient gradient orbs (background atmosphere)
+- Frosted glass nav with gradient underline on hover links
+- Animated gradient text on `<em>` in headlines
+- Scroll progress bar (3px gradient stripe at top)
+- Cursor glow that follows mouse (desktop only)
+- Scroll-triggered reveal animations on all sections
+- 3D tilt + gradient spotlight on cards
+- Magnetic hover on CTA buttons
+- Animated stat counters (count up on scroll into view)
+- Gradient numbers on outcome stats
+- H2 underline that grows on scroll entry
+- Speaking cards with gradient bottom line on hover
+- Gradient scrollbar thumb
+- Section ambient blobs per section
+- Footer gradient glow divider line
 
-## Structure
+## Image paths expected
+
+The HTML files reference these paths — make sure they exist in your repo:
 
 ```
-/
-├── index.html          # Main portfolio page
-├── assets/
-│   ├── css/
-│   │   └── main.css    # All styles
-│   ├── js/
-│   │   └── main.js     # Scroll animations & interactions
-│   └── img/            # All embedded images (extracted from PDFs & project files)
-└── README.md
+assets/img/photo-speaking-uxdx.jpeg   ← Hero photo (index.html)
+assets/img/photo-team.jpeg            ← Leadership section
+assets/img/photo-stage.jpeg           ← Leadership section
+assets/img/photo-street.jpeg          ← Leadership section
+assets/img/monta_hub_ai.png           ← Monta case study
+assets/img/img_05.jpg                 ← Glovo case study
+assets/img/amenitiz-calendar.jpg      ← Amenitiz case study
+assets/img/amenitiz-inventory.jpg     ← Amenitiz case study
+assets/img/img_15.jpg                 ← Booking case study
+assets/img/img_18.jpg                 ← BookClub case study
 ```
 
-## Contact
+All of these already exist in your current repo — no changes needed.
 
-hello@kevinhawkinsdesign.com  
-https://linkedin.com/in/kevinhawkinsdesign  
-Barcelona, Spain
+## Notes
+
+- `gradient-system.css` is a drop-in layer — it never overrides layout, only adds visual enhancement
+- All animations respect `prefers-reduced-motion` 
+- Gradient orbs are disabled on mobile (performance)
+- Cursor glow is desktop-only (skipped on touch devices)

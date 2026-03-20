@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Monta — Kevin Hawkins</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/gradient-system.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monta — Kevin Hawkins</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
-<nav id="main-nav">
+<div class="cursor"></div>
+<div class="cursor-ring"></div>
+<nav id="nav">
   <a class="nav-logo" href="index.html">Kevin Hawkins</a>
   <ul class="nav-links">
     <li><a href="about.html">About</a></li>
-    <li class="has-dropdown">
-      <a href="index.html#work">Work</a>
+    <li class="has-dropdown"><a href="index.html#work">Work</a>
       <ul class="dropdown">
         <li><a href="case-monta.html" class="active">⚡ Monta</a></li>
         <li><a href="case-glovo.html">🛵 Glovo</a></li>
@@ -26,92 +25,103 @@
         <li><a href="case-capital-one.html">🏦 Capital One</a></li>
       </ul>
     </li>
-    <li><a href="index.html#leadership">Leadership</a></li>
     <li><a href="index.html#speaking">Speaking</a></li>
     <li><a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank">LinkedIn</a></li>
   </ul>
-  <a href="mailto:hello@kevinhawkinsdesign.com" class="btn-primary">Get in touch</a>
+  <a class="nav-cta" href="mailto:hello@kevinhawkinsdesign.com">Get in touch</a>
 </nav>
 
-<article class="case-study">
-  <header class="case-hero">
-    <div class="case-breadcrumb">
-      <a href="index.html">Kevin Hawkins</a>
-      <span>/</span>
-      <a href="index.html#work">Work</a>
-      <span>/</span>
-      <span>Monta</span>
-    </div>
-    <div class="case-company">
-      <img src="assets/img/logos/monta.png" alt="Monta">
-      <span class="case-company-name">Monta</span>
-      <div class="case-company-divider"></div>
-      <span class="case-company-role">VP Product Experience</span>
-      <div class="case-company-divider"></div>
-      <span class="case-company-role">2024–Present</span>
-    </div>
-    <h1>Formalizing UX at Europe's leading EV infrastructure platform</h1>
-    <div class="case-meta-row">
-      <div class="case-meta-item"><dt>Role</dt><dd>VP Product Experience</dd></div>
-      <div class="case-meta-item"><dt>Team</dt><dd>20+ designers, researchers &amp; content</dd></div>
-      <div class="case-meta-item"><dt>Location</dt><dd>Barcelona</dd></div>
-      <div class="case-meta-item"><dt>Focus</dt><dd>0→1 UX function · PLG · AI</dd></div>
-    </div>
-  </header>
+<div class="page">
 
-  <div class="case-body">
-  <div class="case-main">
+<section class="case-hero-area">
+  <div class="case-breadcrumb">
+    <a href="index.html">Kevin Hawkins</a>
+    <span>/</span>
+    <a href="index.html#work">Work</a>
+    <span>/</span>
+    <span>Monta</span>
+  </div>
+  <span class="case-num mono">01 / 06</span>
+  <div class="case-co">
+    <div class="case-co-badge"><img src="assets/img/logos/monta.png" alt="Monta"></div>
+    <span class="case-co-name">Monta</span>
+    <div class="case-co-div"></div>
+    <span class="case-co-role">VP Product Experience</span>
+    <div class="case-co-div"></div>
+    <span class="case-co-role">2024–Present</span>
+  </div>
+  <h1 data-reveal>Formalizing UX at Europe's leading <em>EV infrastructure</em> platform.</h1>
+  <div class="case-specs">
+    <div class="case-spec"><dt>Role</dt><dd>VP Product Experience</dd></div><div class="case-spec"><dt>Team</dt><dd>20+ designers & researchers</dd></div><div class="case-spec"><dt>Focus</dt><dd>Systems · Research · AI</dd></div><div class="case-spec"><dt>Scale</dt><dd>Global EV infrastructure</dd></div>
+  </div>
+</section>
 
-  <section class="case-section">
-    <h2>The situation</h2>
-    <p>Monta had grown rapidly without a dedicated UX function. The product had real traction across EV charging networks, charge point operators, and end consumers — but no UX vision, no design career framework, and no experimentation infrastructure tied to business outcomes. I was hired as the company's first UX leader to build everything from scratch.</p>
-  </section>
-  <section class="case-section">
-    <span class="case-section-label">Approach</span>
-  <h2>What we built</h2>
-    <p>I connected the design function directly to quarterly business reviews, making research insights a standing agenda item. I led a team of 20+ across design, research, and content, delegating ownership broadly while staying close enough to lead by example — including personally owning the <strong>PostHog implementation</strong>, architecting the event taxonomy and A/B testing framework the team now runs experiments against.</p>
-    <p>That infrastructure became the foundation for a 20% month-over-month lift in MAU, driven by systematic experimentation and a comprehensive PLG onboarding redesign. On the product side, we led <strong>Monta AI</strong>, the <strong>Customer Council</strong> program, the <strong>NOC operations agent</strong>, and <strong>Mobile 2.0</strong>.</p>
-  </section>
-  <section class="case-section">
-    <span class="case-section-label">Reflection</span>
-  <h2>What I learned</h2>
-    <p>The first job as a new UX leader isn't to redesign things — it's to earn trust and make the case for design maturity in the language of business outcomes.</p>
-  </section>
-  <section class="case-outcomes">
-    <span class="case-section-label">Impact</span>
-  <h2>Outcomes</h2>
-    <div class="outcomes-grid">
-      <div class="outcome-card"><span class="outcome-number" data-count="20" data-prefix="+" data-suffix="%">+20%</span><span class="outcome-label">MoM MAU growth via A/B experimentation</span></div>
-      <div class="outcome-card"><span class="outcome-number">20+</span><span class="outcome-label">designers, researchers &amp; content specialists led</span></div>
-      <div class="outcome-card"><span class="outcome-number">4</span><span class="outcome-label">strategic product initiatives: AI, NOC, Mobile 2.0, Customer Council</span></div>
-      <div class="outcome-card"><span class="outcome-number">1st</span><span class="outcome-label">UX career framework established at Monta</span></div>
+<div class="case-body-area">
+  <main class="case-main">
+    <div class="case-section" data-reveal>
+      <span class="case-section-num">— Overview</span>
+      <p style="font-size:1.15rem;max-width:60ch;line-height:1.8;color:var(--muted)">Monta is Europe's leading EV charging platform. I joined as the first UX leader at the Director/VP level — hired to formalize design practice, scale the team, and connect UX work directly to product growth.</p>
     </div>
-  </section>
-
-  </div><!-- /.case-main -->
-
-  <aside class="case-sidebar-meta">
-    <div class="sidebar-block"><p class="sidebar-label">My responsibilities</p><ul><li>UX vision &amp; strategy</li><li>PostHog implementation</li><li>A/B experimentation</li><li>PLG onboarding redesign</li><li>Career framework</li><li>QBR integration</li></ul></div>
-    <div class="sidebar-block"><p class="sidebar-label">Tools &amp; methods</p><div class="tag-list"><span class="tag">PostHog</span><span class="tag">A/B testing</span><span class="tag">PLG</span><span class="tag">Figma</span><span class="tag">UX research</span><span class="tag">Design systems</span></div></div>
+    
+  <div class="case-section" data-reveal>
+    <span class="case-section-num">— Challenge</span>
+    <h2>What we inherited</h2>
+    <p>Monta had talented individual contributors but no shared design language, no research practice, and no organizational infrastructure for UX to operate at scale. Our job was to build all of that — fast — without slowing down the product teams already shipping.</p>
+  </div>
+  <div class="case-section" data-reveal>
+    <span class="case-section-num">— Approach</span>
+    <h2>How we built it</h2>
+    <p>We started with the team. I hired across design, research, and content — building a 20+ person org with clear levels, career frameworks, and ways of working that didn't exist before. Every hire was deliberate: we needed range, not just seniority.</p><p>In parallel, I led the development of our design system and a centralized research practice — two investments that compounded quickly. Within three months, teams were shipping with more consistency and learning from users at a pace they hadn't achieved before.</p><p>I also personally led the design of <strong>Monta Hub AI</strong> — our AI-powered operator intelligence layer — as a proof of concept for what the practice could produce when it operated at its best.</p>
+  </div>
+  <div class="case-section" data-reveal>
+    <span class="case-section-num">— Reflection</span>
+    <h2>What I learned</h2>
+    <p>The hardest part of first-in-role leadership isn't building the thing — it's building trust while building the thing. You're being evaluated constantly while operating without precedent. The answer is to lead by example early, delegate fast, and let the team's output speak for the org's value.</p>
+  </div>
+    <div class="case-outcomes" data-reveal>
+      <h2>Outcomes</h2>
+      <div class="outcomes-strip">
+        <div class="outcome-cell"><span class="outcome-num"><em>+20</em>%</span><span class="outcome-label">MoM MAU growth driven by AI-enhanced operator experience</span></div><div class="outcome-cell"><span class="outcome-num">20<em>+</em></span><span class="outcome-label">Designers and researchers hired and onboarded</span></div><div class="outcome-cell"><span class="outcome-num">1</span><span class="outcome-label">Design system built from zero and adopted across all product teams</span></div><div class="outcome-cell"><span class="outcome-num">4</span><span class="outcome-label">Strategic initiatives shipped in first 6 months</span></div>
+      </div>
+    </div>
+  </main>
+  <aside class="case-sidebar">
+    <div class="case-sidebar-block">
+      <span class="label">Company</span>
+      <p>Monta — Europe's leading EV charging infrastructure platform, serving charge point operators globally.</p>
+    </div>
+    <div class="case-sidebar-block">
+      <span class="label">Responsibilities</span>
+      <ul><li>Team hiring & leadership</li><li>Design system (0→1)</li><li>Research practice setup</li><li>Monta Hub AI design</li><li>Career frameworks & levels</li></ul>
+    </div>
+    <div class="case-sidebar-block">
+      <span class="label">Methods &amp; Tools</span>
+      <div class="tag-list"><span class="tag">Design systems</span><span class="tag">User research</span><span class="tag">AI/ML design</span><span class="tag">PLG</span><span class="tag">Career frameworks</span><span class="tag">Figma</span></div>
+    </div>
   </aside>
+</div>
 
-  </div><!-- /.case-body -->
+<nav class="case-nav">
+  <a href="case-capital-one.html">
+    <span class="case-nav-dir">← Previous</span>
+    <span class="case-nav-title">Capital One — Design Strategist</span>
+  </a>
+  <a href="case-glovo.html">
+    <span class="case-nav-dir">Next →</span>
+    <span class="case-nav-title">Glovo — Global UX Director</span>
+  </a>
+</nav>
 
-  <nav class="case-nav">
-      <div></div>
-      <a href="case-glovo.html" class="case-nav-next">
-        <span class="case-nav-label">Next →</span>
-        <span class="case-nav-title">🛵 Glovo — Global UX Director</span>
-      </a>
-    </nav>
-</article>
+</div>
 <footer>
-  <p>© 2025 Kevin Hawkins</p>
+  <span class="footer-copy">© 2025 Kevin Hawkins Design</span>
   <div class="footer-links">
     <a href="mailto:hello@kevinhawkinsdesign.com">hello@kevinhawkinsdesign.com</a>
     <a href="https://linkedin.com/in/kevinhawkinsdesign" target="_blank">LinkedIn</a>
+    <a href="about.html">About</a>
   </div>
+  <span class="footer-copy">Barcelona, Spain</span>
 </footer>
-<script src="assets/js/animations.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

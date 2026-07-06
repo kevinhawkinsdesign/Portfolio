@@ -1,71 +1,101 @@
 /* ── KEVIN HAWKINS — MAIN JS ── */
-(function() {
+(function () {
   'use strict';
 
-  // Custom cursor
-  const cursor = document.querySelector('.cursor');
-  const ring   = document.querySelector('.cursor-ring');
-  if (cursor && ring) {
-    let mx = 0, my = 0, rx = 0, ry = 0;
-    document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ── Custom cursor (fine pointers only) ── */
+  var cursor = document.querySelector('.cursor');
+  var ring = document.querySelector('.cursor-ring');
+  if (cursor && ring && fine && !reduce) {
+    var mx = window.innerWidth / 2, my = window.innerHeight / 2, rx = mx, ry = my;
+    document.addEventListener('mousemove', function (e) { mx = e.clientX; my = e.clientY; });
+    document.addEventListener('mouseleave', function () { cursor.style.opacity = ring.style.opacity = '0'; });
+    document.addEventListener('mouseenter', function () { cursor.style.opacity = ring.style.opacity = '1'; });
     (function loop() {
-      rx += (mx - rx) * 0.18;
-      ry += (my - ry) * 0.18;
-      cursor.style.left = mx + 'px';
-      cursor.style.top  = my + 'px';
-      ring.style.left   = rx + 'px';
-      ring.style.top    = ry + 'px';
+      rx += (mx - rx) * 0.2;
+      ry += (my - ry) * 0.2;
+      cursor.style.transform = 'translate(' + mx + 'px,' + my + 'px) translate(-50%,-50%)';
+      ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px) translate(-50%,-50%)';
       requestAnimationFrame(loop);
     })();
+  } else if (cursor && ring) {
+    cursor.style.display = ring.style.display = 'none';
   }
 
-  // Nav scroll state
-  const nav = document.getElementById('nav');
-  if (nav) {
-    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
-    window.addEventListener('scroll', onScroll, { passive: true });
+  /* ── Nav scroll state ── */
+  var nav = document.getElementById('nav');
+
+  /* ── Scroll progress bar ── */
+  var bar = document.createElement('div');
+  bar.className = 'scroll-progress';
+  document.body.appendChild(bar);
+
+  function onScroll() {
+    var y = window.scrollY || document.documentElement.scrollTop;
+    if (nav) nav.classList.toggle('scrolled', y > 40);
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (y / h) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  /* ── Magnetic elements ── */
+  if (fine && !reduce) {
+    document.querySelectorAll('.nav-cta, [data-magnetic]').forEach(function (el) {
+      el.addEventListener('mousemove', function (e) {
+        var r = el.getBoundingClientRect();
+        var x = (e.clientX - r.left - r.width / 2) * 0.28;
+        var y = (e.clientY - r.top - r.height / 2) * 0.28;
+        el.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+      });
+      el.addEventListener('mouseleave', function () { el.style.transform = ''; });
+    });
   }
 
-  // Scroll reveal
-  const revealEls = document.querySelectorAll('[data-reveal]');
-  if (revealEls.length && 'IntersectionObserver' in window) {
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
-    }, { threshold: 0.08 });
-    revealEls.forEach(el => obs.observe(el));
+  /* ── Scroll reveal ── */
+  var revealEls = document.querySelectorAll('[data-reveal]');
+  if (revealEls.length && 'IntersectionObserver' in window && !reduce) {
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    revealEls.forEach(function (el) { obs.observe(el); });
   } else {
-    revealEls.forEach(el => el.classList.add('visible'));
+    revealEls.forEach(function (el) { el.classList.add('visible'); });
   }
 
-  // Speaking tabs
-  document.querySelectorAll('.speaking-tab').forEach(function(tab) {
-    tab.addEventListener('click', function() {
-      document.querySelectorAll('.speaking-tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.speaking-tab-content').forEach(c => c.classList.add('hidden'));
+  /* ── Speaking tabs ── */
+  document.querySelectorAll('.speaking-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.speaking-tab').forEach(function (t) { t.classList.remove('active'); });
+      document.querySelectorAll('.speaking-tab-content').forEach(function (c) { c.classList.add('hidden'); });
       tab.classList.add('active');
-      const el = document.getElementById('tab-' + tab.dataset.tab);
+      var el = document.getElementById('tab-' + tab.dataset.tab);
       if (el) el.classList.remove('hidden');
     });
   });
 
-  // Counter animation
-  document.querySelectorAll('[data-count]').forEach(function(el) {
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
+  /* ── Counter animation ── */
+  document.querySelectorAll('[data-count]').forEach(function (el) {
+    var o = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
         if (!e.isIntersecting) return;
-        const target = +el.dataset.count;
-        const prefix = el.dataset.prefix || '';
-        const suffix = el.dataset.suffix || '';
-        let start = 0, step = target / 50;
-        const tick = setInterval(() => {
+        var target = +el.dataset.count;
+        var prefix = el.dataset.prefix || '';
+        var suffix = el.dataset.suffix || '';
+        var start = 0, step = target / 50;
+        var tick = setInterval(function () {
           start = Math.min(start + step, target);
           el.textContent = prefix + Math.round(start) + suffix;
           if (start >= target) clearInterval(tick);
         }, 28);
-        obs.unobserve(e.target);
+        o.unobserve(e.target);
       });
     }, { threshold: 0.3 });
-    obs.observe(el);
+    o.observe(el);
   });
 
 })();

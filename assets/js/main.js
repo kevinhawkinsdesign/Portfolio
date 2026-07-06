@@ -67,6 +67,59 @@
     revealEls.forEach(function (el) { el.classList.add('visible'); });
   }
 
+  /* ── Mobile menu (built from the existing nav so it stays in sync) ── */
+  if (nav) {
+    var toggle = document.createElement('button');
+    toggle.className = 'nav-toggle';
+    toggle.setAttribute('aria-label', 'Open menu');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.innerHTML = '<span></span><span></span>';
+    nav.appendChild(toggle);
+
+    var menu = document.createElement('div');
+    menu.className = 'mobile-menu';
+    menu.setAttribute('aria-hidden', 'true');
+
+    var html = '<div class="mobile-menu-inner">';
+    var links = nav.querySelector('.nav-links');
+    if (links) {
+      links.querySelectorAll(':scope > li').forEach(function (li) {
+        var a = li.querySelector(':scope > a');
+        if (!a) return;
+        var act = a.classList.contains('active') ? ' active' : '';
+        var tgt = a.target ? ' target="' + a.target + '" rel="noopener"' : '';
+        html += '<a class="mm-link' + act + '" href="' + a.getAttribute('href') + '"' + tgt + '>' + a.textContent.trim() + '</a>';
+        var dd = li.querySelector('.dropdown');
+        if (dd) {
+          html += '<div class="mm-sub">';
+          dd.querySelectorAll('a').forEach(function (sa) {
+            var sact = sa.classList.contains('active') ? ' active' : '';
+            html += '<a class="mm-sublink' + sact + '" href="' + sa.getAttribute('href') + '">' + sa.textContent.trim() + '</a>';
+          });
+          html += '</div>';
+        }
+      });
+    }
+    var cta = nav.querySelector('.nav-cta');
+    if (cta) html += '<a class="mm-cta" href="' + cta.getAttribute('href') + '">' + cta.textContent.trim() + '</a>';
+    html += '</div>';
+    menu.innerHTML = html;
+    document.body.appendChild(menu);
+
+    var setMenu = function (open) {
+      document.body.classList.toggle('menu-open', open);
+      toggle.classList.toggle('open', open);
+      menu.classList.toggle('open', open);
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      menu.setAttribute('aria-hidden', open ? 'false' : 'true');
+    };
+    toggle.addEventListener('click', function () { setMenu(!menu.classList.contains('open')); });
+    menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+    window.addEventListener('resize', function () { if (window.innerWidth > 900) setMenu(false); });
+  }
+
   /* ── Speaking tabs ── */
   document.querySelectorAll('.speaking-tab').forEach(function (tab) {
     tab.addEventListener('click', function () {

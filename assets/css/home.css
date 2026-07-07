@@ -179,8 +179,8 @@ p { line-height: 1.62; }
 /* ── LOGOS ── */
 .logos { padding: clamp(2.5rem,4vw,3.5rem) var(--gut); text-align:center; }
 .logos .eyebrow { margin-bottom: 1.75rem; }
-.logo-row { display:flex; flex-wrap:wrap; gap: clamp(2rem,5vw,4.5rem); align-items:center; justify-content:center; background: var(--paper); }
-.logo-row img { height: clamp(30px, 3.2vw, 42px); width:auto; mix-blend-mode: multiply; opacity: 0.75; transition: opacity 0.3s, transform 0.3s var(--spring); }
+.logo-row { display:flex; flex-wrap:wrap; gap: clamp(1.5rem,4vw,3.5rem); align-items:center; justify-content:center; background: var(--paper); }
+.logo-row img { height: clamp(30px, 3.2vw, 42px); width: clamp(80px, 8vw, 108px); object-fit: contain; mix-blend-mode: multiply; opacity: 0.75; transition: opacity 0.3s, transform 0.3s var(--spring); }
 .logo-row img.blk { filter: brightness(0); }
 .logo-row img.inv { filter: invert(1); }
 .logo-row img.dim-inv { filter: brightness(1000) invert(1); }

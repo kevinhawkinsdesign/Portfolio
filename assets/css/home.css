@@ -153,6 +153,17 @@ p { line-height: 1.62; }
 .scroll-cue::after { content:''; width:1px; height:32px; background:var(--orange); animation:pulseY 1.8s ease-in-out infinite; }
 @keyframes pulseY { 0%,100%{transform:scaleY(0.4);opacity:0.4;transform-origin:top} 50%{transform:scaleY(1);opacity:1} }
 
+.hero-photo { position: absolute; z-index: 1; right: clamp(2rem, 7vw, 7rem); bottom: clamp(4.5rem, 11vh, 8rem);
+  width: clamp(150px, 15vw, 230px); }
+.hero-photo img { width:100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: 18px;
+  box-shadow: 0 24px 50px -18px rgba(22,18,13,0.4); filter: saturate(0); transform: rotate(4deg);
+  transition: filter 0.5s var(--ease), transform 0.4s var(--spring); }
+.hero-photo:hover img { filter: saturate(1); transform: rotate(0deg); }
+.hero-photo .tag { position:absolute; bottom:-12px; left:-14px; background: var(--gold); color: var(--ink);
+  font-family: var(--mono); font-size:0.66rem; padding:0.42rem 0.8rem; border-radius:100px; transform: rotate(-4deg);
+  box-shadow: 0 6px 16px -6px rgba(22,18,13,0.35); }
+@media (max-width: 980px){ .hero-photo{ display:none; } }
+
 /* ── MARQUEE ── */
 .marquee { background: var(--orange); color:#fff; padding: 0.95rem 0; overflow:hidden; }
 .marquee-track { display:flex; width:max-content; animation: scrollx 28s linear infinite; align-items:center; }

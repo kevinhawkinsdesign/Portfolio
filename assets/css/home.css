@@ -179,12 +179,16 @@ p { line-height: 1.62; }
 /* ── LOGOS ── */
 .logos { padding: clamp(2.5rem,4vw,3.5rem) var(--gut); text-align:center; }
 .logos .eyebrow { margin-bottom: 1.75rem; }
-.logo-row { display:flex; flex-wrap:wrap; gap: clamp(1.5rem,4vw,3.5rem); align-items:center; justify-content:center; background: var(--paper); }
-.logo-row img { height: clamp(26px, 2.8vw, 36px); width: auto; max-width: 175px; object-fit: contain; mix-blend-mode: multiply; opacity: 0.75; transition: opacity 0.3s, transform 0.3s var(--spring); }
+.logo-row { display:flex; flex-wrap:wrap; gap: clamp(1.2rem,3.2vw,2.8rem); align-items:center; justify-content:center; background: var(--paper); }
+.logo-row img { height: clamp(21px, 2.24vw, 29px); width: auto; max-width: 140px; object-fit: contain; mix-blend-mode: multiply; opacity: 0.75; transition: opacity 0.3s, transform 0.3s var(--spring); }
 .logo-row img.blk { filter: brightness(0); }
 .logo-row img.inv { filter: invert(1); }
 .logo-row img.dim-inv { filter: brightness(1000) invert(1); }
 .logo-row img:hover { opacity: 1; transform: translateY(-3px); }
+@media (max-width: 640px){
+  .logo-row { gap: clamp(0.9rem,4vw,1.6rem); }
+  .logo-row img { height: clamp(15px, 4vw, 20px); max-width: 95px; }
+}
 
 /* ── BIG STATEMENT ── */
 .statement { text-align:center; }

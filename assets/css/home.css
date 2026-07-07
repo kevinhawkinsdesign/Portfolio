@@ -113,6 +113,9 @@ p { line-height: 1.62; }
 .nav-links a { font-family: var(--sans); font-weight: 500; font-size: 0.9rem; color: var(--ink); position:relative; }
 .nav-links a::after { content:''; position:absolute; left:0; right:100%; bottom:-3px; height:2px; background: var(--orange); transition: right 0.35s var(--ease); }
 .nav-links a:hover::after { right:0; }
+.nav-links a.nav-home { display:inline-flex; align-items:center; color: var(--ink-2); transition: color 0.2s; }
+.nav-links a.nav-home:hover { color: var(--orange); }
+.nav-links a.nav-home::after { display:none; }
 
 /* ── BUTTONS ── */
 .btn { font-family: var(--sans); font-weight: 600; font-size: 0.92rem; letter-spacing: -0.01em;
@@ -162,9 +165,12 @@ p { line-height: 1.62; }
 /* ── LOGOS ── */
 .logos { padding: clamp(2.5rem,4vw,3.5rem) var(--gut); text-align:center; }
 .logos .eyebrow { margin-bottom: 1.75rem; }
-.logo-row { display:flex; flex-wrap:wrap; gap: clamp(1.75rem,4.5vw,3.75rem); align-items:center; justify-content:center; }
-.logo-row img { height: 25px; width:auto; filter: saturate(0); opacity: 0.6; transition: filter 0.3s, opacity 0.3s, transform 0.3s var(--spring); }
-.logo-row img:hover { filter: saturate(1); opacity: 1; transform: translateY(-3px); }
+.logo-row { display:flex; flex-wrap:wrap; gap: clamp(2rem,5vw,4.5rem); align-items:center; justify-content:center; background: var(--paper); }
+.logo-row img { height: clamp(30px, 3.2vw, 42px); width:auto; mix-blend-mode: multiply; opacity: 0.75; transition: opacity 0.3s, transform 0.3s var(--spring); }
+.logo-row img.blk { filter: brightness(0); }
+.logo-row img.inv { filter: invert(1); }
+.logo-row img.dim-inv { filter: brightness(1000) invert(1); }
+.logo-row img:hover { opacity: 1; transform: translateY(-3px); }
 
 /* ── BIG STATEMENT ── */
 .statement { text-align:center; }

@@ -120,6 +120,20 @@
     window.addEventListener('resize', function () { if (window.innerWidth > 900) setMenu(false); });
   }
 
+  /* ── Faded background photos ── */
+  var bgEls = document.querySelectorAll('.bg-photo[data-bg]');
+  bgEls.forEach(function (el) { el.style.backgroundImage = "url('" + el.getAttribute('data-bg') + "')"; });
+  if (bgEls.length && 'IntersectionObserver' in window && !reduce) {
+    var bgObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); bgObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.05 });
+    bgEls.forEach(function (el) { bgObs.observe(el); });
+  } else {
+    bgEls.forEach(function (el) { el.classList.add('in'); });
+  }
+
   /* ── Speaking tabs ── */
   document.querySelectorAll('.speaking-tab').forEach(function (tab) {
     tab.addEventListener('click', function () {

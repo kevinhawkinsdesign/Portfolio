@@ -259,7 +259,7 @@ p { line-height: 1.62; }
 .about-copy p a { color: var(--orange); font-weight: 500; border-bottom: 1px solid rgba(255,90,31,0.4); }
 .about-copy p a:hover { border-color: var(--orange); }
 .about-photo { position: relative; }
-.about-photo img { border-radius: 20px; width:100%; aspect-ratio: 4/5; object-fit: cover; filter: saturate(0); transition: filter 0.5s var(--ease); }
+.about-photo img { border-radius: 20px; width:100%; aspect-ratio: 4/5; object-fit: cover; object-position: 70% top; }
 .about-photo:hover img { filter: saturate(1); }
 .about-photo .tag { position:absolute; bottom:-12px; left:-12px; background: var(--gold); color: var(--ink);
   font-family: var(--mono); font-size:0.7rem; padding:0.45rem 0.85rem; border-radius:100px; transform: rotate(-3deg); }

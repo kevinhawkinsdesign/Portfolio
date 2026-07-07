@@ -105,6 +105,13 @@ p { line-height: 1.62; }
   padding: 1rem var(--gut); transition: background 0.4s, backdrop-filter 0.4s, padding 0.4s, box-shadow 0.4s; }
 #nav.scrolled { background: rgba(250,246,239,0.85); backdrop-filter: blur(14px) saturate(150%);
   padding: 0.6rem var(--gut); box-shadow: 0 1px 0 var(--line-l); }
+/* Dark photo heroes vary in brightness, so give the un-scrolled nav its own
+   guaranteed-dark backdrop rather than trusting the hero's own scrim. */
+#nav.nav--on-dark:not(.scrolled) { background: linear-gradient(180deg, rgba(11,10,12,0.78), rgba(11,10,12,0.4) 75%, transparent); }
+#nav.nav--on-dark:not(.scrolled) .nav-logo,
+#nav.nav--on-dark:not(.scrolled) .nav-links a,
+#nav.nav--on-dark:not(.scrolled) .nav-links a.nav-home { color: var(--cream); }
+#nav.nav--on-dark:not(.scrolled) .nav-toggle span { background: var(--cream); }
 .nav-logo { font-family: var(--sans); font-weight: 700; font-size: 1.05rem; letter-spacing: -0.03em; color: var(--ink);
   display:inline-flex; align-items:center; gap:0.5rem; }
 .nav-logo .star { color: var(--orange); display:inline-block; animation: spin 10s linear infinite; }

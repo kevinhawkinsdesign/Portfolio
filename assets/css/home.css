@@ -259,23 +259,18 @@ p { line-height: 1.62; }
 @media (max-width:640px){ .pod{ grid-template-columns:28px 1fr; } .pod .dur{ display:none; } }
 
 /* ── PERSONAL COLLAGE ── */
-.collage { display:grid; grid-template-columns: repeat(12,1fr); gap: 0.85rem; margin-top: 2.5rem; }
-.collage figure { position:relative; border-radius:16px; overflow:hidden; }
+.collage { display:grid; grid-template-columns: repeat(3,1fr); gap: 0.85rem; margin-top: 2.5rem; }
+.collage figure { position:relative; border-radius:16px; overflow:hidden; aspect-ratio: 4/3; }
 .collage img { width:100%; height:100%; object-fit:cover; filter: saturate(0); transition: transform 0.6s var(--ease), filter 0.5s var(--ease); }
 .collage figure:hover img{ transform: scale(1.05); filter: saturate(1); }
-.collage .c-a{ grid-column: span 5; aspect-ratio:4/3; }
-.collage .c-b{ grid-column: span 4; aspect-ratio:3/4; }
-.collage .c-c{ grid-column: span 3; aspect-ratio:3/4; }
-.collage .c-d{ grid-column: span 4; aspect-ratio:4/3; }
-.collage .c-e{ grid-column: span 4; aspect-ratio:4/3; }
-.collage .c-f{ grid-column: span 4; aspect-ratio:4/3; }
 .collage figcaption{ position:absolute; left:8px; bottom:8px; font-family:var(--mono); font-size:0.58rem; letter-spacing:0.05em; text-transform:uppercase;
   background: rgba(22,18,13,0.82); color: var(--paper); padding:0.24rem 0.5rem; border-radius:100px; }
 .facts { display:flex; flex-wrap:wrap; gap:0.55rem; margin-top:2.5rem; }
 .fact { font-family:var(--mono); font-size:0.72rem; padding:0.5rem 0.9rem; border-radius:100px; border:1px solid var(--line-l); }
 .fact::before{ content:'✦ '; color: var(--f,var(--orange)); }
 .fact:nth-child(4n+1){ --f:var(--orange); } .fact:nth-child(4n+2){ --f:var(--teal); } .fact:nth-child(4n+3){ --f:var(--cobalt); } .fact:nth-child(4n+4){ --f:var(--plum); }
-@media (max-width: 820px){ .collage{ grid-template-columns: repeat(6,1fr);} .collage figure{ grid-column: span 3 !important; aspect-ratio:1/1 !important; } }
+@media (max-width: 820px){ .collage{ grid-template-columns: repeat(2,1fr);} }
+@media (max-width: 480px){ .collage{ grid-template-columns: repeat(1,1fr);} }
 
 /* ── CONTACT ── */
 .contact { text-align:center; }

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Speaking &amp; Media — Kevin Hawkins</title>
+<meta name="description" content="Talks, teaching, and podcast features from Kevin Hawkins — product and design leader, curriculum lead, and mentor.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/css/home.css">
+<style>
+  .feat-hero { min-height: 46vh; display:flex; align-items:flex-end; padding-top:7rem; }
+  .feat-hero .bg-photo.in { opacity: 0.55; }
+  .feat-hero::before { content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
+    background: linear-gradient(180deg, rgba(11,10,12,0.35), rgba(11,10,12,0.55) 55%, var(--night)); }
+  .feat-hero .sec-in { z-index: 2; }
+  .feat-hero h1 { font-size: clamp(2.6rem, 8vw, 6rem); font-weight:600; letter-spacing:-0.045em; color: var(--cream); }
+  .feat-hero h1 em { color: var(--orange); }
+  .feat-body { display:grid; grid-template-columns: 1fr 1.15fr; gap: clamp(2rem,5vw,4.5rem); align-items:start; }
+  .feat-col h2 { font-size: clamp(1.6rem,3vw,2.3rem); letter-spacing:-0.04em; margin-bottom: 1.75rem; color: var(--cream); }
+  .role-list { list-style:none; }
+  .role-item { padding: 1.4rem 0; border-top: 1px solid var(--line-d); }
+  .role-item:last-child { border-bottom: 1px solid var(--line-d); }
+  .role-item .rn { font-family: var(--mono); font-size: 0.66rem; letter-spacing:0.1em; text-transform:uppercase; color: var(--orange); display:block; margin-bottom:0.4rem; }
+  .role-item h4 { font-family: var(--sans); font-weight:600; font-size: 1.15rem; letter-spacing:-0.02em; color: var(--cream); margin-bottom:0.4rem; }
+  .role-item p { font-size: 0.92rem; color: var(--cream-2); }
+  .media-cards { display:flex; flex-direction:column; gap: 1rem; }
+  .media-card { display:block; border:1px solid var(--line-d); border-radius:16px; padding: 1.5rem 1.6rem; transition: border-color 0.25s, transform 0.25s var(--spring), background 0.25s; }
+  .media-card:hover { border-color: var(--orange); transform: translateY(-3px); background: var(--night-2); }
+  .media-card .mn { font-family: var(--mono); font-size:0.66rem; color: var(--cream-2); }
+  .media-card .src { font-family: var(--mono); font-size:0.62rem; letter-spacing:0.1em; text-transform:uppercase; color: var(--cream-2); display:block; margin: 0.4rem 0 0.5rem; }
+  .media-card h3 { font-size: clamp(1.05rem,1.9vw,1.4rem); letter-spacing:-0.025em; color: var(--cream); margin-bottom: 0.6rem; }
+  .media-card .go { font-family: var(--mono); font-size:0.72rem; color: var(--orange); display:inline-flex; align-items:center; gap:0.4rem; }
+  .media-card .go .arr { transition: transform 0.25s var(--spring); }
+  .media-card:hover .go .arr { transform: translateX(3px); }
+  @media (max-width: 900px){ .feat-body{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<nav id="nav" class="nav">
+  <a class="nav-logo" href="index.html">Kevin Hawkins <span class="star">✦</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="speaking.html">Speaking</a></li>
+    <li><a href="index.html#now">Advising</a></li>
+  </ul>
+  <a class="btn" href="mailto:hello@kevinhawkinsdesign.com">Say hello <span class="arr">→</span></a>
+  <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu">
+  <a href="index.html#about">About</a>
+  <a href="work.html">Work</a>
+  <a href="speaking.html">Speaking</a>
+  <a href="index.html#now">Advising</a>
+  <a class="btn" href="mailto:hello@kevinhawkinsdesign.com">Say hello →</a>
+</div>
+
+<header class="sec sec--dark feat-hero">
+  <div class="bg-photo" data-bg="assets/img/photo-stage.jpeg" style="--bg-op:0.55"></div>
+  <div class="sec-in">
+    <span class="eyebrow rise">Speaking · Teaching · Media</span>
+    <h1 class="rise" data-d="1">Talks, teaching &amp; <em>features</em>.</h1>
+  </div>
+</header>
+
+<section class="sec sec--dark">
+  <div class="sec-in feat-body">
+    <div class="feat-col rise">
+      <h2>Teaching &amp; speaking</h2>
+      <ul class="role-list">
+        <li class="role-item">
+          <span class="rn">RGD · Vancouver, Canada · 2022</span>
+          <h4><a href="https://rgd.ca/connecting-learning/events-training/videos/focus-by-kevin-hawkins" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--orange)">Focus →</a></h4>
+          <p>Talk for the Registered Graphic Designers (RGD) on focus, prioritization, and leading design teams through complexity.</p>
+        </li>
+        <li class="role-item">
+          <span class="rn">Hatch Conference</span>
+          <h4>Leadership Ateliers</h4>
+          <p>Co-organizing an annual education series for 120 UX &amp; product leaders across Europe.</p>
+        </li>
+        <li class="role-item">
+          <span class="rn">GrowthTribe</span>
+          <h4>UX Curriculum Lead</h4>
+          <p>Built and taught 3 courses reaching 5,000+ students on Product Design, Design Thinking, and PLG.</p>
+        </li>
+        <li class="role-item">
+          <span class="rn">Georgetown University</span>
+          <h4>Guest Lecturer</h4>
+          <p>Data Visualization, Data Science, and UX for the McCourt School of Public Policy.</p>
+        </li>
+        <li class="role-item">
+          <span class="rn">General Assembly</span>
+          <h4>Mentor &amp; Instructor</h4>
+          <p>Mentoring, coaching, and instructing designers and researchers across career stages.</p>
+        </li>
+        <li class="role-item">
+          <span class="rn">UXDX Barcelona</span>
+          <h4>Ambassador</h4>
+          <p>Representing the Barcelona product &amp; design community for UXDX's global conference series.</p>
+        </li>
+        <li class="role-item">
+          <span class="rn">Barreira A+D · Valencia</span>
+          <h4>Bachelor of Design — Field Trips</h4>
+          <p>Taking Bachelor of Design students on immersive study trips abroad, most recently to San Francisco.</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="feat-col rise" data-d="1">
+      <h2>Podcast features</h2>
+      <div class="media-cards">
+        <a class="media-card" href="https://open.spotify.com/episode/3fhrCH58dCOgnyKLLwJ5lg" target="_blank" rel="noopener">
+          <span class="src">That Pivotal Moment of Change</span>
+          <h3>From Personas to Purpose: Strategic Leadership</h3>
+          <span class="go">Listen to episode <span class="arr">→</span> · 38 min</span>
+        </a>
+        <a class="media-card" href="https://open.spotify.com/episode/534UeXiGPZDFWIEad3KR17" target="_blank" rel="noopener">
+          <span class="src">Untold Secrets of Living Overseas</span>
+          <h3>Blending Career, Identity &amp; Culture</h3>
+          <span class="go">Listen to episode <span class="arr">→</span> · 40 min</span>
+        </a>
+        <a class="media-card" href="https://open.spotify.com/episode/21nIDdvTnCA5apvPbWgBS8" target="_blank" rel="noopener">
+          <span class="src">Why UX? Podcast</span>
+          <h3>Why UX? — Kevin Hawkins</h3>
+          <span class="go">Listen to episode <span class="arr">→</span> · 38 min</span>
+        </a>
+        <a class="media-card" href="https://open.spotify.com/episode/7Jr1uxqKdOgyvaAr7zwdle" target="_blank" rel="noopener">
+          <span class="src">Hatch: Design Talks</span>
+          <h3>Getting Buy-In &amp; Making Stakeholders Listen</h3>
+          <span class="go">Listen to episode <span class="arr">→</span> · 10 min</span>
+        </a>
+        <a class="media-card" href="https://open.spotify.com/episode/67ZA6rRQhpm72TVbY26c8A" target="_blank" rel="noopener">
+          <span class="src">A Lens A Day — Information Architecture</span>
+          <h3>Lenses on Information Architecture</h3>
+          <span class="go">Listen to episode <span class="arr">→</span> · 21 min</span>
+        </a>
+        <a class="media-card" href="https://www.youtube.com/playlist?list=PL6qjgSwuMGbgPp9fkZFgFkM99clQXBpXT" target="_blank" rel="noopener">
+          <span class="src">YouTube Playlist</span>
+          <h3>Conference talks, workshops &amp; panel sessions</h3>
+          <span class="go">Watch all <span class="arr">→</span></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--light contact" style="color:var(--ink)">
+  <div class="sec-in">
+    <span class="eyebrow rise">Book me</span>
+    <h2 class="rise" data-d="1" style="color:var(--ink)">Want me to speak or <em>teach</em>?</h2>
+    <a class="btn rise" data-d="2" href="mailto:hello@kevinhawkinsdesign.com">Get in touch <span class="arr">→</span></a>
+  </div>
+</section>
+
+<footer class="foot">
+  <span>© 2026 Kevin Hawkins</span>
+  <span>Product &amp; Design Leadership · Barcelona ✦</span>
+</footer>
+
+<script src="assets/js/home.js"></script>
+</body>
+</html>

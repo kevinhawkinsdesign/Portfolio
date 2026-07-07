@@ -156,9 +156,9 @@ p { line-height: 1.62; }
 .hero-photo { position: absolute; z-index: 1; right: clamp(2rem, 7vw, 7rem); bottom: clamp(4.5rem, 11vh, 8rem);
   width: clamp(150px, 15vw, 230px); }
 .hero-photo img { width:100%; aspect-ratio: 3/4; object-fit: cover; object-position: top; border-radius: 18px;
-  box-shadow: 0 24px 50px -18px rgba(22,18,13,0.4); filter: saturate(0); transform: rotate(4deg);
-  transition: filter 0.5s var(--ease), transform 0.4s var(--spring); }
-.hero-photo:hover img { filter: saturate(1); transform: rotate(0deg); }
+  box-shadow: 0 24px 50px -18px rgba(22,18,13,0.4); transform: rotate(4deg);
+  transition: transform 0.4s var(--spring); }
+.hero-photo:hover img { transform: rotate(0deg); }
 .hero-photo .tag { position:absolute; bottom:-12px; left:-14px; background: var(--gold); color: var(--ink);
   font-family: var(--mono); font-size:0.66rem; padding:0.42rem 0.8rem; border-radius:100px; transform: rotate(-4deg);
   box-shadow: 0 6px 16px -6px rgba(22,18,13,0.35); }

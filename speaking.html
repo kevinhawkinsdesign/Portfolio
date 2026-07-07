@@ -35,6 +35,9 @@
   .media-card .go .arr { transition: transform 0.25s var(--spring); }
   .media-card:hover .go .arr { transform: translateX(3px); }
   @media (max-width: 900px){ .feat-body{ grid-template-columns:1fr; } }
+
+  .logo-row--lg img { height: clamp(30px, 3.4vw, 46px); max-width: 168px; }
+  .logo-row--lg img.big { height: clamp(34px, 4vw, 54px); max-width: 190px; }
 </style>
 </head>
 <body>
@@ -77,13 +80,13 @@
 
 <section class="sec--light logos">
   <span class="eyebrow rise">Selected stages &amp; conferences</span>
-  <div class="logo-row rise" data-d="1">
+  <div class="logo-row logo-row--lg rise" data-d="1">
     <img src="assets/img/hatch-conf.png" alt="Hatch Conference">
     <img src="assets/img/Leading-Design-Logo.png" alt="Leading Design">
     <img class="inv" src="assets/img/RGD.png" alt="RGD">
     <img src="assets/img/smashing-conference.png" alt="Smashing Conference">
     <img src="assets/img/UXDX-logo.png" alt="UXDX">
-    <img class="inv big" src="assets/img/touch.png" alt="Touch">
+    <img src="assets/img/touch-logo.png" alt="Touch">
   </div>
 </section>
 

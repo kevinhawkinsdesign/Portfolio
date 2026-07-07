@@ -35,10 +35,16 @@
   .pitem.pl-dark .p-role { color: var(--cream-2); }
   .p-desc { font-family: var(--sans); font-size: 0.86rem; color: var(--ink-2); margin-top:0.5rem; line-height:1.5; max-width:22ch; display:none; }
   .pitem.pl-dark .p-desc { color: var(--cream-2); }
-  .p-name { flex: 1; font-family: var(--serif); font-size: clamp(2.4rem,6.4vw,5.4rem); letter-spacing:-0.02em; line-height:1;
-    color: var(--ink); transition: color 0.3s; text-align:center; }
-  .pitem.pl-dark .p-name { color: var(--cream); }
-  .pitem a:hover .p-name { color: var(--orange); }
+  .p-name { flex: 1; display:flex; justify-content:center; }
+  .p-logo { height: clamp(42px,6.5vw,88px); width:auto; max-width: 78%; object-fit:contain;
+    mix-blend-mode: multiply; transition: transform 0.35s var(--spring); }
+  .pitem a:hover .p-logo { transform: scale(1.05); }
+  .pitem.pl-dark .p-logo { mix-blend-mode: screen; }
+  /* naturally black-mark/white-bg logos: no filter needed on light rows; invert to reveal on dark rows */
+  .pitem.pl-dark .p-logo.dark-invert { filter: invert(1); }
+  /* naturally white-mark/black-bg logos: inverted for light rows (existing site convention); drop the invert on dark rows */
+  .p-logo.light-invert { filter: invert(1); }
+  .pitem.pl-dark .p-logo.light-invert { filter: none; }
   .p-meta { flex: 0 0 clamp(110px,14vw,170px); text-align:right; }
   .p-year { font-family: var(--mono); font-size: 0.72rem; color: var(--ink-3); display:block; }
   .pitem.pl-dark .p-year { color: var(--cream-2); }
@@ -49,7 +55,8 @@
   @media (max-width: 700px){
     .pitem a { flex-wrap:wrap; gap:0.5rem 1.5rem; padding: 1.75rem 0; }
     .p-cat { flex: 1 1 auto; order:1; }
-    .p-name { flex: 1 1 100%; order:2; text-align:left; font-size: clamp(1.9rem,9vw,2.8rem); }
+    .p-name { flex: 1 1 100%; order:2; justify-content:flex-start; }
+    .p-logo { height: clamp(36px,10vw,52px); }
     .p-meta { flex: 0 0 auto; order:1; margin-left:auto; text-align:right; }
   }
 </style>
@@ -103,42 +110,42 @@
     <li class="pitem pl-light">
       <a href="case-monta.html">
         <span class="p-cat"><span class="p-role">VP Product Experience</span><span class="p-desc">Design infrastructure &amp; AI automation at Europe's leading EV platform</span></span>
-        <span class="p-name">Monta</span>
+        <span class="p-name"><img class="p-logo dark-invert" src="assets/img/logos/monta.png" alt="Monta"></span>
         <span class="p-meta"><span class="p-year">2024–2026</span><span class="p-pill">+20% MoM MAU</span></span>
       </a>
     </li>
     <li class="pitem pl-dark">
       <a href="case-glovo.html">
         <span class="p-cat"><span class="p-role">Global UX Director</span><span class="p-desc">Leading a 100-person design org across 25 global markets</span></span>
-        <span class="p-name">Glovo</span>
+        <span class="p-name"><img class="p-logo light-invert" src="assets/img/logos/glovo.png" alt="Glovo"></span>
         <span class="p-meta"><span class="p-year">2021–2023</span><span class="p-pill">€500k saved</span></span>
       </a>
     </li>
     <li class="pitem pl-light">
       <a href="case-amenitiz.html">
         <span class="p-cat"><span class="p-role">Head of Design &amp; Research</span><span class="p-desc">Scaling a hospitality SaaS to 60+ countries and 15,000+ properties</span></span>
-        <span class="p-name">Amenitiz</span>
+        <span class="p-name"><img class="p-logo" style="filter:brightness(0)" src="assets/img/logos/amenitiz.webp" alt="Amenitiz"></span>
         <span class="p-meta"><span class="p-year">2023–2024</span><span class="p-pill">+20% LTV</span></span>
       </a>
     </li>
     <li class="pitem pl-dark">
       <a href="case-booking.html">
         <span class="p-cat"><span class="p-role">UX Team Lead</span><span class="p-desc">Cross-brand UX for connected stay &amp; global travel</span></span>
-        <span class="p-name">Booking.com</span>
+        <span class="p-name"><img class="p-logo light-invert" src="assets/img/logos/booking.png" alt="Booking.com"></span>
         <span class="p-meta"><span class="p-year">2019–2021</span><span class="p-pill">2× Hackathon winner</span></span>
       </a>
     </li>
     <li class="pitem pl-light">
       <a href="case-bookclub.html">
         <span class="p-cat"><span class="p-role">Director of Product Design</span><span class="p-desc">Building a social reading platform from zero as founding designer</span></span>
-        <span class="p-name">BookClub</span>
+        <span class="p-name"><img class="p-logo" src="assets/img/logos/bookclub.svg" alt="BookClub"></span>
         <span class="p-meta"><span class="p-year">2018–2019</span><span class="p-pill">0 → 1 build</span></span>
       </a>
     </li>
     <li class="pitem pl-dark">
       <a href="case-capital-one.html">
         <span class="p-cat"><span class="p-role">Design Strategist</span><span class="p-desc">Research-driven strategy across SMB banking and Project Elements</span></span>
-        <span class="p-name">Capital One</span>
+        <span class="p-name"><img class="p-logo dark-invert" src="assets/img/logos/capitalone.png" alt="Capital One"></span>
         <span class="p-meta"><span class="p-year">2016–2018</span><span class="p-pill">20+ interviews</span></span>
       </a>
     </li>

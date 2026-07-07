@@ -162,7 +162,10 @@ p { line-height: 1.62; }
 .hero-photo .tag { position:absolute; bottom:-12px; left:-14px; background: var(--gold); color: var(--ink);
   font-family: var(--mono); font-size:0.66rem; padding:0.42rem 0.8rem; border-radius:100px; transform: rotate(-4deg);
   box-shadow: 0 6px 16px -6px rgba(22,18,13,0.35); }
-@media (max-width: 980px){ .hero-photo{ display:none; } }
+@media (max-width: 980px){
+  .hero-photo { position: relative; inset: auto; right:auto; bottom:auto; z-index:0;
+    width: min(220px, 60vw); margin: 2.5rem auto 0; }
+}
 
 /* ── MARQUEE ── */
 .marquee { background: var(--orange); color:#fff; padding: 0.95rem 0; overflow:hidden; }

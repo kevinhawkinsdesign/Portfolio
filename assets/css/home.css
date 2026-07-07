@@ -198,8 +198,8 @@ p { line-height: 1.62; }
 
 /* ── BIG STATEMENT ── */
 .statement { text-align:center; }
-.statement p { font-family: var(--sans); font-weight: 500; font-size: clamp(1.6rem, 4vw, 3.1rem);
-  line-height: 1.18; letter-spacing:-0.03em; max-width: 22ch; margin: 0 auto; color: inherit; }
+.statement p { font-family: var(--sans); font-weight: 500; font-size: clamp(0.6rem, calc(3.35vw - 1.5px), 2.85rem);
+  line-height: 1.18; letter-spacing:-0.03em; margin: 0 auto; color: inherit; }
 .sec--dark .statement p { color: var(--cream); }
 .statement em { color: var(--orange); }
 

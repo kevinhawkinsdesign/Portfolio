@@ -729,6 +729,14 @@ footer > .footer-copy:last-child { text-align: right; }
 }
 .about-sidebar-block ul li:last-child { border-bottom: none; }
 .about-sidebar-block p { font-size: 0.9rem; line-height: 1.7; }
+.about-content p a, .about-sidebar-block ul li a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--line-2);
+  transition: color 0.2s, border-color 0.2s;
+}
+.about-content p a:hover, .about-sidebar-block ul li a:hover {
+  color: var(--accent-2); border-color: var(--accent-dim);
+}
 
 @media (max-width: 900px) {
   .about-body { grid-template-columns: 1fr; }

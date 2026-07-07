@@ -242,6 +242,9 @@ p { line-height: 1.62; }
 .now-card.c1{ --c: var(--orange); } .now-card.c2{ --c: var(--teal); } .now-card.c3{ --c: var(--pink); }
 @media (max-width: 780px){ .now-cards{ grid-template-columns:1fr; } }
 
+.now-logo { height: clamp(22px, 2.6vw, 30px); width: auto; max-width: 140px; object-fit: contain; object-position: left center; margin-bottom: 0.1rem; }
+.now-logo--inv { filter: invert(1); }
+
 /* ── STATS ── */
 .stats { display:grid; grid-template-columns: repeat(4,1fr); gap: 1rem; }
 .stat { padding: 1.6rem 1.4rem; border:1px solid var(--line-l); border-radius: 18px; background: var(--paper);

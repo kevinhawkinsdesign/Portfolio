@@ -13,6 +13,7 @@
   .hero--photo .bg-photo { background-position: 16% center; background-size: cover; filter: none; }
   .hero--photo .bg-photo.in { opacity: 0.6; }
   @media (min-aspect-ratio: 4/3){ .hero--photo .bg-photo { background-position: 12% center; background-size: auto 150%; } }
+  @media (max-width: 700px){ .hero--photo .bg-photo { background-position: 46% center; } }
   .hero--photo::before { z-index:1;
     background: linear-gradient(100deg, rgba(11,10,12,0.88) 0%, rgba(11,10,12,0.62) 42%, rgba(11,10,12,0.3) 68%, rgba(11,10,12,0.15) 100%),
       linear-gradient(0deg, rgba(11,10,12,0.6), transparent 40%); }

@@ -37,13 +37,17 @@
   .testimonial-card .trole { font-family: var(--mono); font-size:0.7rem; color: var(--ink-3); margin-top:0.15rem; }
   @media (max-width: 820px){ .mentee-stats{ grid-template-columns:1fr 1fr; } .testimonial-grid{ grid-template-columns:1fr; } }
 
-  .prog-list { list-style:none; }
-  .prog-item { padding: 1.4rem 0; border-top: 1px solid var(--line-l); display:grid; grid-template-columns: 200px 1fr; gap: 1.5rem; }
-  .prog-item:last-child { border-bottom: 1px solid var(--line-l); }
-  .prog-item .pn { font-family: var(--mono); font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color: var(--orange); }
-  .prog-item h4 { font-size: 1.05rem; letter-spacing:-0.02em; margin-bottom:0.4rem; }
-  .prog-item p { font-size: 0.92rem; }
-  @media (max-width: 700px){ .prog-item{ grid-template-columns:1fr; gap:0.3rem; } }
+  .prog-cards { list-style:none; display:grid; grid-template-columns: repeat(3,1fr); gap:1.25rem; }
+  .prog-card { padding: 1.75rem; border:1px solid var(--line-l); border-radius: 18px; background: var(--paper); display:flex; flex-direction:column;
+    transition: transform 0.25s var(--spring), border-color 0.25s; }
+  .prog-card:hover { transform: translateY(-4px); border-color: var(--ink); }
+  .prog-card .pn { font-family: var(--mono); font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color: var(--orange); display:block; margin-bottom:0.7rem; }
+  .prog-card h4 { font-size: 1.05rem; letter-spacing:-0.02em; margin-bottom:0.5rem; }
+  .prog-card p { font-size: 0.92rem; color: var(--ink-2); margin-bottom: 1.25rem; }
+  .prog-links { display:flex; flex-direction:column; gap:0.5rem; margin-top:auto; padding-top:1rem; border-top:1px solid var(--line-l); }
+  .prog-links a { font-family: var(--mono); font-size:0.78rem; color: var(--orange); border-bottom:1px solid transparent; transition: border-color 0.2s; }
+  .prog-links a:hover { border-color: var(--orange); }
+  @media (max-width: 900px){ .prog-cards{ grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -95,22 +99,32 @@
   <div class="sec-in">
     <span class="eyebrow rise">How I help</span>
     <h2 class="rise" data-d="1" style="font-size:clamp(1.9rem,4vw,3.3rem);letter-spacing:-0.04em;margin-top:1.4rem;margin-bottom:2rem;max-width:22ch">Structured programs, <em>and</em> one honest conversation at a time.</h2>
-    <ul class="prog-list rise" data-d="2">
-      <li class="prog-item">
+    <ul class="prog-cards rise" data-d="2">
+      <li class="prog-card">
         <span class="pn">Hatch Conference</span>
-        <div><h4>Leadership Ateliers: Co-organizer</h4><p>A 2-day training with elite design trainers for early design leaders: the frameworks and network nobody hands you when you first step into management.</p></div>
+        <h4>Leadership Ateliers: Co-organizer</h4>
+        <p>A 2-day training with elite design trainers for early design leaders: the frameworks and network nobody hands you when you first step into management.</p>
+        <div class="prog-links">
+          <a href="https://www.hatchconference.com/" target="_blank" rel="noopener">Hatch Conference →</a>
+          <a href="https://www.leadershipateliers.com/" target="_blank" rel="noopener">Leadership Ateliers →</a>
+        </div>
       </li>
-      <li class="prog-item">
+      <li class="prog-card">
         <span class="pn">GrowthTribe</span>
-        <div><h4>UX Curriculum Lead &amp; Instructor</h4><p>Built the UX &amp; Design Thinking curriculum and personally taught 250+ students live, with 5,000+ more via on-demand courses on Product Design, Design Thinking, and PLG.</p></div>
+        <h4>UX Curriculum Lead &amp; Instructor</h4>
+        <p>Built the UX &amp; Design Thinking curriculum and personally taught 250+ students live, with 5,000+ more via on-demand courses on Product Design, Design Thinking, and PLG.</p>
+        <div class="prog-links">
+          <a href="https://growthtribe.io/certificates/design-thinking/" target="_blank" rel="noopener">Design Thinking Certificate →</a>
+          <a href="https://growthtribe.io/certificates/digital-leadership/" target="_blank" rel="noopener">Digital Leadership Certificate →</a>
+        </div>
       </li>
-      <li class="prog-item">
-        <span class="pn">General Assembly</span>
-        <div><h4>Mentor &amp; Instructor</h4><p>Mentoring, coaching, and instructing designers and researchers across career stages.</p></div>
-      </li>
-      <li class="prog-item">
+      <li class="prog-card">
         <span class="pn">1:1</span>
-        <div><h4>Individual mentorship</h4><p>Free-form sessions on career growth, portfolio review, and leadership transitions. Most of the reviews below are from these.</p></div>
+        <h4>Individual mentorship</h4>
+        <p>Free-form sessions on career growth, portfolio review, and leadership transitions. Most of the reviews below are from these.</p>
+        <div class="prog-links">
+          <a href="https://adplist.org/mentors/kevin-hawkins" target="_blank" rel="noopener">Book on ADPList →</a>
+        </div>
       </li>
     </ul>
   </div>

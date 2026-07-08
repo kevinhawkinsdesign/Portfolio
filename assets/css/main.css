@@ -927,9 +927,9 @@ footer > .footer-copy:last-child { text-align: right; }
 }
 .case-hero-area .bg-scrim { background: linear-gradient(160deg, rgba(250,246,239,0.25), rgba(250,246,239,0.78) 70%, var(--bg) 98%); }
 
-/* grayscale → color image reveal (case figures) */
-.case-section figure img { filter: saturate(0); transition: filter 0.5s var(--ease), transform 0.6s var(--ease); }
-.case-section figure:hover img { filter: saturate(1); transform: scale(1.015); }
+/* case figures: full color, subtle zoom on hover */
+.case-section figure img { transition: filter 0.5s var(--ease), transform 0.6s var(--ease); }
+.case-section figure:hover img { transform: scale(1.015); }
 
 /* two-up figure gallery */
 .fig-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 3rem 0; }

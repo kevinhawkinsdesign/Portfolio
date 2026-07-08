@@ -906,8 +906,7 @@ footer > .footer-copy:last-child { text-align: right; }
   font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1;
   color: var(--cream); letter-spacing: -0.04em; margin-bottom: 0.55rem;
 }
-.outcome-num em { color: var(--cream); font-style: normal; transition: color 0.3s; }
-.outcome-cell:hover .outcome-num em { color: var(--c, var(--accent)); }
+.outcome-num em { color: var(--c, var(--accent)); font-style: normal; transition: color 0.3s; }
 .outcome-cell:nth-child(4n+1){ --c: var(--accent); } .outcome-cell:nth-child(4n+2){ --c: var(--teal); }
 .outcome-cell:nth-child(4n+3){ --c: var(--cobalt); } .outcome-cell:nth-child(4n+4){ --c: var(--plum); }
 .outcome-label { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.03em; color: var(--cream-2); line-height: 1.6; }

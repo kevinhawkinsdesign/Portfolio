@@ -163,7 +163,7 @@ p { line-height: 1.62; }
   border:1px solid rgba(255,90,31,0.4); padding:0.42rem 0.9rem; border-radius:100px; margin-bottom:1.9rem; }
 .hero-badge .dot { width:8px; height:8px; border-radius:50%; background:var(--orange); animation: ping 2.4s ease-out infinite; }
 @keyframes ping { 0%{box-shadow:0 0 0 0 rgba(255,90,31,0.55)} 100%{box-shadow:0 0 0 9px rgba(255,90,31,0)} }
-.hero h1 { font-size: clamp(1.5rem, 3.4vw, 3.1rem); font-weight: 600; line-height: 1.06; letter-spacing:-0.035em; max-width: 17ch; margin-bottom: 1.3rem; }
+.hero h1 { font-size: clamp(2rem, 5.2vw, 4.5rem); font-weight: 600; line-height: 1.04; letter-spacing:-0.035em; max-width: 17ch; margin-bottom: 1.3rem; }
 .hero h1 em { color: var(--orange); }
 .hero-sub { font-size: clamp(0.92rem, 1.3vw, 1.05rem); font-weight: 400; color: var(--ink-2); max-width: 42ch; line-height:1.5; margin-bottom: 2rem; }
 .hero-cta { display:flex; gap:0.9rem; flex-wrap:wrap; }

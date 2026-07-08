@@ -816,7 +816,7 @@ footer > .footer-copy:last-child { text-align: right; }
 .case-co-div { width: 1px; height: 14px; background: var(--line-2); }
 .case-co-role { font-family: var(--mono); font-size: 0.7rem; color: var(--muted); }
 
-.case-hero-area h1 { max-width: 20ch; margin-bottom: 2.5rem; font-size: clamp(2.5rem, 6vw, 5.5rem); }
+.case-hero-area h1 { max-width: 20ch; margin-bottom: 2.5rem; font-size: clamp(2.1rem, 4.8vw, 4rem); }
 
 .case-specs {
   display: flex; flex-wrap: wrap; gap: 0;

@@ -997,7 +997,8 @@ body.lightbox-open { overflow: hidden; }
 .case-sidebar {
   padding: clamp(3rem, 5vw, 5rem) clamp(1.5rem,2.5vw,2.25rem);
   position: sticky; top: 68px;
-  height: fit-content;
+  max-height: calc(100vh - 68px);
+  overflow-y: auto;
 }
 .case-sidebar-block { padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--line); }
 .case-sidebar-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
@@ -1042,7 +1043,7 @@ body.lightbox-open { overflow: hidden; }
 
 @media (max-width: 960px) {
   .case-body-area { grid-template-columns: 1fr; }
-  .case-sidebar { position: static; height: auto; border-top: 1px solid var(--line); }
+  .case-sidebar { position: static; max-height: none; overflow-y: visible; border-top: 1px solid var(--line); }
 }
 @media (max-width: 600px) {
   .case-nav { grid-template-columns: 1fr; }

@@ -48,6 +48,9 @@
   .ai-tab.active { background: var(--orange); border-color: var(--orange); color: #fff; }
   .ai-panel { display: none; }
   .ai-panel.active { display: block; }
+  .ai-soon { min-height: 40vh; display: flex; align-items: center; }
+  .ai-soon h2 { font-size: clamp(1.8rem,3.6vw,2.8rem); letter-spacing:-0.04em; margin: 0.5rem 0 0.75rem; max-width: 16ch; }
+  .ai-soon p { color: var(--ink-2); font-size: 1.05rem; }
 
   .belief-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 0; border-top: 1px solid var(--line-l); margin-top: 2.5rem; }
   .belief-col { padding: 2rem 1.75rem; border-right: 1px solid var(--line-l); }
@@ -105,13 +108,15 @@
 
 <div class="ai-tabbar">
   <div class="ai-tabbar-in" role="tablist" aria-label="On AI musings">
-    <button class="ai-tab active" role="tab" aria-selected="true" data-tab="stance">Where I stand</button>
-    <button class="ai-tab" role="tab" aria-selected="false" data-tab="pdlc">AI &amp; the PDLC</button>
-    <button class="ai-tab" role="tab" aria-selected="false" data-tab="beliefs">What I believe</button>
+    <button class="ai-tab active" role="tab" aria-selected="true" data-tab="stand">Where I Stand</button>
+    <button class="ai-tab" role="tab" aria-selected="false" data-tab="soon-1">Coming soon</button>
+    <button class="ai-tab" role="tab" aria-selected="false" data-tab="soon-2">Coming soon</button>
   </div>
 </div>
 
-<section class="sec sec--light ai-panel active" id="panel-stance" role="tabpanel">
+<div class="ai-panel active" id="panel-stand" role="tabpanel">
+
+<section class="sec sec--light">
   <div class="sec-in stance-grid">
     <div class="rise">
       <span class="eyebrow" style="margin-bottom:1.25rem">Why I lean in</span>
@@ -127,7 +132,7 @@
   </div>
 </section>
 
-<section class="sec sec--dark ai-panel" id="panel-pdlc" role="tabpanel">
+<section class="sec sec--dark">
   <span class="spark" style="top:14%;right:10%;--c:var(--orange);--s:1.1rem;animation-delay:0.3s">✦</span>
   <div class="sec-in">
     <div class="pdlc-head">
@@ -156,7 +161,7 @@
   </div>
 </section>
 
-<section class="sec sec--light ai-panel" id="panel-beliefs" role="tabpanel">
+<section class="sec sec--light">
   <div class="sec-in">
     <span class="eyebrow rise">What I actually believe</span>
     <div class="belief-grid">
@@ -178,6 +183,28 @@
     </div>
   </div>
 </section>
+
+</div>
+
+<div class="ai-panel" id="panel-soon-1" role="tabpanel">
+  <section class="sec sec--light ai-soon">
+    <div class="sec-in">
+      <span class="eyebrow rise">Coming soon</span>
+      <h2 class="rise" data-d="1">More musings on AI, on their way.</h2>
+      <p class="rise" data-d="2">I'm still writing this one. Check back soon.</p>
+    </div>
+  </section>
+</div>
+
+<div class="ai-panel" id="panel-soon-2" role="tabpanel">
+  <section class="sec sec--light ai-soon">
+    <div class="sec-in">
+      <span class="eyebrow rise">Coming soon</span>
+      <h2 class="rise" data-d="1">More musings on AI, on their way.</h2>
+      <p class="rise" data-d="2">I'm still writing this one. Check back soon.</p>
+    </div>
+  </section>
+</div>
 
 <section class="sec sec--dark contact">
   <div class="bg-photo" data-bg="photo-venice.jpeg" style="--bg-op:0.18"></div>

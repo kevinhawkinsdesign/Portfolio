@@ -151,7 +151,8 @@ p { line-height: 1.62; }
 .nav .btn { padding: 0.55rem 1.05rem; font-size: 0.86rem; }
 
 /* ── HERO ── */
-.hero { min-height: 100svh; display:flex; flex-direction:column; justify-content:center; padding-top: 7rem; padding-bottom: 5rem; }
+/* 3rem short of the viewport so the orange marquee always peeks above the fold */
+.hero { min-height: calc(100svh - 3rem); display:flex; flex-direction:column; justify-content:center; padding-top: 7rem; padding-bottom: 5rem; }
 .hero .sec-in { max-width: none; margin-left: 0; margin-right: auto; }
 .hero::before { content:''; position:absolute; z-index:0; inset:0; pointer-events:none;
   background:
@@ -289,7 +290,7 @@ p { line-height: 1.62; }
 .about-photo { float: right; width: clamp(230px, 36%, 350px);
   margin: clamp(-6rem, -7vw, -2rem) 0 1.25rem clamp(1.75rem, 4vw, 3rem);
   position: relative; z-index: 4; transform: rotate(2.5deg); }
-.about-photo img { border-radius: 14px; width:100%; aspect-ratio: 4/5; object-fit: cover; object-position: 70% top;
+.about-photo img { border-radius: 14px; width:100%; aspect-ratio: 4/5; object-fit: cover; object-position: center 20%;
   border: 6px solid var(--paper); box-shadow: 0 22px 48px -16px rgba(22,18,13,0.4); }
 .about-photo:hover img { filter: saturate(1); }
 .about-photo .tag { position:absolute; bottom:-12px; left:-12px; background: var(--gold); color: var(--ink);
@@ -299,8 +300,10 @@ p { line-height: 1.62; }
   position: relative; z-index: 4; transform: rotate(-4deg);
   transition: transform 0.35s var(--spring); }
 .about-photo-2:hover { transform: rotate(-1deg) translateY(-4px); }
-.about-photo-2 img { width:100%; aspect-ratio: 4/5; object-fit:cover; object-position: center 20%; border-radius:12px;
+.about-photo-2 img { width:100%; aspect-ratio: 4/5; object-fit:cover; object-position: 70% top; border-radius:12px;
   border: 5px solid var(--paper); box-shadow: 0 18px 40px -14px rgba(22,18,13,0.45); filter:none; }
+.about-photo-2 .tag { position:absolute; bottom:-10px; left:-10px; background: var(--gold); color: var(--ink);
+  font-family: var(--mono); font-size:0.6rem; padding:0.35rem 0.7rem; border-radius:100px; transform: rotate(-3deg); }
 @media (max-width: 490px){
   .about-photo{ float:none; width:min(300px, 86%); margin: 0 auto 2rem; transform: rotate(1.5deg); }
   .about-photo-2{ width: 38%; margin: 0.3rem 1.25rem 0.75rem 0; }

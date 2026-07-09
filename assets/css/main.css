@@ -158,22 +158,14 @@ nav, .page, footer, .scroll-progress { position: relative; z-index: 2; }
 
 .nav-logo {
   font-family: var(--sans);
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
   color: var(--ink);
-  display: inline-flex; align-items: center; gap: 0.6rem;
+  display: inline-flex; align-items: center; gap: 0.5rem;
 }
-.nav-logo::before {
-  content: ''; width: 7px; height: 7px; border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 0 var(--accent-dim);
-  animation: livepulse 2.6s ease-in-out infinite;
-}
-@keyframes livepulse {
-  0%,100% { box-shadow: 0 0 0 0 rgba(255,90,31,0.35); }
-  50%     { box-shadow: 0 0 0 6px rgba(255,90,31,0); }
-}
+.nav-logo .star { color: var(--accent); display: inline-block; animation: navstarspin 10s linear infinite; }
+@keyframes navstarspin { to { transform: rotate(360deg); } }
 
 .nav-links {
   display: flex; align-items: center; gap: 2.25rem;
@@ -181,10 +173,10 @@ nav, .page, footer, .scroll-progress { position: relative; z-index: 2; }
 }
 .nav-links a {
   font-family: var(--sans);
-  font-size: 0.82rem;
+  font-size: 0.88rem;
   font-weight: 500;
   letter-spacing: -0.01em;
-  color: var(--muted);
+  color: var(--ink-70);
   transition: color 0.25s;
   position: relative;
 }
@@ -230,13 +222,16 @@ footer .social-icons a:hover { color: var(--accent-2); }
 .dropdown li a.active { color: var(--ink); background: rgba(22,18,13,0.035); }
 
 .nav-cta {
-  font-family: var(--sans); font-size: 0.82rem; font-weight: 600;
+  font-family: var(--sans); font-size: 0.86rem; font-weight: 600;
   letter-spacing: -0.01em; color: #fff;
+  display: inline-flex; align-items: center; gap: 0.5rem;
   background: var(--accent); border-radius: 100px;
-  padding: 0.55rem 1.15rem;
+  padding: 0.55rem 1.05rem;
   transition: transform 0.3s var(--ease), background 0.25s, color 0.25s, box-shadow 0.25s;
   will-change: transform;
 }
+.nav-cta .arr { transition: transform 0.25s var(--ease); }
+.nav-cta:hover .arr { transform: translateX(3px); }
 .nav-cta:hover { background: var(--accent-2); transform: translateY(-2px); box-shadow: 0 10px 24px -8px rgba(255,90,31,0.55); }
 
 /* ── MOBILE MENU ── */

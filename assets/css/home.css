@@ -112,6 +112,10 @@ p { line-height: 1.62; }
 #nav.nav--on-dark:not(.scrolled) .nav-links a,
 #nav.nav--on-dark:not(.scrolled) .nav-links a.nav-home { color: var(--cream); }
 #nav.nav--on-dark:not(.scrolled) .nav-toggle span { background: var(--cream); }
+/* The dropdown always sits on a light card, regardless of nav state,
+   so its links must stay dark even while the nav itself is on-dark. */
+#nav.nav--on-dark:not(.scrolled) .dropdown li a { color: var(--ink-2); }
+#nav.nav--on-dark:not(.scrolled) .dropdown li a:hover { color: var(--ink); }
 .nav-logo { font-family: var(--sans); font-weight: 700; font-size: 1.05rem; letter-spacing: -0.03em; color: var(--ink);
   display:inline-flex; align-items:center; gap:0.5rem; }
 .nav-logo .star { color: var(--orange); display:inline-block; animation: spin 10s linear infinite; }

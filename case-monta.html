@@ -55,8 +55,14 @@
   .hbox { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 18px 22px; margin-top: 18px; background: var(--surface); }
   .hbox p { font-size: .92rem; line-height: 1.72; color: var(--ink-70); max-width: 64ch; }
 
+  .shot-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
+  .shot-card { border: 1px solid var(--line); border-radius: var(--radius-sm); overflow: hidden; background: var(--surface); transition: border-color .3s, transform .4s var(--ease); }
+  .shot-card:hover { border-color: var(--line-2); transform: translateY(-2px); }
+  .shot-card img { display: block; width: 100%; height: 160px; object-fit: cover; object-position: top; background: var(--bg-soft); }
+  .shot-card figcaption { padding: 10px 14px; font-size: .72rem; font-family: var(--mono); letter-spacing: .02em; color: var(--muted); line-height: 1.5; }
+
   @media (max-width: 700px) {
-    .sys-grid, .prog-grid, .split-stat, .agent-grid { grid-template-columns: 1fr; }
+    .sys-grid, .prog-grid, .split-stat, .agent-grid, .shot-grid { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -120,7 +126,7 @@
     <div class="case-section" data-reveal>
       <span class="case-section-num">· Overview</span>
       <p style="font-size:1.2rem;max-width:60ch;line-height:1.75;color:var(--ink-70)">Monta runs the software behind EV charging infrastructure for the world, powering charging for Toyota, Stellantis, and Copenhagen Airport, plus a majority of Nordic energy providers. I joined as the first UX leader at Director/VP level, hired to formalize design practice and scale it without being able to hire our way out. The answer was infrastructure.</p>
-      <figure><img src="assets/img/monta_charge_app.png" alt="Monta charging app interface"><figcaption>The Monta driver app: charging sessions, pricing, and network status</figcaption></figure>
+      <figure><img src="assets/img/img_hero_CPMS.webp" alt="Monta Hub network overview dashboard"><figcaption>Monta Hub: real-time network overview across every charge point on the platform</figcaption></figure>
     </div>
 
     <div class="case-section" data-reveal>
@@ -144,6 +150,43 @@
         <div class="split-stat-item"><div class="n">88%</div><div class="l">weekly AI usage across the company</div></div>
       </div>
       <figure><img src="assets/img/monta_hub_pricing.png" alt="Monta Hub pricing interface"><figcaption>Monta Hub: the internal pricing interface rebuilt on the new design system</figcaption></figure>
+    </div>
+
+    <div class="case-section" data-reveal>
+      <span class="case-section-num">· Brand &amp; Product</span>
+      <h2>One brand, three products, and a hardware business folded in.</h2>
+      <p>Infrastructure was the mandate, but the product didn't stand still while we built it. Working alongside Monta's Brand Design and Marketing teams, we ran a full rebrand: a unified visual identity and naming system across a portfolio that had grown organically into overlapping internal tools, replacing the old "Portal" era with three clearly scoped products — <strong>Monta Hub</strong>, <strong>Monta Charge</strong>, and <strong>Monta Control</strong> — each rebuilt on the new design system rather than reskinned on top of it.</p>
+      <p>Hub, Charge, and Control all shipped extensive updates over this period: new account and driver management, live network operations, granular pricing and roaming controls, growth and finance tooling, and no-code workflow automation. Alongside that, we merged key capabilities out of the legacy Hardware Portal — partner API access and device-level developer tooling — directly into Hub and Control, retiring a fourth surface instead of maintaining it in parallel.</p>
+      <div class="chip-row">
+        <span class="chip">Monta Hub</span><span class="chip">Monta Charge</span><span class="chip">Monta Control</span><span class="chip">Hardware Portal → merged</span>
+      </div>
+      <div class="shot-grid">
+        <div class="shot-card"><img src="assets/img/Operations.png" alt="Monta Hub operations dashboard"><figcaption>Operations: live network uptime, faults, and AI self-healing</figcaption></div>
+        <div class="shot-card"><img src="assets/img/Accounts.png" alt="Monta Hub accounts screen"><figcaption>Accounts: enterprise billing, seats, and wallet balance in one view</figcaption></div>
+        <div class="shot-card"><img src="assets/img/Drivers.png" alt="Monta Hub drivers screen"><figcaption>Drivers: fleet-level charge key, vehicle, and session management</figcaption></div>
+        <div class="shot-card"><img src="assets/img/img_change-pricing.png" alt="Monta Hub charge pricing screen"><figcaption>Charge pricing: public, roaming, member, cost, and reimbursement price groups</figcaption></div>
+        <div class="shot-card"><img src="assets/img/img_roaming.png" alt="Monta Hub roaming dashboard"><figcaption>Roaming: inbound partner usage across the Managed Roaming Network, since expanded with Plugsurfing to 26 countries</figcaption></div>
+        <div class="shot-card"><img src="assets/img/img_analytics.png" alt="Monta Hub analytics screen"><figcaption>Analytics: pricing benchmarked against real-world charger performance data</figcaption></div>
+        <div class="shot-card"><img src="assets/img/img_growth.png" alt="Monta Hub growth screen"><figcaption>Growth: plans, subscriptions, and discounts across the account base</figcaption></div>
+        <div class="shot-card"><img src="assets/img/img_finance.png" alt="Monta Hub finance screen"><figcaption>Finance: transaction ledger and payout reconciliation</figcaption></div>
+        <div class="shot-card"><img src="assets/img/img_workflows.png" alt="Monta Hub workflows screen"><figcaption>Workflows: no-code automation for pricing, access, and hardware actions</figcaption></div>
+        <div class="shot-card"><img src="assets/img/img_developer-tools.png" alt="Monta Hub developer tools screen"><figcaption>Developer tools: partner API key management, the surface absorbed from Hardware Portal</figcaption></div>
+      </div>
+    </div>
+
+    <div class="case-section" data-reveal>
+      <span class="case-section-num">· The Charge App</span>
+      <h2>Back to hands-on: the Charge app revamp</h2>
+      <p>My most hands-on product work over this period was the <a href="https://monta.com/en/products/charge-app/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Monta Charge</a> revamp — the driver-facing app for finding, starting, and paying for a charge — done in close partnership with <a href="https://dk.linkedin.com/in/dsmtan" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Denise Tan</a>, Product Director, and <a href="https://dk.linkedin.com/in/johnny-s%C3%B8rensen-96288765" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Johnny Sørensen</a>, VP of Engineering. Everything else in this case study — Hub, Control, the AI infrastructure — I set direction for and let my team own. The Charge app is where I stayed in the work.</p>
+      <p>The redesign had to reconcile four different ways a driver actually starts a charge: opening a site from the map, tapping a QR sticker on the charger (no account required), tapping an RFID charge key against the reader, or using a payment terminal directly at the site. Each path re-uses the same pre-authorization and wallet top-up logic underneath, so the driver never sees the seams between them.</p>
+      <figure><img src="assets/img/monta_charge_app.png" alt="Monta Charge driver app interface"><figcaption>The revamped Monta Charge app: charging sessions, pricing, and network status</figcaption></figure>
+    </div>
+
+    <div class="case-section" data-reveal>
+      <span class="case-section-num">· Customer Access</span>
+      <h2>A public roadmap, and a room full of customers who already knew the answers.</h2>
+      <p>Two initiatives gave us direct signal before we committed engineering resources to the wrong priorities. I helped launch Monta's <a href="https://roadmap.monta.com/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">public roadmap</a>, where customers submit and vote on features directly, feeding straight into the ADLC's Sense stage below. I also helped stand up a Customer Advisory Board (CAB): a small group of our best customers, meeting on a regular cadence, giving us first access to what would actually make them renew, upsell, or switch to a competitor, and where pricing made sense before we changed it.</p>
+      <p>The CAB paid for itself as more than an advisory panel. It doubled as our built-in alpha and beta test group, and became a community in its own right — members compared notes with each other on shared challenges as much as they gave us feedback. It's the same <a href="https://www.zendesk.es/blog/startups/time-startup-form-customer-advisory-board/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">customer advisory board model</a> run by <a href="https://merchants.doordash.com/en-us/about/rac" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">DoorDash</a>, <a href="https://news.airbnb.com/an-important-announcement-from-airbnb/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Airbnb</a>, <a href="https://www.firmofthefuture.com/partner-council/partner-council-applications-open/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Intuit QuickBooks</a>, <a href="https://business.adobe.com/blog/the-latest/first-adobe-international-advisory-board" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Adobe</a>, and <a href="https://mailchimp.com/newsroom/announcing-customer-advisory-board-2023/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Mailchimp</a>: get the people who'd feel a bad decision first into the room before it ships.</p>
     </div>
 
     <div class="case-section" data-reveal>
@@ -183,6 +226,35 @@
           <div class="chip-row">
             <span class="chip">Token telemetry</span><span class="chip">Role / region / seniority</span><span class="chip">Weekly digest</span><span class="chip">Pattern governance</span>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="case-section" data-reveal>
+      <span class="case-section-num">· AI for Design &amp; Research</span>
+      <h2>The infrastructure above was for the whole company. This is what it did to my own team.</h2>
+      <p>Bridge and the Skills Library weren't just an engineering story. My designers and researchers used them to change how the craft itself gets done: running research and synthesizing findings faster, investigating causation and correlation in usage data instead of stopping at the correlation, generating and iterating on mockups, building coded prototypes to pressure-test an idea before it reached engineering, and in a growing number of cases, shipping coded improvements straight to the app and Hub themselves.</p>
+      <p>I got back into it personally. After years of the job being mostly strategy and people, I started shipping code again — building coded prototypes for the Charge app and Hub, and doing the design system work in the codebase, not just the Figma library. Updating tokens, components, and documentation as code, not as a visual reference engineering had to interpret.</p>
+      <div class="prog-grid">
+        <div class="prog-card">
+          <div class="prog-label">Research</div>
+          <h4>Faster studies, same rigor</h4>
+          <p>AI-assisted synthesis across interview transcripts, support tickets, and usability sessions, cutting the time from raw data to a shareable insight from days to hours.</p>
+        </div>
+        <div class="prog-card">
+          <div class="prog-label">Analysis</div>
+          <h4>Causation, not just correlation</h4>
+          <p>Researchers used Bridge against live product data to test causal hypotheses behind usage patterns, instead of stopping at a dashboard correlation and calling it a finding.</p>
+        </div>
+        <div class="prog-card">
+          <div class="prog-label">Design</div>
+          <h4>Mockups to coded prototypes</h4>
+          <p>Designers moved from static mockups to interactive, coded prototypes built against the real design system, testable with users before an engineer ever picked up the ticket.</p>
+        </div>
+        <div class="prog-card">
+          <div class="prog-label">Delivery</div>
+          <h4>Designers shipping production code</h4>
+          <p>The strongest prototypes didn't get thrown away and rebuilt: they went into PRs. A growing share of app and Hub improvements shipped directly from design, reviewed like any other change.</p>
         </div>
       </div>
     </div>
@@ -340,6 +412,10 @@
         <li>Team hiring &amp; leadership</li>
         <li>Design system (0→1)</li>
         <li>Research practice setup</li>
+        <li>Brand refresh: Hub, Charge, Control</li>
+        <li>Hardware Portal → Hub/Control merge</li>
+        <li>Charge app revamp (hands-on)</li>
+        <li>Public roadmap &amp; customer advisory board</li>
         <li>Monta Bridge: AI backbone</li>
         <li>Skills Library (250+ capabilities)</li>
         <li>Designer-to-code pipeline</li>
@@ -369,7 +445,7 @@
     </div>
     <div class="case-sidebar-block">
       <span class="label">Key Partners</span>
-      <p>Brian Rountree (VP Engineering, AI &amp; Automation) · Head of Product · Regional GMs · AI Ambassadors across all functions</p>
+      <p>Brian Rountree (VP Engineering, AI &amp; Automation) · <a href="https://dk.linkedin.com/in/dsmtan" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Denise Tan</a> (Product Director, Charge app) · <a href="https://dk.linkedin.com/in/johnny-s%C3%B8rensen-96288765" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Johnny Sørensen</a> (VP Engineering, Charge app) · Brand Design &amp; Marketing teams · Regional GMs · AI Ambassadors across all functions</p>
     </div>
   </aside>
 </div>

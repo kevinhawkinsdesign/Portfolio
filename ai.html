@@ -38,6 +38,17 @@
   .pdlc-card p { font-size: 0.9rem; color: var(--cream-2); }
   @media (max-width: 900px){ .pdlc-grid{ grid-template-columns:1fr; } }
 
+  /* ── MUSINGS TABS ── */
+  .ai-tabbar { background: var(--night); padding: 0 var(--gut) 2.25rem; border-bottom: 1px solid var(--line-d); }
+  .ai-tabbar-in { max-width: var(--max-w); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .ai-tab { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--cream-2); background: none; border: 1px solid var(--line-d); padding: 0.55rem 1.1rem;
+    border-radius: 100px; cursor: pointer; transition: color 0.2s, border-color 0.2s, background 0.2s; }
+  .ai-tab:hover { color: var(--cream); border-color: var(--cream-2); }
+  .ai-tab.active { background: var(--orange); border-color: var(--orange); color: #fff; }
+  .ai-panel { display: none; }
+  .ai-panel.active { display: block; }
+
   .belief-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 0; border-top: 1px solid var(--line-l); margin-top: 2.5rem; }
   .belief-col { padding: 2rem 1.75rem; border-right: 1px solid var(--line-l); }
   .belief-col:last-child { border-right:none; }
@@ -92,7 +103,15 @@
   </div>
 </header>
 
-<section class="sec sec--light">
+<div class="ai-tabbar">
+  <div class="ai-tabbar-in" role="tablist" aria-label="On AI musings">
+    <button class="ai-tab active" role="tab" aria-selected="true" data-tab="stance">Where I stand</button>
+    <button class="ai-tab" role="tab" aria-selected="false" data-tab="pdlc">AI &amp; the PDLC</button>
+    <button class="ai-tab" role="tab" aria-selected="false" data-tab="beliefs">What I believe</button>
+  </div>
+</div>
+
+<section class="sec sec--light ai-panel active" id="panel-stance" role="tabpanel">
   <div class="sec-in stance-grid">
     <div class="rise">
       <span class="eyebrow" style="margin-bottom:1.25rem">Why I lean in</span>
@@ -108,7 +127,7 @@
   </div>
 </section>
 
-<section class="sec sec--dark">
+<section class="sec sec--dark ai-panel" id="panel-pdlc" role="tabpanel">
   <span class="spark" style="top:14%;right:10%;--c:var(--orange);--s:1.1rem;animation-delay:0.3s">✦</span>
   <div class="sec-in">
     <div class="pdlc-head">
@@ -137,7 +156,7 @@
   </div>
 </section>
 
-<section class="sec sec--light">
+<section class="sec sec--light ai-panel" id="panel-beliefs" role="tabpanel">
   <div class="sec-in">
     <span class="eyebrow rise">What I actually believe</span>
     <div class="belief-grid">
@@ -181,5 +200,35 @@
 </footer>
 
 <script src="assets/js/home.js"></script>
+<script>
+(function () {
+  'use strict';
+  var tabs = document.querySelectorAll('.ai-tab');
+  function activate(id) {
+    tabs.forEach(function (t) {
+      var on = t.dataset.tab === id;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('.ai-panel').forEach(function (p) {
+      p.classList.toggle('active', p.id === 'panel-' + id);
+    });
+    // panels start hidden, so reveal-on-scroll never fired for their content
+    document.querySelectorAll('.ai-panel.active .rise').forEach(function (el) { el.classList.add('in'); });
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      activate(t.dataset.tab);
+      history.replaceState(null, '', '#' + t.dataset.tab);
+    });
+  });
+  function fromHash() {
+    var hash = location.hash.replace('#', '');
+    if (hash && document.getElementById('panel-' + hash)) activate(hash);
+  }
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
+})();
+</script>
 </body>
 </html>

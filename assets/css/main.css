@@ -873,6 +873,9 @@ footer > .footer-copy:last-child { text-align: right; }
   font-size: clamp(1.75rem, 3.5vw, 2.9rem); margin-bottom: 1.5rem;
 }
 .case-section p { font-size: 1.05rem; max-width: 64ch; line-height: 1.8; color: var(--ink-70); }
+.case-section p strong, .hbox p strong, .sys-card p strong, .prog-card p strong { color: var(--ink); font-weight: 600; }
+.case-section p em, .hbox p em { font-family: var(--serif); font-style: italic; color: var(--ink); }
+.hl { background: linear-gradient(to bottom, transparent 62%, var(--accent-dim) 62%); padding: 0 0.08em; }
 .case-section figure {
   margin: 3rem 0;
   border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;

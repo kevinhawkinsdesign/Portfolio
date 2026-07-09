@@ -271,35 +271,39 @@ p { line-height: 1.62; }
 @media (max-width: 820px){ .stats{ grid-template-columns:1fr 1fr; } }
 @media (max-width: 460px){ .stats{ grid-template-columns:1fr; } }
 
-/* ── ABOUT SPLIT ──
-   Text flows as plain block content (no grid rows) so it stays tight
-   regardless of the photo's height; the photo is pulled out of flow
-   with position:absolute and pinned to the right, vertically centered.
-   Below 490px the photo drops back into normal flow, landing between
-   whichever paragraphs it sits between in the markup (editorial). */
-.about-grid { position: relative; }
-.about-head, .about-p, .about-cities { max-width: min(56ch, 56%); }
+/* ── ABOUT (scrapbook floats) ──
+   Two separated scrapbook photos inside a narrowed container: the
+   main portrait floats right beside the heading, the polaroid floats
+   left further down between paragraphs, and text wraps around both so
+   nothing is obscured and there are no dead columns. The portrait's
+   negative top margin stays smaller than the section's own top
+   padding, so it never reaches the logos strip above. */
+.about-grid { position: relative; max-width: 62rem; margin: 0 auto; }
 .about-head .eyebrow { margin-bottom: 1.4rem; }
 .about-head h2 { font-size: clamp(1.6rem,3.6vw,3rem); margin-bottom: 1.4rem; letter-spacing:-0.04em; max-width: 20ch; }
 .about-head h2 em { color: var(--orange); }
-.about-p { font-size: clamp(0.85rem,2.1vw,1.05rem); margin-bottom: 1rem; }
+.about-p { font-size: clamp(0.92rem,1.4vw,1.05rem); margin-bottom: 1rem; max-width: 62ch; }
 .about-p a { color: var(--orange); font-weight: 500; border-bottom: 1px solid rgba(255,90,31,0.4); }
 .about-p a:hover { border-color: var(--orange); }
-.about-cities { margin-top:1.4rem; padding-top:1.2rem; border-top:1px solid var(--line-l); }
-.about-photo { position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 34%; max-width: 320px; }
-.about-photo img { border-radius: 20px; width:100%; aspect-ratio: 4/5; object-fit: cover; object-position: 70% top; }
+.about-cities { margin-top:1.4rem; padding-top:1.2rem; border-top:1px solid var(--line-l); max-width: 62ch; }
+.about-photo { float: right; width: clamp(230px, 36%, 350px);
+  margin: clamp(-6rem, -7vw, -2rem) 0 1.25rem clamp(1.75rem, 4vw, 3rem);
+  position: relative; z-index: 4; transform: rotate(2.5deg); }
+.about-photo img { border-radius: 14px; width:100%; aspect-ratio: 4/5; object-fit: cover; object-position: 70% top;
+  border: 6px solid var(--paper); box-shadow: 0 22px 48px -16px rgba(22,18,13,0.4); }
 .about-photo:hover img { filter: saturate(1); }
 .about-photo .tag { position:absolute; bottom:-12px; left:-12px; background: var(--gold); color: var(--ink);
   font-family: var(--mono); font-size:0.7rem; padding:0.45rem 0.85rem; border-radius:100px; transform: rotate(-3deg); }
-.about-photo-2 { position:absolute; top:-10%; left:-16%; width:42%; z-index:3;
-  transform: rotate(-6deg); transition: transform 0.35s var(--spring); }
+.about-photo-2 { float: left; width: clamp(130px, 20%, 190px);
+  margin: 0.4rem clamp(1.5rem, 3vw, 2.5rem) 1rem 0;
+  position: relative; z-index: 4; transform: rotate(-4deg);
+  transition: transform 0.35s var(--spring); }
+.about-photo-2:hover { transform: rotate(-1deg) translateY(-4px); }
 .about-photo-2 img { width:100%; aspect-ratio: 4/5; object-fit:cover; object-position: center 20%; border-radius:12px;
   border: 5px solid var(--paper); box-shadow: 0 18px 40px -14px rgba(22,18,13,0.45); filter:none; }
-.about-photo:hover .about-photo-2 { transform: rotate(-2deg) translateY(-4px); }
 @media (max-width: 490px){
-  .about-head, .about-p, .about-cities { max-width:none; }
-  .about-photo{ position:relative; top:auto; right:auto; transform:none; width:auto; max-width: 300px; margin: 1.5rem 0; }
-  .about-photo-2{ width:44%; top:-8%; left:-10%; }
+  .about-photo{ float:none; width:min(300px, 86%); margin: 0 auto 2rem; transform: rotate(1.5deg); }
+  .about-photo-2{ width: 38%; margin: 0.3rem 1.25rem 0.75rem 0; }
 }
 
 /* ── SPEAKING ── */

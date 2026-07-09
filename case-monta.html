@@ -121,7 +121,48 @@
     <div class="case-section" data-reveal>
       <span class="case-section-num">· Overview</span>
       <p style="font-size:1.2rem;max-width:60ch;line-height:1.75;color:var(--ink-70)">Monta runs the software behind EV charging infrastructure for the world, powering charging for Toyota, Stellantis, and Copenhagen Airport, plus a majority of Nordic energy providers. I joined as the first UX leader at Director/VP level, hired to formalize design practice and scale it without being able to hire our way out. The answer was infrastructure.</p>
+      <p>My own hands-on work centred on the Monta Charge driver app, in close partnership with <strong>Denise Tan</strong> (Product Director) and <strong>Johnny Sørensen</strong> (VP of Engineering) — the free, no-subscription app EV drivers use across 650,000+ public charge points, plus home SmartCharging. Beyond Charge, I set direction and hired the leaders for three sibling surfaces on the platform: <strong>Monta Hub</strong> (the CPO command centre), <strong>Monta Control</strong> (the real-time technical/OCPP layer), and the <strong>Hardware Portal</strong> (the manufacturer-facing performance layer), each run day-to-day by a direct report.</p>
       <figure><img src="assets/img/monta_charge_app.png" alt="Monta charging app interface"><figcaption>The Monta driver app: charging sessions, pricing, and network status</figcaption></figure>
+    </div>
+
+    <div class="case-section" data-reveal>
+      <span class="case-section-num">· Product Surface</span>
+      <h2>One platform, four surfaces.</h2>
+      <p>Charge, Hub, Control, and Hardware Portal all sit on the same charge station management system, but serve completely different users: drivers, operators, technical teams, and hardware manufacturers. I owned Charge directly; the other three were built and run by teams I hired and directed.</p>
+      <div class="sys-grid">
+        <div class="sys-card">
+          <div class="sys-card-label">Direct ownership</div>
+          <h4>Monta Charge — the driver app</h4>
+          <p>Free, no-subscription EV charging app across 650,000+ public chargers, with directions, live availability, dynamic and fixed pricing by operator, charge-point reservation, and Smart Queue to distribute demand across occupied bays. Home charging runs on SmartCharging, which shifts sessions to cheap, green grid windows automatically. InstantCharge lets a new driver scan a QR code, start a session, and pay without ever installing the app.</p>
+          <div class="chip-row">
+            <span class="chip">650,000+ chargers</span><span class="chip">SmartCharging</span><span class="chip">InstantCharge QR</span><span class="chip">Smart Queue</span><span class="chip">Reservations</span>
+          </div>
+        </div>
+        <div class="sys-card">
+          <div class="sys-card-label">Oversight via direct report</div>
+          <h4>Monta Hub — the operator command centre</h4>
+          <p>Single dashboard for charge point operators, fleets, energy providers, and site owners to manage hardware, pricing, teams, billing, and roaming from one place. Supports 900+ hardware models across 250+ brands, with managed OCPI roaming so operators toggle it on without negotiating separate EMSP contracts.</p>
+          <div class="chip-row">
+            <span class="chip">900+ models</span><span class="chip">250+ brands</span><span class="chip">Managed roaming</span><span class="chip">Billing &amp; teams</span>
+          </div>
+        </div>
+        <div class="sys-card">
+          <div class="sys-card-label">Oversight via direct report</div>
+          <h4>Monta Control — the technical layer</h4>
+          <p>Real-time OCPP view into every connected station for operators and technical teams: session logs, firmware upgrades, aggregated site power, remote diagnostics. Monta AI is built directly into Control as an always-on assistant that helps diagnose station behaviour without escalating to engineering.</p>
+          <div class="chip-row">
+            <span class="chip">OCPP live view</span><span class="chip">Firmware mgmt</span><span class="chip">Monta AI built-in</span>
+          </div>
+        </div>
+        <div class="sys-card">
+          <div class="sys-card-label">Oversight via direct report</div>
+          <h4>Hardware Portal — the manufacturer layer</h4>
+          <p>Post-sale visibility for hardware manufacturers into every unit in the field: uptime and reliability per connector, OCPP/support/development logs, remote firmware push and rollback, and detailed charge data down to voltage and phase. Closes the loop between what ships and how it performs.</p>
+          <div class="chip-row">
+            <span class="chip">Per-connector uptime</span><span class="chip">Firmware rollback</span><span class="chip">Remote diagnostics</span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="case-section" data-reveal>
@@ -240,8 +281,8 @@
       <div class="agent-grid">
         <div class="agent-card">
           <h4>Driver Support Agent</h4>
-          <p>Autonomous customer support covering all 11 supported languages, resolving the majority of driver issues without human escalation.</p>
-          <div class="agent-stat">80% resolution rate · 2m48s avg response · 11 languages</div>
+          <p>Autonomous customer support covering all 11 supported languages, resolving the majority of driver issues without human escalation. Shipped as part of Monta AI, the operational-intelligence layer built into Control, drawing on anonymised telemetry from 200,000+ charge points.</p>
+          <div class="agent-stat">80% resolution rate · 2.4x faster resolution · 11 languages</div>
         </div>
         <div class="agent-card">
           <h4>NOC Agent</h4>
@@ -316,6 +357,16 @@
       </div>
     </div>
 
+    <div class="case-section" data-reveal>
+      <span class="case-section-num">· Press &amp; Recognition</span>
+      <h2>The platform's reliability work made industry news.</h2>
+      <p>Two moments during my time on the platform: Monta launched the industry's first real-world charger performance ranking, scoring the top DC and AC charger models on live session data and surfacing a hard truth — actual successful-charge rates sat closer to 90% versus the ~97%+ industry-reported uptime figures. And Monta partnered with Plugsurfing to roam onto their network, taking coverage from ~600,000 to 1.1M+ charge points across 26 European countries, an 80% jump in roaming coverage for every driver on the Charge app.</p>
+      <div class="chip-row">
+        <span class="chip">EV Infrastructure News — charger ranking system</span>
+        <span class="chip">EV Infrastructure News — Plugsurfing partnership</span>
+      </div>
+    </div>
+
     <div class="case-outcomes" data-reveal>
       <h2>Outcomes</h2>
       <div class="outcomes-strip">
@@ -338,6 +389,8 @@
     <div class="case-sidebar-block">
       <span class="label">Responsibilities</span>
       <ul>
+        <li>Charge app: direct design ownership</li>
+        <li>Hub, Control, AI &amp; Hardware Portal: oversight via direct reports</li>
         <li>Team hiring &amp; leadership</li>
         <li>Design system (0→1)</li>
         <li>Research practice setup</li>
@@ -370,7 +423,7 @@
     </div>
     <div class="case-sidebar-block">
       <span class="label">Key Partners</span>
-      <p>Brian Rountree (VP Engineering, AI &amp; Automation) · Head of Product · Regional GMs · AI Ambassadors across all functions</p>
+      <p>Denise Tan (Product Director, Charge app) · Johnny Sørensen (VP of Engineering, Charge app) · Brian Rountree (VP Engineering, AI &amp; Automation) · Regional GMs · AI Ambassadors across all functions</p>
     </div>
   </aside>
 </div>

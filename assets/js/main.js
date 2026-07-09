@@ -145,6 +145,85 @@
     });
   });
 
+  /* ── Image lightbox (case study figures + shot-grid galleries) ── */
+  (function () {
+    var items = Array.prototype.slice.call(document.querySelectorAll('.case-main figure img, .shot-card img'));
+    if (!items.length) return;
+
+    var lb = document.createElement('div');
+    lb.className = 'lightbox';
+    lb.innerHTML =
+      '<button type="button" class="lightbox-close" aria-label="Close">✕</button>' +
+      (items.length > 1 ? '<button type="button" class="lightbox-nav lightbox-prev" aria-label="Previous image">‹</button>' +
+      '<button type="button" class="lightbox-nav lightbox-next" aria-label="Next image">›</button>' : '') +
+      '<div class="lightbox-stage">' +
+        '<img class="lightbox-img" alt="">' +
+        '<p class="lightbox-caption"></p>' +
+        (items.length > 1 ? '<span class="lightbox-counter"></span>' : '') +
+      '</div>';
+    document.body.appendChild(lb);
+
+    var imgEl = lb.querySelector('.lightbox-img');
+    var capEl = lb.querySelector('.lightbox-caption');
+    var countEl = lb.querySelector('.lightbox-counter');
+    var closeBtn = lb.querySelector('.lightbox-close');
+    var prevBtn = lb.querySelector('.lightbox-prev');
+    var nextBtn = lb.querySelector('.lightbox-next');
+    var idx = 0;
+    var lastFocus = null;
+
+    function captionFor(img) {
+      var host = img.closest('figure, .shot-card');
+      var cap = host ? host.querySelector('figcaption') : null;
+      return cap ? cap.textContent.trim() : (img.alt || '');
+    }
+
+    function show(i) {
+      idx = (i + items.length) % items.length;
+      var img = items[idx];
+      imgEl.classList.remove('show');
+      imgEl.src = img.currentSrc || img.src;
+      imgEl.alt = img.alt || '';
+      capEl.textContent = captionFor(img);
+      if (countEl) countEl.textContent = (idx + 1) + ' / ' + items.length;
+      requestAnimationFrame(function () { imgEl.classList.add('show'); });
+    }
+
+    function open(i) {
+      lastFocus = document.activeElement;
+      show(i);
+      lb.classList.add('open');
+      document.body.classList.add('lightbox-open');
+      closeBtn.focus();
+    }
+    function close() {
+      lb.classList.remove('open');
+      document.body.classList.remove('lightbox-open');
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    items.forEach(function (img, i) {
+      img.setAttribute('tabindex', '0');
+      img.setAttribute('role', 'button');
+      img.setAttribute('aria-label', 'Zoom image');
+      img.addEventListener('click', function () { open(i); });
+      img.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); }
+      });
+    });
+
+    closeBtn.addEventListener('click', close);
+    if (prevBtn) prevBtn.addEventListener('click', function () { show(idx - 1); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { show(idx + 1); });
+    lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+    document.addEventListener('keydown', function (e) {
+      if (!lb.classList.contains('open')) return;
+      if (e.key === 'Escape') close();
+      else if (e.key === 'ArrowLeft') show(idx - 1);
+      else if (e.key === 'ArrowRight') show(idx + 1);
+    });
+  })();
+
   /* ── Counter animation ── */
   document.querySelectorAll('[data-count]').forEach(function (el) {
     var o = new IntersectionObserver(function (entries) {

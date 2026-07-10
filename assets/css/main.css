@@ -984,6 +984,13 @@ body.lightbox-open { overflow: hidden; }
 .fig-grid figure { margin: 0; }
 @media (max-width: 700px) { .fig-grid { grid-template-columns: 1fr; } }
 
+/* three-up archival screenshot gallery */
+.fig-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.75rem; margin: 2.5rem 0; }
+.fig-grid-3 figure { margin: 0; }
+.fig-grid-3 img { border: 1px solid var(--line); }
+@media (max-width: 900px) { .fig-grid-3 { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .fig-grid-3 { grid-template-columns: 1fr; } }
+
 /* embedded video (YouTube etc.) */
 .video-embed { position: relative; width: 100%; aspect-ratio: 16/9; border-radius: var(--radius); overflow: hidden; margin: 2rem 0; box-shadow: 0 24px 60px -20px rgba(0,0,0,0.35); }
 .video-embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }

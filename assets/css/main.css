@@ -186,6 +186,7 @@ nav, .page, footer, .scroll-progress { position: relative; z-index: 2; }
 }
 .nav-links a:hover, .nav-links a.active { color: var(--ink); }
 .nav-links a:hover::after, .nav-links a.active::after { right: 0; }
+.nav-links li:has(.nav-home) { display: flex; align-items: center; align-self: stretch; }
 .nav-links a.nav-home { display: inline-flex; align-items: center; }
 .nav-links a.nav-home::after { display: none; }
 .nav-links a.nav-home svg { display: block; }

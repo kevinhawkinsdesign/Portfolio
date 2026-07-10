@@ -68,7 +68,25 @@
       <span class="case-section-num">Overview</span>
       <p style="font-size:1.15rem;max-width:60ch;line-height:1.8;color:var(--muted)">Glovo is one of Europe's largest quick-commerce platforms. I led the global UX organization, <strong>100+ people across 25 markets</strong>, through a period of aggressive international expansion and a fundamental shift in product strategy toward social commerce.</p>
     </div>
-    
+
+    <div class="case-section" data-reveal style="margin-bottom:0;">
+      <span class="case-section-num">Two Tracks</span>
+      <h2>Two very different kinds of work, one case study.</h2>
+      <p>Most of what follows is the org, culture, and growth work: scaling a 100-person team and the product bets that came out of it. One track was different in kind entirely: commissioning a custom typeface to get the brand acquisition-ready. Pick a track below, or read both.</p>
+      <div class="case-tabbar" role="tablist" aria-label="Glovo case study tracks">
+        <button class="case-tab active" role="tab" aria-selected="true" data-tab="org">
+          <span class="case-tab-title">Org, Culture &amp; Growth</span>
+          <span class="case-tab-sub">Scaling the team and the product bets</span>
+        </button>
+        <button class="case-tab" role="tab" aria-selected="false" data-tab="brand">
+          <span class="case-tab-title">Brand &amp; Type</span>
+          <span class="case-tab-sub">Commissioning Glovo Sans</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="case-panel active" data-panel="org" role="tabpanel">
+
   <div class="case-section" data-reveal>
     <span class="case-section-num">Challenge</span>
     <h2>Scale without chaos</h2>
@@ -86,6 +104,10 @@
     <p>On the efficiency side, a systematic rearchitecting of our post-order and help flows cut support contacts by <strong>18%</strong>.</p>
     <figure><img src="assets/img/glovo-satisfaction.jpg" alt="Glovo customer satisfaction dashboard"><figcaption>Post-order and help flow redesign: the driver behind the 18% support contact reduction</figcaption></figure>
   </div>
+
+  </div>
+  <div class="case-panel" data-panel="brand" role="tabpanel">
+
   <div class="case-section" data-reveal>
     <span class="case-section-num">Enterprise Readiness</span>
     <h2>Getting acquisition-ready meant rebuilding the brand down to the typeface</h2>
@@ -102,6 +124,10 @@
     </div>
     <p>Glovo Sans Georgian won a <strong>Special Mention at the 13th Granshan Type Design Competition, 2023/2024</strong>, recognized for cultural inclusion, legibility, and creative flair, a rare industry nod for a corporate typeface almost nobody knows is custom. It isn't publicly licensable, but the full story is on <a href="https://letterjuice.cat/custom/global-bespoke-type/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Letterjuice's site</a> and the <a href="https://granshan.com/grand-exhibition/glovo-sans" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Granshan showcase</a>.</p>
   </div>
+
+  </div>
+  <div class="case-panel" data-panel="org" role="tabpanel">
+
   <div class="case-section" data-reveal>
     <span class="case-section-num">Scaling for the Next Bet</span>
     <h2>Grocery and quick commerce meant running product strategy like a retail team</h2>
@@ -124,6 +150,9 @@
     </div>
     <p>Two other things held up across every conversation: <strong>if a customer can't find a feature, it doesn't exist</strong>, even if it's shipped for years, and <strong>people need trust before they try something new</strong>, checking reviews and looking for validation first. Product excellence, in both cases, comes down to reducing that friction.</p>
   </div>
+
+  </div>
+
   <div class="case-section" data-reveal>
     <span class="case-section-num">Reflection</span>
     <h2>On leading at scale</h2>
@@ -196,5 +225,31 @@
   <span class="footer-copy">Barcelona, Spain</span>
 </footer>
 <script src="assets/js/main.js"></script>
+<script>
+(function () {
+  'use strict';
+  var tabs = document.querySelectorAll('.case-tab');
+  if (!tabs.length) return;
+  function activate(id) {
+    tabs.forEach(function (t) {
+      var on = t.dataset.tab === id;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('.case-panel').forEach(function (p) {
+      p.classList.toggle('active', p.dataset.panel === id);
+    });
+    document.querySelectorAll('.case-panel.active [data-reveal]').forEach(function (el) { el.classList.add('visible'); });
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      activate(t.dataset.tab);
+      history.replaceState(null, '', '#' + t.dataset.tab);
+    });
+  });
+  var hash = location.hash.replace('#', '');
+  if (hash && document.querySelector('.case-tab[data-tab="' + hash + '"]')) activate(hash);
+})();
+</script>
 </body>
 </html>

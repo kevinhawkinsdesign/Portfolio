@@ -188,6 +188,7 @@ nav, .page, footer, .scroll-progress { position: relative; z-index: 2; }
 .nav-links a:hover::after, .nav-links a.active::after { right: 0; }
 .nav-links a.nav-home { display: inline-flex; align-items: center; }
 .nav-links a.nav-home::after { display: none; }
+.nav-links a.nav-home svg { display: block; }
 
 /* ── SOCIAL ICONS ── */
 .social-icons { display: flex; align-items: center; gap: 1rem; }

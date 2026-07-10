@@ -117,7 +117,7 @@
 <div class="ai-tabbar">
   <div class="ai-tabbar-in" role="tablist" aria-label="On AI musings">
     <button class="ai-tab active" role="tab" aria-selected="true" data-tab="stand">Where I Stand</button>
-    <button class="ai-tab" role="tab" aria-selected="false" data-tab="soon-1">Coming soon</button>
+    <button class="ai-tab" role="tab" aria-selected="false" data-tab="soon-1">Data &amp; Trust</button>
     <button class="ai-tab" role="tab" aria-selected="false" data-tab="soon-2">Coming soon</button>
   </div>
 </div>
@@ -195,13 +195,23 @@
 </div>
 
 <div class="ai-panel" id="panel-soon-1" role="tabpanel">
-  <section class="sec sec--light ai-soon">
-    <div class="sec-in">
-      <span class="eyebrow rise">Coming soon</span>
-      <h2 class="rise" data-d="1">More musings on AI, on their way.</h2>
-      <p class="rise" data-d="2">I'm still writing this one. Check back soon.</p>
+
+<section class="sec sec--light">
+  <div class="sec-in stance-grid">
+    <div class="rise">
+      <span class="eyebrow" style="margin-bottom:1.25rem">The tension I sit with</span>
+      <h2>I love this era of AI. I also lose sleep over what it can now see.</h2>
+      <p>I've spent most of my career as a data lover: sponsoring analytics tools as an executive, fighting for instrumentation budget, being the person who actually reads the dashboards. So I understand better than most what AI-native analytics unlocks. Ask a plain-language question, get a real answer, no SQL, no waiting on a data team's backlog. That shift is genuinely thrilling, and I don't want to undersell how much better it makes decision-making.</p>
+      <p>But having been the executive sponsor for a dozen of these tools, my worry was never the model itself. It's the access model underneath it. The moment a natural-language layer sits on top of a data warehouse, every permission boundary your data team spent years building either holds or it doesn't, and <span class="hl">suddenly anyone in the company can ask a question about a named user they had no business asking before.</span></p>
     </div>
-  </section>
+    <div class="rise" data-d="1">
+      <div class="pull">"Anyone in the company can ask a question about a named user they had no business asking before."</div>
+      <p>That's why I pay attention to tools like <a href="https://www.sundial.ai/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--orange)">Sundial</a>: they're building the analyst layer with observability and governance as the actual product, not a compliance checkbox bolted on after launch. If AI is going to sit that close to sensitive user data, the tools sitting between the model and the warehouse need to earn that trust deliberately, not accidentally.</p>
+      <p>I'm not anti-access. I've spent my career trying to get more people closer to data, faster. I just think the teams that win this next wave will be the ones who treat governance as a feature people can feel, not a policy doc nobody reads.</p>
+    </div>
+  </div>
+</section>
+
 </div>
 
 <div class="ai-panel" id="panel-soon-2" role="tabpanel">

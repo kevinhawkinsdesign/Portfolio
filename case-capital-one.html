@@ -56,7 +56,7 @@
   </div>
   <h1 data-reveal>Research-driven strategy at <em>America's #8 bank.</em></h1>
   <div class="case-specs">
-    <div class="case-spec"><dt>Role</dt><dd>Design Strategist Consultant</dd></div><div class="case-spec"><dt>Scope</dt><dd>SMB banking · Mobile T&E · Project Elements</dd></div><div class="case-spec"><dt>Research</dt><dd>20+ empathy interviews · 6 webcam sessions</dd></div><div class="case-spec"><dt>Output</dt><dd>Physical launch · SF installation</dd></div>
+    <div class="case-spec"><dt>Role</dt><dd>Design Strategist Consultant</dd></div><div class="case-spec"><dt>Scope</dt><dd>SMB banking · ICCE Mobile &amp; Web · Project Elements</dd></div><div class="case-spec"><dt>Research</dt><dd>20+ empathy interviews · 6 webcam sessions</dd></div><div class="case-spec"><dt>Output</dt><dd>4-release rollout · SXSW installation</dd></div>
   </div>
 </section>
 
@@ -66,33 +66,111 @@
       <span class="case-section-num">Overview</span>
       <p style="font-size:1.15rem;max-width:60ch;line-height:1.8;color:var(--muted)">Capital One had the infrastructure of America's #8 bank and the ambition of a tech company. Engaged via KHD Studio across <strong>two separate engagements (2016–2017, then again in 2019)</strong>, I led research-driven design strategy across SMB (small and medium-sized business) banking, mobile T&E (travel and expense), virtual card, and the Capital One Café. I also contributed to Project Elements, a radical reimagining of the credit card.</p>
     </div>
-    
+
+    <div class="case-section" data-reveal style="margin-bottom:0;">
+      <span class="case-section-num">Two Tracks</span>
+      <h2>Research that grounded a platform I helped design and ship.</h2>
+      <p>The 2016–2017 engagement split into two connected workstreams: deep-dive research into how small businesses actually handle travel and expense, and the information architecture, design system, and interface work for ICCE Web, Capital One's unified virtual payments platform. Pick a track below, or read both.</p>
+      <div class="case-tabbar" role="tablist" aria-label="Capital One case study tracks">
+        <button class="case-tab active" role="tab" aria-selected="true" data-tab="research">
+          <span class="case-tab-title">Mobile T&amp;E Research</span>
+          <span class="case-tab-sub">Understanding small business spend</span>
+        </button>
+        <button class="case-tab" role="tab" aria-selected="false" data-tab="icce">
+          <span class="case-tab-title">ICCE Web: Virtual Payments</span>
+          <span class="case-tab-sub">Shipping the platform</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="case-panel active" data-panel="research" role="tabpanel">
+
   <div class="case-section" data-reveal>
     <span class="case-section-num">Research</span>
     <h2>The Ecosystem Concept Model</h2>
-    <p>For the ICCE (Integrated Commercial Card Experience) initiative, I led 20+ in-person empathy interviews with small business owners, phone interviews with existing customers for the Virtual Card program, and 6 taped webcam sessions for remote validation.</p><p>From this research I built a comprehensive <strong>Ecosystem Concept Model</strong>: mapping all the tasks a small business owner performs at every cadence (daily, weekly, monthly, quarterly, annually) against their internal attitudes and external relationships. <strong>This radial model became the foundation for SMB product strategy and was adopted by multiple product teams.</strong></p><p>Key insights surfaced three user archetypes: ICCE Mobile (T&E), Virtual Card Users, and Decision Makers, each translated into driving principles and a features roadmap that moved insights directly into planning.</p>
+    <p>A cross-functional team spanning product management, design, research, content strategy, and analytics split into two workstreams, Mobile T&E and Web P-Card, and ran a holistic research effort from the ground up: planning and recruiting, scripted interviews, grassroots exercises with Capital One associates, journey mapping, competitive analysis against tools like Expensify, Concur, and eBillity, and solution ideation sessions.</p>
+    <p>For the ICCE (Integrated Commercial Card Experience) initiative, I led <strong>20+ in-person empathy interviews</strong> with small business owners, phone interviews with existing customers for the Virtual Card program, and <strong>6 taped webcam sessions</strong> for remote validation, across multiple full-day sessions and geographies.</p>
     <div class="split-stat">
       <div class="split-stat-item"><div class="n">20<em>+</em></div><div class="l">In-person empathy interviews with small business owners</div></div>
       <div class="split-stat-item"><div class="n">6</div><div class="l">Taped webcam sessions for remote validation</div></div>
       <div class="split-stat-item"><div class="n">3</div><div class="l">User archetypes translated into a features roadmap</div></div>
     </div>
+    <p>Recurring themes cut across almost every interview: <span class="hl">people building their own workarounds because the official process couldn't keep up</span>, heavy manual data entry, rules communicated ad hoc rather than made clear upfront, and a surprising amount of emotional weight tied to simply being trusted with a corporate card. One line from an interview stuck with the whole team:</p>
+    <div class="case-quote"><p>I didn't get into this job to submit expense reports.</p></div>
+    <p>From this research I built a comprehensive <strong>Ecosystem Concept Model</strong>: mapping all the tasks a small business owner performs at every cadence (daily, weekly, monthly, quarterly, annually) against their internal attitudes and external relationships. <strong>This radial model became the foundation for SMB product strategy and was adopted by multiple product teams.</strong></p>
+    <p>Key insights surfaced three user archetypes: ICCE Mobile (T&E), Virtual Card Users, and Decision Makers, each translated into driving principles and a features roadmap that moved insights directly into planning. The personas behind them spanned a wide trust spectrum: <em>a Director of IT who ties his sense of being respected to doing his expense report right every time, and a tile installer with no corporate card at all, fronting her own money and losing hours a month tracking receipts in a folder in her truck.</em> Serving that whole range, not just the average case, is what the roadmap had to do: OCR (optical character recognition) to auto-capture receipt data, and auto-generated expense reports tied to the billing cycle instead of a monthly scramble.</p>
+    <p>That direction shipped as <strong>Capital One T&amp;Easy</strong>, the corporate cardholder app: balance and spend limit visibility, the ability to lock or unlock a card on the spot, transaction notifications, and expense capture on the go, the mobile-first answer to almost everything the research surfaced.</p>
   </div>
+
+    </div>
+
+    <div class="case-panel" data-panel="icce" role="tabpanel">
+
+  <div class="case-section" data-reveal>
+    <span class="case-section-num">The Business Case</span>
+    <h2>Unifying four disconnected tools into one platform</h2>
+    <p>Before ICCE, Capital One's commercial card customers had to stitch together <strong>four separate platforms</strong> just to manage their account, rewards, expenses, and virtual card program. EAP (electronic accounts payable) was the fastest-growing sub-product in the commercial card industry at the time, forecast at roughly <strong>17% CAGR</strong>, and the fragmentation was actively costing ground against dedicated competitors like Verient.</p>
+    <p>ICCE Web was the fix: one integrated commercial card experience serving five distinct customer segments, from Basic self-service accounts to Large Corporate clients running full T&E and EAP programs, across roughly <strong>3,700 clients</strong>. The rollout was phased across four releases, starting with a mobile pilot and building to full platform rollout, under a 5-year B2B payables strategy written by <strong>Fouad Alkisswani</strong>, then Director and Head of Commercial B2B Product Strategy &amp; Digital Channels, who secured <strong>$100M+</strong> in CEO-level investment for it. The platform this work fed into went on to post <strong>30% CAGR revenue growth</strong> over the following two years.</p>
+    <div class="split-stat">
+      <div class="split-stat-item"><div class="n">4</div><div class="l">Platforms unified into one ICCE experience</div></div>
+      <div class="split-stat-item"><div class="n">5</div><div class="l">Customer segments served, Basic to Large Corporate</div></div>
+      <div class="split-stat-item"><div class="n">4</div><div class="l">Release rollout, mobile pilot to full platform</div></div>
+    </div>
+  </div>
+  <div class="case-section" data-reveal>
+    <span class="case-section-num">Information Architecture &amp; Design System</span>
+    <h2>Three sides of one platform</h2>
+    <p>ICCE Web had to work for three different audiences at once: the buying company (basic users, program admins, and Capital One's own issuer-side view), the vendors receiving virtual card payments, and Capital One's internal servicing teams. I mapped the full site structure across all three before any screen got designed, so navigation, permissions, and content ownership were settled up front instead of getting renegotiated screen by screen.</p>
+    <figure><img src="assets/img/capone-sitemap.png" alt="ICCE Web sitemap showing Basic User, Program Admin, Vendor, and Capital One Issuer navigation trees"><figcaption>The ICCE Web sitemap: three audiences, one shared navigation system</figcaption></figure>
+    <p>Alongside the IA, I contributed to the ICCE Web style guide: an atomic system of color, typography, icons, and components (forms, alerts, modals, data visualization) built so the product could scale consistently across every release. <span class="hl">The team ran on an agile PI (Program Increment) and sprint cadence, with a formal design QA pass at the end of each cycle</span>, one pass alone tracked 75 polish items across the Add Vendor, Pay Vendor, and Dashboard flows.</p>
+    <div class="fig-grid">
+      <figure><img src="assets/img/capone-styleguide-color.png" alt="ICCE Web style guide color system"><figcaption>The color system, with semantic naming for progressive, regressive, and destructive actions</figcaption></figure>
+      <figure><img src="assets/img/capone-styleguide-type.png" alt="ICCE Web style guide typography"><figcaption>Typography: a defined type scale carried across every screen</figcaption></figure>
+    </div>
+  </div>
+  <div class="case-section" data-reveal>
+    <span class="case-section-num">Shipping Payables</span>
+    <h2>From annotated wireframe to shipped screen</h2>
+    <p>The Payables flow, where a buying company tracks, filters, and pays vendor invoices via virtual card, went through detailed annotated wireframes before visual design: filter relationships, search field weighting, virtual card issuance and cancellation, and every payment status from Pending through Accepted, Declined, and Expired.</p>
+    <figure><img src="assets/img/capone-wireframe-payables.png" alt="Annotated wireframe of the Payables search and filter screen"><figcaption>Annotated Payables wireframe: filter logic and search behavior specified before visual design</figcaption></figure>
+    <p>That specification work fed directly into the final product: a dashboard giving buying companies a single view of their virtual payments (processed, open, credited, expired), net paid over time, and outstanding tasks like expiring cards or declined vendor payments.</p>
+    <figure><img src="assets/img/capone-dashboard-mockup.jpg" alt="ICCE Web dashboard mockup showing virtual payments and net paid charts"><figcaption>The shipped dashboard: virtual payments breakdown, net paid trend, and outstanding tasks in one view</figcaption></figure>
+  </div>
+  <div class="case-section" data-reveal>
+    <span class="case-section-num">User Management</span>
+    <h2>Giving admins control over who has access</h2>
+    <p>Program admins needed to manage who on their team could see and act on payments, so I designed the full user management flow: a searchable directory, adding and onboarding new users, editing roles and permissions, and unlocking, deactivating, and reactivating accounts, each with its own confirmation state and one-time-PIN verification for sensitive changes.</p>
+    <figure><img src="assets/img/capone-user-directory-mockup.jpg" alt="ICCE Web user directory mockup"><figcaption>The user directory: search, filter, and manage every user's role and status in one table</figcaption></figure>
+  </div>
+
+    </div>
+
   <div class="case-section" data-reveal>
     <span class="case-section-num">Project Elements</span>
     <h2>The credit card, radically redesigned</h2>
     <p>Project Elements by Capital One Labs was the most ambitious work I contributed to during this engagement. The premise: the credit card is a physical object you carry every day. It should feel like it belongs to you, not your bank.</p>
     <div class="case-quote"><p>The credit card is a physical object you carry every day. It should feel like it belongs to you, not your bank.</p></div>
-    <p>The project reimagined every aspect of the card: its shape, material (bamboo, leather, textured metal), and visual identity (personalized with your signature and chosen aesthetic). Cards had names: <strong>Bamboo. Coral. Lemon.</strong> <em>Each told a story about the person who carried it.</em></p><p>The project launched as a physical installation in San Francisco, a gallery-style experience where people could interact with card prototypes, explore materials, and experience a version of financial product design that treated the cardholder as a creative collaborator.</p>
+    <p>The project reimagined every aspect of the card: its shape, material (bamboo, copper, hammered metal, and other finishes across <strong>12 materials and finishes total</strong>), and visual identity, free of traditional card branding. Cards had names: <strong>Bamboo. Coral. Lemon.</strong> <em>Each told a story about the person who carried it.</em></p><p>The project launched as the <strong>Capital One House</strong>, a physical installation at Antone's in Austin during <strong>SXSW 2017</strong>, a modular, gallery-style space where roughly <strong>12,000 attendees</strong> could interact with card prototypes, explore materials, and experience a version of financial product design that treated the cardholder as a creative collaborator.</p>
   </div>
   <div class="case-section" data-reveal>
     <span class="case-section-num">Capital One Café</span>
     <h2>Banking meets hospitality</h2>
     <p>I contributed UX strategy to the Capital One Café initiative, the bank's flagship physical-meets-digital experience designed to make financial services approachable and community-oriented. I helped design the welcoming kiosk experience and ambient digital displays, <strong>reinforcing the "everyone's welcome" positioning at every touchpoint</strong>.</p>
   </div>
+  <div class="case-section" data-reveal>
+    <span class="case-section-num">Legacy</span>
+    <h2>The same divide the research surfaced, still live today</h2>
+    <p>Years later, Capital One's commercial and business card experience still splits along close to the same line our research mapped: dedicated portals like <a href="https://www.commercialcardconnect.com" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Commercial Card Connect</a> and <a href="https://www.capitalone.com/commercial/intellix/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Intellix</a> give corporate admins the spend controls, virtual card issuance, and AP oversight our Decision Maker and Web personas needed, while the standard mobile app carries the lighter, on-the-go card management our Mobile T&E personas needed. <em>Different products now, but the same underlying divide we designed around then.</em></p>
+  </div>
+  <div class="case-section" data-reveal>
+    <span class="case-section-num">Reflection</span>
+    <h2>On designing for the full spectrum</h2>
+    <p><em>The widest range in this project wasn't the number of platforms, it was the users.</em> A Director of IT protecting his reputation with a spotless expense report and a tile installer fronting her own money because she has no corporate card at all are both "T&E users," but they needed almost nothing in common from the product. <strong>Good enterprise research means resisting the urge to design for the average of that range, because the average user doesn't exist.</strong></p>
+  </div>
     <div class="case-outcomes" data-reveal>
       <h2>Outcomes</h2>
       <div class="outcomes-strip">
-        <div class="outcome-cell"><span class="outcome-num">20<em>+</em></span><span class="outcome-label">In-person empathy interviews with small business owners</span></div><div class="outcome-cell"><span class="outcome-num"><em>1</em></span><span class="outcome-label">Ecosystem Concept Model adopted across multiple product teams</span></div><div class="outcome-cell"><span class="outcome-num"><em>3</em></span><span class="outcome-label">User archetypes defined: ICCE Mobile, Virtual Card, Decision Makers</span></div><div class="outcome-cell"><span class="outcome-num">SF</span><span class="outcome-label">Project Elements launched as a physical gallery installation</span></div>
+        <div class="outcome-cell"><span class="outcome-num">20<em>+</em></span><span class="outcome-label">In-person empathy interviews with small business owners</span></div><div class="outcome-cell"><span class="outcome-num"><em>1</em></span><span class="outcome-label">Ecosystem Concept Model adopted across multiple product teams</span></div><div class="outcome-cell"><span class="outcome-num"><em>3</em></span><span class="outcome-label">User archetypes defined: ICCE Mobile, Virtual Card, Decision Makers</span></div><div class="outcome-cell"><span class="outcome-num">4</span><span class="outcome-label">Platforms unified into one ICCE Web experience</span></div><div class="outcome-cell"><span class="outcome-num">3.7<em>k</em></span><span class="outcome-label">Clients served across 5 customer segments</span></div><div class="outcome-cell"><span class="outcome-num">12<em>k</em></span><span class="outcome-label">Attendees at the Project Elements SXSW installation, Austin</span></div>
       </div>
     </div>
   </main>
@@ -103,11 +181,15 @@
     </div>
     <div class="case-sidebar-block">
       <span class="label">Responsibilities</span>
-      <ul><li>SMB research program (20+ interviews)</li><li>Ecosystem Concept Model</li><li>User archetypes & principles</li><li>Mobile IA (information architecture) & wireframes</li><li>Project Elements contribution</li><li>Capital One Café UX strategy</li></ul>
+      <ul><li>SMB & T&E research program (20+ interviews)</li><li>Ecosystem Concept Model</li><li>User archetypes & personas</li><li>ICCE Web sitemap & IA</li><li>ICCE Web style guide & design system</li><li>Payables wireframes & virtual card flows</li><li>User management & permissions design</li><li>Project Elements contribution</li><li>Capital One Café UX strategy</li></ul>
     </div>
     <div class="case-sidebar-block">
       <span class="label">Methods &amp; Tools</span>
-      <div class="tag-list"><span class="tag">Empathy research</span><span class="tag">Ecosystem mapping</span><span class="tag">User archetypes</span><span class="tag">IA design</span><span class="tag">Physical UX</span><span class="tag">Service design</span><span class="tag">Fintech</span></div>
+      <div class="tag-list"><span class="tag">Empathy research</span><span class="tag">Ecosystem mapping</span><span class="tag">User archetypes</span><span class="tag">IA design</span><span class="tag">Design systems</span><span class="tag">Wireframing</span><span class="tag">Physical UX</span><span class="tag">Service design</span><span class="tag">Fintech</span></div>
+    </div>
+    <div class="case-sidebar-block">
+      <span class="label">Key Partners</span>
+      <ul><li><a href="https://www.linkedin.com/in/fouadalkisswani/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Fouad Alkisswani</a>, Director, Head of Commercial B2B Product Strategy &amp; Digital Channels</li><li><a href="https://www.linkedin.com/in/nikkijahangiri" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--accent)">Nikki Jahangiri</a>, Virtual Card Platform Lead, Design Manager</li></ul>
     </div>
   </aside>
 </div>
@@ -136,5 +218,31 @@
   <span class="footer-copy">Barcelona, Spain</span>
 </footer>
 <script src="assets/js/main.js"></script>
+<script>
+(function () {
+  'use strict';
+  var tabs = document.querySelectorAll('.case-tab');
+  if (!tabs.length) return;
+  function activate(id) {
+    tabs.forEach(function (t) {
+      var on = t.dataset.tab === id;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('.case-panel').forEach(function (p) {
+      p.classList.toggle('active', p.dataset.panel === id);
+    });
+    document.querySelectorAll('.case-panel.active [data-reveal]').forEach(function (el) { el.classList.add('visible'); });
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      activate(t.dataset.tab);
+      history.replaceState(null, '', '#' + t.dataset.tab);
+    });
+  });
+  var hash = location.hash.replace('#', '');
+  if (hash && document.querySelector('.case-tab[data-tab="' + hash + '"]')) activate(hash);
+})();
+</script>
 </body>
 </html>

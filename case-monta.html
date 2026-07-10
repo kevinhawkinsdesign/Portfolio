@@ -64,6 +64,19 @@
   @media (max-width: 700px) {
     .sys-grid, .prog-grid, .split-stat, .agent-grid, .shot-grid { grid-template-columns: 1fr; }
   }
+
+  /* ── Case tabs (two tracks within one case study) ── */
+  .case-tabbar { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 3rem 0 clamp(3.5rem,6vw,5.5rem); }
+  .case-tab {
+    font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--muted); background: var(--surface); border: 1px solid var(--line-2);
+    padding: 0.65rem 1.25rem; border-radius: 100px; cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+  .case-tab:hover { color: var(--ink); border-color: var(--ink); }
+  .case-tab.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .case-panel { display: none; }
+  .case-panel.active { display: block; }
 </style>
 </head>
 <body>
@@ -142,6 +155,13 @@
       </div>
     </div>
 
+    <div class="case-tabbar" role="tablist" aria-label="Monta case study tracks">
+      <button class="case-tab active" role="tab" aria-selected="true" data-tab="infra">Infrastructure &amp; AI</button>
+      <button class="case-tab" role="tab" aria-selected="false" data-tab="charge">The Charge App</button>
+    </div>
+
+    <div class="case-panel active" data-panel="infra" role="tabpanel">
+
     <div class="case-section" data-reveal>
       <span class="case-section-num">· Vision</span>
       <h2>Don't hire more designers. Make everyone a better one.</h2>
@@ -177,6 +197,9 @@
       </div>
     </div>
 
+    </div>
+    <div class="case-panel" data-panel="charge" role="tabpanel">
+
     <div class="case-section" data-reveal>
       <span class="case-section-num">· The Charge App</span>
       <h2>Back to hands-on: the Charge app revamp</h2>
@@ -184,6 +207,9 @@
       <p>The redesign had to reconcile four different ways a driver actually starts a charge: opening a site from the map, tapping a QR sticker on the charger (no account required), tapping an RFID (radio-frequency identification) charge key against the reader, or using a payment terminal directly at the site. Each path re-uses the same pre-authorization and wallet top-up logic underneath, so the driver never sees the seams between them.</p>
       <figure><img src="assets/img/monta_charge_app.png" alt="Monta Charge driver app interface"><figcaption>The revamped Monta Charge app: charging sessions, pricing, and network status</figcaption></figure>
     </div>
+
+    </div>
+    <div class="case-panel" data-panel="infra" role="tabpanel">
 
     <div class="case-section" data-reveal>
       <span class="case-section-num">· Customer Access</span>
@@ -389,6 +415,8 @@
       <p><em>Watching it ship without me in the room was the best proof the infrastructure worked.</em></p>
     </div>
 
+    </div>
+
     <div class="case-section" data-reveal>
       <span class="case-section-num">· Reflection</span>
       <h2>What I'd do differently.</h2>
@@ -490,5 +518,31 @@
   <span class="footer-copy">Barcelona, Spain</span>
 </footer>
 <script src="assets/js/main.js"></script>
+<script>
+(function () {
+  'use strict';
+  var tabs = document.querySelectorAll('.case-tab');
+  if (!tabs.length) return;
+  function activate(id) {
+    tabs.forEach(function (t) {
+      var on = t.dataset.tab === id;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('.case-panel').forEach(function (p) {
+      p.classList.toggle('active', p.dataset.panel === id);
+    });
+    document.querySelectorAll('.case-panel.active [data-reveal]').forEach(function (el) { el.classList.add('visible'); });
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      activate(t.dataset.tab);
+      history.replaceState(null, '', '#' + t.dataset.tab);
+    });
+  });
+  var hash = location.hash.replace('#', '');
+  if (hash === 'infra' || hash === 'charge') activate(hash);
+})();
+</script>
 </body>
 </html>

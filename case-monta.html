@@ -66,16 +66,20 @@
   }
 
   /* ── Case tabs (two tracks within one case study) ── */
-  .case-tabbar { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 3rem 0 clamp(3.5rem,6vw,5.5rem); }
+  .case-tabbar { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
   .case-tab {
-    font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase;
-    color: var(--muted); background: var(--surface); border: 1px solid var(--line-2);
-    padding: 0.65rem 1.25rem; border-radius: 100px; cursor: pointer;
-    transition: color 0.2s, border-color 0.2s, background 0.2s;
+    display: flex; flex-direction: column; align-items: flex-start; gap: 0.3rem; text-align: left;
+    background: var(--surface); border: 1px solid var(--line-2);
+    padding: 1rem 1.4rem; border-radius: var(--radius-sm); cursor: pointer; min-width: 220px;
+    transition: border-color 0.2s, background 0.2s, transform 0.3s var(--ease);
   }
-  .case-tab:hover { color: var(--ink); border-color: var(--ink); }
-  .case-tab.active { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .case-panel { display: none; }
+  .case-tab:hover { border-color: var(--ink); transform: translateY(-2px); }
+  .case-tab-title { font-family: var(--sans); font-size: 0.98rem; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
+  .case-tab-sub { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.03em; color: var(--muted); }
+  .case-tab.active { background: var(--accent); border-color: var(--accent); }
+  .case-tab.active .case-tab-title { color: #fff; }
+  .case-tab.active .case-tab-sub { color: rgba(255,255,255,0.75); }
+  .case-panel { display: none; margin-top: clamp(3.5rem,6vw,5.5rem); }
   .case-panel.active { display: block; }
 </style>
 </head>
@@ -109,7 +113,7 @@
 <div class="page">
 
 <section class="case-hero-area">
-  <div class="bg-photo" data-bg="assets/img/photo-monta.jpeg" style="--bg-op:0.28"></div>
+  <div class="bg-photo" data-bg="assets/img/img_hero_CPMS.webp" style="--bg-op:0.5"></div>
   <div class="bg-scrim"></div>
   <div class="case-breadcrumb">
     <a href="index.html">Kevin Hawkins</a>
@@ -142,7 +146,6 @@
     <div class="case-section" data-reveal>
       <span class="case-section-num">· Overview</span>
       <p style="font-size:1.2rem;max-width:60ch;line-height:1.75;color:var(--ink-70)">Monta runs the software behind EV charging infrastructure for the world, powering charging for Toyota, Stellantis, Copenhagen Airport, and many more European providers. I joined as <strong>the first UX leader at VP level</strong>, hired to formalize the UX practice and strategic product research and scale it without being able to hire our way out. <span class="hl">The answer was infrastructure.</span></p>
-      <figure><img src="assets/img/img_hero_CPMS.webp" alt="Monta Hub network overview dashboard"><figcaption>Monta Hub: real-time network overview across every charge point on the platform</figcaption></figure>
     </div>
 
     <div class="case-section" data-reveal>
@@ -155,9 +158,20 @@
       </div>
     </div>
 
-    <div class="case-tabbar" role="tablist" aria-label="Monta case study tracks">
-      <button class="case-tab active" role="tab" aria-selected="true" data-tab="infra">Infrastructure &amp; AI</button>
-      <button class="case-tab" role="tab" aria-selected="false" data-tab="charge">The Charge App</button>
+    <div class="case-section" data-reveal style="margin-bottom:0;">
+      <span class="case-section-num">· Two Tracks</span>
+      <h2>Two very different kinds of work, one case study.</h2>
+      <p>Most of what follows is the infrastructure and AI transformation I directed: systems, culture, governance, scaled across the whole company. One track stayed hands-on. Pick a track below, or read both.</p>
+      <div class="case-tabbar" role="tablist" aria-label="Monta case study tracks">
+        <button class="case-tab active" role="tab" aria-selected="true" data-tab="infra">
+          <span class="case-tab-title">Infrastructure &amp; AI</span>
+          <span class="case-tab-sub">What I directed, company-wide</span>
+        </button>
+        <button class="case-tab" role="tab" aria-selected="false" data-tab="charge">
+          <span class="case-tab-title">The Charge App</span>
+          <span class="case-tab-sub">What I stayed hands-on for</span>
+        </button>
+      </div>
     </div>
 
     <div class="case-panel active" data-panel="infra" role="tabpanel">

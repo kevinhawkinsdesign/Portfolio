@@ -18,7 +18,7 @@
   /* ── Ink ── */
   --ink:       #16120D;
   --ink-70:    #57503f;
-  --muted:     #8a8175;
+  --muted:     #655d50;
   --faint:     #b8b0a2;
 
   /* ── Lines ── */
@@ -29,6 +29,9 @@
   --accent:    #FF5A1F;
   --accent-2:  #FF7A45;
   --accent-dim:rgba(255,90,31,0.14);
+  /* darker accent variants for solid fills with white text (WCAG AA, 4.5:1+) */
+  --accent-deep:   #C7420C;
+  --accent-deep-2: #A8360A;
   --teal:      #10A78F;
   --cobalt:    #3B5BDB;
   --pink:      #FF4D8D;
@@ -227,14 +230,14 @@ footer .social-icons a:hover { color: var(--accent-2); }
   font-family: var(--sans); font-size: 0.86rem; font-weight: 600;
   letter-spacing: -0.01em; color: #fff;
   display: inline-flex; align-items: center; gap: 0.5rem;
-  background: var(--accent); border-radius: 100px;
+  background: var(--accent-deep); border-radius: 100px;
   padding: 0.55rem 1.05rem;
   transition: transform 0.3s var(--ease), background 0.25s, color 0.25s, box-shadow 0.25s;
   will-change: transform;
 }
 .nav-cta .arr { transition: transform 0.25s var(--ease); }
 .nav-cta:hover .arr { transform: translateX(3px); }
-.nav-cta:hover { background: var(--accent-2); transform: translateY(-2px); box-shadow: 0 10px 24px -8px rgba(255,90,31,0.55); }
+.nav-cta:hover { background: var(--accent-deep-2); transform: translateY(-2px); box-shadow: 0 10px 24px -8px rgba(255,90,31,0.55); }
 
 /* ── MOBILE MENU ── */
 .nav-toggle { display: none; }
@@ -1026,9 +1029,9 @@ body.lightbox-open { overflow: hidden; }
 .case-tab:hover { border-color: var(--ink); transform: translateY(-2px); }
 .case-tab-title { font-family: var(--sans); font-size: 0.98rem; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
 .case-tab-sub { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.03em; color: var(--muted); }
-.case-tab.active { background: var(--accent); border-color: var(--accent); }
+.case-tab.active { background: var(--accent-deep); border-color: var(--accent-deep); }
 .case-tab.active .case-tab-title { color: #fff; }
-.case-tab.active .case-tab-sub { color: rgba(255,255,255,0.75); }
+.case-tab.active .case-tab-sub { color: rgba(255,255,255,0.95); }
 .case-panel { display: none; margin-top: clamp(3.5rem,6vw,5.5rem); }
 .case-panel.active { display: block; }
 

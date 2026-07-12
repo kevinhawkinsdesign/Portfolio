@@ -152,6 +152,9 @@
 
     var lb = document.createElement('div');
     lb.className = 'lightbox';
+    lb.setAttribute('role', 'dialog');
+    lb.setAttribute('aria-modal', 'true');
+    lb.setAttribute('aria-label', 'Image viewer');
     lb.innerHTML =
       '<button type="button" class="lightbox-close" aria-label="Close">✕</button>' +
       (items.length > 1 ? '<button type="button" class="lightbox-nav lightbox-prev" aria-label="Previous image">‹</button>' +
@@ -194,7 +197,7 @@
       show(i);
       lb.classList.add('open');
       document.body.classList.add('lightbox-open');
-      closeBtn.focus();
+      requestAnimationFrame(function () { closeBtn.focus(); });
     }
     function close() {
       lb.classList.remove('open');
@@ -221,6 +224,13 @@
       if (e.key === 'Escape') close();
       else if (e.key === 'ArrowLeft') show(idx - 1);
       else if (e.key === 'ArrowRight') show(idx + 1);
+      else if (e.key === 'Tab') {
+        var focusable = Array.prototype.slice.call(lb.querySelectorAll('button')).filter(function (el) { return el.offsetParent !== null; });
+        if (!focusable.length) return;
+        var first = focusable[0], last = focusable[focusable.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
     });
   })();
 

@@ -23,6 +23,7 @@
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <nav id="nav" class="nav nav--on-dark">
   <a class="nav-logo" href="index.html">Kevin Hawkins <span class="star">✦</span></a>
@@ -48,10 +49,10 @@
     </div></li>
   </ul>
   <a class="btn" href="mailto:hello@kevinhawkinsdesign.com">Say hello <span class="arr">→</span></a>
-  <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
 </nav>
 
-<div class="mobile-menu">
+<div class="mobile-menu" id="mobile-menu">
   <a href="index.html">Home</a>
   <a href="work.html">Work</a>
   <a href="speaking.html">Speaking</a>
@@ -67,7 +68,7 @@
 </div>
 
 <!-- HERO -->
-<header class="sec sec--dark hero hero--photo">
+<header id="main-content" tabindex="-1" class="sec sec--dark hero hero--photo">
   <div class="bg-photo" data-bg="assets/img/2023_HatchConference-7-1.jpg" style="--bg-op:0.6"></div>
   <span class="spark" style="top:24%;left:12%;--c:var(--orange);--s:1.3rem;animation-delay:0s">✦</span>
   <span class="spark" style="top:38%;right:14%;--c:var(--teal);--s:0.9rem;animation-delay:0.8s">✦</span>

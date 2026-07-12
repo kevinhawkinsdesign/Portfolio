@@ -35,6 +35,8 @@
       toggle.classList.toggle('open', open);
       menu.classList.toggle('open', open);
       toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menu.setAttribute('aria-hidden', open ? 'false' : 'true');
     };
     toggle.addEventListener('click', function () { set(!menu.classList.contains('open')); });
     menu.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });

@@ -1025,20 +1025,46 @@ body.lightbox-open { overflow: hidden; }
   overflow-y: auto;
 }
 .case-sidebar-block { padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--line); }
-/* ── Case tabs (two tracks within one case study) ── */
-.case-tabbar { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.75rem; }
-.case-tab {
-  display: flex; flex-direction: column; align-items: flex-start; gap: 0.3rem; text-align: left;
-  background: var(--surface); border: 1px solid var(--line-2);
-  padding: 1rem 1.4rem; border-radius: var(--radius-sm); cursor: pointer; min-width: 220px;
-  transition: border-color 0.2s, background 0.2s, transform 0.3s var(--ease);
+/* ── Case tabs (two/three tracks within one case study) — styled like manila folder tabs ── */
+.case-tabbar {
+  position: relative; display: flex; flex-wrap: wrap; align-items: flex-end;
+  gap: 0.5rem; margin-top: 2rem; padding-bottom: 12px;
 }
-.case-tab:hover { border-color: var(--ink); transform: translateY(-2px); }
+.case-tabbar::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 12px;
+  background: var(--accent-deep); border-radius: 0 0 7px 7px; z-index: 1;
+}
+.case-tab {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 0.3rem; text-align: left;
+  background: var(--line-2); border: none;
+  clip-path: polygon(16px 0, calc(100% - 16px) 0, 100% 100%, 0 100%);
+  padding: 0.95rem 1.6rem 1.3rem; cursor: pointer; min-width: 220px;
+  transform: translateY(10px); opacity: 0.82;
+  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease), background 0.2s;
+}
+.case-tab:hover { transform: translateY(4px); opacity: 1; }
 .case-tab-title { font-family: var(--sans); font-size: 0.98rem; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
 .case-tab-sub { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.03em; color: var(--muted); }
-.case-tab.active { background: var(--accent-deep); border-color: var(--accent-deep); }
+.case-tab.active {
+  z-index: 3; background: var(--accent-deep); transform: translateY(0); opacity: 1;
+}
+.case-tab.active:hover { transform: translateY(0); }
 .case-tab.active .case-tab-title { color: #fff; }
 .case-tab.active .case-tab-sub { color: rgba(255,255,255,0.95); }
+/* Folder tabs only read correctly in a row; stack as plain cards once they wrap to one-per-line */
+@media (max-width: 700px) {
+  .case-tabbar { flex-direction: column; align-items: stretch; padding-bottom: 0; gap: 0.75rem; }
+  .case-tabbar::after { display: none; }
+  .case-tab {
+    clip-path: none; transform: none; opacity: 1; min-width: 0;
+    background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--radius-sm);
+    padding: 1rem 1.4rem; border-left: 4px solid var(--line-2);
+  }
+  .case-tab:hover { transform: none; }
+  .case-tab.active { border-left-color: var(--accent-deep-2); }
+  .case-tab.active:hover { transform: none; }
+}
 .case-panel { display: none; margin-top: clamp(3.5rem,6vw,5.5rem); }
 .case-panel.active { display: block; }
 

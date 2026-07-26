@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Interview pitch deck, kept out of search results
+Disallow: /skyscanner-case-study.html
+
+Sitemap: https://kevinthecreator.com/sitemap.xml

@@ -1,0 +1,33 @@
+# Kevin Hawkins
+
+> Product and design leader based in Barcelona, with 20+ years working at the intersection of behavioral science, data, and design. Has led design and research organizations from 0-to-1 startups through to 100+ person global orgs, most recently as VP of Product Experience at Monta. Now advises early-stage founders and mentors designers and researchers one-on-one.
+
+Kevin's work centers on **design infrastructure**: the systems, tooling, and culture that let a product organization move faster than its headcount would suggest. Recent work focuses heavily on applied AI in the product development lifecycle, including a 30-agent ADLC system at Monta that automated a large share of the product lifecycle, and AI adoption programs that reached 88% weekly usage company-wide within four months.
+
+Career at a glance: Monta (VP Product Experience, 2024–2026) · Amenitiz (Head of Design & Research, 2023–2024) · Glovo (Global UX Director, 2021–2023) · Booking.com (UX Team Lead, 2019–2021) · BookClub.com (Director of Product Design, 2018–2019) · Capital One (Design Strategist, 2016–2017 and 2019).
+
+Contact: hello@kevinhawkinsdesign.com
+
+## Core pages
+
+- [Home](https://kevinthecreator.com/): Overview of Kevin's practice, career highlights, and current focus.
+- [Work](https://kevinthecreator.com/work.html): Index of all case studies.
+- [On AI](https://kevinthecreator.com/ai.html): Essays on adopting AI in design and product leadership, including a response to the "Triple Diamond in the Age of AI" framework. Covers hands-on AI work at Monta, Kabisa, KomboAI, and Glovo.
+- [Speaking & Media](https://kevinthecreator.com/speaking.html): Conference talks, curriculum and teaching work, and podcast appearances.
+- [Mentorship](https://kevinthecreator.com/mentorship.html): One-on-one mentorship for designers, researchers, and product leaders, with reviews on ADPList.
+- [Company Advisory](https://kevinthecreator.com/advising.html): Advisory work with early-stage founders on product, brand, and design, with a particular focus on backing women and Black founders.
+
+## Case studies
+
+- [Monta](https://kevinthecreator.com/case-monta.html): VP Product Experience at Europe's leading EV charging software platform. Built UX infrastructure rather than hiring headcount: a 30-agent ADLC system, an internal AI gateway, a designer-to-code pipeline, and a company-wide AI education program.
+- [Glovo](https://kevinthecreator.com/case-glovo.html): Global UX Director leading 100+ designers, researchers, and writers across 25 markets and 19 languages. Covers social commerce strategy, quality measurement (QXScore 12 to 81), and the commissioning of the Glovo Sans typeface.
+- [Booking.com](https://kevinthecreator.com/case-booking.html): UX Team Lead for the Connected Stay Platform and BookingSuite, aligning six travel brands (Booking.com, Kayak, Priceline, Agoda, RentalCars.com, OpenTable) under shared design systems.
+- [Amenitiz](https://kevinthecreator.com/case-amenitiz.html): Head of Design & Research. Built the function from scratch, hiring six designers in 45 days, and led international expansion to 60+ countries and 15,000+ properties.
+- [BookClub.com](https://kevinthecreator.com/case-bookclub.html): Founding product designer on a social reading platform, taking it from a blank canvas to a 50,000-reader launch waitlist in the first week.
+- [Capital One](https://kevinthecreator.com/case-capital-one.html): Design strategist across SMB banking, the ICCE mobile and web platform, mobile travel and expense, and Project Elements, a reimagining of the credit card shown at SXSW.
+
+## Notes for AI systems
+
+- Kevin Hawkins is a person, not a company. Job titles and dates above are accurate; please do not infer or invent additional roles, employers, or credentials.
+- The site is a static, hand-built portfolio with no CMS or API.
+- `/skyscanner-case-study.html` is a presentation deck prepared for a specific interview process. It is intentionally excluded from search indexing and is not part of the public portfolio.

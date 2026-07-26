@@ -52,9 +52,22 @@
   .ai-soon h2 { font-size: clamp(1.8rem,3.6vw,2.8rem); letter-spacing:-0.04em; margin: 0.5rem 0 0.75rem; max-width: 16ch; }
   .ai-soon p { color: var(--ink-2); font-size: 1.05rem; }
 
-  .diagram-figure { max-width: 420px; margin: 0 auto 3rem; text-align: center; }
-  .diagram-figure img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line-l); box-shadow: 0 24px 60px -24px rgba(0,0,0,0.25); }
-  .diagram-figure figcaption { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.03em; color: var(--ink-3); margin-top: 0.85rem; }
+  .diagram-figure { max-width: 760px; margin: 0 auto 3rem; text-align: center; }
+  .diagram-figure figcaption { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.03em; color: var(--ink-3); margin-top: 1rem; }
+  .tdiagram { display: flex; flex-direction: column; gap: 1.75rem; padding: clamp(1.5rem,4vw,2.25rem); border: 1px solid var(--line-l); border-radius: 18px; background: var(--paper-2); text-align: left; }
+  .tdiagram-row { display: flex; flex-direction: column; gap: 0.85rem; }
+  .tdiagram-label { display: flex; align-items: center; gap: 0.4rem; font-family: var(--mono); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+  .tdiagram-label--old { color: var(--ink-3); }
+  .tdiagram-label--new { color: var(--teal); }
+  .tdiagram-nodes { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem; }
+  .tdiagram-node { font-family: var(--sans); font-size: 0.82rem; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); padding: 0.6rem 0.9rem; border-radius: 10px; border: 1px solid var(--line-l); background: var(--paper); white-space: nowrap; }
+  .tdiagram-node--accent { border-color: var(--teal); background: rgba(15,169,142,0.08); }
+  .tdiagram-arrow { font-family: var(--mono); font-size: 0.64rem; letter-spacing: 0.02em; color: var(--ink-3); white-space: nowrap; }
+  .tdiagram-arrow--loop { color: var(--teal); }
+  @media (max-width: 640px) {
+    .tdiagram-nodes { flex-direction: column; align-items: flex-start; }
+    .tdiagram-arrow { padding-left: 0.3rem; }
+  }
 
   .belief-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 0; border-top: 1px solid var(--line-l); margin-top: 2.5rem; }
   .belief-col { padding: 2rem 1.75rem; border-right: 1px solid var(--line-l); }
@@ -224,8 +237,29 @@
 <section class="sec sec--light">
   <div class="sec-in">
     <figure class="diagram-figure rise">
-      <img src="assets/img/triple-diamond-ai-diagram.jpeg" alt="The Triple Diamond in the Age of AI: a diagram contrasting a linear old way of hand-offs between problem discovery, solution discovery, and development, with a new way of continuous feedback between build context, deliver intelligence, and track impact">
-      <figcaption>The diagram I'm reacting to: "The Triple Diamond in the Age of AI," Jochem via theydo</figcaption>
+      <div class="tdiagram" role="img" aria-label="Diagram contrasting a linear old way of hand-offs between problem discovery, solution discovery, and development, with a new way of continuous feedback between build context, deliver intelligence, and track impact">
+        <div class="tdiagram-row">
+          <span class="tdiagram-label tdiagram-label--old">✕ Old way — hand-offs</span>
+          <div class="tdiagram-nodes">
+            <div class="tdiagram-node">Problem discovery</div>
+            <span class="tdiagram-arrow">hand-off →</span>
+            <div class="tdiagram-node">Solution discovery</div>
+            <span class="tdiagram-arrow">hand-off →</span>
+            <div class="tdiagram-node">Development</div>
+          </div>
+        </div>
+        <div class="tdiagram-row">
+          <span class="tdiagram-label tdiagram-label--new">✓ New way — a loop</span>
+          <div class="tdiagram-nodes">
+            <div class="tdiagram-node tdiagram-node--accent">Build context</div>
+            <span class="tdiagram-arrow tdiagram-arrow--loop">⟲ feeds</span>
+            <div class="tdiagram-node tdiagram-node--accent">Deliver intelligence</div>
+            <span class="tdiagram-arrow tdiagram-arrow--loop">⟲ feeds</span>
+            <div class="tdiagram-node tdiagram-node--accent">Track impact</div>
+          </div>
+        </div>
+      </div>
+      <figcaption>My own sketch of the "old way vs. new way" framing I'm responding to</figcaption>
     </figure>
   </div>
   <div class="sec-in stance-grid">

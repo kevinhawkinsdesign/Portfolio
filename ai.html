@@ -52,6 +52,10 @@
   .ai-soon h2 { font-size: clamp(1.8rem,3.6vw,2.8rem); letter-spacing:-0.04em; margin: 0.5rem 0 0.75rem; max-width: 16ch; }
   .ai-soon p { color: var(--ink-2); font-size: 1.05rem; }
 
+  .diagram-figure { max-width: 420px; margin: 0 auto 3rem; text-align: center; }
+  .diagram-figure img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line-l); box-shadow: 0 24px 60px -24px rgba(0,0,0,0.25); }
+  .diagram-figure figcaption { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.03em; color: var(--ink-3); margin-top: 0.85rem; }
+
   .belief-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 0; border-top: 1px solid var(--line-l); margin-top: 2.5rem; }
   .belief-col { padding: 2rem 1.75rem; border-right: 1px solid var(--line-l); }
   .belief-col:last-child { border-right:none; }
@@ -218,6 +222,12 @@
 <div class="ai-panel" id="panel-soon-2" role="tabpanel">
 
 <section class="sec sec--light">
+  <div class="sec-in">
+    <figure class="diagram-figure rise">
+      <img src="assets/img/triple-diamond-ai-diagram.jpeg" alt="The Triple Diamond in the Age of AI: a diagram contrasting a linear old way of hand-offs between problem discovery, solution discovery, and development, with a new way of continuous feedback between build context, deliver intelligence, and track impact">
+      <figcaption>The diagram I'm reacting to: "The Triple Diamond in the Age of AI," Jochem via theydo</figcaption>
+    </figure>
+  </div>
   <div class="sec-in stance-grid">
     <div class="rise">
       <span class="eyebrow" style="margin-bottom:1.25rem">A framework I keep seeing</span>

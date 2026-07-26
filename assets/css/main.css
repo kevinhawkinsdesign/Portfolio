@@ -197,7 +197,7 @@ nav, .page, footer, .scroll-progress { position: relative; z-index: 2; }
 /* ── SOCIAL ICONS ── */
 .social-icons { display: flex; align-items: center; gap: 1rem; }
 .social-icons a { display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; margin: -4px; color: var(--muted); transition: color 0.25s, transform 0.2s var(--ease); }
-.social-icons a:hover, .social-icons a:active { color: var(--accent); transform: translateY(-2px); }
+.social-icons a:hover, .social-icons a:active { color: var(--accent-deep); transform: translateY(-2px); }
 .social-icons svg { width: 16px; height: 16px; }
 .nav-links a.social-ico::after { display: none; }
 footer .social-icons a { color: var(--cream-2); }

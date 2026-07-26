@@ -119,7 +119,7 @@
   <div class="ai-tabbar-in" role="tablist" aria-label="On AI musings">
     <button class="ai-tab active" role="tab" aria-selected="true" data-tab="stand">Where I Stand</button>
     <button class="ai-tab" role="tab" aria-selected="false" data-tab="soon-1">Data &amp; Trust</button>
-    <button class="ai-tab" role="tab" aria-selected="false" data-tab="soon-2">Coming soon</button>
+    <button class="ai-tab" role="tab" aria-selected="false" data-tab="soon-2">Hand-offs vs. Loops</button>
   </div>
 </div>
 
@@ -216,13 +216,23 @@
 </div>
 
 <div class="ai-panel" id="panel-soon-2" role="tabpanel">
-  <section class="sec sec--light ai-soon">
-    <div class="sec-in">
-      <span class="eyebrow rise">Coming soon</span>
-      <h2 class="rise" data-d="1">More musings on AI, on their way.</h2>
-      <p class="rise" data-d="2">I'm still writing this one. Check back soon.</p>
+
+<section class="sec sec--light">
+  <div class="sec-in stance-grid">
+    <div class="rise">
+      <span class="eyebrow" style="margin-bottom:1.25rem">A framework I keep seeing</span>
+      <h2>The <em>"old way"</em> in that diagram was never the good way.</h2>
+      <p>A framework's been making the rounds that frames AI-native product work as an evolution: an "old way" of linear discovery-to-development hand-offs, and a "new way" of continuous, AI-fed feedback loops. I get why it resonates, and the new-way half is genuinely good practice. But I don't think the interesting shift in that diagram has much to do with AI at all.</p>
+      <p>Treating product development as a relay race, one team finishes its artifact and throws it over the wall, the next team picks it up cold, was never a pattern worth being nostalgic about. It's the exact failure mode that cross-functional teams, embedded research, and design ops have spent the last decade trying to engineer out of organizations. AI didn't retire that model. Teams still running it just have more urgency to fix it now.</p>
     </div>
-  </section>
+    <div class="rise" data-d="1">
+      <div class="pull">AI didn't kill the hand-off. Killing the hand-off is what let AI compound.</div>
+      <p>I didn't need AI to tell me hand-offs were the problem. At Monta, we ran one of the largest Flutter apps outside Google, and the fix wasn't a smarter tool sitting on top of a broken relay: it was retiring the relay itself. Designers and engineers working as peers in the same codebase, no spec thrown over a wall, no waiting on translation. AI is what let that compound faster once the hand-off was already gone. It isn't what got rid of it.</p>
+      <p>So when I see a diagram like that, my read isn't "AI changed how we work." It's "this team fixed an org design problem, and AI is what made the fix pay off immediately instead of over a few quarters." Worth celebrating. Just don't let the AI take credit for the org chart finally doing its job.</p>
+    </div>
+  </div>
+</section>
+
 </div>
 
 <section class="sec sec--dark contact">

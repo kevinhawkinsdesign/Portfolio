@@ -1,5 +1,5 @@
 /* ============================================================
-   KEVIN HAWKINS — MODERN EDITORIAL (DARK · NEAR-MONOCHROME)
+   KEVIN HAWKINS · MODERN EDITORIAL (DARK · NEAR-MONOCHROME)
    Grotesque display · Serif-italic accents · Ink & paper
    Colour reserved for interaction only.
    ============================================================ */
@@ -72,7 +72,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* very subtle film grain for depth — monochrome, non-interactive */
+/* very subtle film grain for depth, monochrome, non-interactive */
 body::before {
   content: '';
   position: fixed; inset: 0; z-index: 1; pointer-events: none;
@@ -1025,7 +1025,7 @@ body.lightbox-open { overflow: hidden; }
   overflow-y: auto;
 }
 .case-sidebar-block { padding-bottom: 2rem; margin-bottom: 2rem; border-bottom: 1px solid var(--line); }
-/* ── Case tabs (two/three tracks within one case study) — simple underline tabs ── */
+/* ── Case tabs (two/three tracks within one case study), simple underline tabs ── */
 .case-tabbar {
   display: flex; flex-wrap: wrap; gap: clamp(1.5rem, 4vw, 2.5rem);
   margin-top: 2rem; border-bottom: 1px solid var(--line-2);
@@ -1067,7 +1067,7 @@ body.lightbox-open { overflow: hidden; }
 }
 .tag:hover { color: var(--ink); border-color: var(--accent-dim); }
 
-/* Case nav — dark closing bookend */
+/* Case nav: dark closing bookend */
 .case-nav {
   display: grid; grid-template-columns: 1fr 1fr;
   border-top: 1px solid var(--line-d);

@@ -1,5 +1,5 @@
 /**
- * KEVIN HAWKINS PORTFOLIO — ANIMATIONS
+ * KEVIN HAWKINS PORTFOLIO · ANIMATIONS
  */
 (function () {
   'use strict';
@@ -13,7 +13,7 @@
     bar.style.width = Math.min((h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100, 100) + '%';
   }, { passive: true });
 
-  /* cursor glow — desktop only */
+  /* cursor glow, desktop only */
   var glow = document.createElement('div');
   glow.id = 'kh-cursor-glow';
   document.body.appendChild(glow);

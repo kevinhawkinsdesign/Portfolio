@@ -1,4 +1,4 @@
-/* ── KEVIN HAWKINS — MAIN JS ── */
+/* ── KEVIN HAWKINS · MAIN JS ── */
 (function () {
   'use strict';
 

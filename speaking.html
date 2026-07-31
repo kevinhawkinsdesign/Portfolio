@@ -69,6 +69,14 @@
 
   .video-embed { position:relative; width:100%; max-width:900px; margin:0 auto; aspect-ratio:16/9; border-radius:16px; overflow:hidden; box-shadow: 0 24px 60px -20px rgba(0,0,0,0.5); }
   .video-embed iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+
+  /* Unattributed note from a viewer. Dark-section variant of .pull. */
+  .anon-quote { max-width: 900px; margin: 2.75rem auto 0; padding-left: 1.6rem; border-left: 2px solid var(--orange); }
+  .anon-quote blockquote { font-family: var(--serif); font-style: italic; font-weight: 400;
+    font-size: clamp(1.05rem, 1.75vw, 1.4rem); line-height: 1.5; color: var(--cream); }
+  .anon-quote cite { display: block; margin-top: 1.1rem; font-family: var(--mono); font-style: normal;
+    font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cream-2); }
+  @media (max-width: 700px) { .anon-quote { padding-left: 1.1rem; } }
 </style>
 </head>
 <body>
@@ -153,6 +161,10 @@
     <div class="video-embed rise" data-d="2">
       <iframe src="https://www.youtube.com/embed/whG6oTPalrc" title="Kevin Hawkins: sample talk" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+    <figure class="anon-quote rise" data-d="3">
+      <blockquote>“Thanks for fueling me during my time at Apple. Your talk clips and content have been very refreshing while I was in deeeeeep internal tools. It’s been such a joy to watch you go from pivotal client days to building your own communities. And being a genuinely great, <strong>no nonsense, low ego</strong> individual to represent the work.”</blockquote>
+      <cite>Anonymous</cite>
+    </figure>
   </div>
 </section>
 

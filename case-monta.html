@@ -103,7 +103,7 @@
     font-family: var(--mono); font-size: .6rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
   .strat-join::before, .strat-join::after { content: ''; height: 1px; flex: 1; background: var(--line-2); }
 
-  .strat-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; align-items: stretch; }
+  .strat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; align-items: stretch; }
   .pillar { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius-sm);
     overflow: hidden; background: var(--surface); transition: border-color .3s, transform .4s var(--ease); }
   .pillar:hover { border-color: var(--line-2); transform: translateY(-2px); }
@@ -498,19 +498,28 @@
 
     <div class="case-section" data-reveal>
       <span class="case-section-num">· Corporate Strategy</span>
-      <h2>Four drivers, five bets, and a name against every one.</h2>
-      <p>UX infrastructure was not a side project I ran next to the roadmap. It was <em>on</em> the roadmap, because I helped shape the company growth strategy that set the roadmap. Leadership worked from a single framework: <span class="hl">four strategic drivers</span> at the top, five product bets underneath, and one owning area against each bet so nothing sat in the gap between teams. 📈</p>
-      <p>The framework is what made the rest of this case study fundable. <strong>Experience &amp; self-serve</strong> was my organisation's column, which meant analytics coverage, activation, and onboarding were company commitments with a named owner rather than design asks competing for someone else's quarter.</p>
+      <h2>Four drivers, six themes, and a name against every one.</h2>
+      <p>UX infrastructure was not a side project I ran next to the roadmap. It was <em>on</em> the roadmap, because I helped shape the company growth strategy that set the roadmap. The 2026 plan ran on a single framework: <span class="hl">four strategic drivers</span> at the top, six themes underneath, and for each theme an objective, a set of initiatives, and one owning area so nothing sat in the gap between teams. 📈</p>
+      <p>The framework is what made the rest of this case study fundable. <strong>Experience &amp; self-serve</strong> was my organisation's theme, which meant analytics coverage, activation, and onboarding were company commitments with a named owner rather than design asks competing for someone else's quarter.</p>
 
       <div class="strat">
         <div class="strat-drivers">
-          <div class="driver"><span class="d-name">Higher utilization</span><span class="d-arrow" aria-hidden="true">↗</span></div>
+          <div class="driver"><span class="d-name">Increase utilization</span><span class="d-arrow" aria-hidden="true">↗</span></div>
           <div class="driver"><span class="d-name">Increase revenue</span><span class="d-arrow" aria-hidden="true">↗</span></div>
           <div class="driver"><span class="d-name">Increase uptime</span><span class="d-arrow" aria-hidden="true">↗</span></div>
           <div class="driver"><span class="d-name">Lower cost of operation</span><span class="d-arrow" aria-hidden="true">↘</span></div>
         </div>
-        <div class="strat-join">Five bets</div>
+        <div class="strat-join">Six themes</div>
         <div class="strat-grid">
+          <div class="pillar">
+            <div class="pillar-head">Enterprise grade operations</div>
+            <p class="pillar-goal">Develop an enterprise grade CPMS (charge point management system) from a technology and partner perspective.</p>
+            <ul class="pillar-list">
+              <li>Bulk operations</li><li>Global settings</li><li><strong>Security</strong></li>
+              <li>Advanced tables</li><li><strong>Workflows</strong></li><li>AI operations</li>
+              <li>Platform performance</li><li>Charge quality</li>
+            </ul>
+          </div>
           <div class="pillar">
             <div class="pillar-head">Weaponise financial services</div>
             <p class="pillar-goal">Reach product-market fit on financial services and enable EMI (electronic money institution) license attainment in 2026.</p>
@@ -556,9 +565,9 @@
             <div class="pillar-owner">CPO Solutions</div>
           </div>
         </div>
-        <p class="strat-legend">The highlighted column is the one my organisation owned.</p>
+        <p class="strat-legend">The highlighted theme is the one my organisation owned.</p>
       </div>
-      <p style="margin-top:22px">Read across the bottom row and you get the honest version of the org chart: <strong>five owners, five surfaces, one platform</strong>. Read down my column and you get the mandate that paid for Bridge, the Skills Library, and everything else above.</p>
+      <p style="margin-top:22px">Read across the bottom row and you get the honest version of the org chart: <strong>one named owner per theme, and no gaps between them</strong>. Read down my theme and you get the mandate that paid for Bridge, the Skills Library, and everything else above.</p>
     </div>
 
     <div class="case-section" data-reveal>

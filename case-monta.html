@@ -92,8 +92,47 @@
   .shot-card img { display: block; width: 100%; height: 160px; object-fit: cover; object-position: top; background: var(--bg-soft); }
   .shot-card figcaption { padding: 10px 14px; font-size: .72rem; font-family: var(--mono); letter-spacing: .02em; color: var(--muted); line-height: 1.5; }
 
+  /* Growth strategy framework, rebuilt natively from the internal planning matrix */
+  .strat { margin-top: 24px; }
+  .strat-drivers { display: flex; flex-wrap: wrap; gap: 10px; align-items: stretch; }
+  .driver { flex: 1 1 200px; display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    border: 1px solid var(--line-2); border-radius: var(--radius-sm); padding: 12px 16px; background: var(--surface); }
+  .strat .driver .d-name { font-size: .88rem; font-weight: 600; letter-spacing: -0.01em; color: var(--ink); }
+  .driver .d-arrow { font-size: 1rem; line-height: 1; color: var(--accent-deep); flex-shrink: 0; }
+  .strat-join { display: flex; justify-content: center; align-items: center; gap: 10px; margin: 14px 0;
+    font-family: var(--mono); font-size: .6rem; letter-spacing: .16em; text-transform: uppercase; color: var(--muted); }
+  .strat-join::before, .strat-join::after { content: ''; height: 1px; flex: 1; background: var(--line-2); }
+
+  .strat-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; align-items: stretch; }
+  .pillar { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius-sm);
+    overflow: hidden; background: var(--surface); transition: border-color .3s, transform .4s var(--ease); }
+  .pillar:hover { border-color: var(--line-2); transform: translateY(-2px); }
+  .pillar-head { background: var(--accent-deep); color: #fff; padding: 14px 16px;
+    font-size: .84rem; font-weight: 600; line-height: 1.25; letter-spacing: -0.01em;
+    display: flex; align-items: center; min-height: 78px; }
+  /* .case-section p out-specifies a lone class, so scope these to .strat */
+  .strat p.pillar-goal { padding: 14px 16px 12px; font-size: .78rem; line-height: 1.55; color: var(--ink-70);
+    border-bottom: 1px solid var(--line); margin: 0; max-width: none; }
+  .strat ul.pillar-list { list-style: none; padding: 12px 16px; margin: 0; flex: 1; }
+  .strat .pillar-list li { position: relative; padding-left: 14px; margin-bottom: 6px;
+    font-size: .76rem; line-height: 1.45; color: var(--ink-70); }
+  .strat .pillar-list li::before { content: ''; position: absolute; left: 0; top: .55em;
+    width: 4px; height: 4px; border-radius: 50%; background: var(--faint); }
+  .strat .pillar-list li strong { color: var(--ink); font-weight: 600; }
+  .pillar-list li strong::after { content: ''; }
+  .pillar-owner { background: var(--ink); color: var(--cream); padding: 9px 16px;
+    font-family: var(--mono); font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; }
+  .pillar.is-mine .pillar-owner { background: var(--accent-deep-2); }
+  .strat p.strat-legend { margin: 14px 0 0; font-family: var(--mono); font-size: .62rem;
+    letter-spacing: .08em; text-transform: uppercase; color: var(--muted); max-width: none; }
+  .strat p.strat-legend::before { content: ''; display: inline-block; width: 9px; height: 9px;
+    border-radius: 2px; background: var(--accent-deep-2); margin-right: 8px; vertical-align: -1px; }
+
+  @media (max-width: 1000px) { .strat-grid { grid-template-columns: repeat(2, 1fr); } }
+
   @media (max-width: 700px) {
     .sys-grid, .prog-grid, .agent-grid, .shot-grid { grid-template-columns: 1fr; }
+    .strat-grid { grid-template-columns: 1fr; }
   }
 
 </style>
@@ -453,6 +492,72 @@
           <p>Organised the Product offsite with Booking.com, ABSmartly, and PostHog trainers on experimentation methodology and AI data analysis, giving the Product team rigour that fed directly into the ADLC system.</p>
         </div>
       </div>
+      <p style="margin-top:26px">That offsite is worth unpacking, because I planned and led it and it did more work than a training session usually does. I built the second day around a single question, <em>who do we serve?</em>, and refused to let the team answer it in the abstract: the morning ran as a working exercise on Monta's product vision rather than a presentation of one. The afternoon brought <strong>PostHog</strong> in to train the team on reading user data first-hand, so the vision written before lunch could be argued with using evidence after it.</p>
+      <p>The day closed on a deliberately uncomfortable discussion: <strong>AI FOMO versus efficiency</strong>. By that point we were four months into company-wide adoption, and the risk had flipped from people not using AI to people using it because it felt expected. Naming that in a room with the whole Product organisation, rather than in a leadership channel, is what let <em>"where should we not use AI"</em> become a question anyone could raise without it sounding like resistance.</p>
+    </div>
+
+    <div class="case-section" data-reveal>
+      <span class="case-section-num">· Corporate Strategy</span>
+      <h2>Three drivers, five bets, and a name against every one.</h2>
+      <p>UX infrastructure was not a side project I ran next to the roadmap. It was <em>on</em> the roadmap, because I helped shape the company growth strategy that set the roadmap. Leadership worked from a single framework: <span class="hl">three strategic drivers</span> at the top, five product bets underneath, and one owning area against each bet so nothing sat in the gap between teams. 📈</p>
+      <p>The framework is what made the rest of this case study fundable. <strong>Experience &amp; self-serve</strong> was my organisation's column, which meant analytics coverage, activation, and onboarding were company commitments with a named owner rather than design asks competing for someone else's quarter.</p>
+
+      <div class="strat">
+        <div class="strat-drivers">
+          <div class="driver"><span class="d-name">Increase revenue</span><span class="d-arrow" aria-hidden="true">↗</span></div>
+          <div class="driver"><span class="d-name">Increase uptime</span><span class="d-arrow" aria-hidden="true">↗</span></div>
+          <div class="driver"><span class="d-name">Lower cost of operation</span><span class="d-arrow" aria-hidden="true">↘</span></div>
+        </div>
+        <div class="strat-join">Five bets</div>
+        <div class="strat-grid">
+          <div class="pillar">
+            <div class="pillar-head">Weaponise financial services</div>
+            <p class="pillar-goal">Reach product-market fit on financial services and enable EMI (electronic money institution) license attainment in 2026.</p>
+            <ul class="pillar-list">
+              <li><strong>Reseller models</strong></li><li>E-invoicing</li><li><strong>EMI license</strong></li>
+              <li>Finance module</li><li>Finance operations</li><li>Fraud detection</li>
+            </ul>
+            <div class="pillar-owner">Financial Services</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-head">Business opportunities &amp; growth</div>
+            <p class="pillar-goal">Extend the commercial flexibility of the platform so operators can grow on it.</p>
+            <ul class="pillar-list">
+              <li>Self-managed roaming</li><li><strong>Customer engagement</strong></li><li><strong>eMSP marketplace</strong></li>
+              <li>Monta marketplace</li><li>Extend bilateral agreements</li><li>Pricing control</li>
+            </ul>
+            <div class="pillar-owner">eMSP &amp; Driver</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-head">Platform extensibility</div>
+            <p class="pillar-goal">Let operators build on top of Monta and grow with it, rather than around it.</p>
+            <ul class="pillar-list">
+              <li><strong>API extensibility and productification</strong></li><li>White label and theming flexibility</li>
+            </ul>
+            <div class="pillar-owner">Partner Services</div>
+          </div>
+          <div class="pillar is-mine">
+            <div class="pillar-head">Experience &amp; self-serve</div>
+            <p class="pillar-goal">Improve user insights and onboarding through a self-serve offering.</p>
+            <ul class="pillar-list">
+              <li>100% analytics coverage</li><li><strong>Product-led activation &amp; onboarding</strong></li>
+              <li>Product-led support</li><li>Experience &amp; architecture</li>
+            </ul>
+            <div class="pillar-owner">UX / Cross platform</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar-head">Energy market participation</div>
+            <p class="pillar-goal">Give operators and drivers access to flexibility and energy markets.</p>
+            <ul class="pillar-list">
+              <li><strong>V2G (vehicle-to-grid) proof of concept</strong></li><li>Expand capabilities in UK &amp; DK</li>
+              <li><strong>Prepare entry to new flexibility markets (FR, BE, DE)</strong></li>
+            </ul>
+            <div class="pillar-owner">CPO Solutions</div>
+          </div>
+        </div>
+        <p class="strat-legend">The highlighted column is the one my organisation owned.</p>
+      </div>
+      <p style="margin-top:22px">Read across the bottom row and you get the honest version of the org chart: <strong>five owners, five surfaces, one platform</strong>. Read down my column and you get the mandate that paid for Bridge, the Skills Library, and everything else above.</p>
     </div>
 
     <div class="case-section" data-reveal>

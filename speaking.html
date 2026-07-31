@@ -77,6 +77,16 @@
   .anon-quote cite { display: block; margin-top: 1.1rem; font-family: var(--mono); font-style: normal;
     font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cream-2); }
   @media (max-width: 700px) { .anon-quote { padding-left: 1.1rem; } }
+
+  .stage-figure { display:grid; grid-template-columns: minmax(0,340px) 1fr; gap: clamp(1.5rem,4vw,3rem); align-items:center; }
+  .stage-figure img { width:100%; height:auto; display:block; border-radius:14px;
+    box-shadow: 0 24px 60px -24px rgba(0,0,0,0.65); }
+  .stage-figure figcaption .eyebrow { color: var(--orange); margin-bottom: 0.9rem; }
+  .stage-figure figcaption h3 { font-family: var(--sans); font-weight:600; color: var(--cream);
+    font-size: clamp(1.15rem,2.2vw,1.6rem); letter-spacing:-0.03em; line-height:1.25; margin-bottom:0.8rem; }
+  .stage-figure figcaption p { color: var(--cream-2); font-size:0.9rem; line-height:1.6; max-width:52ch; }
+  @media (max-width: 800px) { .stage-figure { grid-template-columns:1fr; }
+    .stage-figure img { max-width:340px; } }
 </style>
 </head>
 <body>
@@ -169,6 +179,20 @@
 </section>
 
 <section class="sec sec--dark">
+  <div class="sec-in">
+    <figure class="stage-figure rise">
+      <img src="assets/img/speaking-mwc-2025-inclusive-startups.jpg" width="590" height="787" loading="lazy" decoding="async"
+           alt="Four panelists seated on stage at Mobile World Congress in front of a screen reading “Building Inclusive Startups: Designing Products for Diverse Audiences”.">
+      <figcaption>
+        <span class="eyebrow">Mobile World Congress · Barcelona · 2025</span>
+        <h3>Building Inclusive Startups: Designing Products for Diverse Audiences</h3>
+        <p>Speaking for <strong>Monta</strong> on what it actually takes to lead an inclusive workforce, alongside Michael Stephens of We Create Space, Magda Stega, and Leticia Pozza of Odd Data &amp; Design Studio.</p>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="sec sec--dark">
   <div class="sec-in feat-body">
     <div class="feat-col rise">
       <h2>Teaching &amp; speaking</h2>
@@ -177,6 +201,11 @@
           <span class="rn">Hatch Conference · 2024–2026</span>
           <h3><a href="https://leadershipateliers.com/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--orange)">Leadership Ateliers →</a></h3>
           <p>Co-organizing an annual education series for <strong>120 UX and product leaders</strong> across Europe.</p>
+        </li>
+        <li class="role-item">
+          <span class="rn">Mobile World Congress · Barcelona · 2025</span>
+          <h3>Building Inclusive Startups: Designing Products for Diverse Audiences</h3>
+          <p>Panelist on <strong>leading an inclusive workforce</strong>, representing Monta alongside We Create Space and Odd Data &amp; Design Studio.</p>
         </li>
         <li class="role-item">
           <span class="rn">We Create Space × Festival of Consciousness · Barcelona · 2025</span>

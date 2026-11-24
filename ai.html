@@ -426,8 +426,22 @@ https://mcp.figma.com/mcp</pre>
         <a class="res-card" href="https://payloadcms.com" target="_blank" rel="noopener"><h4>Payload CMS</h4><p>A code-first headless CMS. A good fit for a site built with Claude that non-developers need to edit.</p><span class="go">payloadcms.com ↗</span></a>
       </div>
     </div>
+    <div class="res-group rise" id="res-components">
+      <h3>6. Ready-to-use UI components</h3>
+      <p class="res-note">Libraries to start from instead of a blank file. Give your agent one of these as a reference and the result looks far less generic.</p>
+      <div class="res-grid">
+        <a class="res-card" href="https://libraries.dev" target="_blank" rel="noopener"><h4>Libraries Dev</h4><p>A directory of UI component libraries to browse in one place.</p><span class="go">libraries.dev ↗</span></a>
+        <a class="res-card" href="https://pro.beui.dev" target="_blank" rel="noopener"><h4>Pro Beui</h4><p>Ready-to-use UI components.</p><span class="go">pro.beui.dev ↗</span></a>
+        <a class="res-card" href="https://uiarc.dev" target="_blank" rel="noopener"><h4>Uiarc</h4><p>Ready-to-use UI components.</p><span class="go">uiarc.dev ↗</span></a>
+        <a class="res-card" href="https://bencho.dev" target="_blank" rel="noopener"><h4>Bencho</h4><p>Ready-to-use UI components.</p><span class="go">bencho.dev ↗</span></a>
+        <a class="res-card" href="https://boardui.com" target="_blank" rel="noopener"><h4>Board UI</h4><p>Ready-to-use UI components.</p><span class="go">boardui.com ↗</span></a>
+        <a class="res-card" href="https://affectui.com" target="_blank" rel="noopener"><h4>Affect UI</h4><p>Components, screens and blocks, including patterns for AI agent and chat interfaces.</p><span class="go">affectui.com ↗</span></a>
+        <a class="res-card" href="https://kobra.systems" target="_blank" rel="noopener"><h4>Kobra Systems</h4><p>Ready-to-use UI components.</p><span class="go">kobra.systems ↗</span></a>
+        <a class="res-card" href="https://ui.watermelon.sh" target="_blank" rel="noopener"><h4>UI Watermelon</h4><p>Ready-to-use UI components.</p><span class="go">ui.watermelon.sh ↗</span></a>
+      </div>
+    </div>
     <div class="res-group rise" id="res-skills">
-      <h3>6. Skills worth installing</h3>
+      <h3>7. Skills worth installing</h3>
       <div class="res-grid ">
         <a class="res-card" href="https://www.figma.com/resource-library/claude-skills-for-design/" target="_blank" rel="noopener"><h4>Claude skills for design</h4><p>Figma's guide to skills that help designers.</p><span class="go">figma.com ↗</span></a>
         <a class="res-card" href="https://developers.figma.com/docs/figma-mcp-server/create-skills" target="_blank" rel="noopener"><h4>Create skills for the Figma MCP server</h4><p>Turn a prompt that works into a repeatable team skill.</p><span class="go">developers.figma.com ↗</span></a>
@@ -458,7 +472,7 @@ npx skills add benjitaylor/skills --skill stageshow
 npx skills add Leonxlnx/taste-skill</pre>
     </div>
     <div class="res-group rise" id="res-skill-template">
-      <h3>7. Turn a prompt that works into a team skill</h3>
+      <h3>8. Turn a prompt that works into a team skill</h3>
       <p class="res-note">A skill is a folder with a SKILL.md file: a name, a description that says when to use it and when not to, ordered instructions, and edge cases. This one packages the token audit from prompt 12 below. In Claude Code, save it as <code>.claude/skills/ds-audit/SKILL.md</code>. In Cursor, run <code>/create-skill</code> and paste it in. Do not start from zero: Figma ships official skills with its plugin, and the collections above give you more. Build one team skill a month and you have a real design ops toolkit by summer.</p>
       <pre class="res-code">---
 name: ds-audit
@@ -485,7 +499,7 @@ When someone asks to check frames for hardcoded values or drift from the library
 - Component is detached: report it, don't reattach without approval.</pre>
     </div>
     <div class="res-group rise" id="res-prompts">
-      <h3>8. The prompt library</h3>
+      <h3>9. The prompt library</h3>
       <p class="res-note">Copy, fill the brackets, run. Every prompt is ready to paste into Figma, Claude, Gemini or Cursor. Replace anything in [square brackets] with your own context first.</p>
       <p class="res-note">Three habits make every prompt better: give the model your real context (a Project with research, your Figma library, your repo), ask it to mark what it inferred or guessed, and check numbers and quotes yourself before anything ships. Anonymize participant data according to your company's policy before uploading it. <b>Generation got cheap. Judgment didn't.</b></p>
       <p class="res-stage">01 Discover <span>AI-accelerated research</span></p>
@@ -587,7 +601,7 @@ After the test I'll paste results: summarize by task with completion, time on ta
       </details>
     </div>
     <div class="res-group rise" id="res-rituals">
-      <h3>9. Five rituals that protect ownership and collaboration</h3>
+      <h3>10. Five rituals that protect ownership and collaboration</h3>
       <div class="res-table-wrap"><table class="res-table"><thead><tr><th>Ritual</th><th>What it looks like</th></tr></thead><tbody>
         <tr><th scope="row">1. Show the prompt in crits</th><td>Share the agent thread with the design, so others see how you got there.</td></tr>
         <tr><th scope="row">2. Diverge alone, converge together</th><td>Generate options with AI, choose the direction as a team.</td></tr>
@@ -597,7 +611,7 @@ After the test I'll paste results: summarize by task with completion, time on ta
       </tbody></table></div>
     </div>
     <div class="res-group rise" id="res-plan">
-      <h3>10. Your next 30 days</h3>
+      <h3>11. Your next 30 days</h3>
       <div class="res-grid four">
         <div class="res-card res-static"><span class="go">Week 1</span><h4>Set up</h4><p>Install the Figma plugin in Claude Code or Cursor. Connect your libraries to the Figma agent. Try a code layer.</p></div>
         <div class="res-card res-static"><span class="go">Week 2</span><h4>Practice</h4><p>Everyone runs one Discover or Define prompt on a live project and shares the thread with the team.</p></div>
@@ -607,7 +621,7 @@ After the test I'll paste results: summarize by task with completion, time on ta
       <p class="pull" style="margin-top:2rem">Multiply the people you already have. No new headcount required.</p>
     </div>
     <div class="res-group rise" id="res-team">
-      <h3>11. Set up Claude for your whole team</h3>
+      <h3>12. Set up Claude for your whole team</h3>
       <div class="res-grid ">
         <a class="res-card" href="https://claude.ai" target="_blank" rel="noopener"><h4>Create or log into Claude</h4><p>One account per person. Connectors are per user and do not transfer.</p><span class="go">claude.ai ↗</span></a>
         <a class="res-card" href="https://claude.ai/settings/connectors" target="_blank" rel="noopener"><h4>Connectors settings</h4><p>Connect Gmail, Google Calendar, Google Drive, Linear and Slack, each one individually.</p><span class="go">claude.ai ↗</span></a>
@@ -619,7 +633,7 @@ After the test I'll paste results: summarize by task with completion, time on ta
       <div class="res-tags"><span>verify</span><span>code-review</span><span>simplify</span><span>security-review</span><span>init</span><span>run</span><span>dataviz</span><span>artifact-design</span><span>loop</span><span>claude-api</span><span>update-config</span><span>session-start-hook</span></div>
     </div>
     <div class="res-group rise" id="res-reading">
-      <h3>12. Read about the process</h3>
+      <h3>13. Read about the process</h3>
       <div class="res-grid ">
         <a class="res-card" href="https://axdesigners.medium.com/designing-for-intelligence-reimagining-the-double-diamond-in-the-age-of-ai-7335be659a19" target="_blank" rel="noopener"><h4>Designing for intelligence (AIDE)</h4><p>Reimagining the Double Diamond in the age of AI. If you read one thing, read this.</p><span class="go">axdesigners.medium.com ↗</span></a>
         <a class="res-card" href="https://uxplanet.org/gen-ai-design-process-rethinking-the-traditional-approach-for-next-gen-ux-5363c8dea4d7" target="_blank" rel="noopener"><h4>Gen AI design process (UX Planet)</h4><p>Rethinking the traditional approach for next-gen UX.</p><span class="go">uxplanet.org ↗</span></a>

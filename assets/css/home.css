@@ -205,6 +205,8 @@ p { line-height: 1.62; }
 .hero h1 { font-size: clamp(2rem, 5.2vw, 4.5rem); font-weight: 600; line-height: 1.04; letter-spacing:-0.035em; max-width: 17ch; margin-bottom: 1.3rem; }
 .hero h1 em { color: var(--orange); }
 .hero-sub { font-size: clamp(0.92rem, 1.3vw, 1.05rem); font-weight: 400; color: var(--ink-2); max-width: 42ch; line-height:1.5; margin-bottom: 2rem; }
+.hero-sub a { color: inherit; text-decoration: underline; text-decoration-color: var(--orange); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+.hero-sub a:hover { color: var(--orange); }
 .hero-cta { display:flex; gap:0.9rem; flex-wrap:wrap; }
 .scroll-cue { position:absolute; bottom:1.6rem; left:50%; transform:translateX(-50%); z-index:2;
   font-family:var(--mono); font-size:0.62rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--ink-3);

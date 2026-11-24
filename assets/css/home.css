@@ -48,7 +48,7 @@
   --max-w: 1360px;
   --gut: clamp(1.25rem, 4vw, 5rem);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
-  --spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --spring: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -200,8 +200,7 @@ p { line-height: 1.62; }
 .hero-badge { display:inline-flex; align-items:center; gap:0.55rem; font-family: var(--mono); font-size:0.72rem;
   letter-spacing:0.1em; text-transform:uppercase; color: var(--ink); background: var(--orange-t);
   border:1px solid rgba(255,90,31,0.4); padding:0.42rem 0.9rem; border-radius:100px; margin-bottom:1.9rem; }
-.hero-badge .dot { width:8px; height:8px; border-radius:50%; background:var(--orange); animation: ping 2.4s ease-out infinite; }
-@keyframes ping { 0%{box-shadow:0 0 0 0 rgba(255,90,31,0.55)} 100%{box-shadow:0 0 0 9px rgba(255,90,31,0)} }
+.hero-badge .dot { width:8px; height:8px; border-radius:50%; background:var(--orange); }
 .hero h1 { font-size: clamp(2rem, 5.2vw, 4.5rem); font-weight: 600; line-height: 1.04; letter-spacing:-0.035em; max-width: 17ch; margin-bottom: 1.3rem; }
 .hero h1 em { color: var(--orange); }
 .hero-sub { font-size: clamp(0.92rem, 1.3vw, 1.05rem); font-weight: 400; color: var(--ink-2); max-width: 42ch; line-height:1.5; margin-bottom: 2rem; }
@@ -227,9 +226,7 @@ p { line-height: 1.62; }
 
 /* ── MARQUEE ── */
 .marquee { background: var(--orange-deep); color:#fff; padding: 0.95rem 0; overflow:hidden; }
-.marquee-track { display:flex; width:max-content; animation: scrollx 28s linear infinite; align-items:center; }
-.marquee:hover .marquee-track { animation-play-state: paused; }
-@keyframes scrollx { to { transform: translateX(-50%); } }
+.marquee-track { display:flex; align-items:center; }
 .marquee-track span { font-family: var(--sans); font-weight: 600; font-size: clamp(0.95rem,1.6vw,1.25rem); letter-spacing:-0.01em;
   display:inline-flex; align-items:center; padding: 0 1.5rem; }
 .marquee-track span::after { content:'✦'; margin-left: 3rem; opacity: 0.8; }
@@ -464,3 +461,99 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   *,*::before,*::after{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
   .rise{ opacity:1; transform:none; } .bg-photo{ opacity:var(--bg-op,0.14); transform:none; }
 }
+
+/* ============================================================
+   POLISH PASS (Nov 2026)
+   Strips the generated-site tells flagged by Impeccable and
+   tasteskill: tracked mono labels, kickers, section numbers,
+   decorative sparkles and pulses, tilted photos, marquee loop,
+   rainbow stat cards, and italic-serif accents on every heading.
+   Placed last and scoped under html so page-level styles defer.
+   ============================================================ */
+:root {
+  --paper:   #F4F4F2;
+  --paper-2: #EAE9E5;
+  --orange-display: #BE3C07;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --spring: var(--ease-out);
+  --code: 'DM Mono', ui-monospace, monospace;
+}
+html ::selection { background: rgba(255,90,31,0.22); color: inherit; }
+html #nav.scrolled { background: rgba(244,244,242,0.9); }
+
+/* Labels: plain sentence case in the text face, readable size */
+html .eyebrow, html .about-photo .tag, html .collage figcaption, html .contact .socials, html .fact,
+html .foot, html .now-card .role, html .pod .src, html .stat .l, html .witem .wco, html .witem .wpill,
+html .witem .wrole, html .testimonial-card .trole, html .p-pill, html .p-role, html .p-year,
+html .ai-tab, html .diagram-figure figcaption, html .res-count, html .res-host, html .res-jump a,
+html .res-quick button, html .res-quick span, html .res-stage, html .res-table thead th, html .res-pill,
+html .res-prompt .pw, html .res-copy, html .res-tags span, html .mentee-stat .ms-label, html .mentee-tag,
+html .prog-card .pn, html .prog-links a, html .anon-quote cite, html .media-card .go, html .media-card .src,
+html .role-item .rn, html .pod .dur, html .now-card .num {
+  font-family: var(--sans); text-transform: none; letter-spacing: -0.005em;
+  font-size: 0.8rem; font-variant-numeric: tabular-nums;
+}
+html .eyebrow { font-size: 0.95rem; font-weight: 600; color: var(--ink-2); gap: 0; }
+html .sec--dark .eyebrow { color: var(--cream-2); }
+html .eyebrow::before, html .fact::before { content: none; }
+html .stat .l, html .now-card .role, html .witem .wrole, html .p-role, html .testimonial-card .trole,
+html .media-card .src, html .pod .src, html .res-table thead th, html .res-stage { font-size: 0.85rem; }
+html .res-table thead th { font-weight: 600; color: var(--ink-2); }
+html .res-stage { font-weight: 600; }
+html .res-code, html .res-search kbd, html .res-more-body code, html .res-lede code { font-family: var(--code); }
+
+/* Section numbers carry no information here */
+html .col-n, html .feat-n, html .pod .pn, html .witem .wn, html .belief-col .n, html .bring-col .n,
+html .now-card .num, html .res-n, html .media-card .mn { display: none; }
+html .feat-row { grid-template-columns: 1fr 1.1fr; }
+html .pod { grid-template-columns: 1fr auto; }
+html .witem { grid-template-columns: 128px 1fr auto; }
+@media (max-width: 720px){ html .feat-row { grid-template-columns: 1fr; } html .feat-row p { grid-column: 1; } }
+@media (max-width: 640px){ html .pod { grid-template-columns: 1fr; } }
+@media (max-width: 860px){ html .witem { grid-template-columns: 1fr; } }
+
+/* Decoration that simulated life: sparkles, pulses, spinning marks */
+html .spark, html .hero-badge, html .scroll-cue { display: none; }
+html .nav-logo .star { animation: none; }
+html .hero::before { background: radial-gradient(60% 50% at 78% 8%, rgba(255,90,31,0.12), transparent 60%); }
+
+/* Photos sit straight */
+html .hero-photo img, html .hero-photo:hover img, html .about-photo, html .about-photo-2,
+html .about-photo-2:hover, html .about-photo .tag { transform: none; }
+html .about-photo-2:hover { transform: translateY(-2px); }
+
+/* Capability band: static, no loop */
+html .marquee-track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; row-gap: 0.4rem; padding: 0 var(--gut); }
+html .marquee-track span { padding: 0 1.1rem; }
+html .marquee-track span::after { content: none; }
+html .marquee-track span + span { border-left: 1px solid rgba(255,255,255,0.35); }
+
+/* Numbers: one colour, no boxes */
+html .stats { gap: 0; border-top: 1px solid var(--line-l); }
+html .stat { border: none; border-radius: 0; background: none; padding: 1.6rem 1.5rem 0 0; }
+html .stat + .stat { padding-left: 1.5rem; border-left: 1px solid var(--line-l); }
+html .stat:hover { transform: none; }
+html .stat .n { color: var(--ink) !important; font-weight: 600; }
+@media (max-width: 820px){ html .stat:nth-child(3) { border-left: none; padding-left: 0; } }
+@media (max-width: 460px){ html .stat + .stat { border-left: none; padding-left: 0; } }
+
+/* Italic serif accent: keep it for page titles and the closing line only */
+html h2 em, html h3 em { font-family: inherit; font-style: normal; font-weight: inherit; letter-spacing: inherit; color: inherit; }
+html .contact h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--orange); }
+html p em, html li em { font-family: inherit; }
+
+/* Cards lift gently, without a coloured glow */
+html .now-card:hover, html .now-card:active { transform: translateY(-2px); box-shadow: 0 12px 28px -18px rgba(0,0,0,0.6); }
+html .feat-row:hover { padding-left: 0; }
+
+/* Text links get a drawn underline instead of a border hack */
+html .about-p a { border-bottom: none; text-decoration: underline; text-decoration-color: rgba(190,60,7,0.45); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+html .about-p a:hover { text-decoration-color: var(--orange-ink); }
+
+html .prog-links a { color: var(--orange-ink); }
+html h2 em, html h3 em { color: inherit !important; }
+html .contact h2 em { color: var(--orange) !important; }
+html .marquee-track { flex-wrap: nowrap; justify-content: safe center; overflow-x: auto; scrollbar-width: none; }
+html .marquee-track::-webkit-scrollbar { display: none; }
+html .marquee-track span { font-size: clamp(0.9rem, 1.2vw, 1.08rem); white-space: nowrap; padding: 0 1rem; }
+html .pdlc-card .num { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--orange); }

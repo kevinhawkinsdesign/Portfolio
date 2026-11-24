@@ -411,10 +411,7 @@ footer .social-icons a:hover { color: var(--accent-2); }
 .logo-strip::after  { right:0; background:linear-gradient(to left,var(--bg),transparent); }
 .logo-track {
   display:flex; gap:clamp(3rem,6vw,5.5rem); align-items:center;
-  width:max-content; animation:marquee 40s linear infinite;
 }
-.logo-track:hover { animation-play-state:paused; }
-@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 .logo-track img, .logo-track svg {
   height:30px; width:auto; flex-shrink:0;
   filter: brightness(0) invert(1) opacity(0.34);
@@ -1158,3 +1155,43 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   transition: transform 0.2s var(--ease);
 }
 .skip-link:focus { transform: translateY(0); }
+
+/* ============================================================
+   POLISH PASS (Nov 2026)
+   Matches the home stylesheet: sentence-case labels in the text
+   face, no section indices, no spinning or looping decoration,
+   one italic accent per page (the h1), neutral warm paper.
+   ============================================================ */
+:root {
+  --bg:        #F4F4F2;
+  --bg-soft:   #EAE9E5;
+  --surface-2: #EAE9E5;
+  --code: 'DM Mono', 'SFMono-Regular', ui-monospace, monospace;
+}
+html ::selection { background: rgba(255,90,31,0.22); color: inherit; }
+
+html .label, html .case-breadcrumb, html .case-co-role, html .case-nav-dir, html .case-section figcaption,
+html .case-section-num, html .case-spec dt, html .case-tab-sub, html .case-tab-title, html .footer-copy,
+html .lightbox-caption, html .lightbox-counter, html .now-role, html .outcome-label, html .pill,
+html .podcast-source, html .pull-quote cite, html .split-stat-item .l, html .stat-label, html .tag,
+html .work-item-co, html .work-item-role, html .podcast-dur,
+html .adlc-label .stage, html .adlc-pill, html .agent-stat, html .chip, html .pillar-owner, html .prog-label,
+html .shot-card figcaption, html .strat p.strat-legend, html .sys-card-label {
+  font-family: var(--sans); text-transform: none; letter-spacing: -0.005em;
+  font-size: 0.8rem; font-variant-numeric: tabular-nums;
+}
+html .case-section-num, html .label { font-size: 0.95rem; font-weight: 600; color: var(--ink-70); }
+html .case-tab-title { font-size: 0.95rem; }
+html .stat-label, html .outcome-label, html .split-stat-item .l, html .case-spec dt { font-size: 0.85rem; }
+html .case-section figcaption, html .shot-card figcaption, html .lightbox-caption { font-size: 0.85rem; }
+
+html .hero-index, html .hero-scroll, html .case-num, html .work-item-num, html .podcast-num { display: none; }
+html .nav-logo .star { animation: none; }
+html .logo-track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; }
+html .case-hero-area::after { background: radial-gradient(900px 560px at 82% -6%, rgba(255,90,31,0.10), transparent 60%); }
+
+/* italic serif only on the page title */
+html h2 em, html h3 em, html .work-item-title em, html .podcast-title em { font-family: inherit; font-style: normal; font-weight: inherit; letter-spacing: inherit; }
+html p em, html li em { font-family: inherit; }
+html .outcome-num em { color: var(--accent); }
+html .strat-join { font-size: 0.8rem; }

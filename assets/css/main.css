@@ -4,7 +4,7 @@
    Colour reserved for interaction only.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Fraunces:ital,wght@0,400;1,400&family=DM+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Hanken+Grotesk:ital,wght@0,400..700;1,400..500&family=Newsreader:ital,opsz,wght@0,6..72,400..500;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -46,8 +46,9 @@
   --line-d:    rgba(246,241,232,0.14);
 
   /* ── Type ── */
-  --sans:  'Schibsted Grotesk', system-ui, -apple-system, sans-serif;
-  --serif: 'Fraunces', Georgia, serif;
+  --sans:  'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --display: 'Bricolage Grotesque', 'Hanken Grotesk', system-ui, sans-serif;
+  --serif: 'Newsreader', Georgia, serif;
   --mono:  'DM Mono', 'SFMono-Regular', ui-monospace, monospace;
 
   --max-w: 1400px;
@@ -1296,3 +1297,18 @@ html .case-tab:not(.active) .case-tab-title { color: var(--ink-70); }
 html .case-tab:hover .case-tab-title { color: var(--ink); }
 html .case-co-role { color: var(--ink-70); }
 html .case-section p { max-width: 36em; }
+
+/* ============================================================
+   TYPE: Bricolage Grotesque for display, Hanken Grotesk for
+   reading and UI, Newsreader italic for the one accent per page.
+   ============================================================ */
+html :is(h1, h2, h3, h4, .podcast-title, .case-nav-title, .stat-num, .outcome-num, .split-stat-item .n,
+  .work-item-title, .nav-logo) {
+  font-family: var(--display); font-optical-sizing: auto; font-variation-settings: 'wdth' 100;
+}
+html h1 { font-variation-settings: 'wdth' 92; }
+html h1 em, html .hero em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+html h1 { font-variation-settings: 'wdth' 100; letter-spacing: -0.03em; }
+html h2 { letter-spacing: -0.028em; }
+html h1, html .contact h2 { letter-spacing: -0.02em !important; }
+html h2 { letter-spacing: -0.018em !important; }

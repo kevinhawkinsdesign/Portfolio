@@ -5,7 +5,7 @@
    (inspired by flexxi.design + tacto.ai)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;1,400&family=DM+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Hanken+Grotesk:ital,wght@0,400..700;1,400..500&family=Newsreader:ital,opsz,wght@0,6..72,400..500;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -41,8 +41,9 @@
   --cream-2: #a9a29a;
   --line-d:  rgba(246,241,232,0.16);
 
-  --sans:  'Space Grotesk', system-ui, -apple-system, sans-serif;
-  --serif: 'Fraunces', Georgia, serif;
+  --sans:  'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --display: 'Bricolage Grotesque', 'Hanken Grotesk', system-ui, sans-serif;
+  --serif: 'Newsreader', Georgia, serif;
   --mono:  'DM Mono', ui-monospace, monospace;
 
   --max-w: 1360px;
@@ -664,3 +665,23 @@ html .sec-in > p, html blockquote { max-width: 40em; }
 html .now-card::after { content: none; }
 html .now-card { transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s, border-color 0.3s; }
 html .now-card:hover, html .now-card:focus-visible { border-color: var(--c, var(--orange)); }
+
+/* ============================================================
+   TYPE: Bricolage Grotesque for display, Hanken Grotesk for
+   reading and UI, Newsreader italic for the one accent per page.
+   Replaces Space Grotesk and Fraunces (flagged as overused).
+   ============================================================ */
+html :is(h1, h2, h3, .nav-logo, .stat .n, .now-card .co, .pod .pt, .contact h2, .witem .wt,
+  .mobile-menu a, .marquee-track span, .statement p, .res-group h3) {
+  font-family: var(--display); font-optical-sizing: auto; font-variation-settings: 'wdth' 100;
+}
+html :is(h1, h2) { font-weight: 600; letter-spacing: -0.035em; }
+html h1 { font-variation-settings: 'wdth' 92; }
+html :is(h1, h2, h3) em { letter-spacing: -0.02em; }
+html .hero h1 em, html .contact h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; font-optical-sizing: auto; }
+html body { font-feature-settings: 'ss01' 0; }
+html .about-cities { clear: both; padding-top: 0.25rem; }
+html h1 { font-variation-settings: 'wdth' 100; letter-spacing: -0.028em; }
+html h2 { letter-spacing: -0.03em; }
+html h1, html .contact h2 { letter-spacing: -0.02em !important; }
+html h2 { letter-spacing: -0.018em !important; }

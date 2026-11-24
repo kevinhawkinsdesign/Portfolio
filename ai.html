@@ -118,6 +118,29 @@
   .res-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
   .res-tags span { font-family: var(--mono); font-size: 0.72rem; padding: 0.4rem 0.8rem; border: 1px solid var(--line-l); border-radius: 100px; color: var(--ink-2); }
   @media (max-width: 900px){ .res-grid, .res-grid.two { grid-template-columns:1fr; } }
+  .res-grid.four { grid-template-columns: repeat(4,1fr); }
+  .res-static:hover { transform: none; border-color: var(--line-l); }
+  .res-static h4 { font-size: 1.3rem; }
+  .res-table-wrap { overflow-x: auto; border: 1px solid var(--line-l); border-radius: 18px; }
+  .res-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .res-table th, .res-table td { text-align: left; padding: 0.85rem 1.1rem; border-bottom: 1px solid var(--line-l); vertical-align: top; }
+  .res-table thead th { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--orange-ink); }
+  .res-table tbody th { font-weight: 600; }
+  .res-table td { color: var(--ink-2); }
+  .res-table tr:last-child th, .res-table tr:last-child td { border-bottom: none; }
+  .res-stage { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); margin: 2rem 0 0.75rem; }
+  .res-stage span { color: var(--ink-3); margin-left: 0.5rem; }
+  .res-prompt { border: 1px solid var(--line-l); border-radius: 14px; margin-bottom: 0.6rem; padding: 0 1.1rem; }
+  .res-prompt summary { cursor: pointer; padding: 0.95rem 0; font-weight: 600; letter-spacing: -0.01em; list-style: none; display: flex; gap: 0.9rem; align-items: baseline; }
+  .res-prompt summary::-webkit-details-marker { display: none; }
+  .res-prompt summary::after { content: '+'; margin-left: auto; font-family: var(--mono); color: var(--orange-ink); }
+  .res-prompt[open] summary::after { content: '\2212'; }
+  .res-prompt .pn { font-family: var(--mono); font-size: 0.72rem; color: var(--orange-ink); }
+  .res-try { font-size: 0.85rem; color: var(--ink-2); margin-bottom: 0.25rem; }
+  .res-prompt .res-code { margin: 0.5rem 0 1.1rem; }
+  .res-wrap { white-space: pre-wrap; }
+  .res-intro code, .res-note code { font-family: var(--mono); font-size: 0.85em; }
+  @media (max-width: 900px){ .res-grid.four { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -335,11 +358,11 @@
     <div class="res-intro rise">
       <span class="eyebrow" style="margin-bottom:1.25rem">Resources for designers</span>
       <h2>Everything I share when designers ask <em>"where do I start?"</em></h2>
-      <p>This is the working list from the sessions and team setups I run: the tools, plugins, skills and connectors I recommend, with the links and install commands. Start with the setup, then pick one thing to build this week.</p>
+      <p>This is the working list from the workshops and team setups I run: the tools, plugins, skills and connectors I recommend, plus the prompts I hand out. Start with the setup, then pick one thing to build this week.</p>
     </div>
-    <div class="res-group rise">
+    <div class="res-group rise" id="res-setup">
       <h3>1. Connect Figma to your AI tools</h3>
-      <p class="res-note">Install the Figma plugin in Claude Code or Cursor first. It adds the Figma MCP server and Figma's own skills (figma-use, figma-generate-design, figma-generate-library and more) in one step.</p>
+      <p class="res-note">Install the Figma plugin in Claude Code or Cursor first. It adds the Figma MCP server and Figma's own skills (figma-use, figma-generate-design, figma-generate-library and more) in one step. Plan, seat and credit rules change often, so check Figma's current terms before you rely on a beta feature.</p>
       <pre class="res-code"># Claude Code
 claude plugin install figma@claude-plugins-official
 # then: /plugin &gt; Installed &gt; figma &gt; sign in
@@ -351,8 +374,31 @@ claude plugin install figma@claude-plugins-official
 # Any client: add an HTTP MCP server with this URL
 https://mcp.figma.com/mcp</pre>
     </div>
-    <div class="res-group rise">
-      <h3>2. Figma and design-to-code</h3>
+    <div class="res-group rise" id="res-jobs">
+      <h3>2. Which tool for which job</h3>
+      <div class="res-table-wrap"><table class="res-table"><thead><tr><th>The job</th><th>Reach for</th><th>Why</th></tr></thead><tbody>
+        <tr><th scope="row">Research and synthesis</th><td>Claude, Gemini Deep Research, Dovetail</td><td>Cited sources and long context</td></tr>
+        <tr><th scope="row">Framing and strategy</th><td>Claude, Gemini</td><td>A thought partner that argues back</td></tr>
+        <tr><th scope="row">Layouts on your system</th><td>Figma agent</td><td>Uses your real components and variables</td></tr>
+        <tr><th scope="row">Interactive prototypes</th><td>Code layers, Figma Make, Claude Design</td><td>Real states and logic, not click-throughs</td></tr>
+        <tr><th scope="row">Production front-end</th><td>Cursor or Claude Code with the Figma MCP</td><td>Reads your file and your Code Connect mappings</td></tr>
+        <tr><th scope="row">QA and accessibility</th><td>Figma agent skills, Cursor with axe</td><td>Repeatable checks instead of one-off reviews</td></tr>
+        <tr><th scope="row">Marketing visuals</th><td>Gemini images, Figma Weave tools</td><td>Fast variations in one consistent style</td></tr>
+      </tbody></table></div>
+      <p class="res-note" style="margin-top:1rem">Rule of thumb: chat tools for thinking and words, the Figma agent when the output must live on your canvas with your components, code layers or Figma Make when you need real interaction, and Cursor or Claude Code when it becomes production code. You do not need all of them on day one. Pick one per row and get good at it.</p>
+    </div>
+    <div class="res-group rise" id="res-proto">
+      <h3>3. Which prototyping tool, when</h3>
+      <div class="res-table-wrap"><table class="res-table"><thead><tr><th>Tool</th><th>Best for</th><th>Starts from</th><th>Hands off as</th></tr></thead><tbody>
+        <tr><th scope="row">Figma agent</th><td>On-system layouts and variations</td><td>Your libraries</td><td>Editable Figma layers</td></tr>
+        <tr><th scope="row">Code layers</th><td>Real interaction beside your designs</td><td>Frames, prompt, repo, webpage</td><td>Code on canvas, pull request</td></tr>
+        <tr><th scope="row">Figma Make</th><td>Standalone apps with data and logic</td><td>A prompt</td><td>Published app, Supabase backend</td></tr>
+        <tr><th scope="row">Claude Design</th><td>Fast exploration, decks, one-pagers</td><td>Prompt, files, codebase</td><td>Claude Code bundle, PDF, PPTX, Canva</td></tr>
+        <tr><th scope="row">Cursor with Figma MCP</th><td>Production front-end</td><td>Figma link and your repo</td><td>A pull request</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="res-group rise" id="res-figma">
+      <h3>4. Figma and design-to-code</h3>
       <div class="res-grid ">
         <a class="res-card" href="https://www.figma.com/solutions/ai-design-agent/" target="_blank" rel="noopener"><h4>The Figma agent</h4><p>An AI agent that works on your canvas with your libraries.</p><span class="go">figma.com ↗</span></a>
         <a class="res-card" href="https://www.figma.com/agents/" target="_blank" rel="noopener"><h4>Figma agents overview</h4><p>What the agents can do and which plans include them.</p><span class="go">figma.com ↗</span></a>
@@ -364,8 +410,9 @@ https://mcp.figma.com/mcp</pre>
         <a class="res-card" href="https://www.figma.com/blog/config-2026-recap/" target="_blank" rel="noopener"><h4>Config 2026 recap</h4><p>The product announcements behind all of the above.</p><span class="go">figma.com ↗</span></a>
       </div>
     </div>
-    <div class="res-group rise">
-      <h3>3. Prompt, prototype and test</h3>
+    <div class="res-group rise" id="res-build">
+      <h3>5. Prompt, prototype, test and ship</h3>
+      <p class="res-note">I have used Claude with Payload CMS to design and ship a marketing site, and Lovable to get a first version in front of a team quickly. A launch checklist split into a soft launch and a hard launch, posted as a Slack thread, kept both honest.</p>
       <div class="res-grid ">
         <a class="res-card" href="https://claude.ai" target="_blank" rel="noopener"><h4>Claude</h4><p>Projects for research synthesis, plus Research for competitive scans.</p><span class="go">claude.ai ↗</span></a>
         <a class="res-card" href="https://claude.ai/design" target="_blank" rel="noopener"><h4>Claude Design</h4><p>Design with Claude on a canvas you can keep editing. Research preview.</p><span class="go">claude.ai ↗</span></a>
@@ -373,44 +420,195 @@ https://mcp.figma.com/mcp</pre>
         <a class="res-card" href="https://code.claude.com/docs/en/claude-code-on-the-web" target="_blank" rel="noopener"><h4>Claude Code on the web</h4><p>No local install. Runs in the browser against your repos.</p><span class="go">code.claude.com ↗</span></a>
         <a class="res-card" href="https://gemini.google.com" target="_blank" rel="noopener"><h4>Gemini Deep Research</h4><p>Sourced competitive scans with a link behind every claim.</p><span class="go">gemini.google.com ↗</span></a>
         <a class="res-card" href="https://cursor.com" target="_blank" rel="noopener"><h4>Cursor</h4><p>An AI-first editor. Pair it with the Figma MCP server to implement frames.</p><span class="go">cursor.com ↗</span></a>
+        <a class="res-card" href="https://dovetail.com" target="_blank" rel="noopener"><h4>Dovetail</h4><p>Store and tag research so your synthesis prompts have real evidence to read.</p><span class="go">dovetail.com ↗</span></a>
         <a class="res-card" href="https://maze.co" target="_blank" rel="noopener"><h4>Maze</h4><p>Run the unmoderated test your AI-written plan describes.</p><span class="go">maze.co ↗</span></a>
+        <a class="res-card" href="https://lovable.dev" target="_blank" rel="noopener"><h4>Lovable</h4><p>Prompt a first version of a marketing site or product page to react to.</p><span class="go">lovable.dev ↗</span></a>
+        <a class="res-card" href="https://payloadcms.com" target="_blank" rel="noopener"><h4>Payload CMS</h4><p>A code-first headless CMS. A good fit for a site built with Claude that non-developers need to edit.</p><span class="go">payloadcms.com ↗</span></a>
       </div>
     </div>
-    <div class="res-group rise">
-      <h3>4. Skills worth installing</h3>
+    <div class="res-group rise" id="res-skills">
+      <h3>6. Skills worth installing</h3>
       <div class="res-grid ">
         <a class="res-card" href="https://www.figma.com/resource-library/claude-skills-for-design/" target="_blank" rel="noopener"><h4>Claude skills for design</h4><p>Figma's guide to skills that help designers.</p><span class="go">figma.com ↗</span></a>
         <a class="res-card" href="https://developers.figma.com/docs/figma-mcp-server/create-skills" target="_blank" rel="noopener"><h4>Create skills for the Figma MCP server</h4><p>Turn a prompt that works into a repeatable team skill.</p><span class="go">developers.figma.com ↗</span></a>
         <a class="res-card" href="https://github.com/figma/mcp-server-guide" target="_blank" rel="noopener"><h4>Figma mcp-server-guide</h4><p>Figma's official skills on GitHub.</p><span class="go">github.com ↗</span></a>
         <a class="res-card" href="https://github.com/anthropics/skills" target="_blank" rel="noopener"><h4>Anthropic skills</h4><p>The reference collection of skills, including document formats.</p><span class="go">github.com ↗</span></a>
-        <a class="res-card" href="https://github.com/Owl-Listener/designer-skills" target="_blank" rel="noopener"><h4>designer-skills</h4><p>63 design skills in one repo.</p><span class="go">github.com ↗</span></a>
+        <a class="res-card" href="https://github.com/Owl-Listener/designer-skills" target="_blank" rel="noopener"><h4>designer-skills</h4><p>63 skills for research, systems, UI and handoff.</p><span class="go">github.com ↗</span></a>
         <a class="res-card" href="https://www.magier.com/blog/best-claude-design-skills-for-designers" target="_blank" rel="noopener"><h4>Best Claude design skills for designers</h4><p>A curated read from Magier.</p><span class="go">magier.com ↗</span></a>
         <a class="res-card" href="https://nervegna.substack.com/p/50-claude-code-skills-for-designers" target="_blank" rel="noopener"><h4>50 Claude Code skills for designers</h4><p>A long list to browse by need.</p><span class="go">nervegna.substack.com ↗</span></a>
         <a class="res-card" href="https://github.com/benjitaylor/skills" target="_blank" rel="noopener"><h4>Stageshow</h4><p>Faux UI stills, animations and bento grids for marketing and app store assets.</p><span class="go">github.com ↗</span></a>
       </div>
+      <p class="res-note" style="margin-top:1.5rem">Slash commands I point people to first:</p>
+      <div class="res-tags"><span>/figma-use</span><span>/figma-generate-design</span><span>/figma-generate-library</span><span>/audit-design-system</span><span>/apply-design-system</span><span>/create-voice</span><span>/frontend-design</span></div>
+      <p class="res-note" style="margin-top:1rem">The Figma commands ship with the Figma plugin. The audit and apply commands come from Edenspiekermann, <code>/create-voice</code> from Uber (it writes VoiceOver, TalkBack and ARIA specs), and <code>/frontend-design</code> from Anthropic.</p>
       <pre class="res-code"># Stageshow
-npx skills add benjitaylor/skills --skill stageshow
-
-# Save your own skill in Claude Code
-.claude/skills/your-skill-name/SKILL.md</pre>
+npx skills add benjitaylor/skills --skill stageshow</pre>
     </div>
-    <div class="res-group rise">
-      <h3>5. Set up Claude for your whole team</h3>
-      <p class="res-note">The connectors I recommend first are Gmail, Google Calendar, Google Drive, Linear and Slack. Add GitHub when you start working in a repo.</p>
+    <div class="res-group rise" id="res-skill-template">
+      <h3>7. Turn a prompt that works into a team skill</h3>
+      <p class="res-note">A skill is a folder with a SKILL.md file: a name, a description that says when to use it and when not to, ordered instructions, and edge cases. This one packages the token audit from prompt 12 below. In Claude Code, save it as <code>.claude/skills/ds-audit/SKILL.md</code>. In Cursor, run <code>/create-skill</code> and paste it in. Do not start from zero: Figma ships official skills with its plugin, and the collections above give you more. Build one team skill a month and you have a real design ops toolkit by summer.</p>
+      <pre class="res-code">---
+name: ds-audit
+description: Audit Figma frames against the design system. Use for token, variable or component drift. Not for new designs.
+---
+
+# Design system audit
+
+## When to use
+When someone asks to check frames for hardcoded values or drift from the library.
+
+## Instructions
+1. Use the figma-use skill before any use_figma call.
+2. List hardcoded colors, type, radius and spacing in the selection.
+3. Match each to the closest library variable, with a confidence level.
+4. Output a table. Change nothing until the user approves.
+5. Fix high-confidence items only; report the rest.
+
+## Examples
+"Audit the booking widget frames" returns a table of layer, current value, suggested variable, confidence.
+
+## Common edge cases
+- No close match: flag it as "needs new token", never invent one.
+- Component is detached: report it, don't reattach without approval.</pre>
+    </div>
+    <div class="res-group rise" id="res-prompts">
+      <h3>8. The prompt library</h3>
+      <p class="res-note">Copy, fill the brackets, run. Every prompt is ready to paste into Figma, Claude, Gemini or Cursor. Replace anything in [square brackets] with your own context first.</p>
+      <p class="res-note">Three habits make every prompt better: give the model your real context (a Project with research, your Figma library, your repo), ask it to mark what it inferred or guessed, and check numbers and quotes yourself before anything ships. Anonymize participant data according to your company's policy before uploading it. <b>Generation got cheap. Judgment didn't.</b></p>
+      <p class="res-stage">01 Discover <span>AI-accelerated research</span></p>
+      <details class="res-prompt">
+        <summary><span class="pn">1</span>A competitive scan that shows its sources</summary>
+        <p class="res-try">Try it in Gemini Deep Research, or Claude with Research on.</p>
+        <pre class="res-code res-wrap">You are a UX researcher for a [your product category] platform. Research how [competitor 1], [competitor 2], [competitor 3], [competitor 4] and [competitor 5] design [the feature you are studying] for [your user type] with [typical scale]. For each product cover: [aspect 1], [aspect 2], and [aspect 3]. Return a comparison table with a source link for every claim. If you can't find evidence, write "no evidence found". Finish with 5 patterns worth testing and 3 to avoid.</pre>
+      </details>
+      <details class="res-prompt">
+        <summary><span class="pn">2</span>Interview synthesis you can trust</summary>
+        <p class="res-try">Try it in a Claude Project or a Gemini Gem with the transcripts attached.</p>
+        <pre class="res-code res-wrap">Attached are [8] interview transcripts with [your user type]. Synthesize them:
+1. Up to 8 themes. For each: how many participants mentioned it, 2 verbatim quotes with participant IDs, and any evidence against it.
+2. Separate what people say they do from what they describe actually doing.
+3. Mark anything you inferred rather than read.
+Never invent or paraphrase inside quotation marks. End with 3 questions for our next round.</pre>
+      </details>
+      <details class="res-prompt">
+        <summary><span class="pn">3</span>Simulate a user, then list what to validate</summary>
+        <p class="res-try">Try it in Claude or Gemini. A simulated user is a sketch of a person, never a substitute for one.</p>
+        <pre class="res-code res-wrap">Role-play a property manager in Lisbon with 40 short-term listings, 2 cleaners and 1 assistant. It's Sunday night before a big conference week. Walk me through, hour by hour, how you decide which rates to change and which tools you open. Then step out of the role and list the 10 assumptions in your story that I should validate with real users, ranked by risk.</pre>
+      </details>
+      <p class="res-stage">02 Define <span>AI-enhanced framing</span></p>
+      <details class="res-prompt">
+        <summary><span class="pn">4</span>From themes to job stories and HMWs</summary>
+        <p class="res-try">Try it in Claude or Gemini, in the same Project or Gem as prompt 2 so it sees the evidence.</p>
+        <pre class="res-code res-wrap">Here are our research themes: [paste]. Write:
+1. 3 job stories (When..., I want to..., so I can...)
+2. 3 problem statements naming the user, the need and the evidence
+3. 5 How-might-we questions, from safe to bold
+Rate each problem statement's confidence (low, medium, high) and tell me what evidence would change your mind. Push back if a theme is too thin to frame.</pre>
+      </details>
+      <details class="res-prompt">
+        <summary><span class="pn">5</span>Counterfactuals: what if the constraint disappeared?</summary>
+        <p class="res-try">Try it in Gemini or Claude. Swap in your own constraints: budget, channel rules, owner approval, regulation.</p>
+        <pre class="res-code res-wrap">Our problem statement: [paste]. Run 4 counterfactuals:
+1. What if changing prices were free and instant?
+2. What if the manager had no historical data?
+3. What if the AI could act without approval?
+4. What if we had to ship in one week?
+For each: what would we design differently, and what does that reveal about the real constraint?</pre>
+      </details>
+      <details class="res-prompt">
+        <summary><span class="pn">6</span>Define the role of AI in the product</summary>
+        <p class="res-try">Try it in Claude or Gemini, before designing any AI agent screen.</p>
+        <pre class="res-code res-wrap">We're designing an AI pricing agent for property managers. For each action it could take (raise rates, lower rates, block dates, reply to a guest), recommend if it should be assistive (suggests), augmentative (acts after approval) or autonomous (acts, then reports). Give the risk if it's wrong, how we explain the decision, and how the user undoes it. Output a table.</pre>
+      </details>
+      <p class="res-stage">03 Develop <span>AI co-creation</span></p>
+      <details class="res-prompt">
+        <summary><span class="pn">7</span>Three directions on your design system</summary>
+        <p class="res-try">Try it in the Figma agent with your libraries enabled. Run A, B and C as parallel prompts so they don't converge.</p>
+        <pre class="res-code res-wrap">Using our [your] library, create 3 directions for a Pricing suggestions experience on the multi-calendar:
+A) inline in the calendar cells
+B) a side panel
+C) a morning digest
+Use only library components and variables. For each direction show default, empty and error states, and explain how the user sees why a rate was suggested. Put each direction in its own labeled frame.</pre>
+      </details>
+      <details class="res-prompt">
+        <summary><span class="pn">8</span>Weeks become hours: a prototype from one brief</summary>
+        <p class="res-try">Try it in Claude, Claude Design, a Figma code layer or Figma Make. Check every number it shows: in my test run, one projected total was off by 10 euros.</p>
+        <pre class="res-code res-wrap">Build an interactive, single-screen prototype: "Pricing suggestions" for a property manager with 40 listings in Lisbon and Barcelona. An AI pricing agent proposes rate changes for the next 14 days. Show each suggestion with current rate, suggested rate, % change, the reason in plain language and confidence in words. Let the user accept, edit or dismiss each one, and bulk-accept high-confidence ones, with 10 seconds to undo. Include loading, empty and error states. Explain the agent's guardrails. Use an 8px grid, WCAG AA contrast and realistic data. No lorem ipsum.</pre>
+      </details>
+      <details class="res-prompt">
+        <summary><span class="pn">9</span>Map the journey before the screens</summary>
+        <p class="res-try">Try it in Claude or Gemini, or the Figma agent in FigJam once it arrives.</p>
+        <pre class="res-code res-wrap">Before any screens, map the end-to-end journey for a property manager onboarding a new listing in [your product], from signing the owner to the first booking. For each step: the screen or channel, what the user needs to know, what can go wrong, and where AI could help or harm. Then propose the 6 screens to design first, and why.</pre>
+      </details>
+      <details class="res-prompt">
+        <summary><span class="pn">10</span>Campaign concepts with one visual language (marketing)</summary>
+        <p class="res-try">Try it in Gemini for copy and images, then finish in Figma with Weave tools. Treat images as concepts; brand review still applies.</p>
+        <pre class="res-code res-wrap">Create 4 ad concepts for [your product] aimed at property managers with 10 to 50 listings in Southern Europe. Core message: pricing that keeps working while you sleep. For each concept: a headline (max 6 words), a subline (max 12 words), the objection it answers, and the visual idea.
+Then write one image prompt per concept in a consistent style: warm natural light, real apartment interiors, no faces looking at the camera, 4:5 crop, empty space at the top for the headline.</pre>
+      </details>
+      <p class="res-stage">04 Deliver <span>AI-integrated execution</span></p>
+      <details class="res-prompt">
+        <summary><span class="pn">11</span>Implement a frame with your real components</summary>
+        <p class="res-try">Try it in Cursor or Claude Code with the Figma MCP server connected. In Figma, right-click a layer and choose Copy link to selection.</p>
+        <pre class="res-code res-wrap">Implement this design: [Figma link to selection].
+Use our existing components, following the Code Connect mappings, and our design tokens. Never hardcode colors, spacing or radii. Build every state shown in the frame.
+When you finish, list any element you couldn't map to a component and any value you had to guess.</pre>
+      </details>
+      <details class="res-prompt">
+        <summary><span class="pn">12</span>Audit tokens without the manual hunt</summary>
+        <p class="res-try">Try it in the Figma agent, or Claude Code with the Figma MCP server.</p>
+        <pre class="res-code res-wrap">Audit the selected frames against our library. List every layer that uses a hardcoded color, font size, radius or spacing value instead of a variable. For each one, suggest the closest variable and your confidence.
+Don't change anything yet: output a table. After I approve, fix only the high-confidence ones and report the rest.</pre>
+      </details>
+      <details class="res-prompt">
+        <summary><span class="pn">13</span>Accessibility QA before engineering starts</summary>
+        <p class="res-try">Try it in Cursor or Claude Code. Automated checks catch only part of accessibility issues; test with assistive tech and real users too.</p>
+        <pre class="res-code res-wrap">Review this component for WCAG 2.2 AA. Compute the contrast of every text and background pair from the actual token values, not from the screenshot. Check focus order, keyboard access, screen reader labels, target size (at least 24 by 24 px) and reduced motion.
+List issues by severity with the fix. Then write a Playwright and axe test that would catch them.</pre>
+      </details>
+      <details class="res-prompt">
+        <summary><span class="pn">14</span>A user test plan, and the readout after</summary>
+        <p class="res-try">Try it in Claude or Gemini, then run the test in Maze.</p>
+        <pre class="res-code res-wrap">Write a 20-minute unmoderated test plan for the pricing suggestions prototype, for property managers who run 10+ listings. Include a screener, 5 tasks with success criteria, and 2 follow-up questions per task. Avoid leading language.
+After the test I'll paste results: summarize by task with completion, time on task, verbatim quotes and the top 3 fixes.</pre>
+      </details>
+    </div>
+    <div class="res-group rise" id="res-rituals">
+      <h3>9. Five rituals that protect ownership and collaboration</h3>
+      <div class="res-table-wrap"><table class="res-table"><thead><tr><th>Ritual</th><th>What it looks like</th></tr></thead><tbody>
+        <tr><th scope="row">1. Show the prompt in crits</th><td>Share the agent thread with the design, so others see how you got there.</td></tr>
+        <tr><th scope="row">2. Diverge alone, converge together</th><td>Generate options with AI, choose the direction as a team.</td></tr>
+        <tr><th scope="row">3. One shared prompt and skill library</th><td>With a rotating owner who keeps it current.</td></tr>
+        <tr><th scope="row">4. Pair-prompt every week</th><td>Designer with an engineer, a PM or a marketer.</td></tr>
+        <tr><th scope="row">5. Name the human owner</th><td>Every AI-assisted decision has a person who signs it off.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="res-group rise" id="res-plan">
+      <h3>10. Your next 30 days</h3>
+      <div class="res-grid four">
+        <div class="res-card res-static"><span class="go">Week 1</span><h4>Set up</h4><p>Install the Figma plugin in Claude Code or Cursor. Connect your libraries to the Figma agent. Try a code layer.</p></div>
+        <div class="res-card res-static"><span class="go">Week 2</span><h4>Practice</h4><p>Everyone runs one Discover or Define prompt on a live project and shares the thread with the team.</p></div>
+        <div class="res-card res-static"><span class="go">Week 3</span><h4>Systematize</h4><p>Turn the token audit into a team skill, and write your first PRODUCT.md and DESIGN.md.</p></div>
+        <div class="res-card res-static"><span class="go">Week 4</span><h4>Ship</h4><p>Put one live prototype in front of 5 real users, and share what you learned.</p></div>
+      </div>
+      <p class="pull" style="margin-top:2rem">Multiply the people you already have. No new headcount required.</p>
+    </div>
+    <div class="res-group rise" id="res-team">
+      <h3>11. Set up Claude for your whole team</h3>
       <div class="res-grid ">
         <a class="res-card" href="https://claude.ai" target="_blank" rel="noopener"><h4>Create or log into Claude</h4><p>One account per person. Connectors are per user and do not transfer.</p><span class="go">claude.ai ↗</span></a>
         <a class="res-card" href="https://claude.ai/settings/connectors" target="_blank" rel="noopener"><h4>Connectors settings</h4><p>Connect Gmail, Google Calendar, Google Drive, Linear and Slack, each one individually.</p><span class="go">claude.ai ↗</span></a>
         <a class="res-card" href="https://claude.ai/settings/capabilities" target="_blank" rel="noopener"><h4>Capabilities settings</h4><p>Turn skills and plugins on or off.</p><span class="go">claude.ai ↗</span></a>
       </div>
-      <p class="res-note" style="margin-top:1.5rem">Everyday skills to switch on in Claude:</p>
+      <p class="res-note" style="margin-top:1.5rem">The connectors I recommend first are Gmail, Google Calendar, Google Drive, Linear and Slack. Add GitHub when you start working in a repo. Everyday skills to switch on in Claude:</p>
       <div class="res-tags"><span>xlsx</span><span>pptx</span><span>pdf</span><span>docx</span><span>skill-creator</span><span>morning</span></div>
       <p class="res-note" style="margin-top:1.5rem">Built into Claude Code sessions, no setup needed:</p>
       <div class="res-tags"><span>verify</span><span>code-review</span><span>simplify</span><span>security-review</span><span>init</span><span>run</span><span>dataviz</span><span>artifact-design</span><span>loop</span><span>claude-api</span><span>update-config</span><span>session-start-hook</span></div>
     </div>
-    <div class="res-group rise">
-      <h3>6. Read about the process</h3>
+    <div class="res-group rise" id="res-reading">
+      <h3>12. Read about the process</h3>
       <div class="res-grid ">
-        <a class="res-card" href="https://axdesigners.medium.com/designing-for-intelligence-reimagining-the-double-diamond-in-the-age-of-ai-7335be659a19" target="_blank" rel="noopener"><h4>Designing for intelligence (AIDE)</h4><p>Reimagining the Double Diamond in the age of AI.</p><span class="go">axdesigners.medium.com ↗</span></a>
+        <a class="res-card" href="https://axdesigners.medium.com/designing-for-intelligence-reimagining-the-double-diamond-in-the-age-of-ai-7335be659a19" target="_blank" rel="noopener"><h4>Designing for intelligence (AIDE)</h4><p>Reimagining the Double Diamond in the age of AI. If you read one thing, read this.</p><span class="go">axdesigners.medium.com ↗</span></a>
         <a class="res-card" href="https://uxplanet.org/gen-ai-design-process-rethinking-the-traditional-approach-for-next-gen-ux-5363c8dea4d7" target="_blank" rel="noopener"><h4>Gen AI design process (UX Planet)</h4><p>Rethinking the traditional approach for next-gen UX.</p><span class="go">uxplanet.org ↗</span></a>
         <a class="res-card" href="https://medium.com/@abieastwell/how-product-designers-can-use-ai-to-enhance-their-workload-be4d00537f0d" target="_blank" rel="noopener"><h4>How product designers can use AI</h4><p>Practical ways to enhance your workload.</p><span class="go">medium.com ↗</span></a>
       </div>

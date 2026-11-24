@@ -179,7 +179,7 @@ p { line-height: 1.62; }
   display:inline-flex; align-items:center; gap:0.5rem; padding: 0.72rem 1.35rem; border-radius: 100px;
   background: var(--orange-deep); color:#fff; border: 1px solid var(--orange-deep); cursor:pointer;
   transition: transform 0.22s var(--spring), box-shadow 0.22s var(--ease), background 0.2s; }
-.btn:hover, .btn:active { transform: translateY(-2px); box-shadow: 0 10px 24px -8px rgba(255,90,31,0.6); background: var(--orange-deep-2); }
+.btn:hover, .btn:active { transform: translateY(-2px); box-shadow: 0 10px 22px -12px rgba(22,18,13,0.45); background: var(--orange-deep-2); }
 .btn .arr { transition: transform 0.25s var(--spring); }
 .btn:hover .arr, .btn:active .arr { transform: translateX(3px); }
 .btn--ghost { background: transparent; color: var(--ink); border-color: var(--line-l); }
@@ -284,7 +284,7 @@ p { line-height: 1.62; }
 .now-card { border:1px solid var(--line-d); border-radius: 20px; padding: 1.75rem; background: var(--night-2);
   display:flex; flex-direction:column; gap:0.75rem; min-height: 210px;
   transition: transform 0.28s var(--spring), border-color 0.28s, box-shadow 0.28s; }
-.now-card:hover, .now-card:active { transform: translateY(-6px); border-color: var(--c, var(--orange)); box-shadow: 0 18px 40px -18px var(--c, var(--orange)); }
+.now-card:hover, .now-card:active { transform: translateY(-6px); border-color: var(--c, var(--orange)); box-shadow: 0 12px 28px -18px rgba(0,0,0,0.6); }
 .now-card .num { font-family: var(--mono); font-size: 0.7rem; color: var(--cream-2); letter-spacing:0.1em; }
 .now-card .co { font-family: var(--sans); font-weight: 700; font-size: 1.5rem; letter-spacing:-0.03em; color: var(--cream); }
 .now-card .role { font-family: var(--mono); font-size: 0.68rem; letter-spacing:0.06em; text-transform:uppercase; color: var(--cream-2); }
@@ -491,7 +491,7 @@ html .res-prompt .pw, html .res-copy, html .res-tags span, html .mentee-stat .ms
 html .prog-card .pn, html .prog-links a, html .anon-quote cite, html .media-card .go, html .media-card .src,
 html .role-item .rn, html .pod .dur, html .now-card .num {
   font-family: var(--sans); text-transform: none; letter-spacing: -0.005em;
-  font-size: 0.8rem; font-variant-numeric: tabular-nums;
+  font-size: 0.8rem;
 }
 html .eyebrow { font-size: 0.95rem; font-weight: 600; color: var(--ink-2); gap: 0; }
 html .sec--dark .eyebrow { color: var(--cream-2); }
@@ -565,7 +565,7 @@ html .pdlc-card .num { font-family: var(--sans); font-size: 0.85rem; font-weight
    ============================================================ */
 :root {
   --tile:    #2F5FB3;   /* Barcelona azulejo blue */
-  --olive:   #5E7A2E;   /* vermut-bar olive */
+  --olive:   #4F6A22;   /* vermut-bar olive */
   --saffron: #D9920B;   /* paella saffron */
   --wine:    #7A1F3D;   /* priorat red */
 }
@@ -604,10 +604,7 @@ html .pdlc-card .num { font-family: var(--sans); font-size: 0.85rem; font-weight
 .marquee-track span { transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), color 0.2s; }
 .marquee-track span:hover { transform: translateY(-2px); color: #16120D; }
 
-/* advising cards: a stripe of the company's colour slides in */
 .now-card { position: relative; overflow: hidden; }
-.now-card::after { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--c, var(--orange)); transform: scaleX(0); transform-origin: left; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1); }
-.now-card:hover::after, .now-card:focus-visible::after { transform: scaleX(1); }
 
 /* cities: local time tooltip */
 [data-tz] { position: relative; cursor: help; text-decoration: underline dotted rgba(0,0,0,0.25); text-underline-offset: 3px; border-radius: 3px; }
@@ -616,10 +613,12 @@ html .pdlc-card .num { font-family: var(--sans); font-size: 0.85rem; font-weight
   opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s cubic-bezier(0.22,1,0.36,1); }
 [data-tz]:hover::after, [data-tz]:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
 
-/* resources table rows and prompts get a coloured edge on hover */
-.res-table tbody tr { transition: box-shadow 0.2s; }
-.res-table tbody tr:hover { box-shadow: inset 3px 0 0 var(--tile); }
-.res-prompt[open] { box-shadow: inset 3px 0 0 var(--saffron); }
+/* resources: rows tint blue on hover, an open prompt gets a saffron border */
+.res-table tbody tr { transition: background-color 0.2s; }
+.res-table tbody tr:hover { background: rgba(47,95,179,0.06); }
+.res-table tbody tr:hover th a { color: var(--tile); border-bottom-color: var(--tile); }
+.res-prompt { transition: border-color 0.2s; }
+.res-prompt[open] { border-color: var(--saffron); }
 
 /* easter egg: supper club mode */
 html.supper-club body { transition: filter 0.8s; }
@@ -629,7 +628,7 @@ html.supper-club { --orange: #C2410C; --orange-ink: #9A1F3D; }
 @keyframes khcandle { from { opacity: 0.85; } to { opacity: 1; } }
 
 @media (prefers-reduced-motion: reduce) {
-  .nav-logo .star, .btn .arr, .btn svg, .marquee-track span, .now-card::after, [data-tz]::after, .kh-toast { transition: none; }
+  .nav-logo .star, .btn .arr, .btn svg, .marquee-track span, [data-tz]::after, .kh-toast { transition: none; }
   .nav-logo .star.spin, html.supper-club body::after { animation: none; }
 }
 .nav-logo .star:focus:not(:focus-visible) { outline: none; }
@@ -644,3 +643,24 @@ html .hero--photo h1 { text-shadow: 0 2px 24px rgba(0,0,0,0.35); }
   }
   html .hero--photo .hero-sub { font-size: 1rem; line-height: 1.55; }
 }
+
+/* ============================================================
+   IMPECCABLE PASS 2: rendered-page findings
+   ============================================================ */
+/* No orphaned last words or lopsided headings */
+html h1, html h2, html h3, html h4, html blockquote { text-wrap: balance; }
+html p, html li, html figcaption, html dd, html .res-lede, html .hero-sub { text-wrap: pretty; }
+
+/* One visible focus style everywhere a component has not set its own */
+html :focus-visible { outline: 2px solid var(--orange-ink, #BE3C07); outline-offset: 3px; border-radius: 4px; }
+html .sec--dark :focus-visible, html .hero :focus-visible, html .foot :focus-visible, html .case-hero-area :focus-visible { outline-color: var(--orange, #FF5A1F); }
+
+/* Small icon links get a 44px tap area without moving anything */
+html .social-icons a { position: relative; }
+html .social-icons a::after { content: ''; position: absolute; inset: -10px; }
+/* comfortable measure for long paragraphs and quotes */
+html .sec-in > p, html blockquote { max-width: 40em; }
+/* advising cards: the brand colour shows as a full border, not a stripe */
+html .now-card::after { content: none; }
+html .now-card { transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s, border-color 0.3s; }
+html .now-card:hover, html .now-card:focus-visible { border-color: var(--c, var(--orange)); }

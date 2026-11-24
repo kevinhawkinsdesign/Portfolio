@@ -4,7 +4,7 @@
    Colour reserved for interaction only.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Fraunces:ital,wght@0,400;1,400&family=DM+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Hanken+Grotesk:ital,wght@0,400..700;1,400..500&family=Newsreader:ital,opsz,wght@0,6..72,400..500;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -46,8 +46,9 @@
   --line-d:    rgba(246,241,232,0.14);
 
   /* ── Type ── */
-  --sans:  'Schibsted Grotesk', system-ui, -apple-system, sans-serif;
-  --serif: 'Fraunces', Georgia, serif;
+  --sans:  'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --display: 'Bricolage Grotesque', 'Hanken Grotesk', system-ui, sans-serif;
+  --serif: 'Newsreader', Georgia, serif;
   --mono:  'DM Mono', 'SFMono-Regular', ui-monospace, monospace;
 
   --max-w: 1400px;
@@ -237,7 +238,7 @@ footer .social-icons a:hover { color: var(--accent-2); }
 }
 .nav-cta .arr { transition: transform 0.25s var(--ease); }
 .nav-cta:hover .arr, .nav-cta:active .arr { transform: translateX(3px); }
-.nav-cta:hover, .nav-cta:active { background: var(--accent-deep-2); transform: translateY(-2px); box-shadow: 0 10px 24px -8px rgba(255,90,31,0.55); }
+.nav-cta:hover, .nav-cta:active { background: var(--accent-deep-2); transform: translateY(-2px); box-shadow: 0 10px 22px -12px rgba(22,18,13,0.45); }
 
 /* ── MOBILE MENU ── */
 .nav-toggle { display: none; }
@@ -411,10 +412,7 @@ footer .social-icons a:hover { color: var(--accent-2); }
 .logo-strip::after  { right:0; background:linear-gradient(to left,var(--bg),transparent); }
 .logo-track {
   display:flex; gap:clamp(3rem,6vw,5.5rem); align-items:center;
-  width:max-content; animation:marquee 40s linear infinite;
 }
-.logo-track:hover { animation-play-state:paused; }
-@keyframes marquee { from{transform:translateX(0)} to{transform:translateX(-50%)} }
 .logo-track img, .logo-track svg {
   height:30px; width:auto; flex-shrink:0;
   filter: brightness(0) invert(1) opacity(0.34);
@@ -1158,3 +1156,159 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   transition: transform 0.2s var(--ease);
 }
 .skip-link:focus { transform: translateY(0); }
+
+/* ============================================================
+   POLISH PASS (Nov 2026)
+   Matches the home stylesheet: sentence-case labels in the text
+   face, no section indices, no spinning or looping decoration,
+   one italic accent per page (the h1), neutral warm paper.
+   ============================================================ */
+:root {
+  --bg:        #F4F4F2;
+  --bg-soft:   #EAE9E5;
+  --surface-2: #EAE9E5;
+  --code: 'DM Mono', 'SFMono-Regular', ui-monospace, monospace;
+}
+html ::selection { background: rgba(255,90,31,0.22); color: inherit; }
+
+html .label, html .case-breadcrumb, html .case-co-role, html .case-nav-dir, html .case-section figcaption,
+html .case-section-num, html .case-spec dt, html .case-tab-sub, html .case-tab-title, html .footer-copy,
+html .lightbox-caption, html .lightbox-counter, html .now-role, html .outcome-label, html .pill,
+html .podcast-source, html .pull-quote cite, html .split-stat-item .l, html .stat-label, html .tag,
+html .work-item-co, html .work-item-role, html .podcast-dur,
+html .adlc-label .stage, html .adlc-pill, html .agent-stat, html .chip, html .pillar-owner, html .prog-label,
+html .shot-card figcaption, html .strat p.strat-legend, html .sys-card-label {
+  font-family: var(--sans); text-transform: none; letter-spacing: -0.005em;
+  font-size: 0.8rem;
+}
+html .case-section-num, html .label { font-size: 0.95rem; font-weight: 600; color: var(--ink-70); }
+html .case-tab-title { font-size: 0.95rem; }
+html .stat-label, html .outcome-label, html .split-stat-item .l, html .case-spec dt { font-size: 0.85rem; }
+html .case-section figcaption, html .shot-card figcaption, html .lightbox-caption { font-size: 0.85rem; }
+
+html .hero-index, html .hero-scroll, html .case-num, html .work-item-num, html .podcast-num { display: none; }
+html .nav-logo .star { animation: none; }
+html .logo-track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; }
+html .case-hero-area::after { background: radial-gradient(900px 560px at 82% -6%, rgba(255,90,31,0.10), transparent 60%); }
+
+/* italic serif only on the page title */
+html h2 em, html h3 em, html .work-item-title em, html .podcast-title em { font-family: inherit; font-style: normal; font-weight: inherit; letter-spacing: inherit; }
+html p em, html li em { font-family: inherit; }
+html .outcome-num em { color: var(--accent); }
+html .strat-join { font-size: 0.8rem; }
+
+/* ============================================================
+   DELIGHT LAYER: colour that arrives on interaction, small
+   microinteractions, and the supper-club easter egg.
+   Paired with assets/js/delight.js.
+   ============================================================ */
+:root {
+  --tile:    #2F5FB3;   /* Barcelona azulejo blue */
+  --olive:   #4F6A22;   /* vermut-bar olive */
+  --saffron: #D9920B;   /* paella saffron */
+  --wine:    #7A1F3D;   /* priorat red */
+}
+
+/* toast */
+.kh-toast { position: fixed; left: 50%; bottom: 24px; z-index: 300; transform: translate(-50%, 140%);
+  max-width: min(92vw, 460px); padding: 0.8rem 1.15rem; border-radius: 14px; background: #16120D; color: #F7F5F1;
+  font: 500 0.92rem/1.4 var(--sans, system-ui); box-shadow: 0 18px 40px -18px rgba(0,0,0,0.6);
+  transition: transform 0.45s cubic-bezier(0.22,1,0.36,1); pointer-events: none; text-align: center; }
+.kh-toast.show { transform: translate(-50%, 0); }
+.kh-toast::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--orange, #FF5A1F); margin-right: 0.6rem; vertical-align: 1px; }
+
+/* logo star: hover turn, click spin */
+.nav-logo .star { display: inline-block; cursor: pointer; transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s; border-radius: 50%; }
+.nav-logo:hover .star, .nav-logo .star:focus-visible { transform: rotate(72deg); }
+.nav-logo .star.spin { animation: khspin 0.8s cubic-bezier(0.22,1,0.36,1); color: var(--saffron); }
+@keyframes khspin { from { transform: rotate(0) scale(1); } 50% { transform: rotate(200deg) scale(1.35); } to { transform: rotate(360deg) scale(1); } }
+
+/* buttons: arrow nudge and a soft press */
+.btn .arr, .btn svg { transition: transform 0.25s cubic-bezier(0.22,1,0.36,1); }
+.btn:hover .arr, .btn:hover svg { transform: translateX(3px); }
+.btn:active { transform: scale(0.97); }
+
+/* nav links: underline draws in from the left */
+.nav-links a:not(.btn):not([aria-label]) { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1.5px no-repeat; transition: background-size 0.3s cubic-bezier(0.22,1,0.36,1), color 0.2s; padding-bottom: 2px; }
+.nav-links a:not(.btn):not([aria-label]):hover { background-size: 100% 1.5px; }
+
+/* numbers pick up colour when you point at them */
+.stat .n { transition: color 0.3s; }
+.stat:nth-child(1):hover .n { color: var(--orange-ink) !important; }
+.stat:nth-child(2):hover .n { color: var(--tile) !important; }
+.stat:nth-child(3):hover .n { color: var(--olive) !important; }
+.stat:nth-child(4):hover .n { color: var(--wine) !important; }
+
+/* capability band: each item lifts on hover */
+.marquee-track span { transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), color 0.2s; }
+.marquee-track span:hover { transform: translateY(-2px); color: #16120D; }
+
+.now-card { position: relative; overflow: hidden; }
+
+/* cities: local time tooltip */
+[data-tz] { position: relative; cursor: help; text-decoration: underline dotted rgba(0,0,0,0.25); text-underline-offset: 3px; border-radius: 3px; }
+[data-tz]::after { content: attr(data-time); position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translate(-50%, 4px); white-space: nowrap;
+  padding: 0.3rem 0.55rem; border-radius: 8px; background: var(--tile); color: #fff; font-size: 0.75rem; font-weight: 500;
+  opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s cubic-bezier(0.22,1,0.36,1); }
+[data-tz]:hover::after, [data-tz]:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
+
+/* resources: rows tint blue on hover, an open prompt gets a saffron border */
+.res-table tbody tr { transition: background-color 0.2s; }
+.res-table tbody tr:hover { background: rgba(47,95,179,0.06); }
+.res-table tbody tr:hover th a { color: var(--tile); border-bottom-color: var(--tile); }
+.res-prompt { transition: border-color 0.2s; }
+.res-prompt[open] { border-color: var(--saffron); }
+
+/* easter egg: supper club mode */
+html.supper-club body { transition: filter 0.8s; }
+html.supper-club body::after { content: ''; position: fixed; inset: 0; z-index: 250; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 35%, rgba(255,170,80,0.10), rgba(60,8,24,0.55) 85%); mix-blend-mode: multiply; animation: khcandle 3.2s ease-in-out infinite alternate; }
+html.supper-club { --orange: #C2410C; --orange-ink: #9A1F3D; }
+@keyframes khcandle { from { opacity: 0.85; } to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-logo .star, .btn .arr, .btn svg, .marquee-track span, [data-tz]::after, .kh-toast { transition: none; }
+  .nav-logo .star.spin, html.supper-club body::after { animation: none; }
+}
+.nav-logo .star:focus:not(:focus-visible) { outline: none; }
+
+/* ============================================================
+   IMPECCABLE PASS 2: rendered-page findings
+   ============================================================ */
+/* No orphaned last words or lopsided headings */
+html h1, html h2, html h3, html h4, html blockquote { text-wrap: balance; }
+html p, html li, html figcaption, html dd, html .res-lede, html .hero-sub { text-wrap: pretty; }
+
+/* One visible focus style everywhere a component has not set its own */
+html :focus-visible { outline: 2px solid var(--orange-ink, #BE3C07); outline-offset: 3px; border-radius: 4px; }
+html .sec--dark :focus-visible, html .hero :focus-visible, html .foot :focus-visible, html .case-hero-area :focus-visible { outline-color: var(--orange, #FF5A1F); }
+
+/* Small icon links get a 44px tap area without moving anything */
+html .social-icons a { position: relative; }
+html .social-icons a::after { content: ''; position: absolute; inset: -10px; }
+/* case studies: comfortable measure, readable breadcrumbs and tab subtitles */
+html .case-section p { max-width: 37em; }
+html .case-breadcrumb span { opacity: 1; color: var(--ink-70); }
+html .case-breadcrumb a { color: var(--ink-70); }
+html .case-tab-sub { color: var(--ink-70); }
+/* inactive tabs: quieter title colour instead of fading the whole tab */
+html .case-tab { opacity: 1; }
+html .case-tab:not(.active) .case-tab-title { color: var(--ink-70); }
+html .case-tab:hover .case-tab-title { color: var(--ink); }
+html .case-co-role { color: var(--ink-70); }
+html .case-section p { max-width: 36em; }
+
+/* ============================================================
+   TYPE: Bricolage Grotesque for display, Hanken Grotesk for
+   reading and UI, Newsreader italic for the one accent per page.
+   ============================================================ */
+html :is(h1, h2, h3, h4, .podcast-title, .case-nav-title, .stat-num, .outcome-num, .split-stat-item .n,
+  .work-item-title, .nav-logo) {
+  font-family: var(--display); font-optical-sizing: auto; font-variation-settings: 'wdth' 100;
+}
+html h1 { font-variation-settings: 'wdth' 92; }
+html h1 em, html .hero em { font-family: var(--serif); font-style: italic; font-weight: 400; }
+html h1 { font-variation-settings: 'wdth' 100; letter-spacing: -0.03em; }
+html h2 { letter-spacing: -0.028em; }
+html h1, html .contact h2 { letter-spacing: -0.02em !important; }
+html h2 { letter-spacing: -0.018em !important; }

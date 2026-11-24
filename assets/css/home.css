@@ -5,7 +5,7 @@
    (inspired by flexxi.design + tacto.ai)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Fraunces:ital,wght@0,400;1,400&family=DM+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Hanken+Grotesk:ital,wght@0,400..700;1,400..500&family=Newsreader:ital,opsz,wght@0,6..72,400..500;1,6..72,400..500&family=DM+Mono:wght@400;500&display=swap');
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -41,14 +41,15 @@
   --cream-2: #a9a29a;
   --line-d:  rgba(246,241,232,0.16);
 
-  --sans:  'Space Grotesk', system-ui, -apple-system, sans-serif;
-  --serif: 'Fraunces', Georgia, serif;
+  --sans:  'Hanken Grotesk', system-ui, -apple-system, sans-serif;
+  --display: 'Bricolage Grotesque', 'Hanken Grotesk', system-ui, sans-serif;
+  --serif: 'Newsreader', Georgia, serif;
   --mono:  'DM Mono', ui-monospace, monospace;
 
   --max-w: 1360px;
   --gut: clamp(1.25rem, 4vw, 5rem);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
-  --spring: cubic-bezier(0.34, 1.4, 0.64, 1);
+  --spring: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -179,7 +180,7 @@ p { line-height: 1.62; }
   display:inline-flex; align-items:center; gap:0.5rem; padding: 0.72rem 1.35rem; border-radius: 100px;
   background: var(--orange-deep); color:#fff; border: 1px solid var(--orange-deep); cursor:pointer;
   transition: transform 0.22s var(--spring), box-shadow 0.22s var(--ease), background 0.2s; }
-.btn:hover, .btn:active { transform: translateY(-2px); box-shadow: 0 10px 24px -8px rgba(255,90,31,0.6); background: var(--orange-deep-2); }
+.btn:hover, .btn:active { transform: translateY(-2px); box-shadow: 0 10px 22px -12px rgba(22,18,13,0.45); background: var(--orange-deep-2); }
 .btn .arr { transition: transform 0.25s var(--spring); }
 .btn:hover .arr, .btn:active .arr { transform: translateX(3px); }
 .btn--ghost { background: transparent; color: var(--ink); border-color: var(--line-l); }
@@ -200,8 +201,7 @@ p { line-height: 1.62; }
 .hero-badge { display:inline-flex; align-items:center; gap:0.55rem; font-family: var(--mono); font-size:0.72rem;
   letter-spacing:0.1em; text-transform:uppercase; color: var(--ink); background: var(--orange-t);
   border:1px solid rgba(255,90,31,0.4); padding:0.42rem 0.9rem; border-radius:100px; margin-bottom:1.9rem; }
-.hero-badge .dot { width:8px; height:8px; border-radius:50%; background:var(--orange); animation: ping 2.4s ease-out infinite; }
-@keyframes ping { 0%{box-shadow:0 0 0 0 rgba(255,90,31,0.55)} 100%{box-shadow:0 0 0 9px rgba(255,90,31,0)} }
+.hero-badge .dot { width:8px; height:8px; border-radius:50%; background:var(--orange); }
 .hero h1 { font-size: clamp(2rem, 5.2vw, 4.5rem); font-weight: 600; line-height: 1.04; letter-spacing:-0.035em; max-width: 17ch; margin-bottom: 1.3rem; }
 .hero h1 em { color: var(--orange); }
 .hero-sub { font-size: clamp(0.92rem, 1.3vw, 1.05rem); font-weight: 400; color: var(--ink-2); max-width: 42ch; line-height:1.5; margin-bottom: 2rem; }
@@ -227,9 +227,7 @@ p { line-height: 1.62; }
 
 /* ── MARQUEE ── */
 .marquee { background: var(--orange-deep); color:#fff; padding: 0.95rem 0; overflow:hidden; }
-.marquee-track { display:flex; width:max-content; animation: scrollx 28s linear infinite; align-items:center; }
-.marquee:hover .marquee-track { animation-play-state: paused; }
-@keyframes scrollx { to { transform: translateX(-50%); } }
+.marquee-track { display:flex; align-items:center; }
 .marquee-track span { font-family: var(--sans); font-weight: 600; font-size: clamp(0.95rem,1.6vw,1.25rem); letter-spacing:-0.01em;
   display:inline-flex; align-items:center; padding: 0 1.5rem; }
 .marquee-track span::after { content:'✦'; margin-left: 3rem; opacity: 0.8; }
@@ -287,7 +285,7 @@ p { line-height: 1.62; }
 .now-card { border:1px solid var(--line-d); border-radius: 20px; padding: 1.75rem; background: var(--night-2);
   display:flex; flex-direction:column; gap:0.75rem; min-height: 210px;
   transition: transform 0.28s var(--spring), border-color 0.28s, box-shadow 0.28s; }
-.now-card:hover, .now-card:active { transform: translateY(-6px); border-color: var(--c, var(--orange)); box-shadow: 0 18px 40px -18px var(--c, var(--orange)); }
+.now-card:hover, .now-card:active { transform: translateY(-6px); border-color: var(--c, var(--orange)); box-shadow: 0 12px 28px -18px rgba(0,0,0,0.6); }
 .now-card .num { font-family: var(--mono); font-size: 0.7rem; color: var(--cream-2); letter-spacing:0.1em; }
 .now-card .co { font-family: var(--sans); font-weight: 700; font-size: 1.5rem; letter-spacing:-0.03em; color: var(--cream); }
 .now-card .role { font-family: var(--mono); font-size: 0.68rem; letter-spacing:0.06em; text-transform:uppercase; color: var(--cream-2); }
@@ -464,3 +462,226 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   *,*::before,*::after{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
   .rise{ opacity:1; transform:none; } .bg-photo{ opacity:var(--bg-op,0.14); transform:none; }
 }
+
+/* ============================================================
+   POLISH PASS (Nov 2026)
+   Strips the generated-site tells flagged by Impeccable and
+   tasteskill: tracked mono labels, kickers, section numbers,
+   decorative sparkles and pulses, tilted photos, marquee loop,
+   rainbow stat cards, and italic-serif accents on every heading.
+   Placed last and scoped under html so page-level styles defer.
+   ============================================================ */
+:root {
+  --paper:   #F4F4F2;
+  --paper-2: #EAE9E5;
+  --orange-display: #BE3C07;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --spring: var(--ease-out);
+  --code: 'DM Mono', ui-monospace, monospace;
+}
+html ::selection { background: rgba(255,90,31,0.22); color: inherit; }
+html #nav.scrolled { background: rgba(244,244,242,0.9); }
+
+/* Labels: plain sentence case in the text face, readable size */
+html .eyebrow, html .about-photo .tag, html .collage figcaption, html .contact .socials, html .fact,
+html .foot, html .now-card .role, html .pod .src, html .stat .l, html .witem .wco, html .witem .wpill,
+html .witem .wrole, html .testimonial-card .trole, html .p-pill, html .p-role, html .p-year,
+html .ai-tab, html .diagram-figure figcaption, html .res-count, html .res-host, html .res-jump a,
+html .res-quick button, html .res-quick span, html .res-stage, html .res-table thead th, html .res-pill,
+html .res-prompt .pw, html .res-copy, html .res-tags span, html .mentee-stat .ms-label, html .mentee-tag,
+html .prog-card .pn, html .prog-links a, html .anon-quote cite, html .media-card .go, html .media-card .src,
+html .role-item .rn, html .pod .dur, html .now-card .num {
+  font-family: var(--sans); text-transform: none; letter-spacing: -0.005em;
+  font-size: 0.8rem;
+}
+html .eyebrow { font-size: 0.95rem; font-weight: 600; color: var(--ink-2); gap: 0; }
+html .sec--dark .eyebrow { color: var(--cream-2); }
+html .eyebrow::before, html .fact::before { content: none; }
+html .stat .l, html .now-card .role, html .witem .wrole, html .p-role, html .testimonial-card .trole,
+html .media-card .src, html .pod .src, html .res-table thead th, html .res-stage { font-size: 0.85rem; }
+html .res-table thead th { font-weight: 600; color: var(--ink-2); }
+html .res-stage { font-weight: 600; }
+html .res-code, html .res-search kbd, html .res-more-body code, html .res-lede code { font-family: var(--code); }
+
+/* Section numbers carry no information here */
+html .col-n, html .feat-n, html .pod .pn, html .witem .wn, html .belief-col .n, html .bring-col .n,
+html .now-card .num, html .res-n, html .media-card .mn { display: none; }
+html .feat-row { grid-template-columns: 1fr 1.1fr; }
+html .pod { grid-template-columns: 1fr auto; }
+html .witem { grid-template-columns: 128px 1fr auto; }
+@media (max-width: 720px){ html .feat-row { grid-template-columns: 1fr; } html .feat-row p { grid-column: 1; } }
+@media (max-width: 640px){ html .pod { grid-template-columns: 1fr; } }
+@media (max-width: 860px){ html .witem { grid-template-columns: 1fr; } }
+
+/* Decoration that simulated life: sparkles, pulses, spinning marks */
+html .spark, html .hero-badge, html .scroll-cue { display: none; }
+html .nav-logo .star { animation: none; }
+html .hero:not(.hero--photo)::before { background: radial-gradient(60% 50% at 78% 8%, rgba(255,90,31,0.12), transparent 60%); }
+
+/* Photos sit straight */
+html .hero-photo img, html .hero-photo:hover img, html .about-photo, html .about-photo-2,
+html .about-photo-2:hover, html .about-photo .tag { transform: none; }
+html .about-photo-2:hover { transform: translateY(-2px); }
+
+/* Capability band: static, no loop */
+html .marquee-track { animation: none; width: auto; flex-wrap: wrap; justify-content: center; row-gap: 0.4rem; padding: 0 var(--gut); }
+html .marquee-track span { padding: 0 1.1rem; }
+html .marquee-track span::after { content: none; }
+html .marquee-track span + span { border-left: 1px solid rgba(255,255,255,0.35); }
+
+/* Numbers: one colour, no boxes */
+html .stats { gap: 0; border-top: 1px solid var(--line-l); }
+html .stat { border: none; border-radius: 0; background: none; padding: 1.6rem 1.5rem 0 0; }
+html .stat + .stat { padding-left: 1.5rem; border-left: 1px solid var(--line-l); }
+html .stat:hover { transform: none; }
+html .stat .n { color: var(--ink) !important; font-weight: 600; }
+@media (max-width: 820px){ html .stat:nth-child(3) { border-left: none; padding-left: 0; } }
+@media (max-width: 460px){ html .stat + .stat { border-left: none; padding-left: 0; } }
+
+/* Italic serif accent: keep it for page titles and the closing line only */
+html h2 em, html h3 em { font-family: inherit; font-style: normal; font-weight: inherit; letter-spacing: inherit; color: inherit; }
+html .contact h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var(--orange); }
+html p em, html li em { font-family: inherit; }
+
+/* Cards lift gently, without a coloured glow */
+html .now-card:hover, html .now-card:active { transform: translateY(-2px); box-shadow: 0 12px 28px -18px rgba(0,0,0,0.6); }
+html .feat-row:hover { padding-left: 0; }
+
+/* Text links get a drawn underline instead of a border hack */
+html .about-p a { border-bottom: none; text-decoration: underline; text-decoration-color: rgba(190,60,7,0.45); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+html .about-p a:hover { text-decoration-color: var(--orange-ink); }
+
+html .prog-links a { color: var(--orange-ink); }
+html h2 em, html h3 em { color: inherit !important; }
+html .contact h2 em { color: var(--orange) !important; }
+html .marquee-track { flex-wrap: nowrap; justify-content: safe center; overflow-x: auto; scrollbar-width: none; }
+html .marquee-track::-webkit-scrollbar { display: none; }
+html .marquee-track span { font-size: clamp(0.9rem, 1.2vw, 1.08rem); white-space: nowrap; padding: 0 1rem; }
+html .pdlc-card .num { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--orange); }
+
+/* ============================================================
+   DELIGHT LAYER: colour that arrives on interaction, small
+   microinteractions, and the supper-club easter egg.
+   Paired with assets/js/delight.js.
+   ============================================================ */
+:root {
+  --tile:    #2F5FB3;   /* Barcelona azulejo blue */
+  --olive:   #4F6A22;   /* vermut-bar olive */
+  --saffron: #D9920B;   /* paella saffron */
+  --wine:    #7A1F3D;   /* priorat red */
+}
+
+/* toast */
+.kh-toast { position: fixed; left: 50%; bottom: 24px; z-index: 300; transform: translate(-50%, 140%);
+  max-width: min(92vw, 460px); padding: 0.8rem 1.15rem; border-radius: 14px; background: #16120D; color: #F7F5F1;
+  font: 500 0.92rem/1.4 var(--sans, system-ui); box-shadow: 0 18px 40px -18px rgba(0,0,0,0.6);
+  transition: transform 0.45s cubic-bezier(0.22,1,0.36,1); pointer-events: none; text-align: center; }
+.kh-toast.show { transform: translate(-50%, 0); }
+.kh-toast::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--orange, #FF5A1F); margin-right: 0.6rem; vertical-align: 1px; }
+
+/* logo star: hover turn, click spin */
+.nav-logo .star { display: inline-block; cursor: pointer; transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s; border-radius: 50%; }
+.nav-logo:hover .star, .nav-logo .star:focus-visible { transform: rotate(72deg); }
+.nav-logo .star.spin { animation: khspin 0.8s cubic-bezier(0.22,1,0.36,1); color: var(--saffron); }
+@keyframes khspin { from { transform: rotate(0) scale(1); } 50% { transform: rotate(200deg) scale(1.35); } to { transform: rotate(360deg) scale(1); } }
+
+/* buttons: arrow nudge and a soft press */
+.btn .arr, .btn svg { transition: transform 0.25s cubic-bezier(0.22,1,0.36,1); }
+.btn:hover .arr, .btn:hover svg { transform: translateX(3px); }
+.btn:active { transform: scale(0.97); }
+
+/* nav links: underline draws in from the left */
+.nav-links a:not(.btn):not([aria-label]) { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1.5px no-repeat; transition: background-size 0.3s cubic-bezier(0.22,1,0.36,1), color 0.2s; padding-bottom: 2px; }
+.nav-links a:not(.btn):not([aria-label]):hover { background-size: 100% 1.5px; }
+
+/* numbers pick up colour when you point at them */
+.stat .n { transition: color 0.3s; }
+.stat:nth-child(1):hover .n { color: var(--orange-ink) !important; }
+.stat:nth-child(2):hover .n { color: var(--tile) !important; }
+.stat:nth-child(3):hover .n { color: var(--olive) !important; }
+.stat:nth-child(4):hover .n { color: var(--wine) !important; }
+
+/* capability band: each item lifts on hover */
+.marquee-track span { transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), color 0.2s; }
+.marquee-track span:hover { transform: translateY(-2px); color: #16120D; }
+
+.now-card { position: relative; overflow: hidden; }
+
+/* cities: local time tooltip */
+[data-tz] { position: relative; cursor: help; text-decoration: underline dotted rgba(0,0,0,0.25); text-underline-offset: 3px; border-radius: 3px; }
+[data-tz]::after { content: attr(data-time); position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translate(-50%, 4px); white-space: nowrap;
+  padding: 0.3rem 0.55rem; border-radius: 8px; background: var(--tile); color: #fff; font-size: 0.75rem; font-weight: 500;
+  opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s cubic-bezier(0.22,1,0.36,1); }
+[data-tz]:hover::after, [data-tz]:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
+
+/* resources: rows tint blue on hover, an open prompt gets a saffron border */
+.res-table tbody tr { transition: background-color 0.2s; }
+.res-table tbody tr:hover { background: rgba(47,95,179,0.06); }
+.res-table tbody tr:hover th a { color: var(--tile); border-bottom-color: var(--tile); }
+.res-prompt { transition: border-color 0.2s; }
+.res-prompt[open] { border-color: var(--saffron); }
+
+/* easter egg: supper club mode */
+html.supper-club body { transition: filter 0.8s; }
+html.supper-club body::after { content: ''; position: fixed; inset: 0; z-index: 250; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 35%, rgba(255,170,80,0.10), rgba(60,8,24,0.55) 85%); mix-blend-mode: multiply; animation: khcandle 3.2s ease-in-out infinite alternate; }
+html.supper-club { --orange: #C2410C; --orange-ink: #9A1F3D; }
+@keyframes khcandle { from { opacity: 0.85; } to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-logo .star, .btn .arr, .btn svg, .marquee-track span, [data-tz]::after, .kh-toast { transition: none; }
+  .nav-logo .star.spin, html.supper-club body::after { animation: none; }
+}
+.nav-logo .star:focus:not(:focus-visible) { outline: none; }
+
+/* Photo heroes: keep text legible over busy photography */
+html .hero--photo .hero-sub { color: rgba(246,241,231,0.9); text-shadow: 0 1px 2px rgba(0,0,0,0.45); }
+html .hero--photo .hero-sub strong { color: #FFFFFF; }
+html .hero--photo h1 { text-shadow: 0 2px 24px rgba(0,0,0,0.35); }
+@media (max-width: 700px) {
+  html .hero--photo::before {
+    background: linear-gradient(0deg, rgba(11,10,12,0.9) 0%, rgba(11,10,12,0.8) 30%, rgba(11,10,12,0.58) 52%, rgba(11,10,12,0.25) 72%, rgba(11,10,12,0.3) 100%);
+  }
+  html .hero--photo .hero-sub { font-size: 1rem; line-height: 1.55; }
+}
+
+/* ============================================================
+   IMPECCABLE PASS 2: rendered-page findings
+   ============================================================ */
+/* No orphaned last words or lopsided headings */
+html h1, html h2, html h3, html h4, html blockquote { text-wrap: balance; }
+html p, html li, html figcaption, html dd, html .res-lede, html .hero-sub { text-wrap: pretty; }
+
+/* One visible focus style everywhere a component has not set its own */
+html :focus-visible { outline: 2px solid var(--orange-ink, #BE3C07); outline-offset: 3px; border-radius: 4px; }
+html .sec--dark :focus-visible, html .hero :focus-visible, html .foot :focus-visible, html .case-hero-area :focus-visible { outline-color: var(--orange, #FF5A1F); }
+
+/* Small icon links get a 44px tap area without moving anything */
+html .social-icons a { position: relative; }
+html .social-icons a::after { content: ''; position: absolute; inset: -10px; }
+/* comfortable measure for long paragraphs and quotes */
+html .sec-in > p, html blockquote { max-width: 40em; }
+/* advising cards: the brand colour shows as a full border, not a stripe */
+html .now-card::after { content: none; }
+html .now-card { transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s, border-color 0.3s; }
+html .now-card:hover, html .now-card:focus-visible { border-color: var(--c, var(--orange)); }
+
+/* ============================================================
+   TYPE: Bricolage Grotesque for display, Hanken Grotesk for
+   reading and UI, Newsreader italic for the one accent per page.
+   Replaces Space Grotesk and Fraunces (flagged as overused).
+   ============================================================ */
+html :is(h1, h2, h3, .nav-logo, .stat .n, .now-card .co, .pod .pt, .contact h2, .witem .wt,
+  .mobile-menu a, .marquee-track span, .statement p, .res-group h3) {
+  font-family: var(--display); font-optical-sizing: auto; font-variation-settings: 'wdth' 100;
+}
+html :is(h1, h2) { font-weight: 600; letter-spacing: -0.035em; }
+html h1 { font-variation-settings: 'wdth' 92; }
+html :is(h1, h2, h3) em { letter-spacing: -0.02em; }
+html .hero h1 em, html .contact h2 em { font-family: var(--serif); font-style: italic; font-weight: 400; font-optical-sizing: auto; }
+html body { font-feature-settings: 'ss01' 0; }
+html .about-cities { clear: both; padding-top: 0.25rem; }
+html h1 { font-variation-settings: 'wdth' 100; letter-spacing: -0.028em; }
+html h2 { letter-spacing: -0.03em; }
+html h1, html .contact h2 { letter-spacing: -0.02em !important; }
+html h2 { letter-spacing: -0.018em !important; }

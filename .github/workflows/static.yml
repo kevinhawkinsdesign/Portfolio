@@ -39,5 +39,17 @@ jobs:
           # Upload entire repository
           path: '.'
       - name: Deploy to GitHub Pages
-        id: deployment
+        id: first_try
+        continue-on-error: true
         uses: actions/deploy-pages@v4
+      # GitHub's artifact API sometimes lags behind the upload; wait and try once more
+      - name: Wait before retry
+        if: steps.first_try.outcome == 'failure'
+        run: sleep 30
+      - name: Deploy to GitHub Pages (retry)
+        id: retry
+        if: steps.first_try.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+      - name: Report URL
+        id: deployment
+        run: echo "page_url=${{ steps.retry.outputs.page_url || steps.first_try.outputs.page_url }}" >> "$GITHUB_OUTPUT"

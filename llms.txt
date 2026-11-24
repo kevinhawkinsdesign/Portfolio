@@ -13,6 +13,7 @@ Contact: hello@kevinhawkinsdesign.com
 - [Home](https://kevinthecreator.com/): Overview of Kevin's practice, career highlights, and current focus.
 - [Work](https://kevinthecreator.com/work.html): Index of all case studies.
 - [On AI](https://kevinthecreator.com/ai.html): Essays on adopting AI in design and product leadership, including a response to the "Triple Diamond in the Age of AI" framework. Covers hands-on AI work at Monta, Kabisa, KomboAI, and Glovo.
+- [Resources for designers](https://kevinthecreator.com/ai.html#resources): Kevin's curated list of AI tools, skills, MCP connectors, UI component libraries and a 14-prompt library for designers starting to build with AI. Full plain-Markdown version: [resources.md](https://kevinthecreator.com/resources.md).
 - [Speaking & Media](https://kevinthecreator.com/speaking.html): Conference talks, curriculum and teaching work, and podcast appearances.
 - [Mentorship](https://kevinthecreator.com/mentorship.html): One-on-one mentorship for designers, researchers, and product leaders, with reviews on ADPList.
 - [Company Advisory](https://kevinthecreator.com/advising.html): Advisory work with early-stage founders on product, brand, and design, with a particular focus on backing women and Black founders.

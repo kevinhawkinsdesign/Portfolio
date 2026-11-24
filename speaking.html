@@ -74,6 +74,7 @@
   @media (max-width: 900px){ .feat-body{ grid-template-columns:1fr; } }
 
   .logo-row--lg { gap: clamp(1rem, 1.9vw, 1.8rem); }
+  @media (min-width: 721px) and (max-width: 1399px) { .logo-row--lg { display: grid; grid-template-columns: repeat(6, auto); justify-content: center; justify-items: center; row-gap: 1.6rem; column-gap: clamp(1.4rem, 3vw, 2.6rem); } }
   .logo-row--lg img { height: clamp(20px, 2.1vw, 30px); max-width: 124px; }
   .logo-row--lg img.big { height: clamp(23px, 2.7vw, 36px); max-width: 148px; }
 
@@ -151,6 +152,7 @@
 <section class="sec--light logos">
   <span class="eyebrow rise">Trusted by brands and universities:</span>
   <div class="logo-row logo-row--lg rise" data-d="1">
+    <a href="https://www.figma.com/" target="_blank" rel="noopener"><img class="big" src="assets/img/logos/figma.svg" alt="Figma"></a>
     <a href="http://hatchconference.com/" target="_blank" rel="noopener"><img src="assets/img/hatch-conf.png" alt="Hatch Conference"></a>
     <a href="http://leadingdesign.com/" target="_blank" rel="noopener"><img src="assets/img/Leading-Design-Logo.png" alt="Leading Design"></a>
     <a href="http://rgd.ca/" target="_blank" rel="noopener"><img src="assets/img/logos/RGD-logo-transparent.png" alt="RGD"></a>

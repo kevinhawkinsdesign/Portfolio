@@ -557,3 +557,79 @@ html .marquee-track { flex-wrap: nowrap; justify-content: safe center; overflow-
 html .marquee-track::-webkit-scrollbar { display: none; }
 html .marquee-track span { font-size: clamp(0.9rem, 1.2vw, 1.08rem); white-space: nowrap; padding: 0 1rem; }
 html .pdlc-card .num { font-family: var(--sans); font-size: 0.85rem; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--orange); }
+
+/* ============================================================
+   DELIGHT LAYER: colour that arrives on interaction, small
+   microinteractions, and the supper-club easter egg.
+   Paired with assets/js/delight.js.
+   ============================================================ */
+:root {
+  --tile:    #2F5FB3;   /* Barcelona azulejo blue */
+  --olive:   #5E7A2E;   /* vermut-bar olive */
+  --saffron: #D9920B;   /* paella saffron */
+  --wine:    #7A1F3D;   /* priorat red */
+}
+
+/* toast */
+.kh-toast { position: fixed; left: 50%; bottom: 24px; z-index: 300; transform: translate(-50%, 140%);
+  max-width: min(92vw, 460px); padding: 0.8rem 1.15rem; border-radius: 14px; background: #16120D; color: #F7F5F1;
+  font: 500 0.92rem/1.4 var(--sans, system-ui); box-shadow: 0 18px 40px -18px rgba(0,0,0,0.6);
+  transition: transform 0.45s cubic-bezier(0.22,1,0.36,1); pointer-events: none; text-align: center; }
+.kh-toast.show { transform: translate(-50%, 0); }
+.kh-toast::before { content: ''; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--orange, #FF5A1F); margin-right: 0.6rem; vertical-align: 1px; }
+
+/* logo star: hover turn, click spin */
+.nav-logo .star { display: inline-block; cursor: pointer; transition: transform 0.5s cubic-bezier(0.22,1,0.36,1), color 0.3s; border-radius: 50%; }
+.nav-logo:hover .star, .nav-logo .star:focus-visible { transform: rotate(72deg); }
+.nav-logo .star.spin { animation: khspin 0.8s cubic-bezier(0.22,1,0.36,1); color: var(--saffron); }
+@keyframes khspin { from { transform: rotate(0) scale(1); } 50% { transform: rotate(200deg) scale(1.35); } to { transform: rotate(360deg) scale(1); } }
+
+/* buttons: arrow nudge and a soft press */
+.btn .arr, .btn svg { transition: transform 0.25s cubic-bezier(0.22,1,0.36,1); }
+.btn:hover .arr, .btn:hover svg { transform: translateX(3px); }
+.btn:active { transform: scale(0.97); }
+
+/* nav links: underline draws in from the left */
+.nav-links a:not(.btn):not([aria-label]) { background: linear-gradient(currentColor, currentColor) 0 100% / 0 1.5px no-repeat; transition: background-size 0.3s cubic-bezier(0.22,1,0.36,1), color 0.2s; padding-bottom: 2px; }
+.nav-links a:not(.btn):not([aria-label]):hover { background-size: 100% 1.5px; }
+
+/* numbers pick up colour when you point at them */
+.stat .n { transition: color 0.3s; }
+.stat:nth-child(1):hover .n { color: var(--orange-ink) !important; }
+.stat:nth-child(2):hover .n { color: var(--tile) !important; }
+.stat:nth-child(3):hover .n { color: var(--olive) !important; }
+.stat:nth-child(4):hover .n { color: var(--wine) !important; }
+
+/* capability band: each item lifts on hover */
+.marquee-track span { transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), color 0.2s; }
+.marquee-track span:hover { transform: translateY(-2px); color: #16120D; }
+
+/* advising cards: a stripe of the company's colour slides in */
+.now-card { position: relative; overflow: hidden; }
+.now-card::after { content: ''; position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--c, var(--orange)); transform: scaleX(0); transform-origin: left; transition: transform 0.45s cubic-bezier(0.22,1,0.36,1); }
+.now-card:hover::after, .now-card:focus-visible::after { transform: scaleX(1); }
+
+/* cities: local time tooltip */
+[data-tz] { position: relative; cursor: help; text-decoration: underline dotted rgba(0,0,0,0.25); text-underline-offset: 3px; border-radius: 3px; }
+[data-tz]::after { content: attr(data-time); position: absolute; left: 50%; bottom: calc(100% + 8px); transform: translate(-50%, 4px); white-space: nowrap;
+  padding: 0.3rem 0.55rem; border-radius: 8px; background: var(--tile); color: #fff; font-size: 0.75rem; font-weight: 500;
+  opacity: 0; pointer-events: none; transition: opacity 0.2s, transform 0.2s cubic-bezier(0.22,1,0.36,1); }
+[data-tz]:hover::after, [data-tz]:focus-visible::after { opacity: 1; transform: translate(-50%, 0); }
+
+/* resources table rows and prompts get a coloured edge on hover */
+.res-table tbody tr { transition: box-shadow 0.2s; }
+.res-table tbody tr:hover { box-shadow: inset 3px 0 0 var(--tile); }
+.res-prompt[open] { box-shadow: inset 3px 0 0 var(--saffron); }
+
+/* easter egg: supper club mode */
+html.supper-club body { transition: filter 0.8s; }
+html.supper-club body::after { content: ''; position: fixed; inset: 0; z-index: 250; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 35%, rgba(255,170,80,0.10), rgba(60,8,24,0.55) 85%); mix-blend-mode: multiply; animation: khcandle 3.2s ease-in-out infinite alternate; }
+html.supper-club { --orange: #C2410C; --orange-ink: #9A1F3D; }
+@keyframes khcandle { from { opacity: 0.85; } to { opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-logo .star, .btn .arr, .btn svg, .marquee-track span, .now-card::after, [data-tz]::after, .kh-toast { transition: none; }
+  .nav-logo .star.spin, html.supper-club body::after { animation: none; }
+}
+.nav-logo .star:focus:not(:focus-visible) { outline: none; }

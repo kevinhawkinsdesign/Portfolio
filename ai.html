@@ -112,7 +112,12 @@
   .res-card h4 { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.02em; }
   .res-card p { font-size: 0.9rem; color: var(--ink-2); flex: 1; }
   .res-card .go { font-family: var(--mono); font-size: 0.7rem; color: var(--orange-ink); }
-  @media (max-width: 900px){ .res-grid{ grid-template-columns:1fr; } }
+  .res-grid.two { grid-template-columns: repeat(2,1fr); }
+  .res-code { font-family: var(--mono); font-size: 0.78rem; line-height: 1.6; padding: 1.1rem 1.25rem; border: 1px solid var(--line-l); border-radius: 14px; overflow-x: auto; white-space: pre; margin-top: 0.75rem; }
+  .res-note { font-size: 0.9rem; color: var(--ink-2); max-width: 62ch; margin-bottom: 1rem; }
+  .res-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
+  .res-tags span { font-family: var(--mono); font-size: 0.72rem; padding: 0.4rem 0.8rem; border: 1px solid var(--line-l); border-radius: 100px; color: var(--ink-2); }
+  @media (max-width: 900px){ .res-grid, .res-grid.two { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -175,7 +180,7 @@
     <button class="ai-tab" role="tab" aria-selected="false" data-tab="data-trust">Data &amp; Trust</button>
     <button class="ai-tab" role="tab" aria-selected="false" data-tab="hand-offs-loops">Hand-offs vs. Loops</button>
     <button class="ai-tab" role="tab" aria-selected="false" data-tab="judgment">The Judgment Gap</button>
-    <button class="ai-tab" role="tab" aria-selected="false" data-tab="build">Build with AI</button>
+    <button class="ai-tab" role="tab" aria-selected="false" data-tab="resources">Resources for Designers</button>
   </div>
 </div>
 
@@ -323,38 +328,91 @@
 
 </div>
 
-<div class="ai-panel" id="panel-build" role="tabpanel">
+<div class="ai-panel" id="panel-resources" role="tabpanel">
 
 <section class="sec sec--light">
   <div class="sec-in">
     <div class="res-intro rise">
-      <span class="eyebrow" style="margin-bottom:1.25rem">For designers starting to build</span>
-      <h2>You don't need to become an engineer. You do need to <em>build</em>.</h2>
-      <p>The fastest way I've seen designers earn a seat in AI-native teams is by shipping something real: a prototype that runs, a tool that solves their own problem, a page that is live. These are the resources I'd point you to first. The list is short on purpose, and it will keep growing.</p>
+      <span class="eyebrow" style="margin-bottom:1.25rem">Resources for designers</span>
+      <h2>Everything I share when designers ask <em>"where do I start?"</em></h2>
+      <p>This is the working list from the sessions and team setups I run: the tools, plugins, skills and connectors I recommend, with the links and install commands. Start with the setup, then pick one thing to build this week.</p>
     </div>
     <div class="res-group rise">
-      <h3>Start here: prompt and build</h3>
-      <div class="res-grid">
-        <a class="res-card" href="https://claude.ai" target="_blank" rel="noopener"><h4>Claude</h4><p>A good first stop for thinking through a flow, drafting copy, or turning a rough idea into a working prototype.</p><span class="go">claude.ai ↗</span></a>
-        <a class="res-card" href="https://www.anthropic.com/claude-code" target="_blank" rel="noopener"><h4>Claude Code</h4><p>Build in a real codebase from the terminal. The bridge from design intent to shipped code.</p><span class="go">anthropic.com ↗</span></a>
-        <a class="res-card" href="https://docs.claude.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank" rel="noopener"><h4>Prompt engineering guide</h4><p>The official guide to writing clear, structured prompts. Worth reading once, properly.</p><span class="go">docs.claude.com ↗</span></a>
+      <h3>1. Connect Figma to your AI tools</h3>
+      <p class="res-note">Install the Figma plugin in Claude Code or Cursor first. It adds the Figma MCP server and Figma's own skills (figma-use, figma-generate-design, figma-generate-library and more) in one step.</p>
+      <pre class="res-code"># Claude Code
+claude plugin install figma@claude-plugins-official
+# then: /plugin &gt; Installed &gt; figma &gt; sign in
+
+# Cursor chat
+/add-plugin figma
+# then: Cursor Settings &gt; Tools &amp; MCP &gt; Connect
+
+# Any client: add an HTTP MCP server with this URL
+https://mcp.figma.com/mcp</pre>
+    </div>
+    <div class="res-group rise">
+      <h3>2. Figma and design-to-code</h3>
+      <div class="res-grid ">
+        <a class="res-card" href="https://www.figma.com/solutions/ai-design-agent/" target="_blank" rel="noopener"><h4>The Figma agent</h4><p>An AI agent that works on your canvas with your libraries.</p><span class="go">figma.com ↗</span></a>
+        <a class="res-card" href="https://www.figma.com/agents/" target="_blank" rel="noopener"><h4>Figma agents overview</h4><p>What the agents can do and which plans include them.</p><span class="go">figma.com ↗</span></a>
+        <a class="res-card" href="https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/" target="_blank" rel="noopener"><h4>Figma MCP server setup</h4><p>Remote server install guide for any MCP-capable client.</p><span class="go">developers.figma.com ↗</span></a>
+        <a class="res-card" href="https://developers.figma.com/docs/figma-mcp-server/write-to-canvas" target="_blank" rel="noopener"><h4>Write to canvas</h4><p>Let your AI tool create and edit real frames in Figma.</p><span class="go">developers.figma.com ↗</span></a>
+        <a class="res-card" href="https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect" target="_blank" rel="noopener"><h4>Code Connect</h4><p>Map your design components to your code components so generated code uses the real ones.</p><span class="go">help.figma.com ↗</span></a>
+        <a class="res-card" href="https://help.figma.com/hc/en-us/articles/44193259600535-Code-layers-in-Figma-Design" target="_blank" rel="noopener"><h4>Code layers in Figma Design</h4><p>Build and edit coded layers inside a design file.</p><span class="go">help.figma.com ↗</span></a>
+        <a class="res-card" href="https://www.figma.com/solutions/ai-coding-agent/" target="_blank" rel="noopener"><h4>Figma Make</h4><p>Go from a prompt or a frame to a working prototype.</p><span class="go">figma.com ↗</span></a>
+        <a class="res-card" href="https://www.figma.com/blog/config-2026-recap/" target="_blank" rel="noopener"><h4>Config 2026 recap</h4><p>The product announcements behind all of the above.</p><span class="go">figma.com ↗</span></a>
       </div>
     </div>
     <div class="res-group rise">
-      <h3>Prototype fast</h3>
-      <div class="res-grid">
-        <a class="res-card" href="https://www.figma.com/make/" target="_blank" rel="noopener"><h4>Figma Make</h4><p>Prompt your way from a design or an idea to a working prototype without leaving Figma.</p><span class="go">figma.com ↗</span></a>
-        <a class="res-card" href="https://v0.app" target="_blank" rel="noopener"><h4>v0</h4><p>Describe an interface, get working React components you can edit and deploy.</p><span class="go">v0.app ↗</span></a>
-        <a class="res-card" href="https://lovable.dev" target="_blank" rel="noopener"><h4>Lovable</h4><p>Full-stack apps from a conversation. Good for testing a product idea end to end.</p><span class="go">lovable.dev ↗</span></a>
-        <a class="res-card" href="https://bolt.new" target="_blank" rel="noopener"><h4>Bolt</h4><p>Prompt, edit, and deploy web apps from the browser.</p><span class="go">bolt.new ↗</span></a>
+      <h3>3. Prompt, prototype and test</h3>
+      <div class="res-grid ">
+        <a class="res-card" href="https://claude.ai" target="_blank" rel="noopener"><h4>Claude</h4><p>Projects for research synthesis, plus Research for competitive scans.</p><span class="go">claude.ai ↗</span></a>
+        <a class="res-card" href="https://claude.ai/design" target="_blank" rel="noopener"><h4>Claude Design</h4><p>Design with Claude on a canvas you can keep editing. Research preview.</p><span class="go">claude.ai ↗</span></a>
+        <a class="res-card" href="https://code.claude.com/docs" target="_blank" rel="noopener"><h4>Claude Code</h4><p>Build in a real codebase from the terminal or the browser.</p><span class="go">code.claude.com ↗</span></a>
+        <a class="res-card" href="https://code.claude.com/docs/en/claude-code-on-the-web" target="_blank" rel="noopener"><h4>Claude Code on the web</h4><p>No local install. Runs in the browser against your repos.</p><span class="go">code.claude.com ↗</span></a>
+        <a class="res-card" href="https://gemini.google.com" target="_blank" rel="noopener"><h4>Gemini Deep Research</h4><p>Sourced competitive scans with a link behind every claim.</p><span class="go">gemini.google.com ↗</span></a>
+        <a class="res-card" href="https://cursor.com" target="_blank" rel="noopener"><h4>Cursor</h4><p>An AI-first editor. Pair it with the Figma MCP server to implement frames.</p><span class="go">cursor.com ↗</span></a>
+        <a class="res-card" href="https://maze.co" target="_blank" rel="noopener"><h4>Maze</h4><p>Run the unmoderated test your AI-written plan describes.</p><span class="go">maze.co ↗</span></a>
       </div>
     </div>
     <div class="res-group rise">
-      <h3>Work in code with an assistant</h3>
-      <div class="res-grid">
-        <a class="res-card" href="https://cursor.com" target="_blank" rel="noopener"><h4>Cursor</h4><p>An AI-first code editor. A comfortable way for designers to start editing real front-end code.</p><span class="go">cursor.com ↗</span></a>
-        <a class="res-card" href="https://replit.com" target="_blank" rel="noopener"><h4>Replit</h4><p>Spin up and host projects in the browser with no local setup.</p><span class="go">replit.com ↗</span></a>
-        <a class="res-card" href="https://pages.github.com" target="_blank" rel="noopener"><h4>GitHub Pages</h4><p>Free hosting for the static sites you build. This site runs on it.</p><span class="go">pages.github.com ↗</span></a>
+      <h3>4. Skills worth installing</h3>
+      <div class="res-grid ">
+        <a class="res-card" href="https://www.figma.com/resource-library/claude-skills-for-design/" target="_blank" rel="noopener"><h4>Claude skills for design</h4><p>Figma's guide to skills that help designers.</p><span class="go">figma.com ↗</span></a>
+        <a class="res-card" href="https://developers.figma.com/docs/figma-mcp-server/create-skills" target="_blank" rel="noopener"><h4>Create skills for the Figma MCP server</h4><p>Turn a prompt that works into a repeatable team skill.</p><span class="go">developers.figma.com ↗</span></a>
+        <a class="res-card" href="https://github.com/figma/mcp-server-guide" target="_blank" rel="noopener"><h4>Figma mcp-server-guide</h4><p>Figma's official skills on GitHub.</p><span class="go">github.com ↗</span></a>
+        <a class="res-card" href="https://github.com/anthropics/skills" target="_blank" rel="noopener"><h4>Anthropic skills</h4><p>The reference collection of skills, including document formats.</p><span class="go">github.com ↗</span></a>
+        <a class="res-card" href="https://github.com/Owl-Listener/designer-skills" target="_blank" rel="noopener"><h4>designer-skills</h4><p>63 design skills in one repo.</p><span class="go">github.com ↗</span></a>
+        <a class="res-card" href="https://www.magier.com/blog/best-claude-design-skills-for-designers" target="_blank" rel="noopener"><h4>Best Claude design skills for designers</h4><p>A curated read from Magier.</p><span class="go">magier.com ↗</span></a>
+        <a class="res-card" href="https://nervegna.substack.com/p/50-claude-code-skills-for-designers" target="_blank" rel="noopener"><h4>50 Claude Code skills for designers</h4><p>A long list to browse by need.</p><span class="go">nervegna.substack.com ↗</span></a>
+        <a class="res-card" href="https://github.com/benjitaylor/skills" target="_blank" rel="noopener"><h4>Stageshow</h4><p>Faux UI stills, animations and bento grids for marketing and app store assets.</p><span class="go">github.com ↗</span></a>
+      </div>
+      <pre class="res-code"># Stageshow
+npx skills add benjitaylor/skills --skill stageshow
+
+# Save your own skill in Claude Code
+.claude/skills/your-skill-name/SKILL.md</pre>
+    </div>
+    <div class="res-group rise">
+      <h3>5. Set up Claude for your whole team</h3>
+      <p class="res-note">The connectors I recommend first are Gmail, Google Calendar, Google Drive, Linear and Slack. Add GitHub when you start working in a repo.</p>
+      <div class="res-grid ">
+        <a class="res-card" href="https://claude.ai" target="_blank" rel="noopener"><h4>Create or log into Claude</h4><p>One account per person. Connectors are per user and do not transfer.</p><span class="go">claude.ai ↗</span></a>
+        <a class="res-card" href="https://claude.ai/settings/connectors" target="_blank" rel="noopener"><h4>Connectors settings</h4><p>Connect Gmail, Google Calendar, Google Drive, Linear and Slack, each one individually.</p><span class="go">claude.ai ↗</span></a>
+        <a class="res-card" href="https://claude.ai/settings/capabilities" target="_blank" rel="noopener"><h4>Capabilities settings</h4><p>Turn skills and plugins on or off.</p><span class="go">claude.ai ↗</span></a>
+      </div>
+      <p class="res-note" style="margin-top:1.5rem">Everyday skills to switch on in Claude:</p>
+      <div class="res-tags"><span>xlsx</span><span>pptx</span><span>pdf</span><span>docx</span><span>skill-creator</span><span>morning</span></div>
+      <p class="res-note" style="margin-top:1.5rem">Built into Claude Code sessions, no setup needed:</p>
+      <div class="res-tags"><span>verify</span><span>code-review</span><span>simplify</span><span>security-review</span><span>init</span><span>run</span><span>dataviz</span><span>artifact-design</span><span>loop</span><span>claude-api</span><span>update-config</span><span>session-start-hook</span></div>
+    </div>
+    <div class="res-group rise">
+      <h3>6. Read about the process</h3>
+      <div class="res-grid ">
+        <a class="res-card" href="https://axdesigners.medium.com/designing-for-intelligence-reimagining-the-double-diamond-in-the-age-of-ai-7335be659a19" target="_blank" rel="noopener"><h4>Designing for intelligence (AIDE)</h4><p>Reimagining the Double Diamond in the age of AI.</p><span class="go">axdesigners.medium.com ↗</span></a>
+        <a class="res-card" href="https://uxplanet.org/gen-ai-design-process-rethinking-the-traditional-approach-for-next-gen-ux-5363c8dea4d7" target="_blank" rel="noopener"><h4>Gen AI design process (UX Planet)</h4><p>Rethinking the traditional approach for next-gen UX.</p><span class="go">uxplanet.org ↗</span></a>
+        <a class="res-card" href="https://medium.com/@abieastwell/how-product-designers-can-use-ai-to-enhance-their-workload-be4d00537f0d" target="_blank" rel="noopener"><h4>How product designers can use AI</h4><p>Practical ways to enhance your workload.</p><span class="go">medium.com ↗</span></a>
       </div>
     </div>
   </div>

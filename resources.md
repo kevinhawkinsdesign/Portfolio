@@ -27,39 +27,27 @@ https://mcp.figma.com/mcp
 
 The plugin adds the Figma MCP server plus Figma's skills: figma-use, figma-generate-design, figma-generate-library and more. Plan, seat and AI credit rules for the agent, code layers, Code Connect and write to canvas change often, so check Figma's current terms before you rely on a beta feature.
 
-## Which tool for which job
+## Which tool, when
 
 Link: https://kevinthecreator.com/ai.html#res-jobs
 
 Pick one tool per row and get good at it. You do not need all of them on day one.
 
-| The job | Reach for | Why |
+| The job | Reach for | Why it fits |
 |---|---|---|
-| Research and synthesis | Claude, Gemini Deep Research, Dovetail | Cited sources and long context |
-| Framing and strategy | Claude, Gemini | A thought partner that argues back |
-| Layouts on your system | Figma agent | Uses your real components and variables |
-| Interactive prototypes | Code layers, Figma Make, Claude Design | Real states and logic, not click-throughs |
-| Production front-end | Cursor or Claude Code with the Figma MCP | Reads your file and your Code Connect mappings |
-| QA and accessibility | Figma agent skills, Cursor with axe | Repeatable checks instead of one-off reviews |
-| Marketing visuals | Gemini images, Figma Weave tools | Fast variations in one consistent style |
+| Research and synthesis | Claude, Gemini Deep Research, Dovetail | Cited sources and long context. |
+| Framing and strategy | Claude, Gemini | A thought partner that argues back. |
+| Layouts on your design system | Figma agent | Starts from your libraries. Hands off editable Figma layers. |
+| Real interaction beside your designs | Code layers | Starts from frames, a prompt, a repo or a webpage. Hands off code on canvas or a pull request. |
+| A standalone app with data and logic | Figma Make | Starts from a prompt. Hands off a published app with a Supabase backend. |
+| Fast exploration, decks, one-pagers | Claude Design | Starts from a prompt, files or a codebase. Hands off a Claude Code bundle, PDF, PPTX or Canva. |
+| Production front-end | Cursor or Claude Code with the Figma MCP | Reads your Figma link, your repo and your Code Connect mappings. Hands off a pull request. |
+| QA and accessibility | Figma agent skills, Cursor with axe | Repeatable checks instead of one-off reviews. |
+| Marketing visuals | Gemini images, Figma Weave tools | Fast variations in one consistent style. |
 
 **The rule of thumb**
 
-Chat tools for thinking and words. The Figma agent when the output must live on your canvas with your components. Code layers or Figma Make when you need real interaction. Cursor or Claude Code when it becomes production code.
-
-## Which prototyping tool, when
-
-Link: https://kevinthecreator.com/ai.html#res-proto
-
-Match the tool to what you need to hand off.
-
-| Tool | Best for | Starts from | Hands off as |
-|---|---|---|---|
-| Figma agent | On-system layouts and variations | Your libraries | Editable Figma layers |
-| Code layers | Real interaction beside your designs | Frames, prompt, repo, webpage | Code on canvas, pull request |
-| Figma Make | Standalone apps with data and logic | A prompt | Published app, Supabase backend |
-| Claude Design | Fast exploration, decks, one-pagers | Prompt, files, codebase | Claude Code bundle, PDF, PPTX, Canva |
-| Cursor with Figma MCP | Production front-end | Figma link and your repo | A pull request |
+Chat tools for thinking and words. The Figma agent when the output must live on your canvas with your components. Code layers, Figma Make or Claude Design when you need real interaction. Cursor or Claude Code when it becomes production code.
 
 ## Figma and design-to-code
 

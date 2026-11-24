@@ -404,7 +404,7 @@
       </label>
       <p id="res-count" class="res-count" aria-live="polite"></p>
     </div>
-    <nav class="res-jump" aria-label="Jump to a section"><a href="#res-setup">Connect Figma to your AI tools</a><a href="#res-jobs">Which tool for which job</a><a href="#res-proto">Which prototyping tool, when</a><a href="#res-figma">Figma and design-to-code</a><a href="#res-build">Prompt, prototype, test and ship</a><a href="#res-components">Ready-to-use UI components</a><a href="#res-toolkit">An open-source toolkit for agent-built UI</a><a href="#res-skills">Skills worth installing</a><a href="#res-skill-template">Turn a prompt that works into a team skill</a><a href="#res-prompts">The prompt library</a><a href="#res-rituals">Five rituals that protect ownership</a><a href="#res-plan">Your next 30 days</a><a href="#res-team">Set up Claude for your whole team</a><a href="#res-reading">Read about the process</a></nav>
+    <nav class="res-jump" aria-label="Jump to a section"><a href="#res-setup">Connect Figma to your AI tools</a><a href="#res-jobs">Which tool, when</a><a href="#res-figma">Figma and design-to-code</a><a href="#res-build">Prompt, prototype, test and ship</a><a href="#res-components">Ready-to-use UI components</a><a href="#res-toolkit">An open-source toolkit for agent-built UI</a><a href="#res-skills">Skills worth installing</a><a href="#res-skill-template">Turn a prompt that works into a team skill</a><a href="#res-prompts">The prompt library</a><a href="#res-rituals">Five rituals that protect ownership</a><a href="#res-plan">Your next 30 days</a><a href="#res-team">Set up Claude for your whole team</a><a href="#res-reading">Read about the process</a></nav>
     <div class="res-quick" aria-label="Popular searches"><span>Try:</span><button type="button" data-q="figma">figma</button><button type="button" data-q="free">free</button><button type="button" data-q="taste">taste</button><button type="button" data-q="prototype">prototype</button><button type="button" data-q="accessibility">accessibility</button><button type="button" data-q="animate">animate</button></div>
     <p class="res-empty" id="res-empty" hidden>Nothing matches that yet. Try a broader word, or <button type="button" class="res-clear">clear the search</button>.</p>
     <div class="res-group" id="res-setup">
@@ -427,36 +427,27 @@ https://mcp.figma.com/mcp</pre>
       </details>
     </div>
     <div class="res-group" id="res-jobs">
-      <h3><span class="res-n">02</span>Which tool for which job</h3>
+      <h3><span class="res-n">02</span>Which tool, when</h3>
       <p class="res-lede">Pick one tool per row and get good at it. You do not need all of them on day one.</p>
-      <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">The job</th><th scope="col">Reach for</th><th scope="col">Why</th></tr></thead><tbody>
-        <tr class="res-item"><th scope="row" data-label="The job">Research and synthesis</th><td data-label="Reach for">Claude, Gemini Deep Research, Dovetail</td><td data-label="Why">Cited sources and long context</td></tr>
-        <tr class="res-item"><th scope="row" data-label="The job">Framing and strategy</th><td data-label="Reach for">Claude, Gemini</td><td data-label="Why">A thought partner that argues back</td></tr>
-        <tr class="res-item"><th scope="row" data-label="The job">Layouts on your system</th><td data-label="Reach for">Figma agent</td><td data-label="Why">Uses your real components and variables</td></tr>
-        <tr class="res-item"><th scope="row" data-label="The job">Interactive prototypes</th><td data-label="Reach for">Code layers, Figma Make, Claude Design</td><td data-label="Why">Real states and logic, not click-throughs</td></tr>
-        <tr class="res-item"><th scope="row" data-label="The job">Production front-end</th><td data-label="Reach for">Cursor or Claude Code with the Figma MCP</td><td data-label="Why">Reads your file and your Code Connect mappings</td></tr>
-        <tr class="res-item"><th scope="row" data-label="The job">QA and accessibility</th><td data-label="Reach for">Figma agent skills, Cursor with axe</td><td data-label="Why">Repeatable checks instead of one-off reviews</td></tr>
-        <tr class="res-item"><th scope="row" data-label="The job">Marketing visuals</th><td data-label="Reach for">Gemini images, Figma Weave tools</td><td data-label="Why">Fast variations in one consistent style</td></tr>
+      <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">The job</th><th scope="col">Reach for</th><th scope="col">Why it fits</th></tr></thead><tbody>
+        <tr class="res-item"><th scope="row" data-label="The job">Research and synthesis</th><td data-label="Reach for">Claude, Gemini Deep Research, Dovetail</td><td data-label="Why it fits">Cited sources and long context.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">Framing and strategy</th><td data-label="Reach for">Claude, Gemini</td><td data-label="Why it fits">A thought partner that argues back.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">Layouts on your design system</th><td data-label="Reach for">Figma agent</td><td data-label="Why it fits">Starts from your libraries. Hands off editable Figma layers.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">Real interaction beside your designs</th><td data-label="Reach for">Code layers</td><td data-label="Why it fits">Starts from frames, a prompt, a repo or a webpage. Hands off code on canvas or a pull request.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">A standalone app with data and logic</th><td data-label="Reach for">Figma Make</td><td data-label="Why it fits">Starts from a prompt. Hands off a published app with a Supabase backend.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">Fast exploration, decks, one-pagers</th><td data-label="Reach for">Claude Design</td><td data-label="Why it fits">Starts from a prompt, files or a codebase. Hands off a Claude Code bundle, PDF, PPTX or Canva.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">Production front-end</th><td data-label="Reach for">Cursor or Claude Code with the Figma MCP</td><td data-label="Why it fits">Reads your Figma link, your repo and your Code Connect mappings. Hands off a pull request.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">QA and accessibility</th><td data-label="Reach for">Figma agent skills, Cursor with axe</td><td data-label="Why it fits">Repeatable checks instead of one-off reviews.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">Marketing visuals</th><td data-label="Reach for">Gemini images, Figma Weave tools</td><td data-label="Why it fits">Fast variations in one consistent style.</td></tr>
       </tbody></table></div>
       <details class="res-more"><summary>The rule of thumb</summary>
         <div class="res-more-body">
-          <p>Chat tools for thinking and words. The Figma agent when the output must live on your canvas with your components. Code layers or Figma Make when you need real interaction. Cursor or Claude Code when it becomes production code.</p>
+          <p>Chat tools for thinking and words. The Figma agent when the output must live on your canvas with your components. Code layers, Figma Make or Claude Design when you need real interaction. Cursor or Claude Code when it becomes production code.</p>
         </div>
       </details>
     </div>
-    <div class="res-group" id="res-proto">
-      <h3><span class="res-n">03</span>Which prototyping tool, when</h3>
-      <p class="res-lede">Match the tool to what you need to hand off.</p>
-      <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Tool</th><th scope="col">Best for</th><th scope="col">Starts from</th><th scope="col">Hands off as</th></tr></thead><tbody>
-        <tr class="res-item"><th scope="row" data-label="Tool">Figma agent</th><td data-label="Best for">On-system layouts and variations</td><td data-label="Starts from">Your libraries</td><td data-label="Hands off as">Editable Figma layers</td></tr>
-        <tr class="res-item"><th scope="row" data-label="Tool">Code layers</th><td data-label="Best for">Real interaction beside your designs</td><td data-label="Starts from">Frames, prompt, repo, webpage</td><td data-label="Hands off as">Code on canvas, pull request</td></tr>
-        <tr class="res-item"><th scope="row" data-label="Tool">Figma Make</th><td data-label="Best for">Standalone apps with data and logic</td><td data-label="Starts from">A prompt</td><td data-label="Hands off as">Published app, Supabase backend</td></tr>
-        <tr class="res-item"><th scope="row" data-label="Tool">Claude Design</th><td data-label="Best for">Fast exploration, decks, one-pagers</td><td data-label="Starts from">Prompt, files, codebase</td><td data-label="Hands off as">Claude Code bundle, PDF, PPTX, Canva</td></tr>
-        <tr class="res-item"><th scope="row" data-label="Tool">Cursor with Figma MCP</th><td data-label="Best for">Production front-end</td><td data-label="Starts from">Figma link and your repo</td><td data-label="Hands off as">A pull request</td></tr>
-      </tbody></table></div>
-    </div>
     <div class="res-group" id="res-figma">
-      <h3><span class="res-n">04</span>Figma and design-to-code</h3>
+      <h3><span class="res-n">03</span>Figma and design-to-code</h3>
       <p class="res-lede">Start with the MCP server setup page, then Code Connect.</p>
       <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Resource</th><th scope="col">What it's for</th></tr></thead><tbody>
         <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://www.figma.com/solutions/ai-design-agent/" target="_blank" rel="noopener">The Figma agent<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">figma.com</span></th><td>An AI agent that works on your canvas with your libraries.</td></tr>
@@ -470,7 +461,7 @@ https://mcp.figma.com/mcp</pre>
       </tbody></table></div>
     </div>
     <div class="res-group" id="res-build">
-      <h3><span class="res-n">05</span>Prompt, prototype, test and ship</h3>
+      <h3><span class="res-n">04</span>Prompt, prototype, test and ship</h3>
       <p class="res-lede">The everyday tools, from research to a live site.</p>
       <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Resource</th><th scope="col">What it's for</th><th scope="col">Stage</th></tr></thead><tbody>
         <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://claude.ai" target="_blank" rel="noopener">Claude<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">claude.ai</span></th><td>Projects for research synthesis, plus Research for competitive scans.</td><td><span class="res-pill">Think</span></td></tr>
@@ -491,7 +482,7 @@ https://mcp.figma.com/mcp</pre>
       </details>
     </div>
     <div class="res-group" id="res-components">
-      <h3><span class="res-n">06</span>Ready-to-use UI components</h3>
+      <h3><span class="res-n">05</span>Ready-to-use UI components</h3>
       <p class="res-lede">Start from a library instead of a blank file. Give your agent one as a reference and the result looks far less generic.</p>
       <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Library</th><th scope="col">What you get</th><th scope="col">Cost</th></tr></thead><tbody>
         <tr class="res-item"><th scope="row" data-label="Library"><a href="https://affectui.com" target="_blank" rel="noopener">affectUI<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">affectui.com</span></th><td>243 React components, screens and motion effects for AI products and SaaS. One self-contained file each, installable with shadcn or MCP.</td><td><span class="res-pill">Free + Pro</span></td></tr>
@@ -505,7 +496,7 @@ https://mcp.figma.com/mcp</pre>
       </tbody></table></div>
     </div>
     <div class="res-group" id="res-toolkit">
-      <h3><span class="res-n">07</span>An open-source toolkit for agent-built UI</h3>
+      <h3><span class="res-n">06</span>An open-source toolkit for agent-built UI</h3>
       <p class="res-lede">Fonts, layouts, contrast, icons, canvas and motion. Work in order: style, layout, contrast, sketch, animate.</p>
       <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Tool</th><th scope="col">What it does</th><th scope="col">Step</th></tr></thead><tbody>
         <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill" target="_blank" rel="noopener">ui-ux-pro-max<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>80 styles, palettes and font combos, ready to use.</td><td><span class="res-pill">Style</span></td></tr>
@@ -528,7 +519,7 @@ https://mcp.figma.com/mcp</pre>
       </tbody></table></div>
     </div>
     <div class="res-group" id="res-skills">
-      <h3><span class="res-n">08</span>Skills worth installing</h3>
+      <h3><span class="res-n">07</span>Skills worth installing</h3>
       <p class="res-lede">Skills give your agent taste and repeatable habits. Start with one critic and one collection.</p>
       <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Skill</th><th scope="col">What it does</th><th scope="col">Type</th></tr></thead><tbody>
         <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://impeccable.style" target="_blank" rel="noopener">Impeccable<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">impeccable.style</span></th><td>Critique, audit and polish away generic UI. Its anti-slop page is worth reading on its own.</td><td><span class="res-pill">Taste</span></td></tr>
@@ -562,7 +553,7 @@ npx skills add Leonxlnx/taste-skill</pre>
       </details>
     </div>
     <div class="res-group" id="res-skill-template">
-      <h3><span class="res-n">09</span>Turn a prompt that works into a team skill</h3>
+      <h3><span class="res-n">08</span>Turn a prompt that works into a team skill</h3>
       <p class="res-lede">A skill is a folder with a SKILL.md file. Build one team skill a month and you have a real design ops toolkit by summer.</p>
       <details class="res-more"><summary>Show the SKILL.md template</summary>
         <div class="res-more-body">
@@ -594,7 +585,7 @@ When someone asks to check frames for hardcoded values or drift from the library
       </details>
     </div>
     <div class="res-group" id="res-prompts">
-      <h3><span class="res-n">10</span>The prompt library</h3>
+      <h3><span class="res-n">09</span>The prompt library</h3>
       <p class="res-lede">14 prompts across Discover, Define, Develop and Deliver. Open one, fill the [brackets], copy, run.</p>
       <details class="res-more"><summary>Three habits that make every prompt better</summary>
         <div class="res-more-body">
@@ -714,7 +705,7 @@ After the test I'll paste results: summarize by task with completion, time on ta
       </details>
     </div>
     <div class="res-group" id="res-rituals">
-      <h3><span class="res-n">11</span>Five rituals that protect ownership</h3>
+      <h3><span class="res-n">10</span>Five rituals that protect ownership</h3>
       <p class="res-lede">AI makes generating options cheap. These keep taste and decisions a team practice.</p>
       <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Ritual</th><th scope="col">What it looks like</th></tr></thead><tbody>
         <tr class="res-item"><th scope="row" data-label="Ritual">Show the prompt in crits</th><td data-label="What it looks like">Share the agent thread with the design, so others see how you got there.</td></tr>
@@ -725,7 +716,7 @@ After the test I'll paste results: summarize by task with completion, time on ta
       </tbody></table></div>
     </div>
     <div class="res-group" id="res-plan">
-      <h3><span class="res-n">12</span>Your next 30 days</h3>
+      <h3><span class="res-n">11</span>Your next 30 days</h3>
       <p class="res-lede">Multiply the people you already have. No new headcount required.</p>
       <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Week</th><th scope="col">Focus</th><th scope="col">Do this</th></tr></thead><tbody>
         <tr class="res-item"><th scope="row" data-label="Week">Week 1</th><td data-label="Focus">Set up</td><td data-label="Do this">Install the Figma plugin in Claude Code or Cursor. Connect your libraries to the Figma agent. Try a code layer.</td></tr>
@@ -735,7 +726,7 @@ After the test I'll paste results: summarize by task with completion, time on ta
       </tbody></table></div>
     </div>
     <div class="res-group" id="res-team">
-      <h3><span class="res-n">13</span>Set up Claude for your whole team</h3>
+      <h3><span class="res-n">12</span>Set up Claude for your whole team</h3>
       <p class="res-lede">One account per person. Connectors are per user and do not transfer.</p>
       <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Step</th><th scope="col">What to do</th></tr></thead><tbody>
         <tr class="res-item"><th scope="row" data-label="Step"><a href="https://claude.ai" target="_blank" rel="noopener">Create or log into Claude<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">claude.ai</span></th><td>Start here for every teammate.</td></tr>
@@ -752,7 +743,7 @@ After the test I'll paste results: summarize by task with completion, time on ta
       </details>
     </div>
     <div class="res-group" id="res-reading">
-      <h3><span class="res-n">14</span>Read about the process</h3>
+      <h3><span class="res-n">13</span>Read about the process</h3>
       <p class="res-lede">If you read one thing, read the AIDE article.</p>
       <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Article</th><th scope="col">What it covers</th></tr></thead><tbody>
         <tr class="res-item"><th scope="row" data-label="Article"><a href="https://axdesigners.medium.com/designing-for-intelligence-reimagining-the-double-diamond-in-the-age-of-ai-7335be659a19" target="_blank" rel="noopener">Designing for intelligence (AIDE)<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">axdesigners.medium.com</span></th><td>Reimagining the Double Diamond in the age of AI.</td></tr>
@@ -821,6 +812,7 @@ After the test I'll paste results: summarize by task with completion, time on ta
   fromHash();
 })();
 </script>
+
 
 <script>
 (function () {

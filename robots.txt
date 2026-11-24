@@ -3,5 +3,6 @@ Allow: /
 
 # Interview pitch deck, kept out of search results
 Disallow: /skyscanner-case-study.html
+Disallow: /preview/
 
 Sitemap: https://kevinthecreator.com/sitemap.xml

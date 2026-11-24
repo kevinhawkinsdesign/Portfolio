@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<script>
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog && window.posthog.__loaded)||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}p||((p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",p.onerror=function(){p=null},(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r));var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="al ol ll init Il Rl Tl Ml Ol za El Dl Sl capture getExtension Pl nl Hl calculateEventProperties Bl register register_once register_for_session unregister unregister_for_session Vl Cl zl getFeatureFlag getFeatureFlagPayload getFeatureFlagResult getAllFeatureFlags isFeatureEnabled reloadFeatureFlags updateFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey displaySurvey cancelPendingSurvey canRenderSurvey canRenderSurveyAsync Gl identify setPersonProperties unsetPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset Zl shutdown setIdentity clearIdentity get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException addExceptionStep captureLog startExceptionAutocapture stopExceptionAutocapture loadToolbar get_property getSessionProperty Ul ql createPersonProfile setInternalOrTestUser Wl ul hl opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing get_explicit_consent_status is_capturing clear_opt_in_out_capturing $l debug Ua Jn getPageViewId captureTraceFeedback captureTraceMetric bl".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init('phc_qs7wVykPckqoUtsPKUzKgvZ4e6LEUnc8gY8dakL2YCxL', {
+        api_host: 'https://eu.i.posthog.com',
+        defaults: '2026-05-30',
+        person_profiles: 'identified_only'
+    })
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>On AI: Kevin Hawkins</title>
+<meta name="description" content="Kevin Hawkins on adopting AI in design leadership: augmenting craft experts, not replacing them, and building a fairer, more sustainable creative practice.">
+<!-- SEO -->
+<link rel="canonical" href="https://kevinthecreator.com/ai.html">
+<meta name="author" content="Kevin Hawkins">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#FAF6EF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b0a0c" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Kevin Hawkins">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="On AI: Kevin Hawkins">
+<meta property="og:description" content="Kevin Hawkins on adopting AI in design leadership: augmenting craft experts, not replacing them, and building a fairer, more sustainable creative practice.">
+<meta property="og:url" content="https://kevinthecreator.com/ai.html">
+<meta property="og:image" content="https://kevinthecreator.com/assets/img/og/ai.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="On AI: Kevin Hawkins">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@kevinhawkinsdc">
+<meta name="twitter:creator" content="@kevinhawkinsdc">
+<meta name="twitter:title" content="On AI: Kevin Hawkins">
+<meta name="twitter:description" content="Kevin Hawkins on adopting AI in design leadership: augmenting craft experts, not replacing them, and building a fairer, more sustainable creative practice.">
+<meta name="twitter:image" content="https://kevinthecreator.com/assets/img/og/ai.png">
+<!-- /SEO -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="alternate" type="text/markdown" href="../resources.md" title="Resources for designers (Markdown)">
+<link rel="stylesheet" href="assets/css/home.css">
+<style>
+  .feat-hero { min-height: 50vh; display:flex; align-items:flex-end; padding-top:7rem; }
+  .feat-hero .bg-photo.in { opacity: 0.4; }
+  .feat-hero::before { content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
+    background: linear-gradient(180deg, rgba(11,10,12,0.35), rgba(11,10,12,0.55) 55%, var(--night)); }
+  .feat-hero .sec-in { z-index: 2; }
+  .feat-hero h1 { font-size: clamp(2.1rem, 5.2vw, 3.6rem); font-weight:600; letter-spacing:-0.045em; color: var(--cream); max-width: 20ch; }
+  .feat-hero h1 em { color: var(--orange); }
+  .feat-hero p { color: var(--cream-2); font-size: clamp(1.05rem,1.6vw,1.25rem); max-width: 56ch; margin-top: 1.25rem; }
+
+  .stance-grid { display:grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem,5vw,4.5rem); align-items:start; }
+  .stance-grid h2 { font-size: clamp(1.8rem,3.6vw,2.8rem); letter-spacing:-0.04em; margin-bottom: 1.5rem; }
+  .stance-grid h2 em { color: var(--orange-display); }
+  .stance-grid p { font-size: 1.02rem; margin-bottom: 1.1rem; }
+  .pull { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(1.3rem, 2.2vw, 1.7rem); line-height:1.4; color: var(--ink); border-left: 2px solid var(--orange); padding-left: 1.5rem; margin: 1.5rem 0; }
+  @media (max-width: 900px){ .stance-grid{ grid-template-columns:1fr; } }
+
+  .pdlc-head { margin-bottom: 2.5rem; }
+  .pdlc-head h2 { font-size: clamp(1.9rem,4vw,3.3rem); letter-spacing:-0.04em; color: var(--cream); }
+  .pdlc-head h2 em { color: var(--orange); }
+  .pdlc-head p { color: var(--cream-2); font-size: 1.02rem; max-width: 62ch; margin-top: 1rem; }
+  .pdlc-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+  .pdlc-card { display:flex; flex-direction:column; gap: 0.75rem; padding: 2rem 1.75rem; border: 1px solid var(--line-d); border-radius: 18px;
+    transition: transform 0.25s var(--spring), border-color 0.25s, background 0.25s; }
+  .pdlc-card:hover { transform: translateY(-4px); border-color: var(--orange); background: var(--night-2); }
+  .pdlc-card .num { font-family: var(--mono); font-size: 0.7rem; color: var(--orange); }
+  .pdlc-card h3 { font-size: 1.15rem; font-weight:600; letter-spacing:-0.03em; color: var(--cream); }
+  .pdlc-card p { font-size: 0.9rem; color: var(--cream-2); }
+  @media (max-width: 900px){ .pdlc-grid{ grid-template-columns:1fr; } }
+
+  /* ── MUSINGS TABS ── */
+  .ai-tabbar { background: var(--night); padding: 0 var(--gut) 2.25rem; border-bottom: 1px solid var(--line-d); }
+  .ai-tabbar-in { max-width: var(--max-w); margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0.6rem; }
+  .ai-tab { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--cream-2); background: none; border: 1px solid var(--line-d); padding: 0.55rem 1.1rem;
+    border-radius: 100px; cursor: pointer; transition: color 0.2s, border-color 0.2s, background 0.2s; }
+  .ai-tab:hover { color: var(--cream); border-color: var(--cream-2); }
+  .ai-tab.active { background: var(--orange-deep); border-color: var(--orange-deep); color: #fff; }
+  .ai-panel { display: none; }
+  .ai-panel.active { display: block; }
+  .ai-soon { min-height: 40vh; display: flex; align-items: center; }
+  .ai-soon h2 { font-size: clamp(1.8rem,3.6vw,2.8rem); letter-spacing:-0.04em; margin: 0.5rem 0 0.75rem; max-width: 16ch; }
+  .ai-soon p { color: var(--ink-2); font-size: 1.05rem; }
+
+  .diagram-figure { max-width: 420px; margin: 0 auto 3rem; text-align: center; }
+  .diagram-figure img { width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line-l); box-shadow: 0 24px 60px -24px rgba(0,0,0,0.25); }
+  .diagram-figure figcaption { font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.03em; color: var(--ink-3); margin-top: 0.85rem; }
+
+  .belief-grid { display:grid; grid-template-columns: repeat(3,1fr); gap: 0; border-top: 1px solid var(--line-l); margin-top: 2.5rem; }
+  .belief-col { padding: 2rem 1.75rem; border-right: 1px solid var(--line-l); }
+  .belief-col:last-child { border-right:none; }
+  .belief-col .n { font-family: var(--mono); font-size: 0.72rem; color: var(--orange-ink); }
+  .belief-col h3 { font-size: 1.15rem; letter-spacing:-0.02em; margin: 0.5rem 0; }
+  .belief-col p { font-size: 0.9rem; }
+  @media (max-width: 820px){ .belief-grid{ grid-template-columns:1fr; } .belief-col{ border-right:none; border-bottom:1px solid var(--line-l); padding:1.75rem 0; } }
+
+  /* ── RESOURCES FOR DESIGNERS ── */
+  .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+  .res-intro { max-width: 62ch; }
+  .res-intro h2 { font-size: clamp(1.8rem,3.6vw,2.8rem); letter-spacing:-0.04em; margin-bottom: 1.25rem; }
+  .res-intro h2 em { color: var(--orange-display); }
+  .res-intro p { font-size: 1.02rem; }
+  .res-bar { position: sticky; top: 64px; z-index: 20; margin: 2rem 0 0; padding: 0.75rem 0; background: var(--paper); display:flex; align-items:center; gap: 1rem; flex-wrap: wrap; }
+  .res-search { flex: 1 1 320px; display:flex; align-items:center; gap:0.6rem; border: 1.5px solid var(--ink); border-radius: 100px; padding: 0.7rem 1.1rem; background: #fff; color: var(--ink-2); }
+  .res-search:focus-within { outline: 3px solid var(--orange); outline-offset: 2px; }
+  .res-search input { flex:1; border:none; outline:none; background:none; font: inherit; font-size: 1rem; color: var(--ink); min-width: 0; }
+  .res-search kbd { font-family: var(--mono); font-size: 0.7rem; border:1px solid var(--line-l); border-radius: 6px; padding: 0.1rem 0.45rem; color: var(--ink-3); }
+  .res-count { font-family: var(--mono); font-size: 0.75rem; color: var(--ink-2); }
+  .res-jump { display:flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.75rem; }
+  .res-jump a, .res-quick button { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.04em; padding: 0.4rem 0.8rem; border: 1px solid var(--line-l); border-radius: 100px; color: var(--ink-2); background: none; cursor: pointer; }
+  .res-jump a:hover, .res-quick button:hover { border-color: var(--orange); color: var(--ink); }
+  .res-quick { display:flex; flex-wrap: wrap; align-items:center; gap: 0.45rem; margin-top: 0.6rem; }
+  .res-quick span { font-family: var(--mono); font-size: 0.7rem; color: var(--ink-3); }
+  .res-quick button { border-style: dashed; }
+  .res-empty { margin-top: 2rem; font-size: 1rem; }
+  .res-empty button, .res-clear { font: inherit; color: var(--orange-ink); background:none; border:none; text-decoration: underline; cursor:pointer; padding:0; }
+  .res-group { margin-top: 3.5rem; scroll-margin-top: 150px; }
+  .res-group h3 { display:flex; align-items: baseline; gap: 0.75rem; font-size: clamp(1.3rem,2.2vw,1.65rem); letter-spacing: -0.03em; }
+  .res-n { font-family: var(--mono); font-size: 0.75rem; color: var(--orange-ink); }
+  .res-lede { font-size: 0.98rem; color: var(--ink-2); max-width: 70ch; margin: 0.4rem 0 1.1rem; }
+  .res-stage { font-family: var(--mono); font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink); margin: 1.6rem 0 0.6rem; }
+  .res-table-wrap { border: 1px solid var(--line-l); border-radius: 16px; overflow: hidden; background: #fff; }
+  .res-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; }
+  .res-table th, .res-table td { text-align: left; padding: 0.8rem 1.05rem; border-bottom: 1px solid var(--line-l); vertical-align: top; }
+  .res-table thead th { font-family: var(--mono); font-size: 0.66rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); background: var(--paper); }
+  .res-table tbody th { font-weight: 600; width: 30%; }
+  .res-table tbody th a { color: var(--ink); border-bottom: 1px solid var(--orange); }
+  .res-table tbody th a:hover { color: var(--orange-ink); }
+  .res-table .ext { color: var(--orange-ink); font-size: 0.8em; }
+  .res-host { display:block; font-family: var(--mono); font-size: 0.66rem; font-weight: 400; color: var(--ink-3); margin-top: 0.2rem; }
+  .res-table td { color: var(--ink-2); }
+  .res-table tbody tr:last-child th, .res-table tbody tr:last-child td { border-bottom: none; }
+  .res-table tbody tr:hover { background: var(--paper); }
+  .res-pill { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.04em; white-space: nowrap; padding: 0.2rem 0.55rem; border-radius: 100px; background: var(--paper-2); color: var(--ink); }
+  .res-code { font-family: var(--mono); font-size: 0.78rem; line-height: 1.6; padding: 1rem 1.2rem; border-radius: 12px; overflow-x: auto; white-space: pre; background: var(--ink); color: var(--cream); margin: 0.5rem 0; }
+  .res-wrap { white-space: pre-wrap; }
+  .res-tags { display:flex; flex-wrap: wrap; gap: 0.45rem; margin: 0.4rem 0 0.8rem; }
+  .res-tags span { font-family: var(--mono); font-size: 0.72rem; padding: 0.35rem 0.75rem; border: 1px solid var(--line-l); border-radius: 100px; color: var(--ink-2); background:#fff; }
+  .res-more { margin-top: 0.8rem; border-top: 1px solid var(--line-l); }
+  .res-more summary, .res-prompt summary { cursor: pointer; list-style: none; display:flex; align-items: baseline; gap: 0.75rem; }
+  .res-more summary::-webkit-details-marker, .res-prompt summary::-webkit-details-marker { display:none; }
+  .res-more summary { padding: 0.75rem 0; font-size: 0.9rem; font-weight: 600; color: var(--ink); }
+  .res-more summary::before { content: '+'; font-family: var(--mono); color: var(--orange-ink); width: 1ch; }
+  .res-more[open] summary::before { content: '\2212'; }
+  .res-more-body { padding: 0 0 0.75rem 1.6ch; }
+  .res-more-body p { font-size: 0.92rem; margin-bottom: 0.6rem; max-width: 72ch; }
+  .res-more-body code, .res-lede code { font-family: var(--mono); font-size: 0.85em; }
+  .res-prompt { border: 1px solid var(--line-l); border-radius: 12px; margin-bottom: 0.5rem; padding: 0 1rem; background:#fff; }
+  .res-prompt summary { padding: 0.85rem 0; font-weight: 600; letter-spacing: -0.01em; }
+  .res-prompt summary::after { content: '+'; margin-left: 0.5rem; font-family: var(--mono); color: var(--orange-ink); }
+  .res-prompt[open] summary::after { content: '\2212'; }
+  .res-prompt .pn { font-family: var(--mono); font-size: 0.72rem; color: var(--orange-ink); }
+  .res-prompt .pt { flex: 1; }
+  .res-prompt .pw { font-family: var(--mono); font-size: 0.64rem; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+  .res-try { font-size: 0.86rem; color: var(--ink-2); }
+  .res-copy { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.04em; margin: 0 0 1rem; padding: 0.45rem 0.9rem; border-radius: 100px; border: 1px solid var(--ink); background: none; color: var(--ink); cursor: pointer; }
+  .res-copy:hover { background: var(--ink); color: var(--cream); }
+  mark.res-hit { background: #FFE2C7; color: inherit; border-radius: 3px; padding: 0 1px; }
+  .res-sec [hidden] { display: none !important; }
+  @media (max-width: 720px) {
+    .res-bar { top: 56px; }
+    .res-table thead { display:none; }
+    .res-table, .res-table tbody, .res-table tr, .res-table th, .res-table td { display:block; width:100%; }
+    .res-table tbody tr { padding: 0.85rem 1rem; border-bottom: 1px solid var(--line-l); }
+    .res-table tbody th, .res-table td { padding: 0.15rem 0; border: none; width: auto; }
+    .res-table td[data-label]::before { content: attr(data-label) ": "; font-family: var(--mono); font-size: 0.64rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-3); }
+    .res-table tbody tr:hover { background: none; }
+    .res-prompt .pw { display:none; }
+    .res-group { scroll-margin-top: 200px; }
+    .res-jump, .res-quick { flex-wrap: nowrap; overflow-x: auto; margin-left: calc(-1 * var(--gut)); margin-right: calc(-1 * var(--gut)); padding: 0 var(--gut) 0.3rem; scrollbar-width: none; }
+    .res-jump::-webkit-scrollbar, .res-quick::-webkit-scrollbar { display: none; }
+    .res-jump a, .res-quick button, .res-quick span { flex: 0 0 auto; white-space: nowrap; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<nav id="nav" class="nav nav--on-dark">
+  <a class="nav-logo" href="index.html">Kevin Hawkins <span class="star">✦</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="nav-home" aria-label="Home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v9a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1v-9"/></svg></a></li>
+    <li class="has-dropdown"><a href="work.html">Work</a>
+      <ul class="dropdown">
+        <li><a href="case-monta.html">Monta</a></li>
+        <li><a href="case-glovo.html">Glovo</a></li>
+        <li><a href="case-booking.html">Booking.com</a></li>
+        <li><a href="case-bookclub.html">BookClub.com</a></li>
+        <li><a href="case-capital-one.html">Capital One</a></li>
+      </ul>
+</li>
+    <li><a href="speaking.html">Speaking</a></li>
+    <li><a href="mentorship.html">Mentorship</a></li>
+    <li><a href="advising.html">Advisory</a></li>
+    <li><a href="ai.html" class="active" aria-current="page">On AI</a></li>
+    <li class="nav-social"><div class="social-icons">
+      <a href="https://www.linkedin.com/in/kevinhawkinsdesign/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.558V9h3.556v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a href="https://x.com/kevinhawkinsdc" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="https://www.instagram.com/kevinhawkinsdesign" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.058 1.645-.07 4.849-.07zM12 0C8.741 0 8.332.014 7.052.072 2.695.272.273 2.69.073 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.332 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+    </div></li>
+  </ul>
+  <a class="btn" href="mailto:hello@kevinhawkinsdesign.com">Say hello <span class="arr">→</span></a>
+  <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="work.html">Work</a>
+  <a href="speaking.html">Speaking</a>
+  <a href="mentorship.html">Mentorship</a>
+  <a href="advising.html">Advisory</a>
+  <a href="ai.html">On AI</a>
+  <a class="btn" href="mailto:hello@kevinhawkinsdesign.com">Say hello →</a>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/kevinhawkinsdesign/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.558V9h3.556v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    <a href="https://x.com/kevinhawkinsdc" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.instagram.com/kevinhawkinsdesign" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.058 1.645-.07 4.849-.07zM12 0C8.741 0 8.332.014 7.052.072 2.695.272.273 2.69.073 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.332 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+  </div>
+</div>
+
+<header id="main-content" tabindex="-1" class="sec sec--dark feat-hero">
+  <div class="bg-photo" data-bg="../assets/img/monta_noc_agent.png" style="--bg-op:0.35"></div>
+  <div class="sec-in">
+    <h1 class="rise" data-d="1">I didn't wait for AI to change design. I went looking for it.</h1>
+    <p class="rise" data-d="2">I've spent the last two years building the <strong>AI backbone of a global product org</strong>, and I've come out the other side <em>more optimistic about craft, not less</em>. This is where I stand, and why.</p>
+  </div>
+</header>
+
+<div class="ai-tabbar">
+  <div class="ai-tabbar-in" role="tablist" aria-label="On AI musings">
+    <button class="ai-tab active" role="tab" aria-selected="true" data-tab="stand">Where I Stand</button>
+    <button class="ai-tab" role="tab" aria-selected="false" data-tab="data-trust">Data &amp; Trust</button>
+    <button class="ai-tab" role="tab" aria-selected="false" data-tab="hand-offs-loops">Hand-offs vs. Loops</button>
+    <button class="ai-tab" role="tab" aria-selected="false" data-tab="judgment">The Judgment Gap</button>
+    <button class="ai-tab" role="tab" aria-selected="false" data-tab="resources">Resources for Designers</button>
+  </div>
+</div>
+
+<div class="ai-panel active" id="panel-stand" role="tabpanel">
+
+<section class="sec sec--light">
+  <div class="sec-in stance-grid">
+    <div class="rise">
+      <span class="eyebrow" style="margin-bottom:1.25rem">Why I lean in</span>
+      <h2>AI is a <em>tool</em>, and I've always loved tools.</h2>
+      <p>Twenty years in design has taught me that every generation panics about the same thing: the tool that makes the craft faster will make the craft cheaper, and the craft cheaper will make it disposable. Photoshop didn't kill illustration. Figma didn't kill visual design. AI won't kill product design, but it will change, permanently, what's worth spending a senior designer's attention on.</p>
+      <p>This isn't a one-org thing for me. At Glovo, with Prosus's backing, we folded AI straight into the content and design pipeline: localization, interactive prototyping, even the product imagery and ad assets our partners saw every day. Today I bring the same instinct into the startups I advise, KomboAI and Kabisa among them. But Monta is where I got to run the experiment at full scale. An AI backbone wired into every internal data source. A library of 250+ shared skills. A pipeline that let designers and engineers ship as peers, and a 30-agent system automating 90% of our product lifecycle. Weekly AI usage went from near-zero to 88% of the company in four months. Nobody was mandated to use it. They used it because it made them better at the parts of the job they actually cared about.</p>
+    </div>
+    <div class="rise" data-d="1">
+      <div class="pull">"The biggest challenge stopped being how do we get people to use AI, and became where should we not use AI."</div>
+      <p>That's the sentence that stuck with me from that whole project. It's also the reason I don't think the interesting AI conversation is about adoption anymore. It's about judgment: knowing exactly which 10% of the work still needs a human being who has taste, context, and the willingness to be held accountable for a decision.</p>
+      <p>Prosus, who I worked alongside at Glovo, <a href="https://www.prosus.com/news-insights/2026/deploying-agentic-ai-at-scale-from-the-company-that-built-60000-agents" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--orange)">published research in 2026</a> showing the same pattern at far bigger scale. Over 60,000 agents built across their portfolio companies, and just <strong>2% of them driving most of the actual business impact</strong>. Same judgment problem I keep coming back to. It just gets bigger, not different, the more of an organization you point AI at.</p>
+      <p>I stay close to a network of people building the frontier of this: folks at Anthropic, OpenAI, and elsewhere thinking hard about what responsible, sustainable AI-assisted creative work actually looks like. Not because I want to be first. Because I want the tools creative people are handed in five years to have been shaped by people who've actually done the craft.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--dark">
+  <div class="sec-in">
+    <div class="pdlc-head">
+      <h2 class="rise">How AI is actually changing <em>the PDLC</em>.</h2>
+      <p class="rise" data-d="1">The short version: AI is fundamentally transforming the <strong>product development lifecycle</strong> by compressing prototyping timelines, enabling synthetic user research, and automating code and design generation. That shifts human effort away from manual, pixel-pushing tasks toward deeper strategic problem-solving and systemic orchestration across teams.</p>
+    </div>
+    <div class="pdlc-grid">
+      <div class="pdlc-card rise">
+        <span class="num">Prototyping</span>
+        <h3>Weeks become hours</h3>
+        <p>What used to require a sprint of static mocks and a separate build phase to validate now happens <strong>in one sitting</strong>: high-fidelity, interactive, testable same-day. <em>The bottleneck moves from "can we build it" to "do we know what to build."</em></p>
+      </div>
+      <div class="pdlc-card rise" data-d="1">
+        <span class="num">Research</span>
+        <h3>Synthetic signal, real judgment</h3>
+        <p>AI-assisted synthetic research <strong>won't replace talking to real users</strong>, but it collapses the time between a hypothesis and a first directional read. Real research time then goes to the questions that actually need a human in the room.</p>
+      </div>
+      <div class="pdlc-card rise" data-d="2">
+        <span class="num">Generation</span>
+        <h3>Code and design, together</h3>
+        <p>Design-system-aware generation means the handoff between design and engineering <strong>stops being a translation problem</strong>. The output isn't a spec anymore: it's a merge-ready PR, and <em>the designer and engineer are reviewing the same thing</em>.</p>
+      </div>
+    </div>
+    <p class="rise" data-d="3" style="color:var(--cream-2);font-size:0.95rem;max-width:62ch;margin-top:2rem">None of this replaces strategic thinking. <strong>It makes room for it.</strong> The teams that win aren't the ones with the most AI tooling. They're the ones who used the time it freed up to get better at <em>deciding what's worth building at all</em>.</p>
+    <p class="rise" data-d="4" style="color:var(--cream-2);font-size:0.95rem;max-width:62ch;margin-top:1rem">I think about a peer of mine whose design team survived a brutal layoff round by walking into the room with revenue and retention numbers instead of usage or adoption metrics. The same instinct applies here: the right way to justify AI investment isn't "look how much we use it," but <strong>the dollar figure it moved</strong>. <em>That's the metric I actually track.</em></p>
+  </div>
+</section>
+
+<section class="sec sec--light">
+  <div class="sec-in">
+    <span class="eyebrow rise">What I actually believe</span>
+    <div class="belief-grid">
+      <div class="belief-col rise">
+        <h3>Augment the expert, don't replace the craft</h3>
+        <p>The best use of AI I've seen <strong>raises the floor for a junior designer and frees a senior one</strong> for the judgment calls only they can make. The worst use of AI treats craft as a cost center to be automated away. <em>I build for the first version.</em></p>
+      </div>
+      <div class="belief-col rise" data-d="1">
+        <h3>Fair and sustainable for creatives</h3>
+        <p>Tools trained on creative work <strong>owe something back</strong> to the people whose work trained them: in compensation, in attribution, or in access. <em>I care where a tool's training data came from as much as I care what the tool can do.</em></p>
+      </div>
+      <div class="belief-col rise" data-d="2">
+        <h3>Governance ships with capability</h3>
+        <p>Every rollout I've led shipped <strong>monitoring and guardrails alongside the tool</strong>, not after it. <em>Speed without oversight isn't velocity: it's just risk you haven't noticed yet.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="ai-panel" id="panel-data-trust" role="tabpanel">
+
+<section class="sec sec--light">
+  <div class="sec-in stance-grid">
+    <div class="rise">
+      <span class="eyebrow" style="margin-bottom:1.25rem">The tension I sit with</span>
+      <h2>I love this era of AI. I also lose sleep over what it can now see.</h2>
+      <p>I've spent most of my career as a data lover: sponsoring analytics tools as an executive, fighting for instrumentation budget, being the person who actually reads the dashboards. So I understand better than most what AI-native analytics makes possible. Ask a plain-language question, get a real answer, no SQL, no waiting on a data team's backlog. That shift is genuinely thrilling, and I don't want to undersell how much better it makes decision-making.</p>
+      <p>But having been the executive sponsor for a dozen of these tools, my worry was never the model itself. It's the access model underneath it. The moment a natural-language layer sits on top of a data warehouse, every permission boundary your data team spent years building either holds or it doesn't. <span class="hl">Suddenly anyone in the company can ask a question about a named user they had no business asking before.</span></p>
+    </div>
+    <div class="rise" data-d="1">
+      <div class="pull">A natural-language layer is only ever as safe as the permissions sitting underneath it.</div>
+      <p>That's why I pay attention to tools like <a href="https://www.sundial.ai/" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid var(--orange)">Sundial</a>: they're building the analyst layer with observability and governance as the actual product, not a compliance checkbox bolted on after launch. If AI is going to sit that close to sensitive user data, the tools sitting between the model and the warehouse need to earn that trust deliberately, not accidentally.</p>
+      <p>I'm not anti-access. I've spent my career trying to get more people closer to data, faster. I just think the teams that win this next wave will be the ones who treat governance as a feature people can feel, not a policy doc nobody reads.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="ai-panel" id="panel-hand-offs-loops" role="tabpanel">
+
+<section class="sec sec--light">
+  <div class="sec-in">
+    <figure class="diagram-figure rise">
+      <img src="../assets/img/triple-diamond-ai-diagram.jpeg" alt="The Triple Diamond in the Age of AI: a diagram contrasting a linear old way of hand-offs between problem discovery, solution discovery, and development, with a new way of continuous feedback between build context, deliver intelligence, and track impact">
+      <figcaption>The diagram I'm reacting to: "The Triple Diamond in the Age of AI," Jochem via theydo</figcaption>
+    </figure>
+  </div>
+  <div class="sec-in stance-grid">
+    <div class="rise">
+      <span class="eyebrow" style="margin-bottom:1.25rem">A framework I keep seeing</span>
+      <h2>The <em>"old way"</em> in that diagram was never the good way.</h2>
+      <p>A framework's been making the rounds that frames AI-native product work as an evolution: an "old way" of linear discovery-to-development hand-offs, and a "new way" of continuous, AI-fed feedback loops. I get why it resonates, and the new-way half is genuinely good practice. But I don't think the interesting shift in that diagram has much to do with AI at all.</p>
+      <p>Treating product development as a relay race, one team finishes its artifact and throws it over the wall, the next team picks it up cold, was never a pattern worth being nostalgic about. It's the exact failure mode that cross-functional teams, embedded research, and design ops have spent the last decade trying to engineer out of organizations. AI didn't retire that model. Teams still running it just have more urgency to fix it now.</p>
+    </div>
+    <div class="rise" data-d="1">
+      <div class="pull">AI didn't kill the hand-off. Killing the hand-off is what let AI compound.</div>
+      <p>I didn't need AI to tell me hand-offs were the problem. At Monta, we ran one of the largest Flutter apps outside Google, and the fix wasn't a smarter tool sitting on top of a broken relay: it was retiring the relay itself. Designers and engineers working as peers in the same codebase, no spec thrown over a wall, no waiting on translation. AI is what let that compound faster once the hand-off was already gone. It isn't what got rid of it.</p>
+      <p>So when I see a diagram like that, my read isn't "AI changed how we work." It's "this team fixed an org design problem, and AI is what made the fix pay off immediately instead of over a few quarters." Worth celebrating. Just don't let the AI take credit for the org chart finally doing its job.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="ai-panel" id="panel-judgment" role="tabpanel">
+
+<section class="sec sec--light">
+  <div class="sec-in stance-grid">
+    <div class="rise">
+      <span class="eyebrow" style="margin-bottom:1.25rem">The restructure I keep watching</span>
+      <h2>Generation got cheap. <em>Judgment</em> didn't.</h2>
+      <p>The reasoning behind this year's design layoffs is easy to follow, which is most of the problem. A model drafts the copy. Another fills the frame with mockups. A third turns all of it into something clickable before the kickoff meeting has finished. Watch that once and a smaller design org stops looking like a cut and starts looking like arithmetic.</p>
+      <p>The arithmetic holds right until you ask what those people were actually for. I watch the orgs pulling ahead in this window closely, and not one has thinned its design bench. <span class="hl">Every one of them has made it more senior instead.</span> Not bigger. Heavier.</p>
+      <p>That stops being a paradox once you notice what changed. Ten credible directions now land in the time it used to take to sketch one badly, so volume left the list of things worth worrying about. What took its place is the ability to look at those ten and know which one survives contact with a real user, a real roadmap, and a real engineering budget. Then defend the call well enough that a room agrees to fund it. It's the same sliver of the work I keep pointing at everywhere else on this page: the part no amount of tooling absorbs, and the part everyone is currently cutting.</p>
+      <p>That capacity is what seniority actually buys, and no prompt produces it, because it accrues rather than downloads. Ship enough products and you learn which compromises come back for you. Own enough decisions and you can name a tradeoff before it turns into a support queue. Sit through enough reviews where being wrong cost you something, and recognizing the pattern early stops feeling like instinct and starts behaving like a skill. None of that fits in a context window.</p>
+      <p>I've run the opposite version of this decision, and it worked. At Monta I inherited a design organization I was never going to be allowed to grow. Instead of doing less with fewer, I rewrote every role definition, level framework, and job description around what an AI-native team actually needs from people. The seat count never moved. The bar did.</p>
+    </div>
+    <div class="rise" data-d="1">
+      <div class="pull">The scarce thing was never the making. It was knowing what deserved to exist.</div>
+      <p>Which is why this particular restructure optimizes the wrong layer. <strong>You retain everyone fluent in operating the machine and release the handful of people qualified to tell you the machine is wrong.</strong> The tooling budget goes up. The quality ceiling comes down, quietly, over about two quarters.</p>
+      <p>The lag is what makes the judgment gap so expensive, because it never announces itself. Throughput climbs, dashboards look healthy, more ships than ever shipped before. The bill arrives later as a feature nobody asked for, a flow that tests clean and converts badly, a roadmap with no one senior enough left on it to say no.</p>
+      <p>Inside a single month, <strong>15</strong> of these conversations reached me, from CDOs, CHROs, and CPOs: chiefs of design, human resources, and product. Nearly all of them were opening a VP of Design search not long after closing one. Different companies, different sectors, the same sentence delivered with the same rueful timing: <em>"We thought we needed less senior leadership, not more."</em></p>
+      <p>If you signed off on a decision like this and haven't yet said out loud that it might have been wrong, I understand the hesitation. Unwinding a restructure reads publicly as an admission, and nobody schedules that meeting willingly. The consolation is that this correction is close to invisible when it happens early. Catch the gap while it's still a staffing question and it stays one. Leave it, and it becomes a product decision, and those are the ones you end up explaining to the board.</p>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<div class="ai-panel" id="panel-resources" role="tabpanel">
+
+<section class="sec sec--light res-sec">
+  <div class="sec-in">
+    <div class="res-intro rise">
+      <span class="eyebrow" style="margin-bottom:1.25rem">Resources for designers</span>
+      <h2>Everything I share when designers ask <em>"where do I start?"</em></h2>
+      <p>The tools, skills, connectors and prompts I recommend in my workshops and team setups. Search for what you need, or jump to a section.</p>
+    </div>
+    <div class="res-bar" role="search">
+      <label class="res-search">
+        <span class="sr-only">Search resources</span>
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="res-q" type="search" placeholder="Search tools, skills, prompts…" autocomplete="off" aria-describedby="res-count">
+        <kbd aria-hidden="true">/</kbd>
+      </label>
+      <p id="res-count" class="res-count" aria-live="polite"></p>
+    </div>
+    <nav class="res-jump" aria-label="Jump to a section"><a href="#res-setup">Connect Figma to your AI tools</a><a href="#res-jobs">Which tool, when</a><a href="#res-figma">Figma and design-to-code</a><a href="#res-build">Prompt, prototype, test and ship</a><a href="#res-components">Ready-to-use UI components</a><a href="#res-toolkit">An open-source toolkit for agent-built UI</a><a href="#res-skills">Skills worth installing</a><a href="#res-skill-template">Turn a prompt that works into a team skill</a><a href="#res-prompts">The prompt library</a><a href="#res-rituals">Five rituals that protect ownership</a><a href="#res-plan">Your next 30 days</a><a href="#res-team">Set up Claude for your whole team</a><a href="#res-reading">Read about the process</a></nav>
+    <div class="res-quick" aria-label="Popular searches"><span>Try:</span><button type="button" data-q="figma">figma</button><button type="button" data-q="free">free</button><button type="button" data-q="taste">taste</button><button type="button" data-q="prototype">prototype</button><button type="button" data-q="accessibility">accessibility</button><button type="button" data-q="animate">animate</button></div>
+    <p class="res-empty" id="res-empty" hidden>Nothing matches that yet. Try a broader word, or <button type="button" class="res-clear">clear the search</button>.</p>
+    <div class="res-group" id="res-setup">
+      <h3><span class="res-n">01</span>Connect Figma to your AI tools</h3>
+      <p class="res-lede">Install the Figma plugin in Claude Code or Cursor first. One step gives you the Figma MCP server and Figma's own skills.</p>
+      <pre class="res-code"># Claude Code
+claude plugin install figma@claude-plugins-official
+# then: /plugin &gt; Installed &gt; figma &gt; sign in
+
+# Cursor chat
+/add-plugin figma
+# then: Cursor Settings &gt; Tools &amp; MCP &gt; Connect
+
+# Any client: add an HTTP MCP server with this URL
+https://mcp.figma.com/mcp</pre>
+      <details class="res-more"><summary>What the plugin adds, and plan caveats</summary>
+        <div class="res-more-body">
+          <p>The plugin adds the Figma MCP server plus Figma's skills: figma-use, figma-generate-design, figma-generate-library and more. Plan, seat and AI credit rules for the agent, code layers, Code Connect and write to canvas change often, so check Figma's current terms before you rely on a beta feature.</p>
+        </div>
+      </details>
+    </div>
+    <div class="res-group" id="res-jobs">
+      <h3><span class="res-n">02</span>Which tool, when</h3>
+      <p class="res-lede">Pick one tool per row and get good at it. You do not need all of them on day one.</p>
+      <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">The job</th><th scope="col">Reach for</th><th scope="col">Why it fits</th></tr></thead><tbody>
+        <tr class="res-item"><th scope="row" data-label="The job">Research and synthesis</th><td data-label="Reach for">Claude, Gemini Deep Research, Dovetail</td><td data-label="Why it fits">Cited sources and long context.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">Framing and strategy</th><td data-label="Reach for">Claude, Gemini</td><td data-label="Why it fits">A thought partner that argues back.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">Layouts on your design system</th><td data-label="Reach for">Figma agent</td><td data-label="Why it fits">Starts from your libraries. Hands off editable Figma layers.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">Real interaction beside your designs</th><td data-label="Reach for">Code layers</td><td data-label="Why it fits">Starts from frames, a prompt, a repo or a webpage. Hands off code on canvas or a pull request.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">A standalone app with data and logic</th><td data-label="Reach for">Figma Make</td><td data-label="Why it fits">Starts from a prompt. Hands off a published app with a Supabase backend.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">Fast exploration, decks, one-pagers</th><td data-label="Reach for">Claude Design</td><td data-label="Why it fits">Starts from a prompt, files or a codebase. Hands off a Claude Code bundle, PDF, PPTX or Canva.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">Production front-end</th><td data-label="Reach for">Cursor or Claude Code with the Figma MCP</td><td data-label="Why it fits">Reads your Figma link, your repo and your Code Connect mappings. Hands off a pull request.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">QA and accessibility</th><td data-label="Reach for">Figma agent skills, Cursor with axe</td><td data-label="Why it fits">Repeatable checks instead of one-off reviews.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="The job">Marketing visuals</th><td data-label="Reach for">Gemini images, Figma Weave tools</td><td data-label="Why it fits">Fast variations in one consistent style.</td></tr>
+      </tbody></table></div>
+      <details class="res-more"><summary>The rule of thumb</summary>
+        <div class="res-more-body">
+          <p>Chat tools for thinking and words. The Figma agent when the output must live on your canvas with your components. Code layers, Figma Make or Claude Design when you need real interaction. Cursor or Claude Code when it becomes production code.</p>
+        </div>
+      </details>
+    </div>
+    <div class="res-group" id="res-figma">
+      <h3><span class="res-n">03</span>Figma and design-to-code</h3>
+      <p class="res-lede">Start with the MCP server setup page, then Code Connect.</p>
+      <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Resource</th><th scope="col">What it's for</th></tr></thead><tbody>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://www.figma.com/solutions/ai-design-agent/" target="_blank" rel="noopener">The Figma agent<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">figma.com</span></th><td>An AI agent that works on your canvas with your libraries.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://www.figma.com/agents/" target="_blank" rel="noopener">Figma agents overview<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">figma.com</span></th><td>What the agents can do and which plans include them.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://developers.figma.com/docs/figma-mcp-server/remote-server-installation/" target="_blank" rel="noopener">Figma MCP server setup<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">developers.figma.com</span></th><td>Remote server install guide for any MCP-capable client.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://developers.figma.com/docs/figma-mcp-server/write-to-canvas" target="_blank" rel="noopener">Write to canvas<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">developers.figma.com</span></th><td>Let your AI tool create and edit real frames in Figma.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://help.figma.com/hc/en-us/articles/23920389749655-Code-Connect" target="_blank" rel="noopener">Code Connect<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">help.figma.com</span></th><td>Map design components to code components so generated code uses the real ones.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://help.figma.com/hc/en-us/articles/44193259600535-Code-layers-in-Figma-Design" target="_blank" rel="noopener">Code layers in Figma Design<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">help.figma.com</span></th><td>Build and edit coded layers inside a design file.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://www.figma.com/solutions/ai-coding-agent/" target="_blank" rel="noopener">Figma Make<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">figma.com</span></th><td>Go from a prompt or a frame to a working prototype.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://www.figma.com/blog/config-2026-recap/" target="_blank" rel="noopener">Config 2026 recap<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">figma.com</span></th><td>The product announcements behind all of the above.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="res-group" id="res-build">
+      <h3><span class="res-n">04</span>Prompt, prototype, test and ship</h3>
+      <p class="res-lede">The everyday tools, from research to a live site.</p>
+      <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Resource</th><th scope="col">What it's for</th><th scope="col">Stage</th></tr></thead><tbody>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://claude.ai" target="_blank" rel="noopener">Claude<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">claude.ai</span></th><td>Projects for research synthesis, plus Research for competitive scans.</td><td><span class="res-pill">Think</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://gemini.google.com" target="_blank" rel="noopener">Gemini Deep Research<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">gemini.google.com</span></th><td>Sourced competitive scans with a link behind every claim.</td><td><span class="res-pill">Think</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://dovetail.com" target="_blank" rel="noopener">Dovetail<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">dovetail.com</span></th><td>Store and tag research so synthesis prompts have real evidence to read.</td><td><span class="res-pill">Research</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://claude.ai/design" target="_blank" rel="noopener">Claude Design<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">claude.ai</span></th><td>Design with Claude on a canvas you can keep editing. Research preview.</td><td><span class="res-pill">Prototype</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://lovable.dev" target="_blank" rel="noopener">Lovable<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">lovable.dev</span></th><td>Prompt a first version of a site or product page to react to.</td><td><span class="res-pill">Prototype</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://code.claude.com/docs" target="_blank" rel="noopener">Claude Code<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">code.claude.com</span></th><td>Build in a real codebase from the terminal or the browser.</td><td><span class="res-pill">Build</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://code.claude.com/docs/en/claude-code-on-the-web" target="_blank" rel="noopener">Claude Code on the web<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">code.claude.com</span></th><td>No local install. Runs in the browser against your repos.</td><td><span class="res-pill">Build</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://cursor.com" target="_blank" rel="noopener">Cursor<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">cursor.com</span></th><td>An AI-first editor. Pair it with the Figma MCP server to implement frames.</td><td><span class="res-pill">Build</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://payloadcms.com" target="_blank" rel="noopener">Payload CMS<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">payloadcms.com</span></th><td>A code-first headless CMS for a site that non-developers need to edit.</td><td><span class="res-pill">Ship</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Resource"><a href="https://maze.co" target="_blank" rel="noopener">Maze<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">maze.co</span></th><td>Run the unmoderated test your AI-written plan describes.</td><td><span class="res-pill">Test</span></td></tr>
+      </tbody></table></div>
+      <details class="res-more"><summary>How I have used these together</summary>
+        <div class="res-more-body">
+          <p>I have used Claude with Payload CMS to design and ship a marketing site, and Lovable to get a first version in front of a team quickly. A launch checklist split into a soft launch and a hard launch, posted as a Slack thread, kept both honest.</p>
+        </div>
+      </details>
+    </div>
+    <div class="res-group" id="res-components">
+      <h3><span class="res-n">05</span>Ready-to-use UI components</h3>
+      <p class="res-lede">Start from a library instead of a blank file. Give your agent one as a reference and the result looks far less generic.</p>
+      <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Library</th><th scope="col">What you get</th><th scope="col">Cost</th></tr></thead><tbody>
+        <tr class="res-item"><th scope="row" data-label="Library"><a href="https://affectui.com" target="_blank" rel="noopener">affectUI<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">affectui.com</span></th><td>243 React components, screens and motion effects for AI products and SaaS. One self-contained file each, installable with shadcn or MCP.</td><td><span class="res-pill">Free + Pro</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Library"><a href="https://boardui.com" target="_blank" rel="noopener">BoardUI<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">boardui.com</span></th><td>React and Tailwind design system with 104 components, 19 charts and dashboard templates.</td><td><span class="res-pill">Free + Pro</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Library"><a href="https://ui.watermelon.sh" target="_blank" rel="noopener">Watermelon UI<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">ui.watermelon.sh</span></th><td>Open-source animated components, page sections and dashboards with Tailwind and shadcn/ui.</td><td><span class="res-pill">Free</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Library"><a href="https://kobra.systems" target="_blank" rel="noopener">Kobra<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">kobra.systems</span></th><td>Polished React components for shadcn/ui.</td><td><span class="res-pill">Free + Pro</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Library"><a href="https://pro.beui.dev" target="_blank" rel="noopener">beUI Pro<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">pro.beui.dev</span></th><td>Animated React, Next.js and React Native blocks, screens and templates in Tailwind.</td><td><span class="res-pill">Paid</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Library"><a href="https://libraries.dev" target="_blank" rel="noopener">Libraries.dev<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">libraries.dev</span></th><td>MIT-licensed React effects such as animated borders and thinking indicators, some for SwiftUI and React Native.</td><td><span class="res-pill">Free + Pro</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Library"><a href="https://bencho.dev" target="_blank" rel="noopener">Bencho<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">bencho.dev</span></th><td>Live, interactive React components and micro-interactions you can adjust and reuse.</td><td><span class="res-pill">See site</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Library"><a href="https://uiarc.dev" target="_blank" rel="noopener">Uiarc<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">uiarc.dev</span></th><td>Ready-to-use UI components.</td><td><span class="res-pill">See site</span></td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="res-group" id="res-toolkit">
+      <h3><span class="res-n">06</span>An open-source toolkit for agent-built UI</h3>
+      <p class="res-lede">Fonts, layouts, contrast, icons, canvas and motion. Work in order: style, layout, contrast, sketch, animate.</p>
+      <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Tool</th><th scope="col">What it does</th><th scope="col">Step</th></tr></thead><tbody>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill" target="_blank" rel="noopener">ui-ux-pro-max<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>80 styles, palettes and font combos, ready to use.</td><td><span class="res-pill">Style</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/anthropics/skills/tree/main/skills/frontend-design" target="_blank" rel="noopener">frontend-design<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Anthropic's skill for UI that feels hand-made.</td><td><span class="res-pill">Style</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/Nutlope/hallmark" target="_blank" rel="noopener">Hallmark<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Real design, no AI fingerprints.</td><td><span class="res-pill">Style</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/google-labs-code/design.md" target="_blank" rel="noopener">DESIGN.md<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Explains your brand look to any agent.</td><td><span class="res-pill">Style</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/meta/astryx" target="_blank" rel="noopener">Astryx<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Meta's open design rules your agent can follow.</td><td><span class="res-pill">Style</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/shadcn-ui/ui" target="_blank" rel="noopener">shadcn/ui<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Components that live in your own code.</td><td><span class="res-pill">Layout</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/tailwindlabs/tailwindcss" target="_blank" rel="noopener">Tailwind CSS<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Style anything without leaving your HTML.</td><td><span class="res-pill">Layout</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/google-labs-code/stitch-skills" target="_blank" rel="noopener">stitch-skills<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Write a prompt, get UI screens.</td><td><span class="res-pill">Layout</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/GLips/Figma-Context-MCP" target="_blank" rel="noopener">Figma Context MCP<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Your agent reads Figma files directly.</td><td><span class="res-pill">Layout</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/lucide-icons/lucide" target="_blank" rel="noopener">Lucide<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Clean icons that always match.</td><td><span class="res-pill">Layout</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/adobe/leonardo" target="_blank" rel="noopener">Leonardo<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Color palettes that always pass contrast.</td><td><span class="res-pill">Contrast</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/excalidraw/excalidraw" target="_blank" rel="noopener">Excalidraw<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Sketchy diagrams and quick wireframes.</td><td><span class="res-pill">Sketch</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/tldraw/tldraw" target="_blank" rel="noopener">tldraw<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>An endless canvas for your ideas.</td><td><span class="res-pill">Sketch</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/rough-stuff/rough" target="_blank" rel="noopener">Rough.js<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Gives anything a hand-drawn feel.</td><td><span class="res-pill">Sketch</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/magicuidesign/magicui" target="_blank" rel="noopener">Magic UI<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Moving components, just copy and paste.</td><td><span class="res-pill">Animate</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/PavelDoGreat/WebGL-Fluid-Simulation" target="_blank" rel="noopener">WebGL Fluid<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Smoke and ink that really move.</td><td><span class="res-pill">Animate</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Tool"><a href="https://github.com/danielgatis/rembg" target="_blank" rel="noopener">rembg<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Cuts out any subject in one line.</td><td><span class="res-pill">Animate</span></td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="res-group" id="res-skills">
+      <h3><span class="res-n">07</span>Skills worth installing</h3>
+      <p class="res-lede">Skills give your agent taste and repeatable habits. Start with one critic and one collection.</p>
+      <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Skill</th><th scope="col">What it does</th><th scope="col">Type</th></tr></thead><tbody>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://impeccable.style" target="_blank" rel="noopener">Impeccable<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">impeccable.style</span></th><td>Critique, audit and polish away generic UI. Its anti-slop page is worth reading on its own.</td><td><span class="res-pill">Taste</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://github.com/pbakaus/impeccable" target="_blank" rel="noopener">Impeccable on GitHub<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Source for the Impeccable skill.</td><td><span class="res-pill">Taste</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://tasteskill.dev" target="_blank" rel="noopener">Taste Skill<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">tasteskill.dev</span></th><td>A design skill for AI coding agents, by Leon Lin. A new version is on the way.</td><td><span class="res-pill">Taste</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://aiforui.dev/skills" target="_blank" rel="noopener">Emil Kowalski's UI skills<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">aiforui.dev</span></th><td>Skills for UI design, animations and interactions.</td><td><span class="res-pill">Taste</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://github.com/MengTo/skills" target="_blank" rel="noopener">Meng To's skills<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>UI, web design and illustration skills.</td><td><span class="res-pill">Taste</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://get-pinch.io/" target="_blank" rel="noopener">Pinch<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">get-pinch.io</span></th><td>Point at details in screenshots and say why they work. Your agent checks new screens against those notes. Beta.</td><td><span class="res-pill">Taste</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://github.com/benjitaylor/skills" target="_blank" rel="noopener">Stageshow<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Faux UI stills, animations and bento grids for marketing and app store assets.</td><td><span class="res-pill">Assets</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://github.com/nexu-io/open-design" target="_blank" rel="noopener">Open Design<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Local-first, open-source AI design studio that uses the coding agent you already have.</td><td><span class="res-pill">Studio</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://github.com/deeplethe/solid-glass" target="_blank" rel="noopener">Solid Glass<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>A design system between flat UI and liquid glass, with components for AI agent interfaces.</td><td><span class="res-pill">System</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://github.com/figma/mcp-server-guide" target="_blank" rel="noopener">Figma mcp-server-guide<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>Figma's official skills on GitHub.</td><td><span class="res-pill">Collection</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://github.com/anthropics/skills" target="_blank" rel="noopener">Anthropic skills<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>The reference collection of skills, including document formats.</td><td><span class="res-pill">Collection</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://github.com/Owl-Listener/designer-skills" target="_blank" rel="noopener">designer-skills<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">github.com</span></th><td>63 skills for research, systems, UI and handoff.</td><td><span class="res-pill">Collection</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://www.figma.com/resource-library/claude-skills-for-design/" target="_blank" rel="noopener">Claude skills for design<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">figma.com</span></th><td>Figma's guide to skills that help designers.</td><td><span class="res-pill">Guide</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://developers.figma.com/docs/figma-mcp-server/create-skills" target="_blank" rel="noopener">Create skills for the Figma MCP server<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">developers.figma.com</span></th><td>Turn a prompt that works into a repeatable team skill.</td><td><span class="res-pill">Guide</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://www.magier.com/blog/best-claude-design-skills-for-designers" target="_blank" rel="noopener">Best Claude design skills for designers<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">magier.com</span></th><td>A curated read from Magier.</td><td><span class="res-pill">Guide</span></td></tr>
+        <tr class="res-item"><th scope="row" data-label="Skill"><a href="https://nervegna.substack.com/p/50-claude-code-skills-for-designers" target="_blank" rel="noopener">50 Claude Code skills for designers<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">nervegna.substack.com</span></th><td>A long list to browse by need.</td><td><span class="res-pill">Guide</span></td></tr>
+      </tbody></table></div>
+      <p class="res-stage">Slash commands to try first</p>
+      <div class="res-tags"><span class="res-item">/figma-use</span><span class="res-item">/figma-generate-design</span><span class="res-item">/figma-generate-library</span><span class="res-item">/audit-design-system</span><span class="res-item">/apply-design-system</span><span class="res-item">/create-voice</span><span class="res-item">/frontend-design</span></div>
+      <details class="res-more"><summary>Where the commands come from, and install lines</summary>
+        <div class="res-more-body">
+          <p>The Figma commands ship with the Figma plugin. The audit and apply commands come from Edenspiekermann, <code>/create-voice</code> from Uber (it writes VoiceOver, TalkBack and ARIA specs), and <code>/frontend-design</code> from Anthropic.</p>
+          <pre class="res-code"># Stageshow
+npx skills add benjitaylor/skills --skill stageshow
+
+# Taste Skill
+npx skills add Leonxlnx/taste-skill</pre>
+        </div>
+      </details>
+    </div>
+    <div class="res-group" id="res-skill-template">
+      <h3><span class="res-n">08</span>Turn a prompt that works into a team skill</h3>
+      <p class="res-lede">A skill is a folder with a SKILL.md file. Build one team skill a month and you have a real design ops toolkit by summer.</p>
+      <details class="res-more"><summary>Show the SKILL.md template</summary>
+        <div class="res-more-body">
+          <p>It needs a name, a description that says when to use it and when not to, ordered instructions, and edge cases. This one packages the token audit from prompt 12. In Claude Code, save it as <code>.claude/skills/ds-audit/SKILL.md</code>. In Cursor, run <code>/create-skill</code> and paste it in.</p>
+          <pre class="res-code">---
+name: ds-audit
+description: Audit Figma frames against the design system. Use for token, variable or component drift. Not for new designs.
+---
+
+# Design system audit
+
+## When to use
+When someone asks to check frames for hardcoded values or drift from the library.
+
+## Instructions
+1. Use the figma-use skill before any use_figma call.
+2. List hardcoded colors, type, radius and spacing in the selection.
+3. Match each to the closest library variable, with a confidence level.
+4. Output a table. Change nothing until the user approves.
+5. Fix high-confidence items only; report the rest.
+
+## Examples
+"Audit the booking widget frames" returns a table of layer, current value, suggested variable, confidence.
+
+## Common edge cases
+- No close match: flag it as "needs new token", never invent one.
+- Component is detached: report it, don't reattach without approval.</pre>
+        </div>
+      </details>
+    </div>
+    <div class="res-group" id="res-prompts">
+      <h3><span class="res-n">09</span>The prompt library</h3>
+      <p class="res-lede">14 prompts across Discover, Define, Develop and Deliver. Open one, fill the [brackets], copy, run.</p>
+      <details class="res-more"><summary>Three habits that make every prompt better</summary>
+        <div class="res-more-body">
+          <p>Give the model your real context (a Project with research, your Figma library, your repo). Ask it to mark what it inferred or guessed. Check numbers and quotes yourself before anything ships, and anonymize participant data according to your company's policy before uploading it. <b>Generation got cheap. Judgment didn't.</b></p>
+        </div>
+      </details>
+      <p class="res-stage">Discover</p>
+      <details class="res-prompt res-item">
+        <summary><span class="pn">01</span><span class="pt">A competitive scan that shows its sources</span><span class="pw">Discover</span></summary>
+        <p class="res-try"><b>Try it in</b> Gemini Deep Research, or Claude with Research on.</p>
+        <pre class="res-code res-wrap">You are a UX researcher for a [your product category] platform. Research how [competitor 1], [competitor 2], [competitor 3], [competitor 4] and [competitor 5] design [the feature you are studying] for [your user type] with [typical scale]. For each product cover: [aspect 1], [aspect 2], and [aspect 3]. Return a comparison table with a source link for every claim. If you can't find evidence, write "no evidence found". Finish with 5 patterns worth testing and 3 to avoid.</pre>
+        <button type="button" class="res-copy" data-copy>Copy prompt</button>
+      </details>
+      <details class="res-prompt res-item">
+        <summary><span class="pn">02</span><span class="pt">Interview synthesis you can trust</span><span class="pw">Discover</span></summary>
+        <p class="res-try"><b>Try it in</b> A Claude Project or a Gemini Gem with the transcripts attached.</p>
+        <pre class="res-code res-wrap">Attached are [8] interview transcripts with [your user type]. Synthesize them:
+1. Up to 8 themes. For each: how many participants mentioned it, 2 verbatim quotes with participant IDs, and any evidence against it.
+2. Separate what people say they do from what they describe actually doing.
+3. Mark anything you inferred rather than read.
+Never invent or paraphrase inside quotation marks. End with 3 questions for our next round.</pre>
+        <button type="button" class="res-copy" data-copy>Copy prompt</button>
+      </details>
+      <details class="res-prompt res-item">
+        <summary><span class="pn">03</span><span class="pt">Simulate a user, then list what to validate</span><span class="pw">Discover</span></summary>
+        <p class="res-try"><b>Try it in</b> Claude or Gemini. A simulated user is a sketch of a person, never a substitute for one.</p>
+        <pre class="res-code res-wrap">Role-play a property manager in Lisbon with 40 short-term listings, 2 cleaners and 1 assistant. It's Sunday night before a big conference week. Walk me through, hour by hour, how you decide which rates to change and which tools you open. Then step out of the role and list the 10 assumptions in your story that I should validate with real users, ranked by risk.</pre>
+        <button type="button" class="res-copy" data-copy>Copy prompt</button>
+      </details>
+      <p class="res-stage">Define</p>
+      <details class="res-prompt res-item">
+        <summary><span class="pn">04</span><span class="pt">From themes to job stories and HMWs</span><span class="pw">Define</span></summary>
+        <p class="res-try"><b>Try it in</b> Claude or Gemini, in the same Project or Gem as prompt 2 so it sees the evidence.</p>
+        <pre class="res-code res-wrap">Here are our research themes: [paste]. Write:
+1. 3 job stories (When..., I want to..., so I can...)
+2. 3 problem statements naming the user, the need and the evidence
+3. 5 How-might-we questions, from safe to bold
+Rate each problem statement's confidence (low, medium, high) and tell me what evidence would change your mind. Push back if a theme is too thin to frame.</pre>
+        <button type="button" class="res-copy" data-copy>Copy prompt</button>
+      </details>
+      <details class="res-prompt res-item">
+        <summary><span class="pn">05</span><span class="pt">Counterfactuals: what if the constraint disappeared?</span><span class="pw">Define</span></summary>
+        <p class="res-try"><b>Try it in</b> Gemini or Claude. Swap in your own constraints: budget, channel rules, owner approval, regulation.</p>
+        <pre class="res-code res-wrap">Our problem statement: [paste]. Run 4 counterfactuals:
+1. What if changing prices were free and instant?
+2. What if the manager had no historical data?
+3. What if the AI could act without approval?
+4. What if we had to ship in one week?
+For each: what would we design differently, and what does that reveal about the real constraint?</pre>
+        <button type="button" class="res-copy" data-copy>Copy prompt</button>
+      </details>
+      <details class="res-prompt res-item">
+        <summary><span class="pn">06</span><span class="pt">Define the role of AI in the product</span><span class="pw">Define</span></summary>
+        <p class="res-try"><b>Try it in</b> Claude or Gemini, before designing any AI agent screen.</p>
+        <pre class="res-code res-wrap">We're designing an AI pricing agent for property managers. For each action it could take (raise rates, lower rates, block dates, reply to a guest), recommend if it should be assistive (suggests), augmentative (acts after approval) or autonomous (acts, then reports). Give the risk if it's wrong, how we explain the decision, and how the user undoes it. Output a table.</pre>
+        <button type="button" class="res-copy" data-copy>Copy prompt</button>
+      </details>
+      <p class="res-stage">Develop</p>
+      <details class="res-prompt res-item">
+        <summary><span class="pn">07</span><span class="pt">Three directions on your design system</span><span class="pw">Develop</span></summary>
+        <p class="res-try"><b>Try it in</b> The Figma agent with your libraries enabled. Run A, B and C as parallel prompts so they don't converge.</p>
+        <pre class="res-code res-wrap">Using our [your] library, create 3 directions for a Pricing suggestions experience on the multi-calendar:
+A) inline in the calendar cells
+B) a side panel
+C) a morning digest
+Use only library components and variables. For each direction show default, empty and error states, and explain how the user sees why a rate was suggested. Put each direction in its own labeled frame.</pre>
+        <button type="button" class="res-copy" data-copy>Copy prompt</button>
+      </details>
+      <details class="res-prompt res-item">
+        <summary><span class="pn">08</span><span class="pt">Weeks become hours: a prototype from one brief</span><span class="pw">Develop</span></summary>
+        <p class="res-try"><b>Try it in</b> Claude, Claude Design, a Figma code layer or Figma Make. Check every number it shows: in my test run, one projected total was off by 10 euros.</p>
+        <pre class="res-code res-wrap">Build an interactive, single-screen prototype: "Pricing suggestions" for a property manager with 40 listings in Lisbon and Barcelona. An AI pricing agent proposes rate changes for the next 14 days. Show each suggestion with current rate, suggested rate, % change, the reason in plain language and confidence in words. Let the user accept, edit or dismiss each one, and bulk-accept high-confidence ones, with 10 seconds to undo. Include loading, empty and error states. Explain the agent's guardrails. Use an 8px grid, WCAG AA contrast and realistic data. No lorem ipsum.</pre>
+        <button type="button" class="res-copy" data-copy>Copy prompt</button>
+      </details>
+      <details class="res-prompt res-item">
+        <summary><span class="pn">09</span><span class="pt">Map the journey before the screens</span><span class="pw">Develop</span></summary>
+        <p class="res-try"><b>Try it in</b> Claude or Gemini, or the Figma agent in FigJam.</p>
+        <pre class="res-code res-wrap">Before any screens, map the end-to-end journey for a property manager onboarding a new listing in [your product], from signing the owner to the first booking. For each step: the screen or channel, what the user needs to know, what can go wrong, and where AI could help or harm. Then propose the 6 screens to design first, and why.</pre>
+        <button type="button" class="res-copy" data-copy>Copy prompt</button>
+      </details>
+      <details class="res-prompt res-item">
+        <summary><span class="pn">10</span><span class="pt">Campaign concepts with one visual language</span><span class="pw">Develop</span></summary>
+        <p class="res-try"><b>Try it in</b> Gemini for copy and images, then finish in Figma with Weave tools. Treat images as concepts; brand review still applies.</p>
+        <pre class="res-code res-wrap">Create 4 ad concepts for [your product] aimed at property managers with 10 to 50 listings in Southern Europe. Core message: pricing that keeps working while you sleep. For each concept: a headline (max 6 words), a subline (max 12 words), the objection it answers, and the visual idea.
+Then write one image prompt per concept in a consistent style: warm natural light, real apartment interiors, no faces looking at the camera, 4:5 crop, empty space at the top for the headline.</pre>
+        <button type="button" class="res-copy" data-copy>Copy prompt</button>
+      </details>
+      <p class="res-stage">Deliver</p>
+      <details class="res-prompt res-item">
+        <summary><span class="pn">11</span><span class="pt">Implement a frame with your real components</span><span class="pw">Deliver</span></summary>
+        <p class="res-try"><b>Try it in</b> Cursor or Claude Code with the Figma MCP server. In Figma, right-click a layer and choose Copy link to selection.</p>
+        <pre class="res-code res-wrap">Implement this design: [Figma link to selection].
+Use our existing components, following the Code Connect mappings, and our design tokens. Never hardcode colors, spacing or radii. Build every state shown in the frame.
+When you finish, list any element you couldn't map to a component and any value you had to guess.</pre>
+        <button type="button" class="res-copy" data-copy>Copy prompt</button>
+      </details>
+      <details class="res-prompt res-item">
+        <summary><span class="pn">12</span><span class="pt">Audit tokens without the manual hunt</span><span class="pw">Deliver</span></summary>
+        <p class="res-try"><b>Try it in</b> The Figma agent, or Claude Code with the Figma MCP server.</p>
+        <pre class="res-code res-wrap">Audit the selected frames against our library. List every layer that uses a hardcoded color, font size, radius or spacing value instead of a variable. For each one, suggest the closest variable and your confidence.
+Don't change anything yet: output a table. After I approve, fix only the high-confidence ones and report the rest.</pre>
+        <button type="button" class="res-copy" data-copy>Copy prompt</button>
+      </details>
+      <details class="res-prompt res-item">
+        <summary><span class="pn">13</span><span class="pt">Accessibility QA before engineering starts</span><span class="pw">Deliver</span></summary>
+        <p class="res-try"><b>Try it in</b> Cursor or Claude Code. Automated checks catch only part of accessibility issues; test with assistive tech and real users too.</p>
+        <pre class="res-code res-wrap">Review this component for WCAG 2.2 AA. Compute the contrast of every text and background pair from the actual token values, not from the screenshot. Check focus order, keyboard access, screen reader labels, target size (at least 24 by 24 px) and reduced motion.
+List issues by severity with the fix. Then write a Playwright and axe test that would catch them.</pre>
+        <button type="button" class="res-copy" data-copy>Copy prompt</button>
+      </details>
+      <details class="res-prompt res-item">
+        <summary><span class="pn">14</span><span class="pt">A user test plan, and the readout after</span><span class="pw">Deliver</span></summary>
+        <p class="res-try"><b>Try it in</b> Claude or Gemini, then run the test in Maze.</p>
+        <pre class="res-code res-wrap">Write a 20-minute unmoderated test plan for the pricing suggestions prototype, for property managers who run 10+ listings. Include a screener, 5 tasks with success criteria, and 2 follow-up questions per task. Avoid leading language.
+After the test I'll paste results: summarize by task with completion, time on task, verbatim quotes and the top 3 fixes.</pre>
+        <button type="button" class="res-copy" data-copy>Copy prompt</button>
+      </details>
+    </div>
+    <div class="res-group" id="res-rituals">
+      <h3><span class="res-n">10</span>Five rituals that protect ownership</h3>
+      <p class="res-lede">AI makes generating options cheap. These keep taste and decisions a team practice.</p>
+      <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Ritual</th><th scope="col">What it looks like</th></tr></thead><tbody>
+        <tr class="res-item"><th scope="row" data-label="Ritual">Show the prompt in crits</th><td data-label="What it looks like">Share the agent thread with the design, so others see how you got there.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Ritual">Diverge alone, converge together</th><td data-label="What it looks like">Generate options with AI, choose the direction as a team.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Ritual">One shared prompt and skill library</th><td data-label="What it looks like">With a rotating owner who keeps it current.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Ritual">Pair-prompt every week</th><td data-label="What it looks like">Designer with an engineer, a PM or a marketer.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Ritual">Name the human owner</th><td data-label="What it looks like">Every AI-assisted decision has a person who signs it off.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="res-group" id="res-plan">
+      <h3><span class="res-n">11</span>Your next 30 days</h3>
+      <p class="res-lede">Multiply the people you already have. No new headcount required.</p>
+      <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Week</th><th scope="col">Focus</th><th scope="col">Do this</th></tr></thead><tbody>
+        <tr class="res-item"><th scope="row" data-label="Week">Week 1</th><td data-label="Focus">Set up</td><td data-label="Do this">Install the Figma plugin in Claude Code or Cursor. Connect your libraries to the Figma agent. Try a code layer.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Week">Week 2</th><td data-label="Focus">Practice</td><td data-label="Do this">Everyone runs one Discover or Define prompt on a live project and shares the thread with the team.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Week">Week 3</th><td data-label="Focus">Systematize</td><td data-label="Do this">Turn the token audit into a team skill, and write your first PRODUCT.md and DESIGN.md.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Week">Week 4</th><td data-label="Focus">Ship</td><td data-label="Do this">Put one live prototype in front of 5 real users, and share what you learned.</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="res-group" id="res-team">
+      <h3><span class="res-n">12</span>Set up Claude for your whole team</h3>
+      <p class="res-lede">One account per person. Connectors are per user and do not transfer.</p>
+      <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Step</th><th scope="col">What to do</th></tr></thead><tbody>
+        <tr class="res-item"><th scope="row" data-label="Step"><a href="https://claude.ai" target="_blank" rel="noopener">Create or log into Claude<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">claude.ai</span></th><td>Start here for every teammate.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Step"><a href="https://claude.ai/settings/connectors" target="_blank" rel="noopener">Connectors settings<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">claude.ai</span></th><td>Connect Gmail, Google Calendar, Google Drive, Linear and Slack, each one individually. Add GitHub when you work in a repo.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Step"><a href="https://claude.ai/settings/capabilities" target="_blank" rel="noopener">Capabilities settings<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">claude.ai</span></th><td>Turn skills and plugins on or off.</td></tr>
+      </tbody></table></div>
+      <details class="res-more"><summary>Skills to switch on</summary>
+        <div class="res-more-body">
+          <p>Everyday skills in Claude:</p>
+          <div class="res-tags"><span class="res-item">xlsx</span><span class="res-item">pptx</span><span class="res-item">pdf</span><span class="res-item">docx</span><span class="res-item">skill-creator</span><span class="res-item">morning</span></div>
+          <p>Built into Claude Code sessions, no setup needed:</p>
+          <div class="res-tags"><span class="res-item">verify</span><span class="res-item">code-review</span><span class="res-item">simplify</span><span class="res-item">security-review</span><span class="res-item">init</span><span class="res-item">run</span><span class="res-item">dataviz</span><span class="res-item">artifact-design</span><span class="res-item">loop</span><span class="res-item">claude-api</span><span class="res-item">update-config</span><span class="res-item">session-start-hook</span></div>
+        </div>
+      </details>
+    </div>
+    <div class="res-group" id="res-reading">
+      <h3><span class="res-n">13</span>Read about the process</h3>
+      <p class="res-lede">If you read one thing, read the AIDE article.</p>
+      <div class="res-table-wrap"><table class="res-table"><thead><tr><th scope="col">Article</th><th scope="col">What it covers</th></tr></thead><tbody>
+        <tr class="res-item"><th scope="row" data-label="Article"><a href="https://axdesigners.medium.com/designing-for-intelligence-reimagining-the-double-diamond-in-the-age-of-ai-7335be659a19" target="_blank" rel="noopener">Designing for intelligence (AIDE)<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">axdesigners.medium.com</span></th><td>Reimagining the Double Diamond in the age of AI.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Article"><a href="https://uxplanet.org/gen-ai-design-process-rethinking-the-traditional-approach-for-next-gen-ux-5363c8dea4d7" target="_blank" rel="noopener">Gen AI design process (UX Planet)<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">uxplanet.org</span></th><td>Rethinking the traditional approach for next-gen UX.</td></tr>
+        <tr class="res-item"><th scope="row" data-label="Article"><a href="https://medium.com/@abieastwell/how-product-designers-can-use-ai-to-enhance-their-workload-be4d00537f0d" target="_blank" rel="noopener">How product designers can use AI<span class="ext" aria-hidden="true"> ↗</span></a><span class="res-host">medium.com</span></th><td>Practical ways to enhance your workload.</td></tr>
+      </tbody></table></div>
+    </div>
+  </div>
+</section>
+
+</div>
+
+<section class="sec sec--dark contact">
+  <div class="bg-photo" data-bg="../photo-venice.jpeg" style="--bg-op:0.18"></div>
+  <div class="sec-in">
+    <h2 class="rise" data-d="1">Thinking about AI in your <em>product org</em>?</h2>
+    <a class="btn rise" data-d="2" href="mailto:hello@kevinhawkinsdesign.com">Get in touch <span class="arr">→</span></a>
+  </div>
+</section>
+
+<footer class="foot">
+  <span>© 2026 Kevin Hawkins</span>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/kevinhawkinsdesign/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM7.114 20.452H3.558V9h3.556v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+    <a href="https://x.com/kevinhawkinsdc" target="_blank" rel="noopener" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+    <a href="https://www.instagram.com/kevinhawkinsdesign" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.058 1.645-.07 4.849-.07zM12 0C8.741 0 8.332.014 7.052.072 2.695.272.273 2.69.073 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.332 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a>
+  </div>
+  <span>Product &amp; Design Leadership · Barcelona</span>
+</footer>
+
+<script src="assets/js/home.js"></script>
+<script>
+(function () {
+  'use strict';
+  var tabs = document.querySelectorAll('.ai-tab');
+  function activate(id) {
+    tabs.forEach(function (t) {
+      var on = t.dataset.tab === id;
+      t.classList.toggle('active', on);
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('.ai-panel').forEach(function (p) {
+      p.classList.toggle('active', p.id === 'panel-' + id);
+    });
+    // panels start hidden, so reveal-on-scroll never fired for their content
+    document.querySelectorAll('.ai-panel.active .rise').forEach(function (el) { el.classList.add('in'); });
+  }
+  tabs.forEach(function (t) {
+    t.addEventListener('click', function () {
+      activate(t.dataset.tab);
+      history.replaceState(null, '', '#' + t.dataset.tab);
+    });
+  });
+  function fromHash() {
+    var hash = location.hash.replace('#', '');
+    var legacy = { 'soon-1': 'data-trust', 'soon-2': 'hand-offs-loops' };
+    if (legacy[hash]) hash = legacy[hash];
+    if (hash && document.getElementById('panel-' + hash)) { activate(hash); return; }
+    var target = hash && document.getElementById(hash);
+    var owner = target && target.closest('.ai-panel');
+    if (owner) { activate(owner.id.replace('panel-', '')); setTimeout(function () { target.scrollIntoView({ block: 'start' }); }, 350); }
+  }
+  window.addEventListener('hashchange', fromHash);
+  fromHash();
+})();
+</script>
+
+
+<script>
+(function () {
+  'use strict';
+  var panel = document.getElementById('panel-resources');
+  if (!panel) return;
+  var q = document.getElementById('res-q');
+  var count = document.getElementById('res-count');
+  var empty = document.getElementById('res-empty');
+  var groups = [].slice.call(panel.querySelectorAll('.res-group'));
+  var items = [].slice.call(panel.querySelectorAll('.res-item'));
+  var total = items.length;
+  items.forEach(function (it) { it.dataset.text = it.textContent.toLowerCase(); });
+  groups.forEach(function (g) { var h = g.querySelector('h3'); g.dataset.title = h ? h.textContent.toLowerCase() : ''; });
+
+  function clearMarks() {
+    [].slice.call(panel.querySelectorAll('mark.res-hit')).forEach(function (m) {
+      var t = document.createTextNode(m.textContent); m.parentNode.replaceChild(t, m); t.parentNode.normalize();
+    });
+  }
+  function mark(el, term) {
+    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT, null), nodes = [], n;
+    while ((n = walker.nextNode())) { if (n.parentNode.closest('pre')) continue; nodes.push(n); }
+    nodes.forEach(function (node) {
+      var i = node.nodeValue.toLowerCase().indexOf(term);
+      if (i < 0) return;
+      var hit = node.splitText(i); hit.splitText(term.length);
+      var m = document.createElement('mark'); m.className = 'res-hit'; m.textContent = hit.nodeValue;
+      hit.parentNode.replaceChild(m, hit);
+    });
+  }
+  function run() {
+    var raw = q.value.trim().toLowerCase();
+    var terms = raw.split(/\s+/).filter(Boolean);
+    clearMarks();
+    panel.classList.toggle('res-filtering', terms.length > 0);
+    if (!terms.length) {
+      items.forEach(function (it) { it.hidden = false; });
+      groups.forEach(function (g) { g.hidden = false; });
+      panel.querySelectorAll('details[data-auto]').forEach(function (d) { d.open = false; d.removeAttribute('data-auto'); });
+      count.textContent = total + ' items';
+      empty.hidden = true;
+      return;
+    }
+    var shown = 0;
+    groups.forEach(function (g) {
+      var titleHit = terms.every(function (t) { return g.dataset.title.indexOf(t) > -1; });
+      var gi = [].slice.call(g.querySelectorAll('.res-item')), any = false;
+      gi.forEach(function (it) {
+        var ok = titleHit || terms.every(function (t) { return it.dataset.text.indexOf(t) > -1; });
+        it.hidden = !ok; if (ok) { any = true; shown++; terms.forEach(function (t) { mark(it, t); }); }
+        if (ok && it.tagName === 'DETAILS' && !it.open && !titleHit) { it.open = true; it.setAttribute('data-auto', ''); }
+      });
+      // free-text blocks (ledes, accordions) can match too
+      var textHit = !gi.length && terms.every(function (t) { return g.textContent.toLowerCase().indexOf(t) > -1; });
+      var show = titleHit || any || textHit;
+      g.hidden = !show;
+      if (show && !any && !titleHit && textHit) { shown++; }
+      g.querySelectorAll('.res-more').forEach(function (d) {
+        var hit = terms.every(function (t) { return d.textContent.toLowerCase().indexOf(t) > -1; });
+        if (hit && !d.open) { d.open = true; d.setAttribute('data-auto', ''); g.hidden = false; }
+      });
+    });
+    count.textContent = shown + (shown === 1 ? ' match' : ' matches') + ' for “' + q.value.trim() + '”';
+    empty.hidden = groups.some(function (g) { return !g.hidden; });
+  }
+  var t;
+  q.addEventListener('input', function () { clearTimeout(t); t = setTimeout(run, 80); });
+  q.addEventListener('keydown', function (ev) { if (ev.key === 'Escape') { q.value = ''; run(); } });
+  document.addEventListener('keydown', function (ev) {
+    if (ev.key === '/' && !/input|textarea/i.test(document.activeElement.tagName) && panel.classList.contains('active')) { ev.preventDefault(); q.focus(); }
+  });
+  panel.querySelectorAll('[data-q]').forEach(function (b) { b.addEventListener('click', function () { q.value = b.dataset.q; run(); q.focus(); }); });
+  panel.querySelectorAll('.res-clear').forEach(function (b) { b.addEventListener('click', function () { q.value = ''; run(); q.focus(); }); });
+  panel.querySelectorAll('.res-jump a').forEach(function (a) {
+    a.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      if (q.value) { q.value = ''; run(); }
+      var el = document.querySelector(a.getAttribute('href'));
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+  });
+  panel.querySelectorAll('[data-copy]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var pre = b.parentNode.querySelector('pre'); if (!pre || !navigator.clipboard) return;
+      navigator.clipboard.writeText(pre.textContent).then(function () {
+        b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy prompt'; }, 1600);
+      }).catch(function () {});
+    });
+  });
+  run();
+})();
+</script>
+</body>
+</html>
